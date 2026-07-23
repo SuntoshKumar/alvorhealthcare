@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="cbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22c55e20"/>
+      <stop offset="100%" stop-color="#22c55e06"/>
+    </linearGradient>
+    <radialGradient id="cglow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#22c55e15"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#cbg)"/>
+  <rect width="600" height="400" rx="16" fill="url(#cglow)"/>
+  <circle cx="300" cy="170" r="70" fill="white" opacity="0.15"/>
+  <circle cx="300" cy="170" r="40" fill="white" opacity="0.1"/>
+  <text x="300" y="290" font-family="system-ui,sans-serif" font-size="30" font-weight="800" fill="#22c55e" text-anchor="middle">Capsules</text>
+  <line x1="240" y1="310" x2="360" y2="310" stroke="#22c55e" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+  <text x="300" y="340" font-family="system-ui,sans-serif" font-size="12" fill="#22c55e60" text-anchor="middle" letter-spacing="2">ALVOR HEALTHCARE</text>
+</svg>

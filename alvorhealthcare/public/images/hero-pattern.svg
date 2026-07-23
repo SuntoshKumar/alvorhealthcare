@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <pattern id="cross" patternUnits="userSpaceOnUse" width="120" height="120">
+      <path d="M50 40h20v20h20v20H70v20H50V80H30V60h20z" fill="#0ea5e9" opacity="0.04"/>
+    </pattern>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="40" height="40">
+      <circle cx="20" cy="20" r="1.2" fill="#0ea5e9" opacity="0.08"/>
+    </pattern>
+    <radialGradient id="glow1" cx="30%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="70%" cy="70%" r="50%">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#cross)"/>
+  <rect width="800" height="800" fill="url(#dots)"/>
+  <rect width="800" height="800" fill="url(#glow1)"/>
+  <rect width="800" height="800" fill="url(#glow2)"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#0ea5e9" stroke-width="0.5" opacity="0.04"/>
+  <line x1="400" y1="0" x2="400" y2="800" stroke="#0ea5e9" stroke-width="0.5" opacity="0.04"/>
+</svg>

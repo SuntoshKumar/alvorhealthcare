@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="pbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#6366f118"/>
+      <stop offset="100%" stop-color="#6366f106"/>
+    </linearGradient>
+    <filter id="pshadow"><feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#6366f1" flood-opacity="0.15"/></filter>
+  </defs>
+  <rect width="400" height="400" rx="24" fill="url(#pbg)"/>
+  <!-- bottle -->
+  <g filter="url(#pshadow)">
+    <rect x="140" y="95" width="120" height="30" rx="6" fill="white" stroke="#6366f130" stroke-width="1"/>
+    <rect x="155" y="125" width="90" height="160" rx="12" fill="white" stroke="#6366f120" stroke-width="1"/>
+    <rect x="155" y="125" width="90" height="100" rx="12" fill="#6366f112"/>
+    <!-- pills inside -->
+    <ellipse cx="185" cy="200" rx="12" ry="8" fill="#6366f140"/>
+    <ellipse cx="215" cy="210" rx="12" ry="8" fill="#6366f130"/>
+    <ellipse cx="200" cy="235" rx="12" ry="8" fill="#6366f135"/>
+    <ellipse cx="180" cy="250" rx="12" ry="8" fill="#6366f125"/>
+    <ellipse cx="220" cy="245" rx="12" ry="8" fill="#6366f130"/>
+  </g>
+  <!-- label -->
+  <rect x="163" y="260" width="74" height="3" rx="1.5" fill="#6366f1" opacity="0.4"/>
+  <text x="200" y="315" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#6366f1" text-anchor="middle" opacity="0.8">AlvorHeart Care</text>
+  <text x="200" y="340" font-family="system-ui,sans-serif" font-size="10" fill="#6366f160" text-anchor="middle">Alvor Healthcare</text>
+</svg>

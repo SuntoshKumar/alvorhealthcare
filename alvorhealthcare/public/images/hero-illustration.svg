@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="pill1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="50%" stop-color="#f0f9ff"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <linearGradient id="pill2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#faf5ff"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.1"/></filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="20"/></filter>
+  </defs>
+  <rect width="500" height="500" rx="40" fill="url(#bg)"/>
+  <!-- floating particles -->
+  <circle cx="80" cy="80" r="4" fill="#0ea5e9" opacity="0.15"/>
+  <circle cx="420" cy="100" r="3" fill="#22c55e" opacity="0.15"/>
+  <circle cx="60" cy="400" r="5" fill="#8b5cf6" opacity="0.1"/>
+  <circle cx="440" cy="380" r="3" fill="#0ea5e9" opacity="0.12"/>
+  <!-- large pills -->
+  <g filter="url(#shadow)">
+    <rect x="130" y="140" width="200" height="60" rx="30" fill="url(#pill1)" opacity="0.9"/>
+    <text x="230" y="178" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle" opacity="0.6">Quality</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="110" y="230" width="240" height="60" rx="30" fill="url(#pill2)" opacity="0.9"/>
+    <text x="230" y="268" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle" opacity="0.6">Innovation</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="150" y="320" width="160" height="60" rx="30" fill="#f59e0b" opacity="0.2"/>
+    <rect x="150" y="320" width="110" height="60" rx="30" fill="#f59e0b" opacity="0.5"/>
+    <text x="230" y="358" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#1e293b" text-anchor="middle" opacity="0.6">Excellence</text>
+  </g>
+  <!-- capsules scattered -->
+  <rect x="80" y="200" width="40" height="18" rx="9" fill="#0ea5e9" opacity="0.3" transform="rotate(-30, 100, 209)"/>
+  <rect x="340" y="300" width="40" height="18" rx="9" fill="#22c55e" opacity="0.3" transform="rotate(25, 360, 309)"/>
+  <rect x="90" y="330" width="35" height="14" rx="7" fill="#8b5cf6" opacity="0.25" transform="rotate(-45, 107, 337)"/>
+  <!-- shield icon -->
+  <circle cx="250" cy="80" r="35" fill="white" opacity="0.8" filter="url(#shadow)"/>
+  <path d="M250 55l16 8v16c0 10-16 20-16 20s-16-10-16-20V63z" fill="#0ea5e9" opacity="0.2"/>
+  <path d="M250 58l13 6.5v13c0 8-13 16-13 16s-13-8-13-16v-13z" fill="none" stroke="#0ea5e9" stroke-width="2"/>
+  <path d="M244 72l4 4 8-8" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
