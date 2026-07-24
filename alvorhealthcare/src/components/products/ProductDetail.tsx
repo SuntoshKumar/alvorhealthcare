@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import {
   Award,
   CheckCircle,
@@ -43,6 +43,7 @@ interface Specification {
 
 export function ProductDetail({ product, relatedProducts }: ProductDetailProps) {
   const [selectedImage, setSelectedImage] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
   const category = categories.find((item) => item.name === product.category);
   const images = product.images.length > 0 ? product.images : [product.thumbnail];
 
@@ -125,27 +126,35 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
         </div>
       </nav>
 
-      <section className="relative overflow-hidden bg-white py-12 dark:bg-neutral-950 lg:py-20" aria-labelledby="product-title">
+      <section className="relative overflow-hidden bg-white py-10 dark:bg-neutral-950 lg:py-16" aria-labelledby="product-title">
         <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-100/60 blur-3xl dark:bg-blue-900/10" aria-hidden="true" />
+        <div className="pharma-grid absolute inset-0 opacity-25 dark:opacity-10" aria-hidden="true" />
         <div className="container relative">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center">
-            <ScrollReveal>
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:items-start lg:gap-14">
+            <motion.div
+              className="lg:sticky lg:top-28"
+              initial={{ opacity: 0, x: prefersReducedMotion ? 0 : -24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: prefersReducedMotion ? 0.01 : 0.65, ease: [0.22, 1, 0.36, 1] }}
+            >
               <div>
-                <div className="relative aspect-square overflow-hidden rounded-3xl border border-neutral-100 bg-gradient-to-br from-neutral-50 to-blue-50 shadow-sm dark:border-neutral-800 dark:from-neutral-900 dark:to-blue-950/30">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-neutral-100 bg-gradient-to-br from-neutral-50 via-white to-blue-50 shadow-[0_30px_70px_-48px_rgba(30,64,175,0.55)] dark:border-neutral-800 dark:from-neutral-900 dark:via-neutral-900 dark:to-blue-950/30">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.95),transparent_50%)] opacity-80 dark:opacity-10" aria-hidden="true" />
+                  <div className="absolute inset-x-[25%] bottom-8 h-5 rounded-[50%] bg-blue-950/10 blur-lg dark:bg-black/35" aria-hidden="true" />
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={selectedImage}
-                      initial={{ opacity: 0, scale: 0.97 }}
+                      initial={{ opacity: 0, scale: prefersReducedMotion ? 1 : 0.975, filter: prefersReducedMotion ? "none" : "blur(4px)" }}
                       animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 1.02 }}
-                      transition={{ duration: 0.25 }}
+                      exit={{ opacity: 0, scale: prefersReducedMotion ? 1 : 1.015, filter: prefersReducedMotion ? "none" : "blur(3px)" }}
+                      transition={{ duration: prefersReducedMotion ? 0.01 : 0.36, ease: [0.22, 1, 0.36, 1] }}
                       className="absolute inset-0"
                     >
                       <Image
                         src={publicAssetPath(images[selectedImage])}
                         alt={`${product.name} product image ${selectedImage + 1}`}
                         fill
-                        className="object-contain p-5 sm:p-8"
+                        className="object-contain p-6 sm:p-10"
                         priority
                         sizes="(max-width: 1024px) 100vw, 52vw"
                       />
@@ -154,38 +163,48 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                 </div>
 
                 {images.length > 1 && (
-                  <div className="mt-4 flex gap-3 overflow-x-auto pb-2">
+                  <div className="mt-4 flex gap-2.5 overflow-x-auto pb-2 scrollbar-hide">
                     {images.map((image, index) => (
-                      <button
+                      <motion.button
                         key={image}
                         type="button"
                         onClick={() => setSelectedImage(index)}
-                        className={`relative h-20 w-20 shrink-0 overflow-hidden rounded-xl border-2 bg-neutral-50 transition-colors dark:bg-neutral-900 ${
+                        whileTap={{ scale: 0.96 }}
+                        className={`relative h-18 w-18 shrink-0 overflow-hidden rounded-xl border-2 bg-neutral-50 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:bg-neutral-900 sm:h-20 sm:w-20 ${
                           index === selectedImage
-                            ? "border-blue-600"
-                            : "border-neutral-200 hover:border-blue-300 dark:border-neutral-700"
+                            ? "border-blue-600 shadow-[0_8px_20px_-12px_rgba(37,99,235,0.7)]"
+                            : "border-neutral-200 opacity-70 hover:border-blue-300 hover:opacity-100 dark:border-neutral-700"
                         }`}
                         aria-label={`View product image ${index + 1}`}
                         aria-pressed={index === selectedImage}
                       >
                         <Image src={publicAssetPath(image)} alt="" fill className="object-contain p-1" sizes="80px" />
-                      </button>
+                        <AnimatePresence>
+                          {index === selectedImage && (
+                            <motion.span layoutId="active-product-thumbnail" className="absolute inset-x-2 bottom-1 h-0.5 rounded-full bg-blue-600" />
+                          )}
+                        </AnimatePresence>
+                      </motion.button>
                     ))}
                   </div>
                 )}
               </div>
-            </ScrollReveal>
+            </motion.div>
 
-            <div>
-              <ScrollReveal>
+            <motion.div
+              initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: prefersReducedMotion ? 0.01 : 0.65, delay: prefersReducedMotion ? 0 : 0.08, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div>
                 <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
                   {product.category}{product.subCategory ? ` / ${product.subCategory}` : ""}
                 </p>
-                <h1 id="product-title" className="mt-4 display-sm font-bold text-neutral-900 dark:text-white lg:display-md">
+                <h1 id="product-title" className="mt-3 display-sm font-bold text-neutral-900 dark:text-white lg:display-md">
                   {product.name}
                 </h1>
 
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-4 flex flex-wrap gap-2">
                   {product.isNew && (
                     <Badge variant="primary"><Sparkles className="mr-1 h-3 w-3" />New</Badge>
                   )}
@@ -201,23 +220,32 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                   {product.tags.includes("otc") && <Badge variant="outline">OTC</Badge>}
                 </div>
 
-                <p className="mt-6 text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+                <p className="mt-5 max-w-xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
                   {product.shortDescription}
                 </p>
 
-                <dl className="mt-8 grid gap-3 sm:grid-cols-2">
+                <motion.dl
+                  className="mt-7 grid gap-2.5 sm:grid-cols-2"
+                  initial="hidden"
+                  animate="visible"
+                  variants={{ hidden: {}, visible: { transition: { staggerChildren: prefersReducedMotion ? 0 : 0.06, delayChildren: prefersReducedMotion ? 0 : 0.2 } } }}
+                >
                   {specifications.slice(0, 4).map((item) => (
-                    <div key={item.label} className="rounded-xl border border-neutral-100 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-neutral-900/60">
+                    <motion.div
+                      key={item.label}
+                      className="rounded-2xl border border-neutral-100 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-neutral-900/60"
+                      variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } } }}
+                    >
                       <dt className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                         {item.label}
                       </dt>
                       <dd className="mt-1 font-medium text-neutral-900 dark:text-white">{item.value}</dd>
-                    </div>
+                    </motion.div>
                   ))}
-                </dl>
+                </motion.dl>
 
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Link href={inquiryHref} className="btn btn-primary btn-lg">
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <Link href={inquiryHref} className="btn btn-primary btn-lg sm:flex-none">
                     <Mail className="h-5 w-5" />
                     Ask about this product
                   </Link>
@@ -232,15 +260,15 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                     Share
                   </Button>
                 </div>
-              </ScrollReveal>
-            </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="section bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="details-heading">
+      <section className="bg-neutral-50 py-16 dark:bg-neutral-900/50 lg:py-24" aria-labelledby="details-heading">
         <div className="container">
-          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px]">
+          <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-14">
             <div>
               <ScrollReveal>
                 <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
@@ -258,14 +286,24 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                 <ScrollReveal delay={0.1}>
                   <div className="mt-10">
                     <h3 className="heading-md font-semibold text-neutral-900 dark:text-white">Uses</h3>
-                    <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                    <motion.ul
+                      className="mt-5 grid gap-3 sm:grid-cols-2"
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                      variants={{ hidden: {}, visible: { transition: { staggerChildren: prefersReducedMotion ? 0 : 0.06 } } }}
+                    >
                       {product.uses.map((use) => (
-                        <li key={use} className="flex items-start gap-3 rounded-xl bg-white p-4 text-neutral-700 shadow-sm ring-1 ring-neutral-100 dark:bg-neutral-900 dark:text-neutral-300 dark:ring-neutral-800">
+                        <motion.li
+                          key={use}
+                          className="flex items-start gap-3 rounded-2xl bg-white p-4 text-neutral-700 shadow-sm ring-1 ring-neutral-100 dark:bg-neutral-900 dark:text-neutral-300 dark:ring-neutral-800"
+                          variants={{ hidden: { opacity: 0, y: 14 }, visible: { opacity: 1, y: 0, transition: { duration: 0.42, ease: [0.22, 1, 0.36, 1] } } }}
+                        >
                           <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" />
                           {use}
-                        </li>
+                        </motion.li>
                       ))}
-                    </ul>
+                    </motion.ul>
                   </div>
                 </ScrollReveal>
               )}
@@ -289,10 +327,10 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
               )}
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-5 lg:sticky lg:top-28 lg:self-start">
               {specifications.length > 0 && (
                 <ScrollReveal>
-                  <Card variant="elevated" className="p-6">
+                  <Card variant="elevated" className="rounded-3xl p-6">
                     <h3 className="heading-sm font-bold text-neutral-900 dark:text-white">Specifications</h3>
                     <dl className="mt-5 space-y-4">
                       {specifications.map((item) => (
@@ -314,7 +352,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
               )}
 
               <ScrollReveal delay={0.1}>
-                <Card variant="outlined" className="border-blue-100 bg-blue-50 p-6 dark:border-blue-800/40 dark:bg-blue-900/20">
+                <Card variant="outlined" className="rounded-3xl border-blue-100 bg-blue-50 p-6 dark:border-blue-800/40 dark:bg-blue-900/20">
                   <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   <h3 className="mt-4 heading-sm font-bold text-neutral-900 dark:text-white">
                     Need availability or prescribing information?
@@ -334,7 +372,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
       </section>
 
       {relatedProducts.length > 0 && (
-        <section className="section bg-white dark:bg-neutral-950" aria-labelledby="related-heading">
+        <section className="bg-white py-16 dark:bg-neutral-950 lg:py-24" aria-labelledby="related-heading">
           <div className="container">
             <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
               <ScrollReveal>

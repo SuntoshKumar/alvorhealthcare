@@ -1,187 +1,275 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Shield, Award, ChevronDown, Globe } from "lucide-react";
-import { clsx } from "clsx";
+import { motion, useReducedMotion } from "framer-motion";
+import {
+  Activity,
+  ArrowRight,
+  Award,
+  BadgeCheck,
+  ChevronDown,
+  Dna,
+  Globe,
+  Shield,
+  Sparkles,
+} from "lucide-react";
 import { companyInfo, homeContent } from "@/data";
 
-function FloatingPill({ className, delay = "0s", duration = "6s" }: { className?: string; delay?: string; duration?: string }) {
-  return (
-    <div
-      className={clsx("absolute animate-float", className)}
-      style={{ animationDelay: delay, animationDuration: duration }}
-    >
-      <div className="w-16 h-8 lg:w-20 lg:h-10 rounded-full bg-gradient-to-r from-blue-400/30 to-blue-600/30 dark:from-blue-500/20 dark:to-blue-700/20 backdrop-blur-sm border border-white/20 dark:border-white/10 shadow-lg" />
-    </div>
-  );
-}
+const easeOut = [0.22, 1, 0.36, 1] as const;
 
-function FloatingCapsule({ className, delay = "0s", duration = "7s" }: { className?: string; delay?: string; duration?: string }) {
-  return (
-    <div
-      className={clsx("absolute animate-float-slow", className)}
-      style={{ animationDelay: delay, animationDuration: duration }}
-    >
-      <div className="w-10 h-20 lg:w-12 lg:h-24 rounded-full bg-gradient-to-b from-teal-400/30 to-emerald-600/30 dark:from-teal-500/20 dark:to-emerald-700/20 backdrop-blur-sm border border-white/20 dark:border-white/10 shadow-lg" />
-    </div>
-  );
-}
+const entrance = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+};
 
-function FloatingMolecule({ className, delay = "0s" }: { className?: string; delay?: string }) {
+function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
   return (
-    <div className={clsx("absolute animate-spin-slow", className)} style={{ animationDelay: delay }}>
-      <svg width="60" height="60" viewBox="0 0 60 60" className="lg:w-[80px] lg:h-[80px]">
-        <circle cx="30" cy="10" r="4" fill="rgba(59, 130, 246, 0.3)" />
-        <circle cx="10" cy="45" r="4" fill="rgba(20, 184, 166, 0.3)" />
-        <circle cx="50" cy="45" r="4" fill="rgba(59, 130, 246, 0.3)" />
-        <line x1="30" y1="10" x2="10" y2="45" stroke="rgba(59, 130, 246, 0.15)" strokeWidth="1.5" />
-        <line x1="30" y1="10" x2="50" y2="45" stroke="rgba(59, 130, 246, 0.15)" strokeWidth="1.5" />
-        <line x1="10" y1="45" x2="50" y2="45" stroke="rgba(20, 184, 166, 0.15)" strokeWidth="1.5" />
-        <circle cx="30" cy="10" r="2" fill="rgba(59, 130, 246, 0.5)" />
-        <circle cx="10" cy="45" r="2" fill="rgba(20, 184, 166, 0.5)" />
-        <circle cx="50" cy="45" r="2" fill="rgba(59, 130, 246, 0.5)" />
-      </svg>
-    </div>
-  );
-}
-
-function FloatingParticle({ className, delay = "0s" }: { className?: string; delay?: string }) {
-  return (
-    <div
-      className={clsx("absolute w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full animate-pulse-glow", className)}
-      style={{ animationDelay: delay }}
+    <motion.div
+      className="relative mx-auto aspect-[4/4.35] w-full max-w-[620px]"
+      initial={{ opacity: 0, scale: 0.94, x: 24 }}
+      animate={{ opacity: 1, scale: 1, x: 0 }}
+      transition={{ duration: 1, delay: 0.2, ease: easeOut }}
+      aria-hidden="true"
     >
-      <div className="w-full h-full rounded-full bg-blue-400/40 dark:bg-blue-500/30" />
-    </div>
+      <div className="absolute inset-x-[7%] bottom-[2%] h-[14%] rounded-[50%] bg-blue-950/15 blur-2xl dark:bg-black/50" />
+      <div className="absolute inset-x-[12%] bottom-[7%] h-px bg-gradient-to-r from-transparent via-blue-300/70 to-transparent dark:via-blue-600/50" />
+
+      <div className="absolute inset-x-[8%] bottom-[9%] top-[3%] overflow-hidden rounded-[48%_48%_2.8rem_2.8rem/34%_34%_2.8rem_2.8rem] border border-white/80 bg-gradient-to-b from-white/65 via-blue-50/70 to-blue-100/55 shadow-[0_50px_110px_-52px_rgba(30,64,175,0.65)] backdrop-blur-xl dark:border-white/10 dark:from-blue-950/55 dark:via-neutral-950/72 dark:to-blue-950/55">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.95),transparent_34%),linear-gradient(115deg,transparent_35%,rgba(255,255,255,0.35)_49%,transparent_63%)] dark:bg-[radial-gradient(circle_at_50%_30%,rgba(59,130,246,0.28),transparent_34%),linear-gradient(115deg,transparent_35%,rgba(96,165,250,0.08)_49%,transparent_63%)]" />
+        <div className="absolute inset-x-[12%] top-[12%] h-px bg-gradient-to-r from-transparent via-blue-300/80 to-transparent dark:via-blue-500/50" />
+        <div className="absolute inset-x-[19%] top-[17%] h-px bg-gradient-to-r from-transparent via-teal-300/60 to-transparent dark:via-teal-600/40" />
+
+        <motion.div
+          className="absolute left-1/2 top-[15%] h-[58%] w-[58%] -translate-x-1/2 rounded-full border border-blue-200/70 dark:border-blue-600/30"
+          animate={reducedMotion ? undefined : { rotate: 360 }}
+          transition={{ duration: 42, repeat: Infinity, ease: "linear" }}
+        >
+          <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-blue-500 shadow-[0_0_0_8px_rgba(59,130,246,0.12)]" />
+          <span className="absolute bottom-[9%] left-[10%] h-2 w-2 rounded-full bg-teal-400 shadow-[0_0_0_6px_rgba(45,212,191,0.1)]" />
+        </motion.div>
+
+        <motion.div
+          className="absolute left-1/2 top-[21%] h-[46%] w-[46%] -translate-x-1/2 rounded-full border border-dashed border-blue-300/60 dark:border-blue-600/30"
+          animate={reducedMotion ? undefined : { rotate: -360 }}
+          transition={{ duration: 34, repeat: Infinity, ease: "linear" }}
+        />
+
+        <div className="absolute left-[12%] top-[12%] flex items-center gap-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_0_5px_rgba(16,185,129,0.1)]" />
+          <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
+            Precision medicine
+          </span>
+        </div>
+
+        <div className="absolute right-[12%] top-[12%] text-right">
+          <p className="font-display text-[10px] font-bold tracking-[0.16em] text-blue-600 dark:text-blue-400">AHC / 01</p>
+          <p className="mt-0.5 text-[8px] uppercase tracking-[0.18em] text-neutral-400">Global series</p>
+        </div>
+
+        <motion.div
+          className="absolute bottom-[15%] left-[24%] h-[51%] w-[31%]"
+          animate={reducedMotion ? undefined : { y: [-5, 5, -5], rotate: [-4, -3, -4] }}
+          transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut" }}
+          style={{ rotate: -4 }}
+        >
+          <div className="absolute inset-0 rounded-[1.4rem] border border-white bg-gradient-to-br from-white via-slate-50 to-blue-100 shadow-[18px_28px_45px_-20px_rgba(15,23,42,0.5)] dark:border-blue-200/40 dark:from-slate-100 dark:via-blue-50 dark:to-blue-200">
+            <div className="absolute inset-y-0 right-0 w-[13%] rounded-r-[1.35rem] bg-gradient-to-b from-blue-100 to-blue-300 opacity-80" />
+            <div className="absolute left-[13%] top-[10%]">
+              <p className="font-display text-[clamp(0.78rem,1.4vw,1.05rem)] font-bold tracking-[-0.04em] text-blue-700">
+                ALVOR
+              </p>
+              <p className="mt-0.5 text-[7px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                Healthcare
+              </p>
+            </div>
+            <div className="absolute left-[13%] top-[32%] h-px w-[52%] bg-blue-200" />
+            <div className="absolute left-[13%] top-[39%] max-w-[65%]">
+              <p className="text-[clamp(0.62rem,1.1vw,0.82rem)] font-bold leading-tight text-slate-900">
+                Advanced Therapeutics
+              </p>
+              <p className="mt-1 text-[7px] uppercase tracking-[0.16em] text-slate-400">Precision formulation</p>
+            </div>
+            <div className="absolute bottom-[11%] left-[13%] right-[18%]">
+              <div className="mb-2 flex items-center justify-between text-[7px] font-semibold uppercase tracking-[0.12em] text-blue-700">
+                <span>Clinical grade</span>
+                <span>30 units</span>
+              </div>
+              <div className="h-7 overflow-hidden rounded-md bg-gradient-to-r from-blue-600 via-blue-500 to-teal-400">
+                <div className="h-full w-1/2 border-r border-white/35 bg-white/10" />
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-[14%] right-[24%] h-[36%] w-[20%]"
+          animate={reducedMotion ? undefined : { y: [5, -5, 5], rotate: [5, 4, 5] }}
+          transition={{ duration: 5.8, repeat: Infinity, ease: "easeInOut" }}
+          style={{ rotate: 5 }}
+        >
+          <div className="absolute left-1/2 top-0 h-[13%] w-[58%] -translate-x-1/2 rounded-t-md bg-gradient-to-b from-slate-300 to-slate-500 shadow-md" />
+          <div className="absolute left-1/2 top-[10%] h-[10%] w-[44%] -translate-x-1/2 bg-blue-700" />
+          <div className="absolute inset-x-[8%] bottom-0 top-[17%] overflow-hidden rounded-[0.8rem_0.8rem_1.5rem_1.5rem] border border-white/80 bg-gradient-to-br from-white/95 via-blue-50/90 to-blue-200/80 shadow-[14px_24px_35px_-18px_rgba(15,23,42,0.55)]">
+            <div className="absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-t from-blue-500/35 to-transparent" />
+            <div className="absolute inset-x-[16%] top-[30%] rounded-lg border border-blue-100 bg-white/80 px-1 py-2 text-center">
+              <p className="font-display text-[clamp(0.55rem,1vw,0.72rem)] font-bold text-blue-700">AHC</p>
+              <p className="mt-0.5 text-[6px] font-bold uppercase tracking-[0.15em] text-slate-400">Formula 01</p>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-[10%] left-1/2 h-px w-[58%] -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-400/60 to-transparent"
+          animate={reducedMotion ? undefined : { opacity: [0.35, 1, 0.35], scaleX: [0.86, 1, 0.86] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
+      <motion.div
+        className="absolute left-0 top-[27%] flex origin-left scale-[0.82] items-center gap-2.5 rounded-2xl border border-white/85 bg-white/78 px-3.5 py-3 shadow-[0_18px_45px_-24px_rgba(15,23,42,0.55)] backdrop-blur-2xl dark:border-white/10 dark:bg-neutral-900/78 sm:scale-100"
+        animate={reducedMotion ? undefined : { y: [-6, 6, -6] }}
+        transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-500/20">
+          <Dna className="h-4.5 w-4.5" />
+        </span>
+        <div>
+          <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-neutral-400">Innovation engine</p>
+          <p className="mt-0.5 text-xs font-bold text-neutral-900 dark:text-white">Molecule to medicine</p>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-[17%] right-0 flex origin-right scale-[0.82] items-center gap-2.5 rounded-2xl border border-white/85 bg-white/78 px-3.5 py-3 shadow-[0_18px_45px_-24px_rgba(15,23,42,0.55)] backdrop-blur-2xl dark:border-white/10 dark:bg-neutral-900/78 sm:scale-100"
+        animate={reducedMotion ? undefined : { y: [6, -6, 6] }}
+        transition={{ duration: 5.6, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-lg shadow-emerald-500/20">
+          <BadgeCheck className="h-4.5 w-4.5" />
+        </span>
+        <div>
+          <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-neutral-400">Quality released</p>
+          <p className="mt-0.5 text-xs font-bold text-neutral-900 dark:text-white">WHO GMP verified</p>
+        </div>
+      </motion.div>
+
+      <div className="absolute right-[9%] top-[20%] rounded-full border border-blue-200/80 bg-white/70 p-2.5 text-blue-600 shadow-lg backdrop-blur-xl dark:border-blue-700/50 dark:bg-blue-950/60 dark:text-blue-400">
+        <Activity className="h-4 w-4" />
+      </div>
+    </motion.div>
   );
 }
 
 export function HeroSection() {
   const hero = homeContent.hero;
   const trustIcons = [Shield, Award, Globe];
+  const prefersReducedMotion = useReducedMotion();
+  const reducedMotion = Boolean(prefersReducedMotion);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-blue-50/80 via-white to-white dark:from-neutral-900 dark:via-neutral-950 dark:to-neutral-950" aria-labelledby="hero-heading">
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] lg:w-[800px] lg:h-[800px] rounded-full bg-gradient-to-br from-blue-100/40 to-teal-100/20 dark:from-blue-900/20 dark:to-teal-900/10 blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] lg:w-[700px] lg:h-[700px] rounded-full bg-gradient-to-tr from-blue-100/30 to-purple-100/20 dark:from-blue-900/15 dark:to-purple-900/10 blur-3xl" />
-        <div className="absolute top-1/4 left-1/2 w-72 h-72 bg-blue-100/20 dark:bg-blue-900/10 rounded-full blur-3xl animate-blob" />
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-teal-100/20 dark:bg-teal-900/10 rounded-full blur-3xl animate-blob-delayed" />
+    <section
+      className="pharma-hero relative flex min-h-[92svh] items-center overflow-hidden pt-20"
+      aria-labelledby="hero-heading"
+    >
+      <div className="pharma-grid absolute inset-0 opacity-65 dark:opacity-25" aria-hidden="true" />
+      <motion.div
+        className="absolute -right-32 top-8 h-[32rem] w-[32rem] rounded-full bg-blue-300/25 blur-3xl dark:bg-blue-800/20"
+        animate={reducedMotion ? undefined : { scale: [1, 1.12, 1], x: [0, -18, 0] }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        aria-hidden="true"
+      />
+      <motion.div
+        className="absolute -left-40 bottom-0 h-[28rem] w-[28rem] rounded-full bg-teal-200/25 blur-3xl dark:bg-teal-900/15"
+        animate={reducedMotion ? undefined : { scale: [1.1, 0.95, 1.1], y: [0, -20, 0] }}
+        transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+        aria-hidden="true"
+      />
 
-        <FloatingPill className="top-[15%] right-[12%] lg:right-[18%]" delay="0s" />
-        <FloatingCapsule className="top-[30%] right-[8%] lg:right-[12%]" delay="1s" duration="8s" />
-        <FloatingPill className="top-[55%] right-[15%] lg:right-[20%]" delay="2s" duration="7s" />
-        <FloatingCapsule className="top-[70%] right-[10%] lg:right-[15%]" delay="0.5s" duration="9s" />
-        <FloatingPill className="top-[20%] right-[25%] lg:right-[30%]" delay="1.5s" duration="8s" />
-        <FloatingMolecule className="top-[25%] right-[5%] lg:right-[8%]" delay="0s" />
-        <FloatingMolecule className="top-[60%] right-[22%] lg:right-[28%]" delay="3s" />
-        <FloatingMolecule className="top-[45%] right-[5%] lg:right-[8%]" delay="1.5s" />
+      <div className="container relative z-10 py-14 lg:py-20">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-8 xl:gap-16">
+          <motion.div
+            className="max-w-2xl"
+            initial="hidden"
+            animate="visible"
+            transition={{ staggerChildren: reducedMotion ? 0 : 0.11, delayChildren: 0.08 }}
+          >
+            <motion.div
+              variants={entrance}
+              transition={{ duration: 0.65, ease: easeOut }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-white/65 px-3.5 py-2 text-xs font-semibold text-blue-700 shadow-sm backdrop-blur-xl dark:border-blue-800/60 dark:bg-blue-950/35 dark:text-blue-300"
+            >
+              <Sparkles className="h-3.5 w-3.5" />
+              {hero.eyebrow}
+              <span className="h-1 w-1 rounded-full bg-blue-300" />
+              {companyInfo.countriesServed}+ countries
+            </motion.div>
 
-        <FloatingParticle className="top-[10%] right-[30%]" delay="0s" />
-        <FloatingParticle className="top-[40%] right-[25%]" delay="1s" />
-        <FloatingParticle className="top-[75%] right-[20%]" delay="2s" />
-        <FloatingParticle className="top-[20%] right-[35%]" delay="0.5s" />
-        <FloatingParticle className="top-[50%] right-[30%]" delay="1.5s" />
-        <FloatingParticle className="top-[80%] right-[35%]" delay="2.5s" />
-        <FloatingParticle className="top-[15%] right-[15%]" delay="3s" />
-        <FloatingParticle className="top-[65%] right-[5%]" delay="0.8s" />
-      </div>
-
-      <div className="container relative z-10 pt-24 pb-16 lg:pt-32 lg:pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div className="max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800/50 rounded-full text-xs font-semibold text-blue-700 dark:text-blue-300 mb-6 animate-fade-in-up">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-              {hero.eyebrow} · {companyInfo.countriesServed}+ Countries
-            </div>
-
-            <h1 id="hero-heading" className="display-xl lg:display-2xl font-bold text-neutral-900 dark:text-white leading-[1.05] mb-5">
+            <motion.h1
+              id="hero-heading"
+              variants={entrance}
+              transition={{ duration: 0.75, ease: easeOut }}
+              className="max-w-2xl break-words font-display text-[clamp(2.65rem,5.2vw,5.25rem)] font-bold leading-[0.96] tracking-[-0.055em] text-neutral-950 dark:text-white"
+            >
               {hero.titlePrefix}{" "}
-              <span className="gradient-text">{hero.titleHighlight}</span>
-              <br />
-              {hero.titleSuffix}
-            </h1>
+              <span className="pharma-gradient-text">{hero.titleHighlight}</span>
+              <span className="mt-2 block">{hero.titleSuffix}</span>
+            </motion.h1>
 
-            <p className="text-lg lg:text-xl text-neutral-500 dark:text-neutral-400 leading-relaxed mb-8 max-w-lg">
+            <motion.p
+              variants={entrance}
+              transition={{ duration: 0.7, ease: easeOut }}
+              className="mt-6 max-w-xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 sm:text-lg lg:text-xl"
+            >
               {hero.description}
-            </p>
+            </motion.p>
 
-            <div className="flex flex-col sm:flex-row gap-3.5 mb-10">
-              <Link
-                href={hero.primaryCta.href}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-2xl transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm"
-              >
+            <motion.div
+              variants={entrance}
+              transition={{ duration: 0.7, ease: easeOut }}
+              className="mt-8 flex flex-col gap-3 sm:flex-row"
+            >
+              <Link href={hero.primaryCta.href} className="pharma-button group">
                 {hero.primaryCta.label}
-                <ArrowRight className="w-4.5 h-4.5" />
+                <ArrowRight className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
-              <Link
-                href={hero.secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white dark:bg-neutral-800 text-neutral-700 dark:text-neutral-200 font-semibold rounded-2xl border border-neutral-200 dark:border-neutral-700 hover:border-neutral-300 dark:hover:border-neutral-600 transition-all hover:-translate-y-0.5 text-sm"
-              >
+              <Link href={hero.secondaryCta.href} className="pharma-button-secondary">
                 {hero.secondaryCta.label}
               </Link>
-            </div>
+            </motion.div>
 
-            <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            <motion.div
+              variants={entrance}
+              transition={{ duration: 0.7, ease: easeOut }}
+              className="mt-9 grid max-w-xl gap-3 border-t border-blue-100/80 pt-6 dark:border-blue-900/40 sm:grid-cols-3"
+            >
               {hero.trustBadges.map((badge, index) => {
                 const Icon = trustIcons[index] ?? Shield;
                 return (
-                  <div key={badge} className="flex items-center gap-1.5">
-                    <Icon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
-                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">{badge}</span>
+                  <div key={badge} className="flex items-center gap-2">
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                      <Icon className="h-4 w-4" />
+                    </span>
+                    <span className="text-xs font-semibold leading-tight text-neutral-600 dark:text-neutral-300">{badge}</span>
                   </div>
                 );
               })}
-            </div>
+            </motion.div>
+          </motion.div>
 
-            <div className="flex items-center gap-8 mt-8 pt-6 border-t border-neutral-100 dark:border-neutral-800">
-              <div>
-                <span className="display-sm font-bold text-neutral-900 dark:text-white">{companyInfo.experienceYears}+</span>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Years Experience</p>
-              </div>
-              <div>
-                <span className="display-sm font-bold text-neutral-900 dark:text-white">{companyInfo.productsCount}+</span>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Products</p>
-              </div>
-              <div>
-                <span className="display-sm font-bold text-neutral-900 dark:text-white">{companyInfo.countriesServed}+</span>
-                <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">Countries</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden lg:block relative h-[500px] xl:h-[600px]">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-[400px] h-[400px] xl:w-[500px] xl:h-[500px]">
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-100/50 to-teal-100/30 dark:from-blue-900/20 dark:to-teal-900/10 animate-pulse-glow" />
-
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 xl:w-32 xl:h-32 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-2xl shadow-blue-500/30 flex items-center justify-center">
-                  <svg className="w-12 h-12 xl:w-16 xl:h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-
-                <FloatingPill className="!absolute top-[5%] left-[15%]" delay="0s" duration="6s" />
-                <FloatingCapsule className="!absolute top-[18%] right-[10%]" delay="1s" duration="7s" />
-                <FloatingPill className="!absolute bottom-[20%] left-[8%]" delay="2s" duration="8s" />
-                <FloatingCapsule className="!absolute bottom-[8%] right-[15%]" delay="0.5s" duration="9s" />
-                <FloatingMolecule className="!absolute top-[10%] right-[25%]" delay="0s" />
-                <FloatingMolecule className="!absolute bottom-[25%] right-[5%]" delay="3s" />
-                <FloatingMolecule className="!absolute top-[35%] left-[5%]" delay="1.5s" />
-
-                <FloatingParticle className="!absolute top-[40%] left-[20%]" delay="0s" />
-                <FloatingParticle className="!absolute top-[60%] right-[20%]" delay="1s" />
-                <FloatingParticle className="!absolute bottom-[35%] left-[25%]" delay="2s" />
-                <FloatingParticle className="!absolute top-[25%] left-[35%]" delay="0.5s" />
-              </div>
-            </div>
-          </div>
+          <PharmaVisual reducedMotion={reducedMotion} />
         </div>
       </div>
 
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="w-5 h-5 text-neutral-300 dark:text-neutral-600" />
-      </div>
+      <motion.a
+        href="#home-stats"
+        className="absolute bottom-5 left-1/2 hidden -translate-x-1/2 items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-neutral-400 lg:flex"
+        animate={reducedMotion ? undefined : { y: [0, 5, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        aria-label="Scroll to company statistics"
+      >
+        Discover
+        <ChevronDown className="h-4 w-4" />
+      </motion.a>
     </section>
   );
 }

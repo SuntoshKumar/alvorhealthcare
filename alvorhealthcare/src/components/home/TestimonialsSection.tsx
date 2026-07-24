@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { homeContent } from "@/data";
 
@@ -8,9 +9,21 @@ export function TestimonialsSection() {
   const content = homeContent.testimonials;
   const testimonials = content.items;
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const prefersReducedMotion = useReducedMotion();
 
-  const prev = () => setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
-  const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+  const prev = () => {
+    setDirection(-1);
+    setCurrent((c) => (c === 0 ? testimonials.length - 1 : c - 1));
+  };
+  const next = () => {
+    setDirection(1);
+    setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
+  };
+  const select = (index: number) => {
+    setDirection(index > current ? 1 : -1);
+    setCurrent(index);
+  };
 
   const t = testimonials[current];
 
@@ -24,29 +37,41 @@ export function TestimonialsSection() {
           </h2>
         </div>
 
-        <div className="relative bg-white dark:bg-neutral-800/30 border border-neutral-100 dark:border-neutral-700/50 rounded-3xl p-8 lg:p-12 text-center">
-          <div className="flex justify-center gap-1 mb-6">
-            {Array.from({ length: t.rating }).map((_, i) => (
-              <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
-            ))}
-          </div>
-          <blockquote className="text-lg lg:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8 font-medium">
-            &ldquo;{t.content}&rdquo;
-          </blockquote>
-          <div className="flex items-center justify-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-800/50 dark:to-blue-700/50 flex items-center justify-center">
-              <span className="font-bold text-blue-600 dark:text-blue-400 text-lg">{t.name.charAt(0)}</span>
-            </div>
-            <div className="text-left">
-              <p className="font-semibold text-neutral-900 dark:text-white">{t.name}</p>
-              <p className="text-sm text-neutral-500 dark:text-neutral-400">{t.role}, {t.company}</p>
-            </div>
-          </div>
+        <div className="relative overflow-hidden rounded-3xl border border-neutral-100 bg-white p-8 text-center dark:border-neutral-700/50 dark:bg-neutral-800/30 lg:p-12">
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-600 via-teal-400 to-blue-600" aria-hidden="true" />
+          <AnimatePresence initial={false} mode="wait" custom={direction}>
+            <motion.div
+              key={current}
+              custom={direction}
+              initial={{ opacity: 0, x: prefersReducedMotion ? 0 : direction * 28, filter: "blur(4px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, x: prefersReducedMotion ? 0 : direction * -20, filter: "blur(3px)" }}
+              transition={{ duration: prefersReducedMotion ? 0.01 : 0.36, ease: [0.22, 1, 0.36, 1] }}
+            >
+              <div className="flex justify-center gap-1 mb-6">
+                {Array.from({ length: t.rating }).map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-lg lg:text-xl text-neutral-700 dark:text-neutral-300 leading-relaxed mb-8 font-medium">
+                &ldquo;{t.content}&rdquo;
+              </blockquote>
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-800/50 dark:to-blue-700/50 flex items-center justify-center">
+                  <span className="font-bold text-blue-600 dark:text-blue-400 text-lg">{t.name.charAt(0)}</span>
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold text-neutral-900 dark:text-white">{t.name}</p>
+                  <p className="text-sm text-neutral-500 dark:text-neutral-400">{t.role}, {t.company}</p>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
 
           <div className="flex items-center justify-center gap-3 mt-8">
             <button
               onClick={prev}
-              className="w-9 h-9 rounded-xl border border-neutral-200 dark:border-neutral-600 flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
+              className="w-9 h-9 rounded-xl border border-neutral-200 dark:border-neutral-600 flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors focus-ring"
               aria-label="Previous testimonial"
             >
               <ChevronLeft className="w-4 h-4 text-neutral-500" />
@@ -55,17 +80,18 @@ export function TestimonialsSection() {
               {testimonials.map((_, i) => (
                 <button
                   key={i}
-                  onClick={() => setCurrent(i)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    i === current ? "bg-blue-600 w-6" : "bg-neutral-300 dark:bg-neutral-600"
+                  onClick={() => select(i)}
+                  className={`h-2 rounded-full transition-all focus-ring ${
+                    i === current ? "bg-blue-600 w-6" : "bg-neutral-300 dark:bg-neutral-600 w-2"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
+                  aria-current={i === current ? "true" : undefined}
                 />
               ))}
             </div>
             <button
               onClick={next}
-              className="w-9 h-9 rounded-xl border border-neutral-200 dark:border-neutral-600 flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors"
+              className="w-9 h-9 rounded-xl border border-neutral-200 dark:border-neutral-600 flex items-center justify-center hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors focus-ring"
               aria-label="Next testimonial"
             >
               <ChevronRight className="w-4 h-4 text-neutral-500" />

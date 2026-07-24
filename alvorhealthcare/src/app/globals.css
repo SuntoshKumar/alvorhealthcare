@@ -305,6 +305,113 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-xl);
 }
 
+.pharma-hero {
+  background:
+    radial-gradient(circle at 72% 38%, rgba(191, 219, 254, 0.68), transparent 30%),
+    radial-gradient(circle at 18% 82%, rgba(153, 246, 228, 0.32), transparent 26%),
+    linear-gradient(145deg, #f8fbff 0%, #ffffff 48%, #f1f8ff 100%);
+}
+
+[data-theme="dark"] .pharma-hero {
+  background:
+    radial-gradient(circle at 72% 38%, rgba(30, 64, 175, 0.26), transparent 31%),
+    radial-gradient(circle at 18% 82%, rgba(13, 148, 136, 0.14), transparent 28%),
+    linear-gradient(145deg, #08101f 0%, #0f172a 50%, #07111f 100%);
+}
+
+.pharma-grid {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.055) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.pharma-gradient-text {
+  background: linear-gradient(105deg, #2563eb 5%, #0d9488 92%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.pharma-button,
+.pharma-button-secondary {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border-radius: 1rem;
+  padding-inline: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition:
+    transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 300ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 300ms ease,
+    background-color 300ms ease;
+}
+
+.pharma-button {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8 56%, #0f766e 140%);
+  color: white;
+  box-shadow: 0 16px 35px -16px rgba(37, 99, 235, 0.75);
+}
+
+.pharma-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 42px -18px rgba(37, 99, 235, 0.85);
+}
+
+.pharma-button-secondary {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--text-primary);
+  backdrop-filter: blur(16px);
+}
+
+.pharma-button-secondary:hover {
+  transform: translateY(-3px);
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 16px 30px -22px rgba(15, 23, 42, 0.55);
+}
+
+[data-theme="dark"] .pharma-button-secondary {
+  background: rgba(30, 41, 59, 0.72);
+}
+
+.pharma-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 300ms ease;
+}
+
+.pharma-card::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  content: "";
+  background: linear-gradient(to bottom, #2563eb, #14b8a6);
+  opacity: 0;
+  transform: scaleY(0.4);
+  transition: opacity 300ms ease, transform 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pharma-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.28);
+  box-shadow: 0 24px 55px -32px rgba(30, 64, 175, 0.55);
+}
+
+.pharma-card:hover::before {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   33% { transform: translateY(-8px) rotate(1deg); }
