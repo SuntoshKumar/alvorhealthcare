@@ -1,71 +1,68 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Award, Package, Globe, Shield, Factory, Users, FlaskConical } from "lucide-react";
-import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/animations/Animations";
+import { useEffect, useRef, useState } from "react";
+import { companyInfo } from "@/data";
 
-const statistics = [
-  { label: "Years of Excellence", value: 26, suffix: "+", icon: Award, delay: 0 },
-  { label: "Products Worldwide", value: 52, suffix: "+", icon: Package, delay: 0.1 },
-  { label: "Countries Served", value: 45, suffix: "+", icon: Globe, delay: 0.2 },
-  { label: "Certifications", value: 6, suffix: "", icon: Shield, delay: 0.3 },
-  { label: "Mfg. Facilities", value: 3, suffix: "", icon: Factory, delay: 0.4 },
-  { label: "R&D Scientists", value: 120, suffix: "+", icon: FlaskConical, delay: 0.5 },
+const stats = [
+  { value: companyInfo.experienceYears, suffix: "+", label: "Years of Excellence", desc: `Serving global healthcare since ${companyInfo.foundedYear}` },
+  { value: companyInfo.productsCount, suffix: "+", label: "Pharmaceutical Products", desc: "Across therapeutic categories" },
+  { value: companyInfo.countriesServed, suffix: "+", label: "Countries Served", desc: "Global distribution network" },
+  { value: 500, suffix: "+", label: "Healthcare Partners", desc: "Hospitals & pharmacies worldwide" },
 ];
+
+function AnimatedCounter({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
+  const counted = useRef(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || counted.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !counted.current) {
+          counted.current = true;
+          const startTime = performance.now();
+          const step = (now: number) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            setCount(Math.floor(eased * end));
+            if (progress < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.3 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return (
+    <div ref={ref}>
+      <span className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
+        {count}{suffix}
+      </span>
+    </div>
+  );
+}
 
 export function StatisticsSection() {
   return (
-    <section className="section bg-white" aria-labelledby="stats-heading">
-      <div className="container">
-        <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="stats-heading" className="display-md lg:display-lg font-bold text-neutral-900">
-              Our Global Impact
-            </h2>
-            <p className="body-lg text-neutral-600 mt-4">
-              Numbers that reflect our commitment to healthcare excellence worldwide
-            </p>
-          </div>
-        </ScrollReveal>
-
-        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6 lg:gap-8">
-          {statistics.map((stat, index) => (
-            <StaggerItem key={stat.label} delay={stat.delay || index * 0.1}>
-              <ScrollReveal>
-                <motion.div
-                  whileHover={{ scale: 1.02, y: -4 }}
-                  className="text-center p-6 lg:p-8 bg-neutral-50 rounded-2xl border border-neutral-100 hover:border-primary-200 hover:bg-primary-50 transition-all duration-300"
-                >
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ type: "spring", stiffness: 200, damping: 15, delay: stat.delay || index * 0.1 }}
-                    className="w-14 h-14 mx-auto mb-4 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600"
-                  >
-                    <stat.icon className="w-7 h-7" aria-hidden="true" />
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: (stat.delay || index * 0.1) + 0.2, duration: 0.5 }}
-                    className="text-3xl lg:text-4xl font-bold text-neutral-900"
-                  >
-                    {stat.value}
-                    <span className="text-lg font-normal">{stat.suffix}</span>
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: (stat.delay || index * 0.1) + 0.3, duration: 0.5 }}
-                    className="text-sm text-neutral-600 mt-1 font-medium"
-                  >
-                    {stat.label}
-                  </motion.div>
-                </motion.div>
-              </ScrollReveal>
-            </StaggerItem>
+    <section className="py-12 lg:py-16 bg-primary-600 dark:bg-primary-800 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-700/50 to-transparent" aria-hidden="true" />
+      <div className="container relative">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          {stats.map((stat) => (
+            <div key={stat.label} className="text-center">
+              <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+              <p className="text-sm font-semibold text-blue-100 mt-1.5">{stat.label}</p>
+              <p className="text-xs text-blue-200/70 mt-0.5">{stat.desc}</p>
+            </div>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );

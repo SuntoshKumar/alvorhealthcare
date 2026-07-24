@@ -1,0 +1,321 @@
+backend:
+  name: github
+  repo: SuntoshKumar/alvorhealthcare
+  branch: main
+
+local_backend: true
+publish_mode: editorial_workflow
+media_folder: alvorhealthcare/public/images/uploads
+public_folder: /images/uploads
+
+site_url: https://alvorhealthcare.com
+display_url: https://alvorhealthcare.com
+logo_url: /images/og-image.svg
+
+collections:
+  - name: settings
+    label: Site Settings
+    files:
+      - name: company
+        label: Company Information
+        file: alvorhealthcare/src/data/company.json
+        format: json
+        fields:
+          - { label: Company Name, name: name, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Mission, name: mission, widget: text }
+          - { label: Vision, name: vision, widget: text }
+          - { label: Founded Year, name: foundedYear, widget: number, value_type: int }
+          - { label: Countries Served, name: countriesServed, widget: number, value_type: int }
+          - label: Certifications
+            name: certifications
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Logo, name: logo, widget: image }
+              - { label: Description, name: description, widget: text }
+              - { label: Year Obtained, name: yearObtained, widget: number, value_type: int }
+              - { label: Valid Until, name: validUntil, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, required: false }
+          - { label: Manufacturing Capabilities, name: manufacturingCapabilities, widget: list, field: { label: Capability, name: item, widget: string } }
+          - { label: Quality Standards, name: qualityStandards, widget: list, field: { label: Standard, name: item, widget: string } }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Address, name: address, widget: string }
+              - { label: City, name: city, widget: string }
+              - { label: State, name: state, widget: string }
+              - { label: Country, name: country, widget: string }
+              - { label: Postal Code, name: postalCode, widget: string }
+              - { label: Phone, name: phone, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Fax, name: fax, widget: string, required: false }
+              - { label: WhatsApp, name: whatsapp, widget: string, required: false }
+              - { label: Working Hours, name: workingHours, widget: string }
+              - { label: Map Embed URL, name: mapEmbedUrl, widget: string }
+          - label: Social Links
+            name: socialLinks
+            widget: list
+            summary: "{{fields.platform}}"
+            fields:
+              - { label: Platform, name: platform, widget: string }
+              - { label: URL, name: url, widget: string }
+              - { label: Icon Name, name: icon, widget: string }
+
+      - name: site
+        label: Navigation and Footer
+        file: alvorhealthcare/src/data/site.json
+        format: json
+        fields:
+          - label: Navigation
+            name: navigation
+            widget: list
+            summary: "{{fields.label}}"
+            fields: &link_fields
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: href, widget: string }
+          - label: Header Button
+            name: headerCta
+            widget: object
+            fields: *link_fields
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Description, name: description, widget: text }
+              - label: Quick Links
+                name: quickLinks
+                widget: list
+                summary: "{{fields.label}}"
+                fields: *link_fields
+              - label: Legal Links
+                name: legalLinks
+                widget: list
+                summary: "{{fields.label}}"
+                fields: *link_fields
+              - { label: Newsletter Title, name: newsletterTitle, widget: string }
+              - { label: Newsletter Placeholder, name: newsletterPlaceholder, widget: string }
+
+      - name: home
+        label: Homepage
+        file: alvorhealthcare/src/data/home.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title Prefix, name: titlePrefix, widget: string }
+              - { label: Highlighted Title, name: titleHighlight, widget: string }
+              - { label: Title Suffix, name: titleSuffix, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Primary Button, name: primaryCta, widget: object, fields: *link_fields }
+              - { label: Secondary Button, name: secondaryCta, widget: object, fields: *link_fields }
+              - { label: Trust Badges, name: trustBadges, widget: list, field: { label: Badge, name: item, widget: string } }
+          - label: Why Choose Us
+            name: whyChoose
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Items
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Icon, name: icon, widget: select, options: [shield, flask, award, truck, users, leaf] }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: Partners
+            name: partners
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Partner Names, name: names, widget: list, field: { label: Name, name: item, widget: string } }
+          - label: Testimonials
+            name: testimonials
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - label: Testimonials
+                name: items
+                widget: list
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: Role, name: role, widget: string }
+                  - { label: Company, name: company, widget: string }
+                  - { label: Quote, name: content, widget: text }
+                  - { label: Rating, name: rating, widget: number, value_type: int, min: 1, max: 5 }
+          - label: News Section
+            name: news
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Link Label, name: linkLabel, widget: string }
+          - label: Call to Action
+            name: cta
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Primary Button, name: primaryCta, widget: object, fields: *link_fields }
+              - { label: Secondary Button, name: secondaryCta, widget: object, fields: *link_fields }
+
+      - name: about
+        label: About Page
+        file: alvorhealthcare/src/data/about.json
+        format: json
+        fields:
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title Prefix, name: titlePrefix, widget: string }
+              - { label: Highlighted Title, name: titleHighlight, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Primary Button Label, name: primaryCtaLabel, widget: string }
+              - { label: Secondary Button Label, name: secondaryCtaLabel, widget: string }
+          - label: Mission and Values
+            name: mission
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Values Heading, name: valuesTitle, widget: string }
+              - { label: Values Summary, name: valuesSummary, widget: text }
+              - label: Core Values
+                name: coreValues
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Icon, name: icon, widget: select, options: [shield, award, lightbulb, heart, globe, leaf] }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+          - label: Company History
+            name: history
+            widget: object
+            fields:
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - label: Milestones
+                name: milestones
+                widget: list
+                summary: "{{fields.year}} · {{fields.title}}"
+                fields:
+                  - { label: Year, name: year, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: Icon, name: icon, widget: select, options: [building, flask, award, globe, target, zap, shield, leaf, factory] }
+                  - { label: Stat Label, name: statLabel, widget: string }
+                  - { label: Stat Value, name: statValue, widget: string }
+
+  - name: catalog
+    label: Catalog Content
+    files:
+      - name: products
+        label: Products
+        file: alvorhealthcare/src/data/products.json
+        format: json
+        fields:
+          - label: Products
+            name: products
+            widget: list
+            root: true
+            summary: "{{fields.name}}"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: URL Slug, name: slug, widget: string, pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase letters, numbers, and hyphens only'] }
+              - { label: Name, name: name, widget: string }
+              - { label: Category, name: category, widget: string }
+              - { label: Subcategory, name: subCategory, widget: string, required: false }
+              - { label: Short Description, name: shortDescription, widget: text }
+              - { label: Full Description, name: description, widget: text }
+              - { label: Uses, name: uses, widget: list, field: { label: Use, name: item, widget: string } }
+              - label: Key Information
+                name: keyInformation
+                widget: object
+                fields:
+                  - { label: Composition, name: composition, widget: string, required: false }
+                  - { label: Strength, name: strength, widget: string, required: false }
+                  - { label: Dosage Form, name: dosageForm, widget: string, required: false }
+                  - { label: Packaging, name: packaging, widget: string, required: false }
+                  - { label: Storage, name: storage, widget: string, required: false }
+                  - { label: Shelf Life, name: shelfLife, widget: string, required: false }
+                  - { label: Manufacturer, name: manufacturer, widget: string, required: false }
+                  - { label: License Number, name: licenseNumber, widget: string, required: false }
+              - { label: Images, name: images, widget: list, field: { label: Image, name: item, widget: image } }
+              - { label: Thumbnail, name: thumbnail, widget: image }
+              - { label: PDF Brochure, name: pdfBrochure, widget: file, required: false }
+              - { label: Tags, name: tags, widget: list, field: { label: Tag, name: item, widget: string } }
+              - { label: Featured, name: featured, widget: boolean, default: false }
+              - { label: New Product, name: isNew, widget: boolean, default: false }
+              - { label: Bestseller, name: isBestseller, widget: boolean, default: false }
+              - { label: Certifications, name: certifications, widget: list, field: { label: Certification, name: item, widget: string } }
+              - { label: Related Product IDs, name: relatedProducts, widget: list, field: { label: Product ID, name: item, widget: string } }
+              - { label: Created At, name: createdAt, widget: datetime }
+              - { label: Updated At, name: updatedAt, widget: datetime }
+
+      - name: categories
+        label: Product Categories
+        file: alvorhealthcare/src/data/categories.json
+        format: json
+        fields:
+          - label: Categories
+            name: categories
+            widget: list
+            root: true
+            summary: "{{fields.name}}"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: URL Slug, name: slug, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Icon Name, name: icon, widget: string }
+              - { label: Image, name: image, widget: image }
+              - { label: Featured, name: featured, widget: boolean }
+              - { label: Order, name: order, widget: number, value_type: int }
+              - label: Subcategories
+                name: subCategories
+                widget: list
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: ID, name: id, widget: string }
+                  - { label: URL Slug, name: slug, widget: string }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Description, name: description, widget: text }
+
+      - name: news
+        label: News Articles
+        file: alvorhealthcare/src/data/news.json
+        format: json
+        fields:
+          - label: Articles
+            name: articles
+            widget: list
+            root: true
+            summary: "{{fields.title}}"
+            fields:
+              - { label: ID, name: id, widget: string }
+              - { label: URL Slug, name: slug, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Excerpt, name: excerpt, widget: text }
+              - { label: Article Content, name: content, widget: text }
+              - { label: Author, name: author, widget: string }
+              - { label: Publish Date, name: publishDate, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false }
+              - { label: Category, name: category, widget: select, options: [announcement, product-launch, healthcare-news, research, event] }
+              - { label: Featured Image, name: featuredImage, widget: image }
+              - { label: Tags, name: tags, widget: list, field: { label: Tag, name: item, widget: string } }
+              - { label: Featured, name: featured, widget: boolean, default: false }
+              - { label: Read Time (minutes), name: readTime, widget: number, value_type: int, min: 1 }

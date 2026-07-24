@@ -12,9 +12,9 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 export const Card = forwardRef<HTMLDivElement, CardProps>(
   ({ children, variant = "default", padding = "md", hover = false, className, ...props }, ref) => {
     const variants = {
-      default: "bg-white border border-neutral-100 shadow-soft",
-      elevated: "bg-white border border-neutral-100 shadow-medium",
-      outlined: "bg-white border-2 border-neutral-200",
+      default: "bg-white dark:bg-neutral-800/30 border border-neutral-100 dark:border-neutral-700/50 shadow-soft",
+      elevated: "bg-white dark:bg-neutral-800/30 border border-neutral-100 dark:border-neutral-700/50 shadow-medium",
+      outlined: "bg-white dark:bg-neutral-800/30 border-2 border-neutral-200 dark:border-neutral-700/50",
       glass: "glass",
     };
 
@@ -32,7 +32,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
           "rounded-2xl transition-all duration-300",
           variants[variant],
           paddings[padding],
-          hover && "hover:shadow-large hover:-translate-y-1 hover:border-neutral-200",
+          hover && "hover:shadow-large hover:-translate-y-1 hover:border-neutral-200 dark:hover:border-neutral-600",
           className
         )}
         {...props}
@@ -45,9 +45,7 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
 
 Card.displayName = "Card";
 
-interface CardHeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const CardHeader = forwardRef<HTMLDivElement, CardHeaderProps>(
+export const CardHeader = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref) => (
     <div
       ref={ref}
@@ -69,7 +67,7 @@ export const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
   ({ children, as: Component = "h3", className, ...props }, ref) => (
     <Component
       ref={ref}
-      className={clsx("heading-lg font-semibold text-neutral-900", className)}
+      className={clsx("heading-lg font-semibold text-neutral-900 dark:text-white", className)}
       {...props}
     >
       {children}
@@ -79,13 +77,11 @@ export const CardTitle = forwardRef<HTMLHeadingElement, CardTitleProps>(
 
 CardTitle.displayName = "CardTitle";
 
-interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {}
-
-export const CardDescription = forwardRef<HTMLParagraphElement, CardDescriptionProps>(
+export const CardDescription = forwardRef<HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>>(
   ({ children, className, ...props }, ref) => (
     <p
       ref={ref}
-      className={clsx("body-sm text-neutral-500 mt-1", className)}
+      className={clsx("body-sm text-neutral-500 dark:text-neutral-400 mt-1", className)}
       {...props}
     >
       {children}
@@ -95,9 +91,7 @@ export const CardDescription = forwardRef<HTMLParagraphElement, CardDescriptionP
 
 CardDescription.displayName = "CardDescription";
 
-interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
+export const CardContent = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref) => (
     <div
       ref={ref}
@@ -111,13 +105,11 @@ export const CardContent = forwardRef<HTMLDivElement, CardContentProps>(
 
 CardContent.displayName = "CardContent";
 
-interface CardFooterProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export const CardFooter = forwardRef<HTMLDivElement, CardFooterProps>(
+export const CardFooter = forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ children, className, ...props }, ref) => (
     <div
       ref={ref}
-      className={clsx("mt-4 pt-4 border-t border-neutral-100 flex items-center gap-3", className)}
+      className={clsx("mt-4 pt-4 border-t border-neutral-100 dark:border-neutral-700/50 flex items-center gap-3", className)}
       {...props}
     >
       {children}

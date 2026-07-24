@@ -19,13 +19,13 @@ export const Badge = ({
   ...props
 }: BadgeProps) => {
   const variants = {
-    default: "bg-neutral-100 text-neutral-700",
-    primary: "bg-primary-100 text-primary-700",
-    secondary: "bg-secondary-100 text-secondary-700",
-    success: "bg-success-100 text-success-700",
-    warning: "bg-warning-100 text-warning-700",
-    danger: "bg-danger-100 text-danger-700",
-    outline: "bg-transparent border border-neutral-200 text-neutral-600 hover:border-neutral-300",
+    default: "bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300",
+    primary: "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+    secondary: "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300",
+    success: "bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300",
+    warning: "bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300",
+    danger: "bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-300",
+    outline: "bg-transparent border border-neutral-200 dark:border-neutral-600 text-neutral-600 dark:text-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-500",
   };
 
   const sizes = {
@@ -61,7 +61,7 @@ interface TagProps extends React.HTMLAttributes<HTMLSpanElement> {
 }
 
 export const Tag = ({ children, removable, onRemove, className, ...props }: TagProps) => (
-  <span className={clsx("inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium bg-neutral-100 text-neutral-700 rounded-full", className)} {...props}>
+  <span className={clsx("inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 rounded-full", className)} {...props}>
     {children}
     {removable && (
       <button

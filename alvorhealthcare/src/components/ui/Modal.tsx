@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, ReactNode } from "react";
+import { ReactNode } from "react";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
@@ -67,22 +67,22 @@ export const Modal = ({
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
           className={clsx(
-            "w-full bg-white rounded-2xl shadow-large overflow-hidden",
+            "w-full bg-white dark:bg-neutral-900 rounded-2xl shadow-large overflow-hidden",
             sizes[size],
             className
           )}
           onClick={(e) => e.stopPropagation()}
         >
           {(title || showCloseButton) && (
-            <div className="flex items-start justify-between p-6 border-b border-neutral-100">
+            <div className="flex items-start justify-between p-6 border-b border-neutral-100 dark:border-neutral-700/50">
               <div>
                 {title && (
-                  <h2 id="modal-title" className="heading-lg font-semibold text-neutral-900">
+                  <h2 id="modal-title" className="heading-lg font-semibold text-neutral-900 dark:text-white">
                     {title}
                   </h2>
                 )}
                 {description && (
-                  <p id="modal-description" className="mt-1 body-sm text-neutral-500">
+                  <p id="modal-description" className="mt-1 body-sm text-neutral-500 dark:text-neutral-400">
                     {description}
                   </p>
                 )}
@@ -90,7 +90,7 @@ export const Modal = ({
               {showCloseButton && (
                 <button
                   onClick={onClose}
-                  className="flex-shrink-0 p-1 rounded-lg text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 transition-colors focus-ring"
+                  className="flex-shrink-0 p-1 rounded-lg text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors focus-ring"
                   aria-label="Close modal"
                 >
                   <X className="w-5 h-5" />
@@ -158,7 +158,7 @@ export const Drawer = ({
           exit={{ x: position === "left" ? -300 : position === "right" ? 300 : 300, y: position === "bottom" ? 300 : 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
           className={clsx(
-            "fixed z-50 bg-white shadow-large flex flex-col",
+            "fixed z-50 bg-white dark:bg-neutral-900 shadow-large flex flex-col",
             positions[position],
             sizes[size],
             position === "bottom" ? "rounded-t-2xl" : "h-full rounded-none"
@@ -166,14 +166,14 @@ export const Drawer = ({
           onClick={(e) => e.stopPropagation()}
         >
           {(title || showCloseButton) && (
-            <div className="flex items-start justify-between p-6 border-b border-neutral-100">
+            <div className="flex items-start justify-between p-6 border-b border-neutral-100 dark:border-neutral-700/50">
               <div>
-                {title && <h2 className="heading-lg font-semibold text-neutral-900">{title}</h2>}
+                {title && <h2 className="heading-lg font-semibold text-neutral-900 dark:text-white">{title}</h2>}
               </div>
               {showCloseButton && (
                 <button
                   onClick={onClose}
-                  className="flex-shrink-0 p-1 rounded-lg text-neutral-400 hover:text-neutral-600 hover:bg-neutral-100 transition-colors"
+                  className="flex-shrink-0 p-1 rounded-lg text-neutral-400 dark:text-neutral-500 hover:text-neutral-600 dark:hover:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
                   aria-label="Close drawer"
                 >
                   <X className="w-5 h-5" />

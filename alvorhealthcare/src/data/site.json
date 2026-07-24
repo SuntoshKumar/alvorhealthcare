@@ -1,0 +1,33 @@
+{
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Products", "href": "/products" },
+    { "label": "Partners", "href": "/#partners" },
+    { "label": "Resources", "href": "/resources" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "headerCta": {
+    "label": "Get in Touch",
+    "href": "/contact"
+  },
+  "footer": {
+    "description": "A global pharmaceutical company dedicated to improving health through innovative, high-quality medicines. Trusted by healthcare professionals worldwide.",
+    "quickLinks": [
+      { "label": "About Us", "href": "/about" },
+      { "label": "Quality Assurance", "href": "/about#quality" },
+      { "label": "Certifications", "href": "/about#certifications" },
+      { "label": "Resources", "href": "/resources" },
+      { "label": "Contact", "href": "/contact" },
+      { "label": "Careers", "href": "/careers" }
+    ],
+    "legalLinks": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "Terms of Use", "href": "/terms" },
+      { "label": "Cookie Policy", "href": "/cookies" },
+      { "label": "Accessibility", "href": "/accessibility" }
+    ],
+    "newsletterTitle": "Newsletter",
+    "newsletterPlaceholder": "Your email"
+  }
+}

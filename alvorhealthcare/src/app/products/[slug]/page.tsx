@@ -53,11 +53,5 @@ export default async function ProductDetailPage({ params }: Props) {
 
   const relatedProducts = getRelatedProducts(product.id, 4);
 
-  return (
-    <>
-      <main id="main-content" className="min-h-screen">
-        <ProductDetail product={product} relatedProducts={relatedProducts} />
-      </main>
-    </>
-  );
+  return <ProductDetail product={product} relatedProducts={relatedProducts} />;
 }

@@ -1,0 +1,56 @@
+[
+  {
+    "id": "n1",
+    "slug": "alvor-launches-new-cardiovascular-drug",
+    "title": "Alvor Healthcare Launches Innovative Cardiovascular Medication",
+    "excerpt": "New extended-release formulation shows improved patient adherence and outcomes in clinical trials.",
+    "content": "Alvor Healthcare has announced the launch of its latest cardiovascular medication, a novel extended-release formulation designed to improve patient adherence and therapeutic outcomes. The new formulation utilizes advanced drug delivery technology that allows for once-daily dosing, significantly reducing the pill burden for patients managing chronic cardiovascular conditions.\n\nClinical trials involving over 3,000 patients across 12 countries demonstrated that the extended-release formulation maintained consistent therapeutic blood levels over a 24-hour period, with a 40% improvement in patient adherence compared to standard immediate-release formulations. The trials also showed a comparable safety profile with no unexpected adverse events.\n\nThe product will be initially available in tablet form across 15 countries, with plans to expand manufacturing capacity to serve additional markets in the coming quarters. Healthcare professionals can now prescribe this innovative formulation, giving patients a more convenient treatment option that may lead to better long-term outcomes.",
+    "author": "Corporate Communications",
+    "publishDate": "2025-01-15",
+    "category": "product-launch",
+    "featuredImage": "/images/news/cardio-launch.svg",
+    "tags": [
+      "cardiovascular",
+      "new-product",
+      "clinical-trials"
+    ],
+    "featured": true,
+    "readTime": 5
+  },
+  {
+    "id": "n2",
+    "slug": "who-gmp-recertification-2025",
+    "title": "Alvor Healthcare Achieves WHO GMP Recertification",
+    "excerpt": "Manufacturing facilities pass rigorous inspection with zero critical observations.",
+    "content": "Alvor Healthcare is proud to announce the successful recertification of all its manufacturing facilities under the World Health Organization's Good Manufacturing Practices (WHO GMP) standards. The recertification, awarded after a comprehensive audit process, confirms that Alvor's facilities continue to meet the highest international quality standards for pharmaceutical manufacturing.\n\nThe audit, conducted by an independent certification body, covered all aspects of the manufacturing process including facility design, equipment validation, quality control laboratories, documentation practices, and personnel training. Inspectors noted zero critical observations, reflecting the company's unwavering commitment to quality excellence.\n\nThis recertification reinforces Alvor Healthcare's position as a trusted global pharmaceutical manufacturer and ensures continued access to regulated markets worldwide. The certification is valid for three years, with surveillance audits conducted annually to maintain compliance.",
+    "author": "Quality Assurance Team",
+    "publishDate": "2025-01-10",
+    "category": "announcement",
+    "featuredImage": "/images/news/gmp-recert.svg",
+    "tags": [
+      "quality",
+      "certification",
+      "manufacturing"
+    ],
+    "featured": true,
+    "readTime": 3
+  },
+  {
+    "id": "n3",
+    "slug": "expansion-into-southeast-asia",
+    "title": "Alvor Healthcare Expands Operations into Southeast Asia",
+    "excerpt": "New distribution partnerships established in 6 countries to improve medication access.",
+    "content": "Alvor Healthcare has announced a major strategic expansion into Southeast Asian markets, establishing distribution partnerships in six countries including Vietnam, Indonesia, Thailand, Malaysia, the Philippines, and Singapore. This expansion marks a significant milestone in the company's global growth strategy.\n\nThe new distribution network will initially focus on Alvor's core therapeutic categories including cardiovascular, anti-infective, and gastroenterology products. Local regulatory filings have been completed or are in advanced stages, with product launches expected to begin in Q2 2025.\n\nEach partnership has been carefully selected based on the distributor's infrastructure, regulatory expertise, and market reach. Alvor will provide comprehensive training and support to ensure proper handling, storage, and distribution of pharmaceutical products in compliance with local regulations.\n\nThis expansion is expected to improve access to quality, affordable medications for millions of patients across the region while strengthening Alvor's presence in one of the world's fastest-growing pharmaceutical markets.",
+    "author": "Business Development",
+    "publishDate": "2025-01-05",
+    "category": "announcement",
+    "featuredImage": "/images/news/asia-expansion.svg",
+    "tags": [
+      "expansion",
+      "global-health",
+      "partnerships"
+    ],
+    "featured": false,
+    "readTime": 4
+  }
+]

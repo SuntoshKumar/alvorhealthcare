@@ -1,105 +1,86 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { Tablet, Droplets, Syringe, Pill, HeartPulse, ChevronRight, Package, Users, Globe, Award, Shield, Leaf, Search, Filter, Star } from "lucide-react";
-import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
-import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { categories } from "@/data";
+import { ArrowRight } from "lucide-react";
 
-const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  Tablets: Tablet,
-  Capsules: Pill,
-  Syrups: Droplets,
-  Injections: Syringe,
-  Supplements: Pill,
-  "Medical Supplies": HeartPulse,
-};
-
-const getCategoryIcon = (name: string) => {
-  const Icon = categoryIcons[name] || Package;
-  return <Icon className="w-16 h-16 text-primary-600 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />;
-};
+const categories = [
+  {
+    name: "Tablets",
+    slug: "tablets",
+    count: 14,
+    gradient: "from-blue-500 to-blue-600",
+    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+  },
+  {
+    name: "Capsules",
+    slug: "capsules",
+    count: 10,
+    gradient: "from-teal-500 to-teal-600",
+    icon: "M7 16.5c0-.828.672-1.5 1.5-1.5h7c.828 0 1.5.672 1.5 1.5v2.5c0 .828-.672 1.5-1.5 1.5h-7c-.828 0-1.5-.672-1.5-1.5v-2.5zM7 9.5c0-.828.672-1.5 1.5-1.5h7c.828 0 1.5.672 1.5 1.5v2.5c0 .828-.672 1.5-1.5 1.5h-7c-.828 0-1.5-.672-1.5-1.5v-2.5z",
+  },
+  {
+    name: "Syrups",
+    slug: "syrups",
+    count: 8,
+    gradient: "from-emerald-500 to-emerald-600",
+    icon: "M12 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a2 2 0 002 2h4a2 2 0 002-2v-2M10 12a2 2 0 100-4 2 2 0 000 4zM19 14v4a2 2 0 01-2 2H7a2 2 0 01-2-2v-4",
+  },
+  {
+    name: "Injections",
+    slug: "injections",
+    count: 10,
+    gradient: "from-purple-500 to-purple-600",
+    icon: "M15 12H9m12 0a9 9 0 10-18 0 9 9 0 0018 0zM9 12l2 2 4-4",
+  },
+  {
+    name: "Supplements",
+    slug: "supplements",
+    count: 8,
+    gradient: "from-amber-500 to-amber-600",
+    icon: "M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11",
+  },
+];
 
 export function CategoriesSection() {
   return (
-    <section className="section bg-neutral-50" aria-labelledby="categories-heading">
+    <section className="section" aria-labelledby="categories-heading">
       <div className="container">
-        <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="categories-heading" className="display-md lg:display-lg font-bold text-neutral-900">
-              Product Categories
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+          <div>
+            <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Categories</span>
+            <h2 id="categories-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2">
+              Explore Our Product Range
             </h2>
-            <p className="body-lg text-neutral-600 mt-4">
-              Explore our comprehensive portfolio of pharmaceutical products across multiple dosage forms
+            <p className="text-neutral-500 dark:text-neutral-400 mt-2 max-w-lg">
+              50+ pharmaceutical products organized across 6 therapeutic categories to meet diverse healthcare needs.
             </p>
           </div>
-        </ScrollReveal>
+          <Link
+            href="/products"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors flex-shrink-0"
+          >
+            View All Products <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category, index) => (
-            <StaggerItem key={category.id} delay={index * 0.1}>
-              <ScrollReveal>
-                <HoverScale scale={1.02}>
-                  <Link href={`/categories/${category.slug}`} className="block">
-                    <Card variant="elevated" className="h-full overflow-hidden group-hover:border-primary-200 transition-all duration-300">
-                      <div className="relative h-56 bg-gradient-to-br from-primary-100 to-secondary-100 overflow-hidden">
-                        <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          {getCategoryIcon(category.name)}
-                        </div>
-                        <Badge variant="primary" className="absolute top-4 right-4">
-                          {category.productCount} Products
-                        </Badge>
-                        {category.featured && (
-                          <Badge variant="secondary" className="absolute top-4 left-4">
-                            <Star className="w-3 h-3 mr-1 fill-current" />
-                            Featured
-                          </Badge>
-                        )}
-                      </div>
-                      <CardContent className="p-6">
-                        <CardTitle className="text-neutral-900 group-hover:text-primary-600 transition-colors">
-                          {category.name}
-                        </CardTitle>
-                        <CardDescription className="mt-2 line-clamp-2">{category.description}</CardDescription>
-                        
-                        {category.subCategories && category.subCategories.length > 0 && (
-                          <div className="mt-4 flex flex-wrap gap-2">
-                            {category.subCategories.slice(0, 4).map((sub) => (
-                              <Badge key={sub.id} variant="outline" size="sm" className="group-hover:bg-primary-50 group-hover:text-primary-600 group-hover:border-primary-200 transition-colors">
-                                {sub.name} ({sub.productCount})
-                              </Badge>
-                            ))}
-                            {category.subCategories.length > 4 && (
-                              <Badge variant="outline" size="sm">+{category.subCategories.length - 4} more</Badge>
-                            )}
-                          </div>
-                        )}
-
-                        <div className="mt-6 flex items-center justify-between">
-                          <span className="text-sm font-medium text-primary-600 group-hover:underline">
-                            View Products
-                            <ChevronRight className="w-4 h-4 inline ms-1" />
-                          </span>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </HoverScale>
-              </ScrollReveal>
-            </StaggerItem>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-5">
+          {categories.map((cat) => (
+            <Link
+              key={cat.slug}
+              href={`/categories/${cat.slug}`}
+              className="group relative p-6 lg:p-8 rounded-2xl bg-white dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-700/50 hover:border-neutral-200 dark:hover:border-neutral-600 transition-all hover:-translate-y-1 hover:shadow-lg text-center"
+            >
+              <div className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br ${cat.gradient} flex items-center justify-center shadow-lg`}>
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={cat.icon} />
+                </svg>
+              </div>
+              <h3 className="font-heading font-semibold text-neutral-900 dark:text-white text-sm lg:text-base">
+                {cat.name}
+              </h3>
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-1">{cat.count} products</p>
+            </Link>
           ))}
-        </StaggerContainer>
-
-        <div className="text-center mt-12">
-          <ScrollReveal>
-            <Button variant="outline" size="lg" rightIcon={<ChevronRight className="w-5 h-5" />}>
-              View All Categories
-            </Button>
-          </ScrollReveal>
         </div>
       </div>
     </section>

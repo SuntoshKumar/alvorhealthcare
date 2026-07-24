@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "About Us",
   description: `Learn about ${companyInfo.name}'s ${companyInfo.experienceYears}+ year journey of pharmaceutical excellence. Our mission, vision, quality commitment, manufacturing capabilities, and leadership team.`,
   openGraph: {
-    title: `About ${companyInfo.name} | 26+ Years of Pharmaceutical Excellence`,
+    title: `About ${companyInfo.name} | ${companyInfo.experienceYears}+ Years of Pharmaceutical Excellence`,
     description: `Leading global pharmaceutical company dedicated to improving health through innovation and quality.`,
     type: "website",
   },

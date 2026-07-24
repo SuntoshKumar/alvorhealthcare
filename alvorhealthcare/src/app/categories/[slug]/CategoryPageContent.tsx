@@ -3,13 +3,14 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ChevronRight, Package, Globe, Award, Shield, Leaf, Star, Search, Filter, ChevronDown, ChevronUp, X, Tag, Sparkles, RotateCcw, DownloadIcon } from "lucide-react";
+import { ChevronRight, Package, Globe, Award, Search, Tag, RotateCcw } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
-import { Card, CardContent, CardTitle, CardDescription, CardFooter } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
+import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { Pagination } from "@/components/ui/Navigation";
+import { ProductCard } from "@/components/products/ProductCard";
 import { sortProducts, paginateProducts } from "@/data";
 import { Category, Product } from "@/types";
 
@@ -60,8 +61,8 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
   const CategoryIcon = categoryIcons[category.name] || Package;
 
   return (
-    <div className="min-h-screen bg-white">
-      <section className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary-50 via-white to-secondary-50">
+    <div className="min-h-screen bg-white dark:bg-neutral-950">
+      <section className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 via-white to-teal-50 dark:from-blue-950/30 dark:via-neutral-950 dark:to-teal-950/30">
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] bg-cover bg-center opacity-5" aria-hidden="true" />
 
         <div className="container relative px-6 py-20 lg:py-28">
@@ -72,7 +73,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                 animate={{ opacity: 1, y: 0 }}
                 className="mb-8"
               >
-                <Link href="/categories" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium hover:bg-primary-200 transition-colors">
+                <Link href="/categories" className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium hover:bg-blue-100 dark:hover:bg-blue-800/50 transition-colors">
                   <Package className="w-4 h-4" aria-hidden="true" />
                   All Categories
                 </Link>
@@ -85,8 +86,8 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <CategoryIcon className="w-20 h-20 mx-auto mb-6 text-primary-600" aria-hidden="true" />
-                <h1 className="display-xl lg:display-2xl font-bold text-neutral-900 leading-tight mb-6">
+                <CategoryIcon className="w-20 h-20 mx-auto mb-6 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+                <h1 className="display-xl lg:display-2xl font-bold text-neutral-900 dark:text-white leading-tight mb-6">
                   {category.name}
                 </h1>
               </motion.div>
@@ -97,7 +98,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="body-lg lg:text-xl text-neutral-600 max-w-2xl mx-auto mb-10"
+                className="body-lg lg:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto mb-10"
               >
                 {category.description}
               </motion.p>
@@ -108,28 +109,28 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex flex-wrap items-center justify-center gap-8 text-sm text-neutral-600"
+                className="flex flex-wrap items-center justify-center gap-8 text-sm text-neutral-600 dark:text-neutral-400"
               >
                 <div className="flex items-center gap-2">
-                  <Package className="w-5 h-5 text-primary-600" />
-                  <span className="font-medium text-neutral-900">{category.productCount}</span>
+                  <Package className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <span className="font-medium text-neutral-900 dark:text-white">{category.productCount}</span>
                   <span>Products</span>
                 </div>
                 {category.subCategories && category.subCategories.length > 0 && (
                   <div className="flex items-center gap-2">
-                    <Tag className="w-5 h-5 text-primary-600" />
-                    <span className="font-medium text-neutral-900">{category.subCategories.length}</span>
+                    <Tag className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <span className="font-medium text-neutral-900 dark:text-white">{category.subCategories.length}</span>
                     <span>Subcategories</span>
                   </div>
                 )}
                 <div className="flex items-center gap-2">
-                  <Globe className="w-5 h-5 text-primary-600" />
-                  <span className="font-medium text-neutral-900">45+</span>
+                  <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <span className="font-medium text-neutral-900 dark:text-white">45+</span>
                   <span>Countries</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-primary-600" />
-                  <span className="font-medium text-neutral-900">WHO GMP</span>
+                  <Award className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <span className="font-medium text-neutral-900 dark:text-white">WHO GMP</span>
                   <span>Certified</span>
                 </div>
               </motion.div>
@@ -139,10 +140,10 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
       </section>
 
       {category.subCategories && category.subCategories.length > 0 && (
-        <section className="py-12 bg-neutral-50" aria-labelledby="subcategories-heading">
+        <section className="py-12 bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="subcategories-heading">
           <div className="container">
             <ScrollReveal>
-              <h2 id="subcategories-heading" className="display-sm font-bold text-neutral-900 text-center mb-10">
+              <h2 id="subcategories-heading" className="display-sm font-bold text-neutral-900 dark:text-white text-center mb-10">
                 Subcategories
               </h2>
             </ScrollReveal>
@@ -153,13 +154,13 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                   <ScrollReveal>
                     <HoverScale>
                       <Link href={`/products?category=${category.slug}&subcategory=${sub.slug}`} className="block">
-                        <Card variant="elevated" className="p-6 text-center h-full group-hover:border-primary-200 transition-colors">
-                          <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 group-hover:scale-110 transition-transform">
+                        <Card variant="elevated" className="p-6 text-center h-full group-hover:border-blue-200 dark:group-hover:border-blue-700 transition-colors">
+                          <div className="w-16 h-16 mx-auto mb-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform">
                             <Package className="w-8 h-8" />
                           </div>
-                          <CardTitle className="text-neutral-900">{sub.name}</CardTitle>
+                          <CardTitle className="text-neutral-900 dark:text-white">{sub.name}</CardTitle>
                           <CardDescription className="mt-2">{sub.description}</CardDescription>
-                          <div className="mt-4 text-sm font-medium text-primary-600">
+                          <div className="mt-4 text-sm font-medium text-blue-600 dark:text-blue-400">
                             {sub.productCount} Products
                             <ChevronRight className="w-4 h-4 inline ml-1" />
                           </div>
@@ -174,17 +175,17 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
         </section>
       )}
 
-      <section className="section bg-white" aria-labelledby="products-heading">
+      <section className="section bg-white dark:bg-neutral-950" aria-labelledby="products-heading">
         <div className="container">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12">
             <div>
               <ScrollReveal>
-                <h2 id="products-heading" className="display-md lg:display-lg font-bold text-neutral-900">
+                <h2 id="products-heading" className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
                   {category.name} Products
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <p className="body-lg text-neutral-600 mt-2">
+                <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-2">
                   {filteredProducts.length} products in this category
                 </p>
               </ScrollReveal>
@@ -193,13 +194,13 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
             <ScrollReveal delay={0.2}>
               <div className="flex flex-wrap gap-3 lg:gap-4">
                 <div className="relative max-w-xs flex-1">
-                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" aria-hidden="true" />
+                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400 dark:text-neutral-500" aria-hidden="true" />
                   <input
                     type="search"
                     placeholder="Search products..."
                     value={filters.search}
                     onChange={(e) => handleFilterChange("search", e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 rounded-xl bg-neutral-50 border-none focus:ring-2 focus:ring-primary-500 text-base"
+                    className="w-full pl-12 pr-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border-none focus:ring-2 focus:ring-blue-500 text-base dark:text-white dark:placeholder-neutral-500"
                     aria-label="Search products"
                   />
                 </div>
@@ -221,10 +222,10 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
           </div>
 
           <div className="flex items-center justify-between mb-6">
-            <p className="text-neutral-600">
-              Showing <span className="font-semibold text-neutral-900">{paginated.data.length > 0 ? (filters.page - 1) * filters.limit + 1 : 0}</span> to{" "}
-              <span className="font-semibold text-neutral-900">{Math.min(filters.page * filters.limit, filteredProducts.length)}</span> of{" "}
-              <span className="font-semibold text-neutral-900">{filteredProducts.length}</span> products
+            <p className="text-neutral-600 dark:text-neutral-400">
+              Showing <span className="font-semibold text-neutral-900 dark:text-white">{paginated.data.length > 0 ? (filters.page - 1) * filters.limit + 1 : 0}</span> to{" "}
+              <span className="font-semibold text-neutral-900 dark:text-white">{Math.min(filters.page * filters.limit, filteredProducts.length)}</span> of{" "}
+              <span className="font-semibold text-neutral-900 dark:text-white">{filteredProducts.length}</span> products
             </p>
           </div>
 
@@ -232,45 +233,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
             {paginated.data.map((product, index) => (
               <StaggerItem key={product.id} delay={index * 0.05}>
                 <ScrollReveal>
-                  <HoverScale>
-                    <Link href={`/products/${product.slug}`} className="block">
-                      <Card variant="elevated" className="h-full overflow-hidden group-hover:border-primary-200 transition-all duration-300">
-                        <div className="relative aspect-square bg-neutral-100 overflow-hidden">
-                          <CategoryIcon className="absolute inset-0 w-full h-full text-primary-200 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />
-                          <div className="absolute top-3 right-3 flex gap-1.5">
-                            {product.isNew && <Badge variant="primary" size="sm"><Sparkles className="w-3 h-3 mr-1" /> New</Badge>}
-                            {product.isBestseller && <Badge variant="secondary" size="sm"><Star className="w-3 h-3 mr-1 fill-current" /> Bestseller</Badge>}
-                          </div>
-                          <div className="absolute bottom-3 left-3 right-3 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 translate-y-2 group-hover:translate-y-0">
-                            <Button variant="primary" size="sm" className="flex-1">View Details</Button>
-                            <Button variant="ghost" size="sm" className="flex-1 bg-white/90"><DownloadIcon className="w-4 h-4" /></Button>
-                          </div>
-                        </div>
-                        <CardContent className="p-5">
-                          <div className="flex items-center gap-2 mb-2">
-                            <CategoryIcon className="w-4 h-4 text-primary-600" aria-hidden="true" />
-                            <span className="text-sm font-medium text-primary-600">{category.name}</span>
-                          </div>
-                          <CardTitle className="text-neutral-900 group-hover:text-primary-600 transition-colors line-clamp-1">{product.name}</CardTitle>
-                          <CardDescription className="mt-2 line-clamp-2">{product.shortDescription}</CardDescription>
-                          <div className="mt-4 flex flex-wrap gap-1.5">
-                            {product.tags.slice(0, 3).map((tag) => (
-                              <Badge key={tag} variant="outline" size="sm">{tag}</Badge>
-                            ))}
-                            {product.tags.length > 3 && (
-                              <Badge variant="outline" size="sm">+{product.tags.length - 3} more</Badge>
-                            )}
-                          </div>
-                        </CardContent>
-                        <CardFooter className="px-5 pb-5">
-                          <span className="flex items-center justify-between w-full text-sm font-medium text-primary-600 transition-colors">
-                            View Details
-                            <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                          </span>
-                        </CardFooter>
-                      </Card>
-                    </Link>
-                  </HoverScale>
+                  <ProductCard product={product} />
                 </ScrollReveal>
               </StaggerItem>
             ))}
@@ -291,9 +254,9 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
           {filteredProducts.length === 0 && (
             <ScrollReveal>
               <div className="text-center py-16">
-                <Search className="w-16 h-16 mx-auto mb-4 text-neutral-300" />
-                <h3 className="heading-lg font-bold text-neutral-900 mb-2">No products found</h3>
-                <p className="text-neutral-600 mb-4">Try adjusting your search or filters</p>
+                <Search className="w-16 h-16 mx-auto mb-4 text-neutral-300 dark:text-neutral-600" />
+                <h3 className="heading-lg font-bold text-neutral-900 dark:text-white mb-2">No products found</h3>
+                <p className="text-neutral-600 dark:text-neutral-400 mb-4">Try adjusting your search or filters</p>
                 <Button variant="outline" onClick={() => setFilters({ search: "", sortBy: "name", page: 1, limit: 12 })}>
                   <RotateCcw className="w-4 h-4 mr-2" />
                   Clear Filters
@@ -304,7 +267,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
         </div>
       </section>
 
-      <section className="section bg-primary-600 text-white relative overflow-hidden" aria-labelledby="cta-heading">
+      <section className="section bg-blue-600 dark:bg-blue-800 text-white relative overflow-hidden" aria-labelledby="cta-heading">
         <div className="absolute inset-0 bg-[url('/images/cta-pattern.svg')] bg-cover bg-center opacity-10" aria-hidden="true" />
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -314,7 +277,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="body-lg text-primary-100 mb-8">
+              <p className="body-lg text-blue-100 mb-8">
                 Our pharmaceutical experts can help you select the best products for your market needs.
               </p>
             </ScrollReveal>

@@ -1,94 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Award, Shield, Globe, FlaskConical, HeartPulse, Leaf, Building2, Users, Truck, CheckCircle } from "lucide-react";
-import { ScrollReveal } from "@/components/animations/Animations";
-import { Card, CardContent } from "@/components/ui/Card";
-
-const partners = [
-  { id: "p1", name: "World Health Organization", category: "regulatory" },
-  { id: "p2", name: "CVS Health", category: "pharmacy" },
-  { id: "p3", name: "Walgreens Boots Alliance", category: "pharmacy" },
-  { id: "p4", name: "McKesson Corporation", category: "distributor" },
-  { id: "p5", name: "Cardinal Health", category: "distributor" },
-  { id: "p6", name: "Mayo Clinic", category: "hospital" },
-  { id: "p7", name: "Cleveland Clinic", category: "hospital" },
-  { id: "p8", name: "NIH", category: "research" },
-  { id: "p9", name: "FDA", category: "regulatory" },
-  { id: "p10", name: "EMA", category: "regulatory" },
-  { id: "p11", name: "AmerisourceBergen", category: "distributor" },
-  { id: "p12", name: "Kaiser Permanente", category: "hospital" },
-];
-
-const trustBadges = [
-  { icon: Award, label: "26+ Years", description: "Pharmaceutical Excellence" },
-  { icon: Shield, label: "6 Global", description: "Certifications" },
-  { icon: Globe, label: "45+ Countries", description: "Worldwide Presence" },
-  { icon: FlaskConical, label: "120+ R&D", description: "Scientists" },
-  { icon: HeartPulse, label: "52+ Products", description: "Therapeutic Areas" },
-  { icon: Leaf, label: "3 Facilities", description: "GMP Certified" },
-  { icon: Building2, label: "Zero Critical", description: "FDA Observations" },
-  { icon: Users, label: "500+ Healthcare", description: "Professionals Trained" },
-];
+import { homeContent } from "@/data";
 
 export function TrustedPartnersSection() {
-  return (
-    <section className="section bg-neutral-900 text-white" aria-labelledby="trust-heading">
-      <div className="container">
-        <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="trust-heading" className="display-md lg:display-lg font-bold text-white">
-              Trusted by Industry Leaders
-            </h2>
-            <p className="body-lg text-neutral-400 mt-4">
-              Partnering with world-renowned healthcare institutions and distributors
-            </p>
-          </div>
-        </ScrollReveal>
+  const content = homeContent.partners;
 
-        <div className="overflow-hidden mb-16">
-          <div className="flex animate-[scroll_30s_linear_infinite] gap-12 lg:gap-20 px-4">
-            {partners.map((partner, index) => (
-              <div key={partner.id} className="flex-shrink-0 w-40 lg:w-48 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0">
-                <a href={`https://${partner.name.toLowerCase().replace(/\s+/g, '')}.com`} target="_blank" rel="noopener noreferrer" className="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                  <div className="w-full h-12 lg:h-16 flex items-center justify-center">
-                    <div className="w-full h-full bg-neutral-800 rounded-lg flex items-center justify-center">
-                      <span className="text-neutral-400 text-sm font-medium text-center px-2">{partner.name}</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            ))}
-            {partners.map((partner, index) => (
-              <div key={`${partner.id}-dup`} className="flex-shrink-0 w-40 lg:w-48 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0">
-                <a href={`https://${partner.name.toLowerCase().replace(/\s+/g, '')}.com`} target="_blank" rel="noopener noreferrer" className="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                  <div className="w-full h-12 lg:h-16 flex items-center justify-center">
-                    <div className="w-full h-full bg-neutral-800 rounded-lg flex items-center justify-center">
-                      <span className="text-neutral-400 text-sm font-medium text-center px-2">{partner.name}</span>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            ))}
-          </div>
+  return (
+    <section className="section bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="partners-heading" id="partners">
+      <div className="container">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">{content.eyebrow}</span>
+          <h2 id="partners-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-3">
+            {content.title}
+          </h2>
+          <p className="text-neutral-500 dark:text-neutral-400">
+            {content.description}
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-          {trustBadges.map((badge, index) => (
-            <ScrollReveal key={badge.label} delay={index * 0.1}>
-              <Card variant="outlined" className="bg-neutral-800/50 border-neutral-800 p-6 text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: "spring", stiffness: 200, damping: 15, delay: index * 0.1 }}
-                  className="w-12 h-12 mx-auto mb-4 bg-primary-900/30 rounded-xl flex items-center justify-center text-primary-400"
-                >
-                  <badge.icon className="w-6 h-6" aria-hidden="true" />
-                </motion.div>
-                <h3 className="font-semibold text-white mb-1">{badge.label}</h3>
-                <p className="text-sm text-neutral-400">{badge.description}</p>
-              </Card>
-            </ScrollReveal>
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-6 items-center">
+          {content.names.map((partner) => (
+            <div
+              key={partner}
+              className="flex items-center justify-center p-4 rounded-xl bg-white dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-700/50 hover:border-neutral-200 dark:hover:border-neutral-600 transition-all"
+            >
+              <span className="text-xs font-semibold text-neutral-400 dark:text-neutral-500 uppercase tracking-wider">
+                {partner}
+              </span>
+            </div>
           ))}
         </div>
       </div>

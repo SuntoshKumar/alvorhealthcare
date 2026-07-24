@@ -1,9 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Factory, Shield, CheckCircle, Microscope, Database, RotateCcw, Layers, Zap, Leaf, Truck, Cpu, BarChart3, Search, FileCheck } from "lucide-react";
+import { Factory, Shield, CheckCircle, Microscope, Database, RotateCcw, Layers, Leaf, Cpu, BarChart3, Search, FileCheck } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
-import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/Card";
+import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { companyInfo } from "@/data";
 
@@ -27,14 +26,14 @@ const qualitySystems = [
 
 export function AboutManufacturing() {
   return (
-    <section className="section bg-white" aria-labelledby="manufacturing-heading">
+    <section className="section bg-white dark:bg-neutral-950" aria-labelledby="manufacturing-heading">
       <div className="container">
         <ScrollReveal>
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="manufacturing-heading" className="display-md lg:display-lg font-bold text-neutral-900">
+            <h2 id="manufacturing-heading" className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
               Manufacturing Excellence
             </h2>
-            <p className="body-lg text-neutral-600 mt-4">
+            <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
               World-class facilities with advanced technology and stringent quality controls
             </p>
           </div>
@@ -47,15 +46,15 @@ export function AboutManufacturing() {
                 <HoverScale>
                   <Card variant="outlined" className="h-full p-6 lg:p-8">
                     <div className="flex gap-4">
-                      <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 flex-shrink-0">
+                      <div className="w-14 h-14 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
                         <capability.icon className="w-7 h-7" aria-hidden="true" />
                       </div>
                       <div>
-                        <CardTitle className="text-neutral-900">{capability.title}</CardTitle>
+                        <CardTitle className="text-neutral-900 dark:text-white">{capability.title}</CardTitle>
                         <CardDescription className="mt-2">{capability.description}</CardDescription>
                         <div className="mt-4 flex flex-wrap gap-2">
                           {capability.features.map((feature) => (
-                            <span key={feature} className="px-3 py-1 bg-neutral-50 text-neutral-700 rounded-full text-xs font-medium border border-neutral-200">
+                            <span key={feature} className="px-3 py-1 bg-neutral-50 dark:bg-neutral-800/50 text-neutral-700 dark:text-neutral-300 rounded-full text-xs font-medium border border-neutral-200 dark:border-neutral-700/50">
                               {feature}
                             </span>
                           ))}
@@ -78,11 +77,11 @@ export function AboutManufacturing() {
             ].map((item, index) => (
               <StaggerItem key={item.title} delay={index * 0.1}>
                 <Card variant="elevated" className="p-6 text-center">
-                  <div className="w-14 h-14 mx-auto mb-4 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600">
+                  <div className="w-14 h-14 mx-auto mb-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400">
                     <item.icon className="w-7 h-7" aria-hidden="true" />
                   </div>
-                  <CardTitle className="text-neutral-900">{item.title}</CardTitle>
-                  <div className="text-2xl font-bold text-primary-600 my-2">{item.value}</div>
+                  <CardTitle className="text-neutral-900 dark:text-white">{item.title}</CardTitle>
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 my-2">{item.value}</div>
                   <CardDescription>{item.desc}</CardDescription>
                 </Card>
               </StaggerItem>
@@ -91,17 +90,17 @@ export function AboutManufacturing() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="bg-neutral-50 rounded-2xl p-8 lg:p-12">
+          <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-2xl p-8 lg:p-12">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="display-sm font-bold text-neutral-900 mb-4">Facility Certifications & Compliance</h3>
-                <p className="body-md text-neutral-600 mb-6">
+                <h3 className="display-sm font-bold text-neutral-900 dark:text-white mb-4">Facility Certifications & Compliance</h3>
+                <p className="body-md text-neutral-600 dark:text-neutral-300 mb-6">
                   Our three manufacturing facilities maintain the highest regulatory standards with continuous compliance monitoring.
                 </p>
                 <ul className="space-y-3 mb-6">
                   {companyInfo.manufacturingCapabilities.slice(0, 8).map((cap, index) => (
-                    <li key={index} className="flex items-center gap-3 text-neutral-700">
-                      <CheckCircle className="w-5 h-5 text-secondary-600 flex-shrink-0" />
+                    <li key={index} className="flex items-center gap-3 text-neutral-700 dark:text-neutral-300">
+                      <CheckCircle className="w-5 h-5 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
                       {cap}
                     </li>
                   ))}
@@ -115,10 +114,10 @@ export function AboutManufacturing() {
                   { label: "Automation", value: "Level 4", desc: "Industry 4.0" },
                   { label: "OEE", value: "92%+", desc: "Equipment Effectiveness" },
                 ].map((stat, index) => (
-                  <div key={stat.label} className="text-center p-4 bg-white rounded-xl border border-neutral-100">
-                    <div className="text-2xl lg:text-3xl font-bold text-primary-600">{stat.value}</div>
-                    <div className="text-sm text-neutral-600">{stat.label}</div>
-                    <div className="text-xs text-neutral-500">{stat.desc}</div>
+                  <div key={stat.label} className="text-center p-4 bg-white dark:bg-neutral-800/30 rounded-xl border border-neutral-100 dark:border-neutral-700/50">
+                    <div className="text-2xl lg:text-3xl font-bold text-blue-600 dark:text-blue-400">{stat.value}</div>
+                    <div className="text-sm text-neutral-600 dark:text-neutral-400">{stat.label}</div>
+                    <div className="text-xs text-neutral-500 dark:text-neutral-500">{stat.desc}</div>
                   </div>
                 ))}
               </div>

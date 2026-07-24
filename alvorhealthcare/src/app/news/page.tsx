@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useMemo } from "react";
 import Link from "next/link";
-import { ChevronRight, Calendar, Clock, Tag, ArrowRight, Share2, ExternalLink, Download, RotateCcw } from "lucide-react";
+import { Tag, ArrowRight, RotateCcw } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
@@ -62,17 +62,17 @@ export default function NewsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-b from-primary-50 via-white to-secondary-50 py-16 lg:py-24" aria-labelledby="news-heading">
+    <div className="min-h-screen bg-white dark:bg-neutral-950">
+      <section className="bg-gradient-to-b from-blue-50 via-white to-teal-50 dark:from-blue-950/30 dark:via-neutral-950 dark:to-teal-950/30 py-16 lg:py-24" aria-labelledby="news-heading">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
-              <h1 id="news-heading" className="display-lg lg:display-xl font-bold text-neutral-900">
+              <h1 id="news-heading" className="display-lg lg:display-xl font-bold text-neutral-900 dark:text-white">
                 Latest News & Updates
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="body-lg text-neutral-600 mt-4 max-w-2xl mx-auto">
+              <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4 max-w-2xl mx-auto">
                 Stay informed about our latest innovations, partnerships, and healthcare initiatives.
                 Our commitment to transparency keeps you updated on everything that matters.
               </p>
@@ -81,17 +81,17 @@ export default function NewsPage() {
         </div>
       </section>
 
-      <section className="section bg-white" aria-labelledby="articles-heading">
+      <section className="section bg-white dark:bg-neutral-950" aria-labelledby="articles-heading">
         <div className="container">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12">
             <div>
               <ScrollReveal>
-                <h2 id="articles-heading" className="display-md font-bold text-neutral-900">
+                <h2 id="articles-heading" className="display-md font-bold text-neutral-900 dark:text-white">
                   Articles
                 </h2>
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
-                <p className="body-lg text-neutral-600 mt-2">
+                <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-2">
                   {paginated.total} articles found
                 </p>
               </ScrollReveal>
@@ -105,10 +105,10 @@ export default function NewsPage() {
                     placeholder="Search articles..."
                     value={filters.search}
                     onChange={(e) => handleFilterChange("search", e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 rounded-xl bg-neutral-50 border-none focus:ring-2 focus:ring-primary-500 text-base"
+                    className="w-full pl-12 pr-4 py-3 rounded-xl bg-neutral-50 dark:bg-neutral-900/50 border-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 text-base"
                     aria-label="Search articles"
                   />
-                  <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400 dark:text-neutral-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
@@ -132,10 +132,10 @@ export default function NewsPage() {
           </div>
 
           <div className="flex items-center justify-between mb-6">
-            <p className="text-neutral-600">
-              Showing <span className="font-semibold text-neutral-900">{paginated.data.length > 0 ? (filters.page - 1) * filters.limit + 1 : 0}</span> to{" "}
-              <span className="font-semibold text-neutral-900">{Math.min(filters.page * filters.limit, filteredArticles.length)}</span> of{" "}
-              <span className="font-semibold text-neutral-900">{filteredArticles.length}</span> articles
+            <p className="text-neutral-600 dark:text-neutral-300">
+              Showing <span className="font-semibold text-neutral-900 dark:text-white">{paginated.data.length > 0 ? (filters.page - 1) * filters.limit + 1 : 0}</span> to{" "}
+              <span className="font-semibold text-neutral-900 dark:text-white">{Math.min(filters.page * filters.limit, filteredArticles.length)}</span> of{" "}
+              <span className="font-semibold text-neutral-900 dark:text-white">{filteredArticles.length}</span> articles
             </p>
           </div>
 
@@ -146,22 +146,22 @@ export default function NewsPage() {
                   <HoverScale scale={1.02}>
                     <article className="group">
                       <Card variant="elevated" className="h-full overflow-hidden">
-                        <div className="relative aspect-video overflow-hidden bg-neutral-100">
-                          <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-secondary-100" />
+                        <div className="relative aspect-video overflow-hidden bg-neutral-100 dark:bg-neutral-800">
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/30 dark:to-teal-900/30" />
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-center p-4">
-                              <Tag className="w-10 h-10 mx-auto mb-2 text-primary-600" aria-hidden="true" />
-                              <span className="text-neutral-500 text-sm">{categoryLabels[article.category]}</span>
+                              <Tag className="w-10 h-10 mx-auto mb-2 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+                              <span className="text-neutral-500 dark:text-neutral-400 text-sm">{categoryLabels[article.category]}</span>
                             </div>
                           </div>
                           <div className="absolute top-4 right-4">
-                            <Badge variant="primary" size="sm" className="group-hover:bg-primary-700">
+                            <Badge variant="primary" size="sm" className="group-hover:bg-blue-700 dark:group-hover:bg-blue-600">
                               {article.readTime} min read
                             </Badge>
                           </div>
                           {article.featured && (
                             <div className="absolute top-4 left-4">
-                              <Badge variant="secondary" size="sm" className="group-hover:bg-secondary-700">
+                              <Badge variant="secondary" size="sm" className="group-hover:bg-teal-700 dark:group-hover:bg-teal-600">
                                 Featured
                               </Badge>
                             </div>
@@ -170,11 +170,11 @@ export default function NewsPage() {
                         <CardContent className="p-6">
                           <CardHeader className="flex items-center gap-2 mb-4">
                             <Badge variant="outline" size="sm">{categoryLabels[article.category]}</Badge>
-                            <time dateTime={article.publishDate} className="text-sm text-neutral-500">
+                            <time dateTime={article.publishDate} className="text-sm text-neutral-500 dark:text-neutral-400">
                               {format(new Date(article.publishDate), "MMM d, yyyy")}
                             </time>
                           </CardHeader>
-                          <CardTitle className="text-neutral-900 group-hover:text-primary-600 transition-colors line-clamp-2">
+                          <CardTitle className="text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
                             {article.title}
                           </CardTitle>
                           <CardDescription className="mt-2 line-clamp-3">{article.excerpt}</CardDescription>
@@ -187,7 +187,7 @@ export default function NewsPage() {
                         <div className="px-6 pb-6">
                           <Link
                             href={`/news/${article.slug}`}
-                            className="inline-flex items-center gap-2 text-sm font-medium text-primary-600 hover:text-primary-700 transition-colors group"
+                            className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors group"
                           >
                             Read More
                             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -216,9 +216,9 @@ export default function NewsPage() {
           {filteredArticles.length === 0 && (
             <ScrollReveal>
               <div className="text-center py-16">
-                <Tag className="w-16 h-16 mx-auto mb-4 text-neutral-300" />
-                <h3 className="heading-lg font-bold text-neutral-900 mb-2">No articles found</h3>
-                <p className="text-neutral-600 mb-4">Try adjusting your search or filters</p>
+                <Tag className="w-16 h-16 mx-auto mb-4 text-neutral-300 dark:text-neutral-600" />
+                <h3 className="heading-lg font-bold text-neutral-900 dark:text-white mb-2">No articles found</h3>
+                <p className="text-neutral-600 dark:text-neutral-300 mb-4">Try adjusting your search or filters</p>
                 <Button variant="outline" onClick={() => setFilters({ category: "all", search: "", page: 1, limit: 9 })}>
                   <RotateCcw className="w-4 h-4 mr-2" />
                   Clear Filters
@@ -229,7 +229,7 @@ export default function NewsPage() {
         </div>
       </section>
 
-      <section className="section bg-primary-600 text-white relative overflow-hidden" aria-labelledby="cta-heading">
+      <section className="section bg-blue-600 dark:bg-blue-700 text-white relative overflow-hidden" aria-labelledby="cta-heading">
         <div className="absolute inset-0 bg-[url('/images/cta-pattern.svg')] bg-cover bg-center opacity-10" aria-hidden="true" />
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -239,7 +239,7 @@ export default function NewsPage() {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="body-lg text-primary-100 mb-8">
+              <p className="body-lg text-blue-100 dark:text-blue-200 mb-8">
                 Subscribe to our newsletter for the latest product launches, research updates, and industry insights delivered to your inbox.
               </p>
             </ScrollReveal>
@@ -248,7 +248,7 @@ export default function NewsPage() {
                 <input
                   type="email"
                   placeholder="Enter your email address"
-                  className="flex-1 px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-primary-200 focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  className="flex-1 px-6 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-blue-200 dark:placeholder:text-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-blue-200"
                   required
                 />
                 <Button size="lg" variant="secondary" rightIcon={<ArrowRight className="w-5 h-5" />}>
@@ -262,5 +262,3 @@ export default function NewsPage() {
     </div>
   );
 }
-
-import { useState, useMemo } from "react";

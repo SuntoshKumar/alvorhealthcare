@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, FlaskConical, Truck, Leaf, Users, Award, Globe, HeartPulse } from "lucide-react";
+import { Shield, FlaskConical, Truck, Leaf, Users, Award } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
-import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/Card";
+import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 
 const features = [
   {

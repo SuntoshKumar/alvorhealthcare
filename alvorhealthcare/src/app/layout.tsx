@@ -3,10 +3,6 @@ import { Inter, Plus_Jakarta_Sans, Space_Grotesk } from "next/font/google";
 import { Providers } from "./providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { BackToTop } from "@/components/ui/BackToTop";
-import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { PageLoader } from "@/components/ui/LoadingAnimation";
-import { OrganizationStructuredData } from "@/components/ui/StructuredData";
 import "./globals.css";
 
 const inter = Inter({
@@ -28,24 +24,16 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://alvorhealthcare.com"),
   title: {
     default: "Alvor Healthcare | Premium Pharmaceutical Products & Healthcare Solutions",
     template: "%s | Alvor Healthcare",
   },
   description:
-    "Alvor Healthcare is a leading global pharmaceutical company dedicated to improving health through innovative, high-quality medicines. Explore our 50+ products across tablets, capsules, syrups, injections, and supplements.",
+    "Alvor Healthcare is a leading global pharmaceutical company dedicated to improving health through innovative, high-quality medicines. Explore 50+ products across tablets, capsules, syrups, injections, and supplements.",
   keywords: [
-    "pharmaceutical",
-    "healthcare",
-    "medicines",
-    "tablets",
-    "capsules",
-    "injections",
-    "syrups",
-    "supplements",
-    "pharma company",
-    "drug manufacturer",
-    "WHO GMP certified",
+    "pharmaceutical", "healthcare", "medicines", "pharma company",
+    "drug manufacturer", "WHO GMP certified", "pharmaceutical distributor",
   ],
   authors: [{ name: "Alvor Healthcare" }],
   creator: "Alvor Healthcare",
@@ -53,13 +41,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
   },
   openGraph: {
     type: "website",
@@ -67,73 +49,75 @@ export const metadata: Metadata = {
     url: "https://alvorhealthcare.com",
     siteName: "Alvor Healthcare",
     title: "Alvor Healthcare | Premium Pharmaceutical Products",
-    description:
-      "Leading global pharmaceutical company with 50+ high-quality products. WHO GMP certified, trusted by healthcare professionals worldwide.",
-    images: [
-      {
-        url: "/images/og-image.svg",
-        width: 1200,
-        height: 630,
-        alt: "Alvor Healthcare - Premium Pharmaceutical Products",
-      },
-    ],
+    description: "Leading global pharmaceutical company with 50+ high-quality products. WHO GMP certified, trusted by healthcare professionals worldwide.",
+    images: [{ url: "/images/og-image.svg", width: 1200, height: 630, alt: "Alvor Healthcare" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Alvor Healthcare | Premium Pharmaceutical Products",
-    description:
-      "Leading global pharmaceutical company with 50+ high-quality products. WHO GMP certified.",
+    description: "Leading global pharmaceutical company with 50+ high-quality products. WHO GMP certified.",
     images: ["/images/og-image.svg"],
-    creator: "@alvorhealthcare",
-  },
-  verification: {
-    google: "google-site-verification-code",
   },
 };
 
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
   ],
   width: "device-width",
   initialScale: 1,
-  maximumScale: 5,
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       className={`${inter.variable} ${plusJakartaSans.variable} ${spaceGrotesk.variable} scroll-smooth`}
+      suppressHydrationWarning
     >
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "HealthcareOrganization",
+              name: "Alvor Healthcare",
+              alternateName: "Alvor Healthcare Ltd.",
+              url: "https://alvorhealthcare.com",
+              description: "Leading global pharmaceutical company dedicated to improving health through innovative, high-quality medicines.",
+              logo: "https://alvorhealthcare.com/images/logo.svg",
+              foundingDate: "1998",
+              numberOfEmployees: "200+",
+              areaServed: "Worldwide",
+              medicalSpecialty: "Pharmaceutical Manufacturing",
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+1-555-0123",
+                contactType: "customer service",
+                availableLanguage: ["English"],
+              },
+              sameAs: [
+                "https://linkedin.com/company/alvorhealthcare",
+                "https://facebook.com/alvorhealthcare",
+              ],
+            }),
+          }}
+        />
       </head>
-      <body className="min-h-screen flex flex-col bg-white text-neutral-900 antialiased">
-        <OrganizationStructuredData />
-        <PageLoader />
+      <body className="min-h-screen flex flex-col bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 antialiased">
         <Providers>
-          <a
-            href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 btn-primary"
-          >
+          <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 btn-primary focus-ring">
             Skip to main content
           </a>
           <Header />
-          <main id="main-content" className="flex-1 pt-14 lg:pt-16" tabIndex={-1}>
+          <main id="main-content" className="flex-1" tabIndex={-1}>
             {children}
           </main>
           <Footer />
-          <BackToTop />
-          <WhatsAppButton />
         </Providers>
       </body>
     </html>

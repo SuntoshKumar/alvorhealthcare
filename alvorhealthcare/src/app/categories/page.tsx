@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Tablet, Droplets, Syringe, ChevronRight, Package, Users, Globe, Award, Shield, Leaf, Search, Filter, Star, Sparkles, Cpu, Factory, HelpCircle, HeartPulse } from "lucide-react";
+import { Tablet, Droplets, Syringe, ChevronRight, Package, Users, Globe, Award, Shield, Leaf, Star, Cpu, Factory, HeartPulse } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
@@ -20,13 +20,13 @@ const categoryIcons: Record<string, React.ComponentType<{ className?: string }>>
 
 function getCategoryIcon(name: string) {
   const Icon = categoryIcons[name] || Package;
-  return <Icon className="w-20 h-20 text-primary-600 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />;
+  return <Icon className="w-20 h-20 text-blue-600 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />;
 }
 
 export default function CategoriesPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary-50 via-white to-secondary-50">
+    <div className="min-h-screen bg-white dark:bg-neutral-950">
+      <section className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 via-white to-teal-50 dark:from-blue-950/30 dark:via-neutral-950 dark:to-teal-950/30">
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] bg-cover bg-center opacity-5" aria-hidden="true" />
         
         <div className="container relative px-6 py-20 lg:py-28">
@@ -35,7 +35,7 @@ export default function CategoriesPage() {
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6"
               >
                 <Package className="w-4 h-4" aria-hidden="true" />
                 {categories.length} Product Categories
@@ -47,7 +47,7 @@ export default function CategoriesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="display-xl lg:display-2xl font-bold text-neutral-900 leading-tight mb-6"
+                className="display-xl lg:display-2xl font-bold text-neutral-900 dark:text-white leading-tight mb-6"
               >
                 Explore Our Pharmaceutical{" "}
                 <span className="gradient-text">Categories</span>
@@ -59,7 +59,7 @@ export default function CategoriesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="body-lg lg:text-xl text-neutral-600 max-w-2xl mx-auto mb-10"
+                className="body-lg lg:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto mb-10"
               >
                 Discover our comprehensive portfolio organized by dosage form. Each category represents our commitment to quality, innovation, and patient-centric healthcare solutions.
               </motion.p>
@@ -70,26 +70,26 @@ export default function CategoriesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="flex flex-wrap items-center justify-center gap-8 text-sm text-neutral-600"
+                className="flex flex-wrap items-center justify-center gap-8 text-sm text-neutral-600 dark:text-neutral-300"
               >
                 <div className="flex items-center gap-2">
-                  <Package className="w-5 h-5 text-primary-600" />
-                  <span className="font-medium text-neutral-900">{categories.reduce((sum, c) => sum + c.productCount, 0)}+</span>
+                  <Package className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <span className="font-medium text-neutral-900 dark:text-white">{categories.reduce((sum, c) => sum + c.productCount, 0)}+</span>
                   <span>Products</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Globe className="w-5 h-5 text-primary-600" />
-                  <span className="font-medium text-neutral-900">45+</span>
+                  <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <span className="font-medium text-neutral-900 dark:text-white">45+</span>
                   <span>Countries</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-primary-600" />
-                  <span className="font-medium text-neutral-900">WHO GMP</span>
+                  <Award className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <span className="font-medium text-neutral-900 dark:text-white">WHO GMP</span>
                   <span>Certified</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Shield className="w-5 h-5 text-primary-600" />
-                  <span className="font-medium text-neutral-900">ISO 9001</span>
+                  <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <span className="font-medium text-neutral-900 dark:text-white">ISO 9001</span>
                   <span>Compliant</span>
                 </div>
               </motion.div>
@@ -98,14 +98,14 @@ export default function CategoriesPage() {
         </div>
       </section>
 
-      <section className="section bg-white" aria-labelledby="categories-heading">
+      <section className="section bg-white dark:bg-neutral-950" aria-labelledby="categories-heading">
         <div className="container">
           <ScrollReveal>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 id="categories-heading" className="display-md lg:display-lg font-bold text-neutral-900">
+              <h2 id="categories-heading" className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
                 All Product Categories
               </h2>
-              <p className="body-lg text-neutral-600 mt-4">
+              <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
                 Each category is manufactured under strict WHO GMP guidelines with comprehensive quality control
               </p>
             </div>
@@ -117,8 +117,8 @@ export default function CategoriesPage() {
                 <ScrollReveal>
                   <HoverScale scale={1.02}>
                     <Link href={`/categories/${category.slug}`} className="block">
-                      <Card variant="elevated" className="h-full overflow-hidden group-hover:border-primary-200 transition-all duration-300">
-                        <div className="relative h-56 bg-gradient-to-br from-primary-100 to-secondary-100 overflow-hidden">
+                      <Card variant="elevated" className="h-full overflow-hidden border-neutral-100 dark:border-neutral-700/50 group-hover:border-blue-200 dark:group-hover:border-blue-700 transition-all duration-300">
+                        <div className="relative h-56 bg-gradient-to-br from-blue-50 dark:from-blue-900/30 to-teal-50 dark:to-teal-900/30 overflow-hidden">
                           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           <div className="absolute inset-0 flex items-center justify-center">
                             {getCategoryIcon(category.name)}
@@ -134,7 +134,7 @@ export default function CategoriesPage() {
                           )}
                         </div>
                         <CardContent className="p-6">
-                          <CardTitle className="text-neutral-900 group-hover:text-primary-600 transition-colors">
+                          <CardTitle className="text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                             {category.name}
                           </CardTitle>
                           <CardDescription className="mt-2 line-clamp-2">{category.description}</CardDescription>
@@ -142,7 +142,7 @@ export default function CategoriesPage() {
                           {category.subCategories && category.subCategories.length > 0 && (
                             <div className="mt-4 flex flex-wrap gap-2">
                               {category.subCategories.slice(0, 4).map((sub) => (
-                                <Badge key={sub.id} variant="outline" size="sm" className="group-hover:bg-primary-50 group-hover:text-primary-600 group-hover:border-primary-200 transition-colors">
+                                <Badge key={sub.id} variant="outline" size="sm" className="group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:border-blue-200 dark:group-hover:border-blue-700 transition-colors">
                                   {sub.name} ({sub.productCount})
                                 </Badge>
                               ))}
@@ -153,7 +153,7 @@ export default function CategoriesPage() {
                           )}
 
                           <div className="mt-6 flex items-center justify-between">
-                            <span className="text-sm font-medium text-primary-600 group-hover:underline">
+                            <span className="text-sm font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
                               View Products
                               <ChevronRight className="w-4 h-4 inline ms-1" />
                             </span>
@@ -177,14 +177,14 @@ export default function CategoriesPage() {
         </div>
       </section>
 
-      <section className="section bg-neutral-50" aria-labelledby="why-heading">
+      <section className="section bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="why-heading">
         <div className="container">
           <ScrollReveal>
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <h2 id="why-heading" className="display-md lg:display-lg font-bold text-neutral-900">
+              <h2 id="why-heading" className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
                 Why Choose Alvor Categories
               </h2>
-              <p className="body-lg text-neutral-600 mt-4">
+              <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
                 Every product category benefits from our unified quality and manufacturing standards
               </p>
             </div>
@@ -205,10 +205,10 @@ export default function CategoriesPage() {
                 <ScrollReveal>
                   <HoverScale>
                     <Card variant="outlined" className="p-6 text-center h-full">
-                      <div className="w-14 h-14 mx-auto mb-4 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600">
+                      <div className="w-14 h-14 mx-auto mb-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400">
                         <item.icon className="w-7 h-7" aria-hidden="true" />
                       </div>
-                      <CardTitle className="text-neutral-900">{item.title}</CardTitle>
+                      <CardTitle className="text-neutral-900 dark:text-white">{item.title}</CardTitle>
                       <CardDescription className="mt-2">{item.desc}</CardDescription>
                     </Card>
                   </HoverScale>
@@ -229,7 +229,7 @@ export default function CategoriesPage() {
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="body-lg text-primary-100 mb-8">
+              <p className="body-lg text-blue-200 dark:text-blue-700 mb-8">
                 Our pharmaceutical experts can help you find the right products for your market needs. Contact us for personalized recommendations.
               </p>
             </ScrollReveal>

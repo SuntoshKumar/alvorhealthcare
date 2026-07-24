@@ -2,9 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Award, Shield, Globe, FlaskConical, HeartPulse, Leaf, Building2, Users, Truck, CheckCircle } from "lucide-react";
+import { Award, Shield, Globe, FlaskConical, HeartPulse, Leaf, Building2, Users } from "lucide-react";
 import { ScrollReveal } from "@/components/animations/Animations";
-import { Card, CardContent } from "@/components/ui/Card";
+import { Card } from "@/components/ui/Card";
+import { companyInfo } from "@/data";
 
 const partners = [
   { id: "p1", name: "World Health Organization", category: "regulatory" },
@@ -22,11 +23,11 @@ const partners = [
 ];
 
 const trustBadges = [
-  { icon: Award, label: "26+ Years", description: "Pharmaceutical Excellence" },
-  { icon: Shield, label: "6 Global", description: "Certifications" },
-  { icon: Globe, label: "45+ Countries", description: "Worldwide Presence" },
+  { icon: Award, label: `${companyInfo.experienceYears}+ Years`, description: "Pharmaceutical Excellence" },
+  { icon: Shield, label: `${companyInfo.certifications.length} Global`, description: "Certifications" },
+  { icon: Globe, label: `${companyInfo.countriesServed}+ Countries`, description: "Worldwide Presence" },
   { icon: FlaskConical, label: "120+ R&D", description: "Scientists" },
-  { icon: HeartPulse, label: "52+ Products", description: "Therapeutic Areas" },
+  { icon: HeartPulse, label: `${companyInfo.productsCount}+ Products`, description: "Therapeutic Areas" },
   { icon: Leaf, label: "3 Facilities", description: "GMP Certified" },
   { icon: Building2, label: "Zero Critical", description: "FDA Observations" },
   { icon: Users, label: "500+ Healthcare", description: "Professionals Trained" },

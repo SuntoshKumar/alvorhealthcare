@@ -1,0 +1,118 @@
+{
+  "name": "Alvor Healthcare",
+  "tagline": "Advancing Health Through Innovation",
+  "mission": "To improve the quality of life for patients worldwide by developing, manufacturing, and delivering innovative, high-quality, and affordable pharmaceutical products that meet the highest standards of safety and efficacy.",
+  "vision": "To be a globally recognized leader in the pharmaceutical industry, known for our unwavering commitment to quality, innovation, and patient-centric care.",
+  "foundedYear": 1998,
+  "countriesServed": 45,
+  "certifications": [
+    {
+      "id": "who-gmp",
+      "name": "WHO GMP Certified",
+      "logo": "/images/certifications/who-gmp.svg",
+      "description": "World Health Organization Good Manufacturing Practices certification ensuring international quality standards.",
+      "yearObtained": 2005,
+      "validUntil": "2026-12-31"
+    },
+    {
+      "id": "iso-9001",
+      "name": "ISO 9001:2015",
+      "logo": "/images/certifications/iso-9001.svg",
+      "description": "International quality management system certification.",
+      "yearObtained": 2010,
+      "validUntil": "2027-06-15"
+    },
+    {
+      "id": "fda",
+      "name": "FDA Registered Facility",
+      "logo": "/images/certifications/fda.svg",
+      "description": "US Food and Drug Administration registered manufacturing facility.",
+      "yearObtained": 2012
+    },
+    {
+      "id": "ema",
+      "name": "EMA Compliant",
+      "logo": "/images/certifications/ema.svg",
+      "description": "European Medicines Agency regulatory compliance.",
+      "yearObtained": 2015
+    },
+    {
+      "id": "halal",
+      "name": "Halal Certified",
+      "logo": "/images/certifications/halal.svg",
+      "description": "Halal certification for pharmaceutical products.",
+      "yearObtained": 2018,
+      "validUntil": "2026-03-20"
+    },
+    {
+      "id": "green",
+      "name": "Green Manufacturing",
+      "logo": "/images/certifications/green.svg",
+      "description": "Environmentally sustainable manufacturing practices certification.",
+      "yearObtained": 2020,
+      "validUntil": "2026-09-10"
+    }
+  ],
+  "manufacturingCapabilities": [
+    "Tablet Compression (Single & Multi-layer)",
+    "Hard & Soft Gelatin Capsule Filling",
+    "Liquid & Syrup Manufacturing",
+    "Sterile Injectable Production (Ampoules, Vials, Pre-filled Syringes)",
+    "Nutraceutical & Supplement Production",
+    "Blister, Strip, & Bottle Packaging Lines",
+    "Quality Control & Analytical Testing Labs",
+    "Stability Chambers (ICH Conditions)",
+    "Cleanroom Class A/B/C/D Facilities",
+    "Continuous Manufacturing Technology"
+  ],
+  "qualityStandards": [
+    "ICH Q7/Q9/Q10 Guidelines Compliance",
+    "Pharmacopoeia Standards (USP, BP, EP, JP, IP)",
+    "21 CFR Part 11 Electronic Records",
+    "Data Integrity (ALCOA+ Principles)",
+    "Vendor Qualification & Audit Program",
+    "Annual Product Quality Reviews (APQR)",
+    "Change Control & Deviation Management",
+    "CAPA System with Root Cause Analysis"
+  ],
+  "contact": {
+    "address": "123 Healthcare Boulevard",
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "postalCode": "10001",
+    "phone": "+1 (800) 555-0123",
+    "email": "info@alvorhealthcare.com",
+    "fax": "+1 (212) 555-0124",
+    "whatsapp": "+1 (800) 555-0123",
+    "workingHours": "Mon-Fri: 8:00 AM - 6:00 PM EST",
+    "mapEmbedUrl": "https://www.google.com/maps/embed"
+  },
+  "socialLinks": [
+    {
+      "platform": "LinkedIn",
+      "url": "https://linkedin.com/company/alvorhealthcare",
+      "icon": "linkedin"
+    },
+    {
+      "platform": "Twitter",
+      "url": "https://twitter.com/alvorhealthcare",
+      "icon": "twitter"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://facebook.com/alvorhealthcare",
+      "icon": "facebook"
+    },
+    {
+      "platform": "Instagram",
+      "url": "https://instagram.com/alvorhealthcare",
+      "icon": "instagram"
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://youtube.com/@alvorhealthcare",
+      "icon": "youtube"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "tablets",
+    "slug": "tablets",
+    "name": "Tablets",
+    "description": "Solid oral dosage forms including immediate release, extended release, and effervescent tablets.",
+    "icon": "tablet",
+    "image": "/images/categories/tablets.svg",
+    "featured": true,
+    "order": 1,
+    "subCategories": [
+      { "id": "immediate-release", "slug": "immediate-release", "name": "Immediate Release", "description": "Standard release tablets" },
+      { "id": "extended-release", "slug": "extended-release", "name": "Extended Release", "description": "Controlled release formulations" },
+      { "id": "effervescent", "slug": "effervescent", "name": "Effervescent", "description": "Fast-dissolving tablets" },
+      { "id": "chewable", "slug": "chewable", "name": "Chewable", "description": "Chewable tablets for easy administration" }
+    ]
+  },
+  {
+    "id": "capsules",
+    "slug": "capsules",
+    "name": "Capsules",
+    "description": "Hard and soft gelatin capsules for precise dosing and improved bioavailability.",
+    "icon": "capsule",
+    "image": "/images/categories/capsules.svg",
+    "featured": true,
+    "order": 2,
+    "subCategories": [
+      { "id": "hard-gelatin", "slug": "hard-gelatin", "name": "Hard Gelatin", "description": "Two-piece hard capsules" },
+      { "id": "soft-gelatin", "slug": "soft-gelatin", "name": "Soft Gelatin", "description": "Softgel capsules for liquids" },
+      { "id": "enteric-coated", "slug": "enteric-coated", "name": "Enteric Coated", "description": "Delayed release capsules" }
+    ]
+  },
+  {
+    "id": "syrups",
+    "slug": "syrups",
+    "name": "Syrups",
+    "description": "Palatable liquid formulations for pediatric and geriatric patients.",
+    "icon": "droplets",
+    "image": "/images/categories/syrups.svg",
+    "featured": true,
+    "order": 3,
+    "subCategories": [
+      { "id": "pediatric", "slug": "pediatric", "name": "Pediatric Syrups", "description": "Child-friendly formulations" },
+      { "id": "adult", "slug": "adult", "name": "Adult Syrups", "description": "Standard liquid formulations" },
+      { "id": "sugar-free", "slug": "sugar-free", "name": "Sugar-Free", "description": "Diabetic-friendly syrups" }
+    ]
+  },
+  {
+    "id": "injections",
+    "slug": "injections",
+    "name": "Injections",
+    "description": "Sterile parenteral formulations including ampoules, vials, and pre-filled syringes.",
+    "icon": "syringe",
+    "image": "/images/categories/injections.svg",
+    "featured": true,
+    "order": 4,
+    "subCategories": [
+      { "id": "ampoules", "slug": "ampoules", "name": "Ampoules", "description": "Glass ampoule packaging" },
+      { "id": "vials", "slug": "vials", "name": "Vials", "description": "Single and multi-dose vials" },
+      { "id": "prefilled", "slug": "prefilled", "name": "Pre-filled Syringes", "description": "Ready-to-use syringes" }
+    ]
+  },
+  {
+    "id": "supplements",
+    "slug": "supplements",
+    "name": "Supplements",
+    "description": "Nutraceuticals, vitamins, minerals, and dietary supplements for health maintenance.",
+    "icon": "pill",
+    "image": "/images/categories/supplements.svg",
+    "featured": false,
+    "order": 5,
+    "subCategories": [
+      { "id": "vitamins", "slug": "vitamins", "name": "Vitamins", "description": "Essential vitamin supplements" },
+      { "id": "minerals", "slug": "minerals", "name": "Minerals", "description": "Essential mineral supplements" },
+      { "id": "herbal", "slug": "herbal", "name": "Herbal Extracts", "description": "Standardized herbal formulations" }
+    ]
+  }
+]

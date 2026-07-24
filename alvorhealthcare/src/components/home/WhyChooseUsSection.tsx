@@ -1,80 +1,59 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Shield, FlaskConical, Truck, Leaf, Users, Award, Globe, HeartPulse } from "lucide-react";
-import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
-import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/Card";
+import { Shield, FlaskConical, Truck, Award, Users, Leaf } from "lucide-react";
+import { homeContent } from "@/data";
 
-const features = [
-  {
-    icon: Shield,
-    title: "WHO GMP Certified",
-    description: "All products manufactured in WHO GMP certified facilities ensuring international quality standards.",
-  },
-  {
-    icon: FlaskConical,
-    title: "Advanced R&D",
-    description: "State-of-the-art research center with 120+ scientists driving pharmaceutical innovation.",
-  },
-  {
-    icon: Truck,
-    title: "Global Distribution",
-    description: "Efficient supply chain serving 45+ countries with temperature-controlled logistics.",
-  },
-  {
-    icon: Leaf,
-    title: "Sustainable Practices",
-    description: "Green manufacturing with reduced carbon footprint and eco-friendly packaging.",
-  },
-  {
-    icon: Users,
-    title: "Patient Centric",
-    description: "Focused on improving patient outcomes through affordable and accessible medications.",
-  },
-  {
-    icon: Award,
-    title: "Regulatory Excellence",
-    description: "Compliance with FDA, EMA, WHO, and local regulatory requirements worldwide.",
-  },
-];
+const icons: Record<string, typeof Shield> = {
+  shield: Shield,
+  flask: FlaskConical,
+  truck: Truck,
+  award: Award,
+  users: Users,
+  leaf: Leaf,
+};
+
+const gradients: Record<string, string> = {
+  shield: "from-blue-500 to-blue-600",
+  flask: "from-purple-500 to-purple-600",
+  award: "from-amber-500 to-amber-600",
+  truck: "from-cyan-500 to-cyan-600",
+  users: "from-rose-500 to-rose-600",
+  leaf: "from-emerald-500 to-emerald-600",
+};
 
 export function WhyChooseUsSection() {
-  return (
-    <section className="section bg-white" aria-labelledby="why-choose-heading">
-      <div className="container">
-        <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="why-choose-heading" className="display-md lg:display-lg font-bold text-neutral-900">
-              Why Choose Alvor Healthcare
-            </h2>
-            <p className="body-lg text-neutral-600 mt-4">
-              Our commitment to quality, innovation, and patient care sets us apart in the pharmaceutical industry
-            </p>
-          </div>
-        </ScrollReveal>
+  const content = homeContent.whyChoose;
 
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
-            <StaggerItem key={feature.title} delay={index * 0.1}>
-              <ScrollReveal>
-                <HoverScale>
-                  <Card variant="outlined" className="h-full p-6 lg:p-8 group">
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 15, delay: index * 0.1 }}
-                      className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600 mb-6 group-hover:bg-primary-600 group-hover:text-white transition-colors duration-300"
-                    >
-                      <feature.icon className="w-7 h-7" aria-hidden="true" />
-                    </motion.div>
-                    <CardTitle className="text-neutral-900">{feature.title}</CardTitle>
-                    <CardDescription className="mt-3">{feature.description}</CardDescription>
-                  </Card>
-                </HoverScale>
-              </ScrollReveal>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+  return (
+    <section className="section bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="why-choose-heading">
+      <div className="container">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">{content.eyebrow}</span>
+          <h2 id="why-choose-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">
+            {content.title}
+          </h2>
+          <p className="text-neutral-500 dark:text-neutral-400">
+            {content.description}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {content.items.map((feature) => {
+            const Icon = icons[feature.icon] ?? Shield;
+            return (
+              <div
+                key={feature.title}
+                className="group p-6 lg:p-7 rounded-2xl bg-white dark:bg-neutral-800/30 border border-neutral-100 dark:border-neutral-700/50 hover:border-neutral-200 dark:hover:border-neutral-600 transition-all hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${gradients[feature.icon] ?? gradients.shield} flex items-center justify-center mb-4 shadow-md`}>
+                  <Icon className="w-5.5 h-5.5 text-white" />
+                </div>
+                <h3 className="font-heading font-semibold text-neutral-900 dark:text-white mb-2">{feature.title}</h3>
+                <p className="text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed">{feature.description}</p>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
