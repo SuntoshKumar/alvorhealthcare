@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpDown, ChevronDown, Grid, List, LoaderCircle, Package, Search, SlidersHorizontal, Sparkles, X } from "lucide-react";
 import { ProductCard } from "@/components/products/ProductCard";
@@ -22,10 +23,6 @@ interface FilterState {
   limit: number;
 }
 
-interface ProductsPageContentProps {
-  initialCategory?: string;
-  initialSubCategory?: string;
-}
 
 const defaultFilters: FilterState = {
   search: "",
@@ -49,8 +46,11 @@ function createInitialFilters(initialCategory?: string, initialSubCategory?: str
   };
 }
 
-export function ProductsPageContent({ initialCategory, initialSubCategory }: ProductsPageContentProps) {
-  const [filters, setFilters] = useState<FilterState>(() => createInitialFilters(initialCategory, initialSubCategory));
+export function ProductsPageContent() {
+  const searchParams = useSearchParams();
+  const rawCategory = searchParams.get("category") ?? undefined;
+  const rawSubCategory = searchParams.get("subcategory") ?? undefined;
+  const [filters, setFilters] = useState<FilterState>(() => createInitialFilters(rawCategory, rawSubCategory));
   const deferredSearch = useDeferredValue(filters.search);
   const prefersReducedMotion = useReducedMotion();
 
