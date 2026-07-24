@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { AboutHero } from "@/components/about/AboutHero";
+import { AboutSectionNav } from "@/components/about/AboutSectionNav";
 import { AboutMission } from "@/components/about/AboutMission";
 import { AboutHistory } from "@/components/about/AboutHistory";
 import { AboutQuality } from "@/components/about/AboutQuality";
@@ -21,8 +22,9 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <>
+    <div className="about-page">
       <AboutHero />
+      <AboutSectionNav />
       <AboutMission />
       <AboutHistory />
       <AboutQuality />
@@ -30,6 +32,6 @@ export default function AboutPage() {
       <AboutCertifications />
       <AboutTeam />
       <CTASection />
-    </>
+    </div>
   );
 }

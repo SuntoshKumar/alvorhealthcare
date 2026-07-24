@@ -23,14 +23,18 @@ const certifications = companyInfo.certifications;
 
 export function AboutCertifications() {
   return (
-    <section className="section bg-white dark:bg-neutral-950" aria-labelledby="certifications-heading">
+    <section id="certifications" className="relative scroll-mt-32 overflow-hidden bg-[#f7fafc] py-20 dark:bg-[#09111d] sm:py-24 lg:py-32" aria-labelledby="certifications-heading">
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-300 to-transparent dark:via-blue-800" aria-hidden="true" />
       <div className="container">
         <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="certifications-heading" className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
-              Certifications & Regulatory Approvals
-            </h2>
-            <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
+          <div className="mb-14 grid gap-5 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-16">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">Verified globally</span>
+              <h2 id="certifications-heading" className="mt-4 font-display text-[clamp(2.5rem,5vw,4.6rem)] font-bold leading-[0.96] tracking-[-0.055em] text-neutral-950 dark:text-white">
+                Standards you can audit.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 lg:text-lg">
               Meeting the highest international standards across global regulatory bodies
             </p>
           </div>
@@ -41,7 +45,7 @@ export function AboutCertifications() {
             <StaggerItem key={cert.id} delay={index * 0.1}>
               <ScrollReveal>
                 <HoverScale>
-                  <Card variant="elevated" className="h-full p-6 relative overflow-hidden group">
+                  <Card variant="elevated" className="group relative h-full overflow-hidden rounded-[1.5rem] border-white/90 p-6 shadow-[0_22px_60px_-44px_rgba(30,64,175,0.7)] dark:border-white/10">
                     <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                       <Badge variant="success" size="sm">Active</Badge>
                     </div>
@@ -75,7 +79,7 @@ export function AboutCertifications() {
         </StaggerContainer>
 
         <ScrollReveal>
-          <h3 className="heading-xl font-bold text-neutral-900 dark:text-white text-center mb-8">Global Regulatory Authorities</h3>
+          <h3 className="mb-8 font-display text-2xl font-bold tracking-[-0.03em] text-neutral-950 dark:text-white sm:text-3xl">Global regulatory authorities</h3>
         </ScrollReveal>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -105,9 +109,9 @@ export function AboutCertifications() {
         </StaggerContainer>
 
         <ScrollReveal>
-          <div className="bg-neutral-50 dark:bg-neutral-900/50 rounded-2xl p-8 lg:p-12">
-            <h3 className="heading-lg font-bold text-neutral-900 dark:text-white text-center mb-8">Compliance Documentation</h3>
-            <p className="body-md text-neutral-600 dark:text-neutral-300 text-center max-w-2xl mx-auto mb-8">
+          <div className="rounded-[2rem] bg-gradient-to-br from-blue-950 via-blue-900 to-teal-900 p-8 text-white lg:p-12">
+            <h3 className="font-display text-3xl font-bold tracking-[-0.04em]">Compliance documentation</h3>
+            <p className="mb-8 mt-4 max-w-2xl text-base leading-relaxed text-blue-100/70">
               All certifications and regulatory approvals are maintained current. Documentation available for qualified partners and regulatory authorities upon request.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -121,13 +125,13 @@ export function AboutCertifications() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-center p-4 bg-white dark:bg-neutral-800/30 rounded-xl border border-neutral-100 dark:border-neutral-700/50"
+                  className="rounded-2xl border border-white/10 bg-white/8 p-5 text-left backdrop-blur-sm"
                 >
-                  <div className="w-12 h-12 mx-auto mb-3 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400">
+                  <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-teal-300">
                     <doc.icon className="w-6 h-6" aria-hidden="true" />
                   </div>
-                  <h4 className="font-semibold text-neutral-900 dark:text-white">{doc.title}</h4>
-                  <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">{doc.desc}</p>
+                  <h4 className="font-semibold text-white">{doc.title}</h4>
+                  <p className="mt-1 text-sm text-blue-100/65">{doc.desc}</p>
                 </motion.div>
               ))}
             </div>

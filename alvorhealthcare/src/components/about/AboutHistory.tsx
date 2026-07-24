@@ -1,12 +1,21 @@
 "use client";
 
 import { useRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import {
-  Building2, FlaskConical, Award, Globe, Target, Zap, Shield, Leaf, Factory,
-  ChevronLeft, ChevronRight, Calendar, MapPin
+  Award,
+  Building2,
+  ChevronLeft,
+  ChevronRight,
+  Factory,
+  FlaskConical,
+  Globe,
+  Leaf,
+  MapPin,
+  Shield,
+  Target,
+  Zap,
 } from "lucide-react";
-import { ScrollReveal } from "@/components/animations/Animations";
-import { clsx } from "clsx";
 import { aboutContent } from "@/data";
 
 const historyIcons = {
@@ -21,156 +30,120 @@ const historyIcons = {
   factory: Factory,
 };
 
-const historyGradients: Record<string, string> = {
-  building: "from-blue-500 to-blue-600",
-  flask: "from-purple-500 to-purple-600",
-  award: "from-emerald-500 to-emerald-600",
-  globe: "from-teal-500 to-teal-600",
-  target: "from-blue-500 to-blue-600",
-  zap: "from-amber-500 to-amber-600",
-  shield: "from-blue-500 to-blue-600",
-  leaf: "from-green-500 to-green-600",
-  factory: "from-teal-500 to-teal-600",
-};
-
 const milestones = aboutContent.history.milestones.map((item) => ({
   ...item,
   icon: historyIcons[item.icon as keyof typeof historyIcons] ?? Building2,
-  gradient: historyGradients[item.icon] ?? historyGradients.building,
-  stats: [{ label: item.statLabel, value: item.statValue }],
 }));
-
-function JourneyCard({ item }: { item: typeof milestones[0] }) {
-  const Icon = item.icon;
-
-  return (
-    <div className="group relative flex-shrink-0 w-[280px] sm:w-[300px] snap-start">
-      <div className="relative p-5 sm:p-6 rounded-2xl bg-white dark:bg-neutral-800/40 border border-neutral-100 dark:border-neutral-700/50 hover:border-blue-200 dark:hover:border-blue-700/50 transition-all hover:-translate-y-1 hover:shadow-xl h-full">
-        <div className="flex items-center justify-between mb-4">
-          <div className={clsx(
-            "w-10 h-10 rounded-xl bg-gradient-to-br shadow-md flex items-center justify-center",
-            item.gradient
-          )}>
-            <Icon className="w-5 h-5 text-white" />
-          </div>
-          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold tracking-wider">
-            <Calendar className="w-3 h-3" />
-            {item.year}
-          </span>
-        </div>
-
-        <h3 className="font-heading font-semibold text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-sm sm:text-base leading-snug">
-          {item.title}
-        </h3>
-
-        <p className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 mt-2 leading-relaxed line-clamp-3">
-          {item.description}
-        </p>
-
-        {item.stats && (
-          <div className="mt-4 pt-3 border-t border-neutral-100 dark:border-neutral-700/50">
-            {item.stats.map((stat) => (
-              <div key={stat.label} className="flex items-center justify-between text-xs">
-                <span className="text-neutral-400 dark:text-neutral-500">{stat.label}</span>
-                <span className="font-semibold text-neutral-700 dark:text-neutral-300">{stat.value}</span>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
 
 export function AboutHistory() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const prefersReducedMotion = useReducedMotion();
   const content = aboutContent.history;
 
   const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const amount = 320;
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -amount : amount,
-        behavior: "smooth",
-      });
-    }
+    scrollRef.current?.scrollBy({
+      left: direction === "left" ? -380 : 380,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
   };
 
   return (
-    <section className="section bg-neutral-50 dark:bg-neutral-900/50 relative overflow-hidden" aria-labelledby="history-heading">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial from-blue-100/30 dark:from-blue-900/10 to-transparent rounded-full blur-3xl" />
-      </div>
+    <section id="history" className="relative scroll-mt-32 overflow-hidden bg-[#071b2f] py-20 text-white sm:py-24 lg:py-32" aria-labelledby="history-heading">
+      <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:54px_54px]" aria-hidden="true" />
+      <div className="absolute -left-40 top-1/4 h-96 w-96 rounded-full bg-blue-600/20 blur-3xl" aria-hidden="true" />
+      <div className="absolute -right-40 bottom-0 h-96 w-96 rounded-full bg-teal-500/15 blur-3xl" aria-hidden="true" />
 
       <div className="container relative z-10">
-        <ScrollReveal>
-          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
-            <div className="max-w-2xl">
-              <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-3">
-                <MapPin className="w-3.5 h-3.5" />
-                {content.eyebrow}
-              </span>
-              <h2 id="history-heading" className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
-                {content.title}
-              </h2>
-              <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-3 max-w-xl">
-                {content.description}
-              </p>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <button
-                onClick={() => scroll("left")}
-                className="w-10 h-10 rounded-xl bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:border-blue-300 dark:hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center justify-center"
-                aria-label="Scroll left"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={() => scroll("right")}
-                className="w-10 h-10 rounded-xl bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:border-blue-300 dark:hover:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400 transition-all flex items-center justify-center"
-                aria-label="Scroll right"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </ScrollReveal>
-
-        <div
-          ref={scrollRef}
-          className="flex gap-4 sm:gap-5 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide -mx-4 sm:-mx-6 px-4 sm:px-6"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        <motion.div
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-12 grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end"
         >
-          {milestones.map((item, index) => (
-            <ScrollReveal key={item.year} delay={index * 0.05}>
-              <JourneyCard item={item} />
-            </ScrollReveal>
-          ))}
-        </div>
+          <div className="max-w-3xl">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-teal-300">
+              <MapPin className="h-3.5 w-3.5" />
+              {content.eyebrow}
+            </span>
+            <h2 id="history-heading" className="mt-4 font-display text-[clamp(2.7rem,5.4vw,5rem)] font-bold leading-[0.95] tracking-[-0.055em]">
+              {content.title}
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-blue-100/75 sm:text-lg">{content.description}</p>
+          </div>
 
-        <div className="flex justify-center gap-2 mt-6">
-          {milestones.map((item, index) => (
+          <div className="flex items-center gap-2">
             <button
-              key={item.year}
-              onClick={() => {
-                if (scrollRef.current) {
-                  scrollRef.current.children[index]?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-                }
-              }}
-              className={clsx(
-                "w-2 h-2 rounded-full transition-all",
-                "bg-neutral-300 dark:bg-neutral-600 hover:bg-blue-400 dark:hover:bg-blue-500"
-              )}
-              aria-label={`Go to ${item.year}`}
-            />
-          ))}
-        </div>
-      </div>
+              type="button"
+              onClick={() => scroll("left")}
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/8 text-white transition-colors hover:border-blue-300/50 hover:bg-white/15"
+              aria-label="View earlier milestones"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => scroll("right")}
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-white/15 bg-white/8 text-white transition-colors hover:border-blue-300/50 hover:bg-white/15"
+              aria-label="View later milestones"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
+        </motion.div>
 
-      <style>{`
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-      `}</style>
+        <div className="relative">
+          <div className="absolute left-0 right-0 top-[2.9rem] hidden h-px bg-gradient-to-r from-blue-400/20 via-teal-300/80 to-blue-400/20 sm:block" aria-hidden="true" />
+          <div
+            ref={scrollRef}
+            className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-5 pt-1 scrollbar-hide sm:-mx-6 sm:gap-5 sm:px-6 lg:-mx-10 lg:px-10"
+          >
+            {milestones.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <motion.article
+                  key={`${item.year}-${item.title}`}
+                  initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : Math.min(index * 0.06, 0.3), ease: [0.22, 1, 0.36, 1] }}
+                  className="group relative w-[82vw] max-w-[350px] shrink-0 snap-start pt-8 sm:w-[330px]"
+                >
+                  <div className="absolute left-7 top-0 z-10 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-br from-blue-500 to-teal-500 text-white shadow-[0_16px_30px_-14px_rgba(45,212,191,0.7)] transition-transform duration-300 group-hover:-translate-y-1 group-hover:rotate-2">
+                    <Icon className="h-6 w-6" />
+                  </div>
+
+                  <div className="flex h-full min-h-[285px] flex-col rounded-[1.6rem] border border-white/10 bg-white/[0.065] p-7 pt-11 backdrop-blur-xl transition-all duration-300 group-hover:-translate-y-1 group-hover:border-teal-300/30 group-hover:bg-white/[0.095]">
+                    <div className="flex items-center justify-between gap-4">
+                      <span className="font-display text-3xl font-bold tracking-[-0.04em] text-white">{item.year}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-blue-200/60">
+                        Chapter {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+                    <h3 className="mt-7 font-display text-xl font-bold tracking-[-0.025em] text-white">{item.title}</h3>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-blue-100/65">{item.description}</p>
+                    <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs">
+                      <span className="font-medium text-blue-200/55">{item.statLabel}</span>
+                      <span className="font-bold uppercase tracking-[0.1em] text-teal-300">{item.statValue}</span>
+                    </div>
+                  </div>
+                </motion.article>
+              );
+            })}
+          </div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-blue-100/55 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <p>{milestones.length} defining milestones across more than two decades.</p>
+          <p className="font-semibold text-teal-300">Built deliberately. Improved continuously.</p>
+        </motion.div>
+      </div>
     </section>
   );
 }

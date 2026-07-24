@@ -1,10 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Shield, CheckCircle, Award, Microscope, Search, Layers, RotateCcw, FileCheck, Globe, Target, AlertCircle, BarChart3, ArrowRight } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
 
 const qualitySystems = [
   { icon: CheckCircle, title: "Quality Assurance", description: "Comprehensive QA oversight including vendor qualification, change control, deviation management, CAPA, and annual product reviews.", badge: "ICH Q10" },
@@ -35,20 +35,24 @@ const analyticalCapabilities = [
 
 export function AboutQuality() {
   return (
-    <section className="section bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="quality-heading">
+    <section id="quality" className="relative scroll-mt-32 overflow-hidden bg-[#f4f8ff] py-20 dark:bg-[#081321] sm:py-24 lg:py-32" aria-labelledby="quality-heading">
+      <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-blue-300/20 blur-3xl dark:bg-blue-800/10" aria-hidden="true" />
       <div className="container">
         <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="quality-heading" className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
-              Quality Commitment
-            </h2>
-            <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
+          <div className="relative mb-14 grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-16">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">Quality architecture</span>
+              <h2 id="quality-heading" className="mt-4 font-display text-[clamp(2.6rem,5vw,4.7rem)] font-bold leading-[0.96] tracking-[-0.055em] text-neutral-950 dark:text-white">
+                Evidence at every stage.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 lg:text-lg">
               Uncompromising quality standards across every aspect of our pharmaceutical operations
             </p>
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="mb-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: Award, value: "Zero", label: "Critical FDA 483s", desc: "Since 2012" },
             { icon: Shield, value: "100%", label: "Batch Release Rate", desc: "On-time delivery" },
@@ -61,14 +65,14 @@ export function AboutQuality() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-center p-6 bg-white dark:bg-neutral-800/30 rounded-2xl border border-neutral-100 dark:border-neutral-700/50"
+                  className="relative overflow-hidden rounded-[1.4rem] border border-white/80 bg-white/82 p-6 text-left shadow-[0_20px_55px_-42px_rgba(30,64,175,0.7)] backdrop-blur-xl dark:border-white/10 dark:bg-neutral-900/65"
                 >
-                  <div className="w-14 h-14 mx-auto mb-4 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400">
+                  <div className="mb-7 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
                     <stat.icon className="w-7 h-7" aria-hidden="true" />
                   </div>
-                  <div className="text-3xl lg:text-4xl font-bold text-neutral-900 dark:text-white">{stat.value}</div>
-                  <div className="text-sm font-medium text-neutral-900 dark:text-white mt-1">{stat.label}</div>
-                  <div className="text-xs text-neutral-500 dark:text-neutral-400">{stat.desc}</div>
+                  <div className="font-display text-3xl font-bold tracking-[-0.04em] text-neutral-950 dark:text-white lg:text-4xl">{stat.value}</div>
+                  <div className="mt-1 text-sm font-bold text-neutral-900 dark:text-white">{stat.label}</div>
+                  <div className="mt-0.5 text-xs text-neutral-500 dark:text-neutral-400">{stat.desc}</div>
                 </motion.div>
               </ScrollReveal>
             </StaggerItem>
@@ -101,7 +105,7 @@ export function AboutQuality() {
         </StaggerContainer>
 
         <ScrollReveal>
-          <h3 className="heading-xl font-bold text-neutral-900 dark:text-white text-center mb-12">Regulatory Compliance Framework</h3>
+          <h3 className="mb-10 font-display text-2xl font-bold tracking-[-0.03em] text-neutral-950 dark:text-white sm:text-3xl">Regulatory compliance framework</h3>
         </ScrollReveal>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -126,7 +130,7 @@ export function AboutQuality() {
         </StaggerContainer>
 
         <ScrollReveal>
-          <h3 className="heading-xl font-bold text-neutral-900 dark:text-white text-center mb-12">Analytical Testing Capabilities</h3>
+          <h3 className="mb-10 font-display text-2xl font-bold tracking-[-0.03em] text-neutral-950 dark:text-white sm:text-3xl">Analytical testing capabilities</h3>
         </ScrollReveal>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -155,19 +159,21 @@ export function AboutQuality() {
         </StaggerContainer>
 
         <ScrollReveal>
-          <div className="bg-blue-600 dark:bg-blue-700 rounded-2xl p-8 lg:p-12 text-white text-center">
-            <h3 className="display-sm font-bold mb-4">Quality Without Compromise</h3>
-            <p className="body-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-700 via-blue-600 to-teal-700 p-8 text-white shadow-[0_32px_90px_-45px_rgba(30,64,175,0.9)] lg:p-12">
+            <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full border border-white/15" aria-hidden="true" />
+            <h3 className="relative font-display text-3xl font-bold tracking-[-0.04em] sm:text-4xl">Quality without compromise</h3>
+            <p className="relative mt-4 max-w-2xl text-base leading-relaxed text-blue-100 lg:text-lg">
               Every product that leaves our facilities undergoes comprehensive testing and quality review. 
               Our commitment to quality is not just a standard&mdash;it&apos;s our promise to patients worldwide.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" rightIcon={<ArrowRight className="w-5 h-5" />}>
+            <div className="relative mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link href="#certifications" className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-blue-700 transition-transform hover:-translate-y-0.5">
                 View Quality Certificates
-              </Button>
-              <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                Download Quality Manual
-              </Button>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link href="/contact?inquiryType=partnership&subject=Quality%20documentation" className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/10 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-white/20">
+                Request documentation
+              </Link>
             </div>
           </div>
         </ScrollReveal>

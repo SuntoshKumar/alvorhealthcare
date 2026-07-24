@@ -1,11 +1,12 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
 import { Award, FlaskConical, Building2, Users, GraduationCap, Briefcase, ArrowRight } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 
 const LinkedinIcon = ({ className }: { className?: string }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -134,21 +135,24 @@ const getDepartmentIcon = (department: string) => {
 
 export function AboutTeam() {
   return (
-    <section className="section bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="team-heading">
+    <section id="leadership" className="relative scroll-mt-32 overflow-hidden bg-white py-20 dark:bg-neutral-950 sm:py-24 lg:py-32" aria-labelledby="team-heading">
       <div className="container">
         <ScrollReveal>
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 id="team-heading" className="display-md lg:display-lg font-bold text-neutral-900 dark:text-white">
-              Leadership Team
-            </h2>
-            <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
+          <div className="mb-14 grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-end lg:gap-16">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-teal-600 dark:text-teal-400">Leadership</span>
+              <h2 id="team-heading" className="mt-4 font-display text-[clamp(2.6rem,5vw,4.7rem)] font-bold leading-[0.96] tracking-[-0.055em] text-neutral-950 dark:text-white">
+                Expertise with accountability.
+              </h2>
+            </div>
+            <p className="max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 lg:text-lg">
               Experienced professionals dedicated to pharmaceutical excellence and patient care
             </p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal>
-          <h3 className="heading-lg font-bold text-neutral-900 dark:text-white text-center mb-12">Executive Leadership</h3>
+          <h3 className="mb-8 font-display text-2xl font-bold tracking-[-0.03em] text-neutral-950 dark:text-white sm:text-3xl">Executive leadership</h3>
         </ScrollReveal>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -156,15 +160,14 @@ export function AboutTeam() {
             <StaggerItem key={member.id} delay={index * 0.1}>
               <ScrollReveal>
                 <HoverScale>
-                  <Card variant="elevated" className="h-full overflow-hidden">
-                    <div className="relative h-64 bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20">
-                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                          <LinkedinIcon className="w-8 h-8 text-white" />
-                        </div>
-                      </div>
-                      <div className="absolute bottom-4 left-4 right-4 flex gap-2">
+                  <Card variant="elevated" className="group h-full overflow-hidden rounded-[1.6rem] border-neutral-200/80">
+                    <div className="relative h-72 overflow-hidden bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20">
+                      <Image src={member.image} alt="" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/10 to-transparent" />
+                      <a href={member.linkedin} className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-neutral-950/30 text-white backdrop-blur-xl transition-colors hover:bg-blue-600" aria-label={`${member.name} on LinkedIn`}>
+                        <LinkedinIcon className="h-4 w-4" />
+                      </a>
+                      <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-1.5">
                         {member.expertise.slice(0, 3).map((exp) => (
                           <Badge key={exp} variant="primary" size="sm">{exp}</Badge>
                         ))}
@@ -193,7 +196,7 @@ export function AboutTeam() {
         </StaggerContainer>
 
         <ScrollReveal>
-          <h3 className="heading-lg font-bold text-neutral-900 dark:text-white text-center mb-12">Senior Leadership</h3>
+          <h3 className="mb-8 font-display text-2xl font-bold tracking-[-0.03em] text-neutral-950 dark:text-white sm:text-3xl">Senior leadership</h3>
         </ScrollReveal>
 
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
@@ -201,9 +204,14 @@ export function AboutTeam() {
             <StaggerItem key={member.id} delay={index * 0.1}>
               <ScrollReveal>
                 <HoverScale>
-                  <Card variant="outlined" className="p-6 text-center">
-                    <div className="w-24 h-24 mx-auto mb-4 bg-neutral-100 dark:bg-neutral-700 rounded-full flex items-center justify-center">
-                      {React.createElement(getDepartmentIcon(member.department), { className: "w-10 h-10 text-blue-600 dark:text-blue-400" })}
+                  <Card variant="outlined" className="group p-6 text-left">
+                    <div className="mb-5 flex items-center gap-4">
+                      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl bg-neutral-100 dark:bg-neutral-800">
+                        <Image src={member.image} alt="" fill className="object-cover" sizes="64px" />
+                      </div>
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                        {React.createElement(getDepartmentIcon(member.department), { className: "w-5 h-5" })}
+                      </div>
                     </div>
                     <CardTitle className="text-neutral-900 dark:text-white">{member.name}</CardTitle>
                     <div className="text-blue-600 dark:text-blue-400 font-medium text-sm mb-2">{member.role}</div>
@@ -217,15 +225,17 @@ export function AboutTeam() {
         </StaggerContainer>
 
         <ScrollReveal>
-          <div className="bg-blue-600 dark:bg-blue-700 rounded-2xl p-8 lg:p-12 text-white text-center">
-            <h3 className="display-sm font-bold mb-4">Join Our Team</h3>
-            <p className="body-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-blue-700 to-teal-700 p-8 text-white lg:p-12">
+            <div className="absolute -right-12 -top-20 h-64 w-64 rounded-full border border-white/15" aria-hidden="true" />
+            <h3 className="relative font-display text-3xl font-bold tracking-[-0.04em] sm:text-4xl">Build what healthcare needs next.</h3>
+            <p className="relative mt-4 max-w-2xl text-base leading-relaxed text-blue-100 lg:text-lg">
               We&apos;re always looking for passionate professionals who share our commitment to healthcare excellence.
               Explore career opportunities across R&D, manufacturing, quality, regulatory, and commercial functions.
             </p>
-            <Button size="lg" variant="secondary" rightIcon={<ArrowRight className="w-5 h-5" />}>
+            <Link href="/careers" className="relative mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-blue-700 transition-transform hover:-translate-y-0.5">
               View Career Opportunities
-            </Button>
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </div>
         </ScrollReveal>
       </div>
