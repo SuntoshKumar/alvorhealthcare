@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -9,36 +10,36 @@ const categories = [
     name: "Tablets",
     slug: "tablets",
     count: 14,
-    gradient: "from-blue-500 to-blue-600",
-    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+    gradient: "from-blue-100 to-blue-300",
+    image: "/images/categories/tablet.png",
   },
   {
     name: "Capsules",
     slug: "capsules",
     count: 10,
-    gradient: "from-teal-500 to-teal-600",
-    icon: "M7 16.5c0-.828.672-1.5 1.5-1.5h7c.828 0 1.5.672 1.5 1.5v2.5c0 .828-.672 1.5-1.5 1.5h-7c-.828 0-1.5-.672-1.5-1.5v-2.5zM7 9.5c0-.828.672-1.5 1.5-1.5h7c.828 0 1.5.672 1.5 1.5v2.5c0 .828-.672 1.5-1.5 1.5h-7c-.828 0-1.5-.672-1.5-1.5v-2.5z",
+    gradient: "from-teal-100 to-teal-300",
+    image: "/images/categories/capsule.png",
   },
   {
     name: "Syrups",
     slug: "syrups",
     count: 8,
-    gradient: "from-emerald-500 to-emerald-600",
-    icon: "M12 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a2 2 0 002 2h4a2 2 0 002-2v-2M10 12a2 2 0 100-4 2 2 0 000 4zM19 14v4a2 2 0 01-2 2H7a2 2 0 01-2-2v-4",
+    gradient: "from-emerald-100 to-emerald-300",
+    image: "/images/categories/syrup.png",
   },
   {
     name: "Injections",
     slug: "injections",
     count: 10,
-    gradient: "from-purple-500 to-purple-600",
-    icon: "M15 12H9m12 0a9 9 0 10-18 0 9 9 0 0018 0zM9 12l2 2 4-4",
+    gradient: "from-purple-100 to-purple-300",
+    image: "/images/categories/injection.png",
   },
   {
     name: "Supplements",
     slug: "supplements",
     count: 8,
-    gradient: "from-amber-500 to-amber-600",
-    icon: "M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11",
+    gradient: "from-amber-100 to-amber-300",
+    image: "/images/categories/supplement.png",
   },
 ];
 
@@ -90,9 +91,13 @@ export function CategoriesSection() {
                 className="pharma-card group relative block rounded-2xl border border-neutral-100 bg-white p-6 text-center dark:border-neutral-700/50 dark:bg-neutral-800/50 lg:p-8"
               >
                 <div className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br ${cat.gradient} flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110`}>
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={cat.icon} />
-                  </svg>
+                  <Image
+                    src={cat.image}
+                    alt={cat.name}
+                    width={24}
+                    height={24}
+                    className="object-contain"
+                  />
                 </div>
                 <h3 className="font-heading font-semibold text-neutral-900 dark:text-white text-sm lg:text-base">
                   {cat.name}

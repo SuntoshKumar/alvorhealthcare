@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronRight, Package, Globe, Award, Search, Tag, RotateCcw } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
@@ -19,13 +20,13 @@ interface Props {
   products: Product[];
 }
 
-const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  Tablets: ({ className }) => <motion.svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></motion.svg>,
-  Capsules: ({ className }) => <motion.svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16.5c0-.828.672-1.5 1.5-1.5h7c.828 0 1.5.672 1.5 1.5v2.5c0 .828-.672 1.5-1.5 1.5h-7c-.828 0-1.5-.672-1.5-1.5v-2.5z" /><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 9.5c0-.828.672-1.5 1.5-1.5h7c.828 0 1.5.672 1.5 1.5v2.5c0 .828-.672 1.5-1.5 1.5h-7c-.828 0-1.5-.672-1.5-1.5v-2.5z" /></motion.svg>,
-  Syrups: ({ className }) => <motion.svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a2 2 0 002 2h4a2 2 0 002-2v-2" /><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 12a2 2 0 100-4 2 2 0 000 4z" /><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14v4a2 2 0 01-2 2H7a2 2 0 01-2-2v-4" /></motion.svg>,
-  Injections: ({ className }) => <motion.svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12H9m12 0a9 9 0 10-18 0 9 9 0 0018 0z" /><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4" /></motion.svg>,
-  Supplements: ({ className }) => <motion.svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 11l3 3L22 4" /><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" /></motion.svg>,
-  "Medical Supplies": ({ className }) => <motion.svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24"><motion.path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></motion.svg>,
+const categoryImages: Record<string, string> = {
+  Tablets: "/images/categories/tablet.png",
+  Capsules: "/images/categories/capsule.png",
+  Syrups: "/images/categories/syrup.png",
+  Injections: "/images/categories/injection.png",
+  Supplements: "/images/categories/supplement.png",
+  "Medical Supplies": "/images/categories/medical-supplies.png",
 };
 
 export function CategoryPageContent({ category, products: categoryProducts }: Props) {
@@ -58,7 +59,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
     setFilters((prev) => ({ ...prev, [key]: value, page: 1 }));
   };
 
-  const CategoryIcon = categoryIcons[category.name] || Package;
+  const categoryImage = categoryImages[category.name];
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950">
@@ -86,7 +87,15 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <CategoryIcon className="w-20 h-20 mx-auto mb-6 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+                <div className="w-28 h-28 mx-auto mb-6 rounded-3xl bg-white dark:bg-neutral-300 shadow-lg border border-neutral-200 dark:border-neutral-700 flex items-center justify-center p-4">
+                  <Image
+                    src={categoryImage}
+                    alt={category.name}
+                    width={80}
+                    height={80}
+                    className="w-20 h-20 object-contain"
+                  />
+                </div>
                 <h1 className="display-xl lg:display-2xl font-bold text-neutral-900 dark:text-white leading-tight mb-6">
                   {category.name}
                 </h1>
