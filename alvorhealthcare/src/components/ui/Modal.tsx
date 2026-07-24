@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { createPortal } from "react-dom";
@@ -39,11 +39,14 @@ export const Modal = ({
     full: "max-w-4xl",
   };
 
-  const handleKeyDown = (e: KeyboardEvent) => {
-    if (e.key === "Escape" && closeOnEscape) {
-      onClose();
-    }
-  };
+  useEffect(() => {
+    if (!closeOnEscape) return;
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [closeOnEscape, onClose]);
 
   if (!isOpen) return null;
 
@@ -201,7 +204,7 @@ interface ToastProps {
   duration?: number;
 }
 
-export const Toast = ({ id, title, description, type = "info", onClose, duration = 5000 }: ToastProps) => {
+export const Toast = ({ id, title, description, type = "info", onClose }: Omit<ToastProps, "duration">) => {
   const types = {
     success: "bg-success-50 border-success-200 text-success-800",
     error: "bg-danger-50 border-danger-200 text-danger-800",

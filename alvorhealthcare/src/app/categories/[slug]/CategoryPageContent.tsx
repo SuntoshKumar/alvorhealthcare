@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { ChevronRight, Package, Globe, Award, Search, Tag, RotateCcw } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
+
 import { Button } from "@/components/ui/Button";
 import { Select } from "@/components/ui/Select";
 import { Pagination } from "@/components/ui/Navigation";

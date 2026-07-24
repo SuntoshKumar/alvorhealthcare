@@ -1,6 +1,6 @@
 "use client";
 
-import { Factory, Shield, Cpu, Beaker, Package as PackageIcon, CheckCircle } from "lucide-react";
+import { Factory, Shield, Cpu, Beaker } from "lucide-react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 

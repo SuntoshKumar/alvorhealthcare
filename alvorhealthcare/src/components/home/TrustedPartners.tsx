@@ -50,7 +50,7 @@ export function TrustedPartners() {
 
         <div className="overflow-hidden">
           <div className="flex animate-[scroll_30s_linear_infinite] gap-12 lg:gap-20 px-4">
-            {partners.map((partner, index) => (
+            {partners.map((partner) => (
               <div key={partner.id} className="flex-shrink-0 w-40 lg:w-48 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0">
                 <a href={`https://${partner.name.toLowerCase().replace(/\s+/g, '')}.com`} target="_blank" rel="noopener noreferrer" className="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
                   <div className="w-full h-12 lg:h-16 flex items-center justify-center">
@@ -61,7 +61,7 @@ export function TrustedPartners() {
                 </a>
               </div>
             ))}
-            {partners.map((partner, index) => (
+            {partners.map((partner) => (
               <div key={`${partner.id}-dup`} className="flex-shrink-0 w-40 lg:w-48 opacity-60 hover:opacity-100 transition-opacity duration-300 filter grayscale hover:grayscale-0">
                 <a href={`https://${partner.name.toLowerCase().replace(/\s+/g, '')}.com`} target="_blank" rel="noopener noreferrer" className="block p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
                   <div className="w-full h-12 lg:h-16 flex items-center justify-center">
