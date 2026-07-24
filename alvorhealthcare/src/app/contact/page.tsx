@@ -1,45 +1,10 @@
-import ContactPageContent from "./ContactPageContent";
+import { Suspense } from "react";
+import { ContactPageQuery } from "./ContactPageQuery";
 
-const inquiryTypes = [
-  "general",
-  "product-inquiry",
-  "partnership",
-  "career",
-  "complaint",
-  "media",
-] as const;
-
-type InquiryType = (typeof inquiryTypes)[number];
-
-interface ContactPageProps {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
-}
-
-function firstValue(value: string | string[] | undefined) {
-  return Array.isArray(value) ? value[0] : value;
-}
-
-function isInquiryType(value: string | undefined): value is InquiryType {
-  return inquiryTypes.some((type) => type === value);
-}
-
-export default async function ContactPage({ searchParams }: ContactPageProps) {
-  const params = await searchParams;
-  const requestedInquiryType = firstValue(params.inquiryType);
-  const product = firstValue(params.product);
-  const subject = firstValue(params.subject);
-
-  const initialInquiryType = isInquiryType(requestedInquiryType)
-    ? requestedInquiryType
-    : "general";
-  const initialSubject = product
-    ? `Product inquiry: ${product}`
-    : subject ?? "";
-
+export default function ContactPage() {
   return (
-    <ContactPageContent
-      initialInquiryType={initialInquiryType}
-      initialSubject={initialSubject}
-    />
+    <Suspense fallback={<div className="min-h-screen bg-white dark:bg-neutral-950" />}>
+      <ContactPageQuery />
+    </Suspense>
   );
 }

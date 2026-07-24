@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Link from "next/link";
 import { Shield } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -77,7 +78,7 @@ export default function PrivacyPage() {
 
           <h2>7. Cookies</h2>
           <p>
-            Our website uses cookies and similar technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. You can control cookie preferences through your browser settings. For more details, please see our <a href="/cookies">Cookie Policy</a>.
+            Our website uses cookies and similar technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors come from. You can control cookie preferences through your browser settings. For more details, please see our <Link href="/cookies">Cookie Policy</Link>.
           </p>
 
           <h2>8. Contact Us</h2>

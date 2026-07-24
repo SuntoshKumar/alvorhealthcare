@@ -414,7 +414,7 @@ export default function ContactPageContent({
       </section>
 
       <section className="section bg-blue-600 dark:bg-blue-700 text-white relative overflow-hidden" aria-labelledby="cta-heading">
-        <div className="absolute inset-0 bg-[url('/images/cta-pattern.svg')] bg-cover bg-center opacity-10" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:24px_24px] opacity-10" aria-hidden="true" />
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>

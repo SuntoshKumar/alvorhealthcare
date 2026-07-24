@@ -27,7 +27,7 @@ export default function CategoriesPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950">
       <section className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 via-white to-teal-50 dark:from-blue-950/30 dark:via-neutral-950 dark:to-teal-950/30">
-        <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] bg-cover bg-center opacity-5" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] bg-[size:24px_24px] opacity-[0.04]" aria-hidden="true" />
         
         <div className="container relative px-6 py-20 lg:py-28">
           <div className="max-w-4xl mx-auto text-center">
@@ -220,7 +220,7 @@ export default function CategoriesPage() {
       </section>
 
       <section className="section bg-primary-600 text-white relative overflow-hidden" aria-labelledby="cta-heading">
-        <div className="absolute inset-0 bg-[url('/images/cta-pattern.svg')] bg-cover bg-center opacity-10" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:24px_24px] opacity-10" aria-hidden="true" />
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>

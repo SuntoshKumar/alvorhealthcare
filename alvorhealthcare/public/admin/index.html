@@ -1,4 +1,4 @@
-const adminHtml = `<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -10,13 +10,4 @@ const adminHtml = `<!doctype html>
     <div id="nc-root">Loading content editor...</div>
     <script src="https://unpkg.com/decap-cms@3.15.0/dist/decap-cms.js"></script>
   </body>
-</html>`;
-
-export function GET() {
-  return new Response(adminHtml, {
-    headers: {
-      "Content-Type": "text/html; charset=utf-8",
-      "Cache-Control": "no-store",
-    },
-  });
-}
+</html>

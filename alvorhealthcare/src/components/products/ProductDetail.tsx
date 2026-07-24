@@ -27,6 +27,7 @@ import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Breadcrumb } from "@/components/ui/Navigation";
 import { categories } from "@/data";
+import { publicAssetPath } from "@/lib/paths";
 import type { Product } from "@/types";
 
 interface ProductDetailProps {
@@ -100,7 +101,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
     if (!product.pdfBrochure) return;
 
     const link = document.createElement("a");
-    link.href = product.pdfBrochure;
+    link.href = publicAssetPath(product.pdfBrochure);
     link.download = `${product.slug}-brochure.pdf`;
     link.click();
     toast.success("Brochure download started");
@@ -141,7 +142,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                       className="absolute inset-0"
                     >
                       <Image
-                        src={images[selectedImage]}
+                        src={publicAssetPath(images[selectedImage])}
                         alt={`${product.name} product image ${selectedImage + 1}`}
                         fill
                         className="object-contain p-5 sm:p-8"
@@ -167,7 +168,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                         aria-label={`View product image ${index + 1}`}
                         aria-pressed={index === selectedImage}
                       >
-                        <Image src={image} alt="" fill className="object-contain p-1" sizes="80px" />
+                        <Image src={publicAssetPath(image)} alt="" fill className="object-contain p-1" sizes="80px" />
                       </button>
                     ))}
                   </div>

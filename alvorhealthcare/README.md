@@ -38,6 +38,13 @@ The form-based editor is available at `/admin`. Production authentication setup 
 | `npm test` | Run Vitest tests |
 | `npm run check` | Run content, TypeScript, tests, and lint checks |
 
+## GitHub Pages
+
+Pushes to `main` are exported and deployed by `.github/workflows/deploy-pages.yml`.
+In the repository settings, set **Pages > Build and deployment > Source** to
+**GitHub Actions**. Project repositories are automatically served under their
+repository base path, such as `/alvorhealthcare/`.
+
 ## Project Structure
 
 ```

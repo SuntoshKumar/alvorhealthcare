@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronRight, Download, Sparkles, Star } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { Badge } from "@/components/ui/Badge";
+import { publicAssetPath } from "@/lib/paths";
 import type { Product } from "@/types";
 
 interface ProductCardProps {
@@ -16,7 +17,7 @@ function downloadBrochure(product: Product) {
   if (!product.pdfBrochure) return;
 
   const link = document.createElement("a");
-  link.href = product.pdfBrochure;
+  link.href = publicAssetPath(product.pdfBrochure);
   link.download = `${product.slug}-brochure.pdf`;
   link.click();
   toast.success("Brochure download started");
@@ -52,7 +53,7 @@ export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
       <article className="group relative grid gap-5 rounded-2xl border border-neutral-100 bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-lg dark:border-neutral-700/50 dark:bg-neutral-800/30 dark:hover:border-blue-700 sm:grid-cols-[152px_minmax(0,1fr)_auto] sm:items-center sm:p-5">
         <div className="relative aspect-square overflow-hidden rounded-xl bg-gradient-to-br from-neutral-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950/40">
           <Image
-            src={product.thumbnail}
+            src={publicAssetPath(product.thumbnail)}
             alt={`${product.name} product artwork`}
             fill
             className="object-contain p-2 transition-transform duration-300 group-hover:scale-105"
@@ -113,7 +114,7 @@ export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
     <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-100 bg-white transition-all hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl dark:border-neutral-700/50 dark:bg-neutral-800/30 dark:hover:border-blue-700">
       <div className={`relative overflow-hidden bg-gradient-to-br from-neutral-50 to-blue-50 dark:from-neutral-800 dark:to-blue-950/40 ${isRelated ? "h-48" : "h-60"}`}>
         <Image
-          src={product.thumbnail}
+          src={publicAssetPath(product.thumbnail)}
           alt={`${product.name} product artwork`}
           fill
           className="object-contain p-3 transition-transform duration-300 group-hover:scale-105"
