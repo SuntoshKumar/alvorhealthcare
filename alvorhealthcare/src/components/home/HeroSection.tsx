@@ -25,7 +25,7 @@ const entrance = {
 function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
   return (
     <motion.div
-      className="relative mx-auto aspect-[4/4.35] w-full max-w-[620px]"
+      className="relative mx-auto hidden aspect-[4/4.35] w-full max-w-[620px] lg:block"
       initial={{ opacity: 0, scale: 0.94, x: 24 }}
       animate={{ opacity: 1, scale: 1, x: 0 }}
       transition={{ duration: 1, delay: 0.2, ease: easeOut }}

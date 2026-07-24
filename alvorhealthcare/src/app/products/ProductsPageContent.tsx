@@ -14,6 +14,7 @@ type ViewMode = "grid" | "list";
 interface FilterState {
   search: string;
   category: string;
+  subCategory: string;
   tags: string[];
   sortBy: SortOption;
   viewMode: ViewMode;
@@ -21,9 +22,15 @@ interface FilterState {
   limit: number;
 }
 
+interface ProductsPageContentProps {
+  initialCategory?: string;
+  initialSubCategory?: string;
+}
+
 const defaultFilters: FilterState = {
   search: "",
   category: "all",
+  subCategory: "",
   tags: [],
   sortBy: "featured",
   viewMode: "grid",
@@ -31,8 +38,19 @@ const defaultFilters: FilterState = {
   limit: 12,
 };
 
-export function ProductsPageContent() {
-  const [filters, setFilters] = useState<FilterState>(defaultFilters);
+function createInitialFilters(initialCategory?: string, initialSubCategory?: string): FilterState {
+  const category = categories.find((item) => item.slug === initialCategory);
+  const subCategory = category?.subCategories?.find((item) => item.slug === initialSubCategory);
+
+  return {
+    ...defaultFilters,
+    category: category?.slug ?? "all",
+    subCategory: subCategory?.name ?? "",
+  };
+}
+
+export function ProductsPageContent({ initialCategory, initialSubCategory }: ProductsPageContentProps) {
+  const [filters, setFilters] = useState<FilterState>(() => createInitialFilters(initialCategory, initialSubCategory));
   const deferredSearch = useDeferredValue(filters.search);
   const prefersReducedMotion = useReducedMotion();
 
@@ -67,20 +85,22 @@ export function ProductsPageContent() {
   const filteredProducts = useMemo(() => {
     const result = filterProducts({
       category: filters.category !== "all" ? filters.category : undefined,
+      subCategory: filters.subCategory || undefined,
       tags: filters.tags.length > 0 ? filters.tags : undefined,
       search: deferredSearch || undefined,
     });
 
     return sortProducts(result, filters.sortBy);
-  }, [deferredSearch, filters.category, filters.sortBy, filters.tags]);
+  }, [deferredSearch, filters.category, filters.sortBy, filters.subCategory, filters.tags]);
 
   const paginated = paginateProducts(filteredProducts, filters.page, filters.limit);
-  const hasActiveFilters = filters.search || filters.category !== "all" || filters.tags.length > 0;
+  const hasActiveFilters = filters.search || filters.category !== "all" || filters.subCategory || filters.tags.length > 0;
 
   const updateFilter = <K extends keyof FilterState>(key: K, value: FilterState[K]) => {
     setFilters((previous) => ({
       ...previous,
       [key]: value,
+      ...(key === "category" ? { subCategory: "" } : {}),
       ...(key === "page" ? {} : { page: 1 }),
     }));
   };
@@ -104,6 +124,7 @@ export function ProductsPageContent() {
   const isSearching = filters.search !== deferredSearch;
   const transitionDuration = prefersReducedMotion ? 0.01 : 0.35;
   const activeCategory = categories.find((category) => category.slug === filters.category);
+  const activeSubCategory = activeCategory?.subCategories?.find((subCategory) => subCategory.name === filters.subCategory);
 
   const changePage = (page: number) => {
     updateFilter("page", page);
@@ -344,6 +365,16 @@ export function ProductsPageContent() {
                       {activeCategory.name}
                     </span>
                   )}
+                  {activeSubCategory && (
+                    <button
+                      type="button"
+                      onClick={() => updateFilter("subCategory", "")}
+                      className="inline-flex items-center gap-1 rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 transition-colors hover:border-blue-200 hover:bg-blue-100 dark:border-blue-800/50 dark:bg-blue-900/30 dark:text-blue-300 dark:hover:bg-blue-900/50"
+                    >
+                      {activeSubCategory.name}
+                      <X className="h-3 w-3" />
+                    </button>
+                  )}
                   {filters.search && (
                     <button type="button" onClick={() => updateFilter("search", "")} className="inline-flex max-w-56 items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium text-neutral-600 transition-colors hover:border-blue-200 hover:text-blue-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
                       <Search className="h-3 w-3 shrink-0" />
@@ -364,7 +395,7 @@ export function ProductsPageContent() {
 
           <AnimatePresence mode="popLayout" initial={false}>
             <motion.div
-              key={`${filters.viewMode}-${filters.page}-${filters.category}-${deferredSearch}-${filters.tags.join(",")}-${filters.sortBy}`}
+              key={`${filters.viewMode}-${filters.page}-${filters.category}-${filters.subCategory}-${deferredSearch}-${filters.tags.join(",")}-${filters.sortBy}`}
               initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 14 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -8 }}

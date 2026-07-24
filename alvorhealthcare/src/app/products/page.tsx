@@ -6,6 +6,23 @@ export const metadata: Metadata = {
   description: "Browse the Alvor Healthcare product portfolio by category, therapeutic area, or product name.",
 };
 
-export default function ProductsPage() {
-  return <ProductsPageContent />;
+interface ProductsPageProps {
+  searchParams: Promise<{
+    category?: string | string[];
+    subcategory?: string | string[];
+  }>;
+}
+
+export default async function ProductsPage({ searchParams }: ProductsPageProps) {
+  const query = await searchParams;
+  const category = Array.isArray(query.category) ? query.category[0] : query.category;
+  const subCategory = Array.isArray(query.subcategory) ? query.subcategory[0] : query.subcategory;
+
+  return (
+    <ProductsPageContent
+      key={`${category ?? "all"}:${subCategory ?? "all"}`}
+      initialCategory={category}
+      initialSubCategory={subCategory}
+    />
+  );
 }

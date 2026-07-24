@@ -46,6 +46,12 @@ describe("Data Layer", () => {
     expect(result.every((p) => p.category === "Tablets")).toBe(true);
   });
 
+  it("filterProducts by category and subcategory", () => {
+    const result = filterProducts({ category: "tablets", subCategory: "Immediate Release" });
+    expect(result.length).toBeGreaterThan(0);
+    expect(result.every((p) => p.category === "Tablets" && p.subCategory === "Immediate Release")).toBe(true);
+  });
+
   it("filterProducts by search", () => {
     const result = filterProducts({ search: "alvorpar" });
     expect(result.length).toBeGreaterThan(0);
