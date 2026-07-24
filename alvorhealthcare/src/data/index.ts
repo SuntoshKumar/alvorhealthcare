@@ -7,6 +7,21 @@ import productsData from "./products.json";
 import siteData from "./site.json";
 import aboutData from "./about.json";
 
+export {
+  getResourceCollection,
+  getResourceInformationPage,
+  resourceCollections,
+  resourceInformationPages,
+  type ResourceCollection,
+  type ResourceIconName,
+  type ResourceInformationAction,
+  type ResourceInformationPage,
+  type ResourceInformationTopic,
+  type ResourceLink,
+  type ResourceSection,
+  type ResourceTone,
+} from "./resources";
+
 export const products: Product[] = productsData as Product[];
 export const categories: Category[] = categoriesData.map((category) => ({
   ...category,

@@ -15,6 +15,8 @@ const news = readJson("news.json");
 const site = readJson("site.json");
 const home = readJson("home.json");
 const about = readJson("about.json");
+const resources = readJson("resources.json");
+const resourcePages = readJson("resource-pages.json");
 
 const requireText = (value, path) => {
   if (typeof value !== "string" || value.trim() === "") errors.push(`${path} must be a non-empty string`);
@@ -61,9 +63,18 @@ const requireLinks = (links, path) => {
   });
 };
 
+const requireInternalHref = (value, path) => {
+  requireText(value, path);
+  if (typeof value === "string" && !value.startsWith("/")) {
+    errors.push(`${path} must be a root-relative internal path`);
+  }
+};
+
 if (!Array.isArray(categories)) errors.push("categories.json must contain an array");
 if (!Array.isArray(products)) errors.push("products.json must contain an array");
 if (!Array.isArray(news)) errors.push("news.json must contain an array");
+if (!Array.isArray(resources)) errors.push("resources.json must contain an array");
+if (!Array.isArray(resourcePages)) errors.push("resource-pages.json must contain an array");
 
 requireText(company.name, "company.name");
 requireText(company.contact?.email, "company.contact.email");
@@ -107,10 +118,37 @@ requireUnique(products, "id", "products.json");
 requireUnique(products, "slug", "products.json");
 requireUnique(news, "id", "news.json");
 requireUnique(news, "slug", "news.json");
+requireUnique(resources, "slug", "resources.json");
+requireUnique(resourcePages, "slug", "resource-pages.json");
 
 const categoryByName = new Map(categories.map((category) => [category.name, category]));
 const productIds = new Set(products.map((product) => product.id));
 const newsCategories = new Set(["announcement", "product-launch", "healthcare-news", "research", "event"]);
+const resourceSlugs = new Set(["hcp", "patients", "clinical-studies", "education"]);
+const resourcePageSlugs = new Set([
+  "medical-education",
+  "clinical-studies",
+  "compliance",
+  "prescribing-info",
+  "medication-guides",
+  "patient-support",
+]);
+const resourceTones = new Set(["blue", "teal", "amber", "coral"]);
+const resourceIcons = new Set([
+  "book",
+  "users",
+  "flask",
+  "graduation",
+  "file",
+  "shield",
+  "pill",
+  "heart",
+  "search",
+  "calendar",
+  "play",
+  "briefcase",
+  "message",
+]);
 
 categories.forEach((category, index) => {
   const path = `categories[${index}]`;
@@ -167,6 +205,97 @@ news.forEach((article, index) => {
   if (!newsCategories.has(article.category)) errors.push(`${path}.category is invalid: ${article.category}`);
 });
 
+resources.forEach((resource, index) => {
+  const path = `resources[${index}]`;
+  requireSlug(resource.slug, `${path}.slug`);
+  requireText(resource.title, `${path}.title`);
+  requireText(resource.shortTitle, `${path}.shortTitle`);
+  requireText(resource.eyebrow, `${path}.eyebrow`);
+  requireText(resource.description, `${path}.description`);
+  requireInternalHref(resource.href, `${path}.href`);
+  requireText(resource.audience, `${path}.audience`);
+  requireText(resource.supportTitle, `${path}.supportTitle`);
+  requireText(resource.supportDescription, `${path}.supportDescription`);
+  requireInternalHref(resource.supportHref, `${path}.supportHref`);
+  requireText(resource.supportLabel, `${path}.supportLabel`);
+
+  if (!resourceSlugs.has(resource.slug)) errors.push(`${path}.slug is invalid: ${resource.slug}`);
+  if (!resourceTones.has(resource.tone)) errors.push(`${path}.tone is invalid: ${resource.tone}`);
+  if (!resourceIcons.has(resource.icon)) errors.push(`${path}.icon is invalid: ${resource.icon}`);
+
+  if (!Array.isArray(resource.highlights) || resource.highlights.length === 0) {
+    errors.push(`${path}.highlights must contain at least one item`);
+  } else {
+    resource.highlights.forEach((highlight, highlightIndex) => {
+      requireText(highlight, `${path}.highlights[${highlightIndex}]`);
+    });
+  }
+
+  const validateResourceLink = (link, linkPath) => {
+    requireText(link?.title, `${linkPath}.title`);
+    requireText(link?.description, `${linkPath}.description`);
+    requireInternalHref(link?.href, `${linkPath}.href`);
+    if (!resourceIcons.has(link?.icon)) errors.push(`${linkPath}.icon is invalid: ${link?.icon}`);
+    if (link?.meta !== undefined) requireText(link.meta, `${linkPath}.meta`);
+  };
+
+  validateResourceLink(resource.featured, `${path}.featured`);
+
+  if (!Array.isArray(resource.sections) || resource.sections.length === 0) {
+    errors.push(`${path}.sections must contain at least one section`);
+    return;
+  }
+
+  resource.sections.forEach((section, sectionIndex) => {
+    const sectionPath = `${path}.sections[${sectionIndex}]`;
+    requireText(section.eyebrow, `${sectionPath}.eyebrow`);
+    requireText(section.title, `${sectionPath}.title`);
+    requireText(section.description, `${sectionPath}.description`);
+
+    if (!Array.isArray(section.items) || section.items.length === 0) {
+      errors.push(`${sectionPath}.items must contain at least one resource`);
+      return;
+    }
+
+    section.items.forEach((item, itemIndex) => {
+      validateResourceLink(item, `${sectionPath}.items[${itemIndex}]`);
+    });
+  });
+});
+
+resourcePages.forEach((page, index) => {
+  const path = `resourcePages[${index}]`;
+  requireSlug(page.slug, `${path}.slug`);
+  requireText(page.title, `${path}.title`);
+  requireText(page.eyebrow, `${path}.eyebrow`);
+  requireText(page.description, `${path}.description`);
+  requireText(page.audience, `${path}.audience`);
+  requireText(page.overviewTitle, `${path}.overviewTitle`);
+  requireText(page.overviewDescription, `${path}.overviewDescription`);
+  requireText(page.noticeTitle, `${path}.noticeTitle`);
+  requireText(page.noticeDescription, `${path}.noticeDescription`);
+
+  if (!resourcePageSlugs.has(page.slug)) errors.push(`${path}.slug is invalid: ${page.slug}`);
+  if (!resourceTones.has(page.tone)) errors.push(`${path}.tone is invalid: ${page.tone}`);
+  if (!resourceIcons.has(page.icon)) errors.push(`${path}.icon is invalid: ${page.icon}`);
+
+  if (!Array.isArray(page.topics) || page.topics.length === 0) {
+    errors.push(`${path}.topics must contain at least one topic`);
+  } else {
+    page.topics.forEach((topic, topicIndex) => {
+      const topicPath = `${path}.topics[${topicIndex}]`;
+      requireText(topic.title, `${topicPath}.title`);
+      requireText(topic.description, `${topicPath}.description`);
+      if (!resourceIcons.has(topic.icon)) errors.push(`${topicPath}.icon is invalid: ${topic.icon}`);
+    });
+  }
+
+  for (const actionName of ["primaryAction", "secondaryAction"]) {
+    requireText(page[actionName]?.label, `${path}.${actionName}.label`);
+    requireInternalHref(page[actionName]?.href, `${path}.${actionName}.href`);
+  }
+});
+
 for (const [index, certification] of (company.certifications ?? []).entries()) {
   requireAsset(certification.logo, `company.certifications[${index}].logo`);
   if (certification.validUntil) requireDate(certification.validUntil, `company.certifications[${index}].validUntil`);
@@ -178,4 +307,6 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log(`Content is valid: ${products.length} products, ${categories.length} categories, ${news.length} news articles.`);
+console.log(
+  `Content is valid: ${products.length} products, ${categories.length} categories, ${news.length} news articles, ${resources.length} resource collections, ${resourcePages.length} resource pages.`
+);

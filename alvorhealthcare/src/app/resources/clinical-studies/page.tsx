@@ -1,11 +1,12 @@
 import { Metadata } from "next";
-import { PageStub } from "@/components/ui/PageStub";
+import { ResourceDetailPage } from "@/components/resources/ResourceDetailPage";
+import { getResourceCollection } from "@/data";
 
 export const metadata: Metadata = {
-  title: "Clinical Studies | Alvor Healthcare",
-  description: "Access our clinical research data and study results.",
+  title: "Clinical Research Resources",
+  description: "Explore Alvor Healthcare clinical research, evidence, responsible study conduct, and scientific collaboration.",
 };
 
 export default function ClinicalStudiesPage() {
-  return <PageStub title="Clinical Studies" description="Clinical trial data, research publications, and study results coming soon." />;
+  return <ResourceDetailPage collection={getResourceCollection("clinical-studies")!} />;
 }

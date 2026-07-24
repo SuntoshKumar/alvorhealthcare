@@ -1,0 +1,230 @@
+[
+  {
+    "slug": "medical-education",
+    "title": "Medical Education",
+    "eyebrow": "Professional learning",
+    "description": "Explore educational pathways that connect therapeutic knowledge, clinical evidence, and practical healthcare conversations.",
+    "audience": "Healthcare professionals, educators, and clinical teams",
+    "icon": "graduation",
+    "tone": "coral",
+    "overviewTitle": "Learning designed around clinical needs",
+    "overviewDescription": "Alvor Healthcare supports responsible professional learning through focused therapeutic information, product knowledge, and evidence-based discussion. Contact our team to discuss available materials or an education requirement for your organization.",
+    "topics": [
+      {
+        "title": "Therapeutic education",
+        "description": "Build foundational knowledge around therapeutic areas represented in the Alvor Healthcare portfolio.",
+        "icon": "book"
+      },
+      {
+        "title": "Evidence in context",
+        "description": "Connect clinical research and product information with practical questions from healthcare settings.",
+        "icon": "flask"
+      },
+      {
+        "title": "Team learning",
+        "description": "Discuss educational needs for healthcare teams, institutions, or professional groups.",
+        "icon": "users"
+      }
+    ],
+    "noticeTitle": "Looking for a specific program or material?",
+    "noticeDescription": "Educational availability can differ by topic and market. Send us your profession, organization, country, and area of interest so we can route the request appropriately.",
+    "primaryAction": {
+      "label": "Request education information",
+      "href": "/contact?inquiryType=general&subject=Medical%20education%20request"
+    },
+    "secondaryAction": {
+      "label": "Explore education resources",
+      "href": "/resources/education"
+    }
+  },
+  {
+    "slug": "clinical-studies",
+    "title": "Clinical Studies",
+    "eyebrow": "Research information",
+    "description": "Learn how to request clinical study information, research summaries, and scientific support from Alvor Healthcare.",
+    "audience": "Researchers, investigators, institutions, and healthcare professionals",
+    "icon": "flask",
+    "tone": "amber",
+    "overviewTitle": "Responsible access to research information",
+    "overviewDescription": "Clinical evidence should be accurate, appropriately contextualized, and relevant to the requesting audience. Our team can help identify available study information and route scientific enquiries to the right contact.",
+    "topics": [
+      {
+        "title": "Study information",
+        "description": "Request available information about clinical programs, study design, or evidence supporting an Alvor Healthcare product.",
+        "icon": "file"
+      },
+      {
+        "title": "Scientific enquiries",
+        "description": "Submit a focused question for review by the appropriate medical or scientific contact.",
+        "icon": "message"
+      },
+      {
+        "title": "Research collaboration",
+        "description": "Start a conversation about investigator interest, institutional research, or scientific partnership.",
+        "icon": "briefcase"
+      }
+    ],
+    "noticeTitle": "Clinical data requests require context",
+    "noticeDescription": "Include the product or therapeutic area, your role and organization, country, and the specific information required. This helps us respond accurately and in line with local requirements.",
+    "primaryAction": {
+      "label": "Submit a clinical enquiry",
+      "href": "/contact?inquiryType=product-inquiry&subject=Clinical%20study%20information%20request"
+    },
+    "secondaryAction": {
+      "label": "Visit research resources",
+      "href": "/resources/clinical-studies"
+    }
+  },
+  {
+    "slug": "compliance",
+    "title": "Quality & Compliance",
+    "eyebrow": "Standards and responsibility",
+    "description": "Understand the principles that guide product quality, responsible operations, and regulatory engagement at Alvor Healthcare.",
+    "audience": "Healthcare partners, quality teams, institutions, and distributors",
+    "icon": "shield",
+    "tone": "teal",
+    "overviewTitle": "Quality is a system, not a single checkpoint",
+    "overviewDescription": "Our quality approach spans sourcing, manufacturing, documentation, storage, distribution, and continuous review. Certification or market-specific documentation can be requested directly from our team.",
+    "topics": [
+      {
+        "title": "Quality systems",
+        "description": "Processes and controls support consistent product quality throughout the product lifecycle.",
+        "icon": "shield"
+      },
+      {
+        "title": "Regulatory alignment",
+        "description": "Requirements are managed according to the product, market, and applicable regulatory framework.",
+        "icon": "file"
+      },
+      {
+        "title": "Quality enquiries",
+        "description": "Report a product-quality concern or request documentation for a professional or business need.",
+        "icon": "message"
+      }
+    ],
+    "noticeTitle": "Need a certificate or market-specific document?",
+    "noticeDescription": "Tell us the product, destination market, organization, and document required. Our team will confirm what can be provided for that request.",
+    "primaryAction": {
+      "label": "Contact quality support",
+      "href": "/contact?inquiryType=complaint&subject=Quality%20or%20compliance%20enquiry"
+    },
+    "secondaryAction": {
+      "label": "Explore our company",
+      "href": "/about#quality"
+    }
+  },
+  {
+    "slug": "prescribing-info",
+    "title": "Prescribing Information",
+    "eyebrow": "For healthcare professionals",
+    "description": "Request product-specific prescribing information and professional medical support from Alvor Healthcare.",
+    "audience": "Licensed healthcare professionals and authorized healthcare organizations",
+    "icon": "file",
+    "tone": "blue",
+    "overviewTitle": "Product information must match your market",
+    "overviewDescription": "Indications, dosage, contraindications, warnings, and approved labeling can vary by country. Use the product directory to identify the medicine, then contact us for the appropriate prescribing information.",
+    "topics": [
+      {
+        "title": "Identify the product",
+        "description": "Provide the product name, strength, dosage form, and market whenever possible.",
+        "icon": "search"
+      },
+      {
+        "title": "Request approved information",
+        "description": "Ask for the prescribing or professional information applicable to your country.",
+        "icon": "file"
+      },
+      {
+        "title": "Submit a medical question",
+        "description": "Include your role, organization, and focused clinical or product-information question.",
+        "icon": "message"
+      }
+    ],
+    "noticeTitle": "Professional information is market specific",
+    "noticeDescription": "This page does not provide prescribing advice. Always use locally approved labeling and your professional judgment when making treatment decisions.",
+    "primaryAction": {
+      "label": "Request prescribing information",
+      "href": "/contact?inquiryType=product-inquiry&subject=Prescribing%20information%20request"
+    },
+    "secondaryAction": {
+      "label": "Find a product",
+      "href": "/products"
+    }
+  },
+  {
+    "slug": "medication-guides",
+    "title": "Medication Guides",
+    "eyebrow": "For patients and caregivers",
+    "description": "Find the right pathway for patient-focused medicine information and questions about safe use.",
+    "audience": "Patients, family members, and caregivers",
+    "icon": "pill",
+    "tone": "teal",
+    "overviewTitle": "Start with the medicine and your local information",
+    "overviewDescription": "Patient leaflets, packaging, and approved medicine information can vary by country. Identify your product and contact us if you need help locating the appropriate patient guide.",
+    "topics": [
+      {
+        "title": "Check the packaging",
+        "description": "Use the leaflet supplied with your medicine and follow the instructions provided by your healthcare professional.",
+        "icon": "file"
+      },
+      {
+        "title": "Ask your care team",
+        "description": "Speak with a doctor or pharmacist about dosage, interactions, side effects, or missed doses.",
+        "icon": "heart"
+      },
+      {
+        "title": "Request a guide",
+        "description": "Contact us with the product name, strength, dosage form, country, and preferred language.",
+        "icon": "message"
+      }
+    ],
+    "noticeTitle": "This information does not replace medical advice",
+    "noticeDescription": "Contact a qualified healthcare professional for advice about your medicine. Seek urgent medical help if you believe you are experiencing a serious reaction or emergency.",
+    "primaryAction": {
+      "label": "Request a medication guide",
+      "href": "/contact?inquiryType=product-inquiry&subject=Medication%20guide%20request"
+    },
+    "secondaryAction": {
+      "label": "Browse products",
+      "href": "/products"
+    }
+  },
+  {
+    "slug": "patient-support",
+    "title": "Patient Support",
+    "eyebrow": "Help finding the next step",
+    "description": "Access practical guidance for product questions, support enquiries, and conversations with your healthcare team.",
+    "audience": "Patients, caregivers, and families",
+    "icon": "heart",
+    "tone": "coral",
+    "overviewTitle": "Support begins with the right connection",
+    "overviewDescription": "Programs and product availability can vary by market. We can help direct general enquiries, but treatment decisions and urgent medical concerns should always be handled by qualified healthcare professionals.",
+    "topics": [
+      {
+        "title": "Product access",
+        "description": "Ask about availability or the appropriate Alvor Healthcare contact for your country.",
+        "icon": "search"
+      },
+      {
+        "title": "Using your medicine",
+        "description": "Use the supplied patient information and discuss treatment questions with your doctor or pharmacist.",
+        "icon": "pill"
+      },
+      {
+        "title": "General support",
+        "description": "Contact our team if you need help locating product information or the correct support pathway.",
+        "icon": "message"
+      }
+    ],
+    "noticeTitle": "For side effects or urgent concerns",
+    "noticeDescription": "Contact your healthcare professional promptly. In an emergency, contact local emergency services. Product-quality or adverse-event information can also be submitted through our Contact page.",
+    "primaryAction": {
+      "label": "Contact patient support",
+      "href": "/contact?inquiryType=general&subject=Patient%20support%20enquiry"
+    },
+    "secondaryAction": {
+      "label": "Read common questions",
+      "href": "/faq"
+    }
+  }
+]

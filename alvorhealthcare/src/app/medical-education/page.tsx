@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { PageStub } from "@/components/ui/PageStub";
+import type { Metadata } from "next";
+import { ResourceInformationPage } from "@/components/resources/ResourceInformationPage";
+import { getResourceInformationPage } from "@/data";
 
 export const metadata: Metadata = {
-  title: "Medical Education | Alvor Healthcare",
-  description: "Educational resources for healthcare professionals.",
+  title: "Medical Education",
+  description: "Professional medical education and learning information from Alvor Healthcare.",
 };
 
 export default function MedicalEducationPage() {
-  return <PageStub title="Medical Education" description="Continuing medical education resources, webinars, and training programs coming soon." />;
+  return <ResourceInformationPage page={getResourceInformationPage("medical-education")!} />;
 }

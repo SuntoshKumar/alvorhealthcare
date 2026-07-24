@@ -1,11 +1,12 @@
 import { Metadata } from "next";
-import { PageStub } from "@/components/ui/PageStub";
+import { ResourceDetailPage } from "@/components/resources/ResourceDetailPage";
+import { getResourceCollection } from "@/data";
 
 export const metadata: Metadata = {
-  title: "Healthcare Professionals | Alvor Healthcare",
-  description: "Resources and information for healthcare professionals.",
+  title: "Healthcare Professional Resources",
+  description: "Product information, clinical evidence, and medical education resources for healthcare professionals.",
 };
 
 export default function HCPPage() {
-  return <PageStub title="Healthcare Professionals" description="Prescribing information, clinical resources, and professional education materials coming soon." />;
+  return <ResourceDetailPage collection={getResourceCollection("hcp")!} />;
 }

@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { PageStub } from "@/components/ui/PageStub";
+import type { Metadata } from "next";
+import { ResourceInformationPage } from "@/components/resources/ResourceInformationPage";
+import { getResourceInformationPage } from "@/data";
 
 export const metadata: Metadata = {
-  title: "Compliance | Alvor Healthcare",
-  description: "Regulatory compliance and quality standards information.",
+  title: "Quality & Compliance",
+  description: "Quality systems, regulatory responsibility, and compliance information from Alvor Healthcare.",
 };
 
 export default function CompliancePage() {
-  return <PageStub title="Compliance" description="Information about our regulatory compliance, quality standards, and certifications coming soon." />;
+  return <ResourceInformationPage page={getResourceInformationPage("compliance")!} />;
 }

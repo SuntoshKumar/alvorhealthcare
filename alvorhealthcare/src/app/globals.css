@@ -349,6 +349,7 @@ h1, h2, h3, h4, h5, h6 {
 .animate-blob-delayed { animation: blob 10s ease-in-out 2s infinite; }
 .animate-spin-slow { animation: spin-slow 20s linear infinite; }
 .animate-shimmer { background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-tertiary) 50%, var(--bg-secondary) 75%); background-size: 200% 100%; animation: shimmer 2s linear infinite; }
+.animate-resource-enter { animation: fade-in-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

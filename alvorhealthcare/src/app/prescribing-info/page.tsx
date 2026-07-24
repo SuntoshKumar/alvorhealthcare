@@ -1,11 +1,12 @@
-import { Metadata } from "next";
-import { PageStub } from "@/components/ui/PageStub";
+import type { Metadata } from "next";
+import { ResourceInformationPage } from "@/components/resources/ResourceInformationPage";
+import { getResourceInformationPage } from "@/data";
 
 export const metadata: Metadata = {
-  title: "Prescribing Information | Alvor Healthcare",
-  description: "Detailed prescribing information for Alvor Healthcare products.",
+  title: "Prescribing Information",
+  description: "Request market-appropriate prescribing and professional product information from Alvor Healthcare.",
 };
 
 export default function PrescribingInfoPage() {
-  return <PageStub title="Prescribing Information" description="Comprehensive prescribing information, dosage guidelines, and safety data for our products coming soon." />;
+  return <ResourceInformationPage page={getResourceInformationPage("prescribing-info")!} />;
 }

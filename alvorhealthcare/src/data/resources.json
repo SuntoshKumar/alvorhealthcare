@@ -1,0 +1,342 @@
+[
+  {
+    "slug": "hcp",
+    "title": "Healthcare Professional Resources",
+    "shortTitle": "Healthcare Professionals",
+    "eyebrow": "Clinical practice",
+    "description": "A focused workspace for product information, clinical evidence, medical education, and professional support.",
+    "href": "/resources/hcp",
+    "icon": "book",
+    "tone": "blue",
+    "audience": "Physicians, pharmacists, nurses, and healthcare teams",
+    "highlights": [
+      "Product information",
+      "Clinical evidence",
+      "Professional education"
+    ],
+    "featured": {
+      "title": "Prescribing information",
+      "description": "Review product-specific indications, dosage information, contraindications, and safety guidance.",
+      "href": "/contact",
+      "icon": "file",
+      "meta": "Clinical reference"
+    },
+    "sections": [
+      {
+        "eyebrow": "Clinical library",
+        "title": "Information for everyday practice",
+        "description": "Move directly to the information most commonly used when evaluating or supporting treatment.",
+        "items": [
+          {
+            "title": "Prescribing information",
+            "description": "Product indications, dosage, administration, and safety information.",
+            "href": "/prescribing-info",
+            "icon": "file",
+            "meta": "Product reference"
+          },
+          {
+            "title": "Clinical studies",
+            "description": "Explore research programs, study summaries, and clinical evidence.",
+            "href": "/resources/clinical-studies",
+            "icon": "flask",
+            "meta": "Evidence library"
+          },
+          {
+            "title": "Product directory",
+            "description": "Browse Alvor Healthcare products by category and therapeutic area.",
+            "href": "/products",
+            "icon": "pill",
+            "meta": "50+ products"
+          }
+        ]
+      },
+      {
+        "eyebrow": "Professional development",
+        "title": "Keep knowledge current",
+        "description": "Access learning pathways and supporting material designed for healthcare professionals.",
+        "items": [
+          {
+            "title": "Medical education",
+            "description": "Educational programs, clinical topics, and professional learning resources.",
+            "href": "/resources/education",
+            "icon": "graduation",
+            "meta": "Learning hub"
+          },
+          {
+            "title": "Quality and compliance",
+            "description": "Understand the standards and governance behind our medicines.",
+            "href": "/compliance",
+            "icon": "shield",
+            "meta": "Quality standards"
+          },
+          {
+            "title": "Medical information request",
+            "description": "Contact our team for product or clinical information support.",
+            "href": "/contact",
+            "icon": "message",
+            "meta": "Contact support"
+          }
+        ]
+      }
+    ],
+    "supportTitle": "Need product-specific information?",
+    "supportDescription": "Our team can help route clinical, quality, and product questions to the right Alvor Healthcare contact.",
+    "supportHref": "/contact",
+    "supportLabel": "Contact medical information"
+  },
+  {
+    "slug": "patients",
+    "title": "Patient & Caregiver Resources",
+    "shortTitle": "Patients & Caregivers",
+    "eyebrow": "Clear health information",
+    "description": "Plain-language guides, practical support, and trusted pathways to help you understand and manage your care.",
+    "href": "/resources/patients",
+    "icon": "users",
+    "tone": "teal",
+    "audience": "Patients, family members, and caregivers",
+    "highlights": [
+      "Medication guides",
+      "Support services",
+      "Common questions"
+    ],
+    "featured": {
+      "title": "Medication guides",
+      "description": "Find easy-to-follow information about medicines, safe use, and questions to discuss with your care team.",
+      "href": "/contact",
+      "icon": "pill",
+      "meta": "Patient-friendly"
+    },
+    "sections": [
+      {
+        "eyebrow": "Start here",
+        "title": "Understand your treatment",
+        "description": "Use these resources alongside guidance from your doctor, pharmacist, or other qualified healthcare professional.",
+        "items": [
+          {
+            "title": "Medication guides",
+            "description": "Plain-language guidance for using and understanding your medicine.",
+            "href": "/medication-guides",
+            "icon": "pill",
+            "meta": "Treatment guidance"
+          },
+          {
+            "title": "Product directory",
+            "description": "Find Alvor Healthcare products and available product information.",
+            "href": "/products",
+            "icon": "search",
+            "meta": "Browse products"
+          },
+          {
+            "title": "Frequently asked questions",
+            "description": "Answers to common questions about products, access, and support.",
+            "href": "/faq",
+            "icon": "message",
+            "meta": "Quick answers"
+          }
+        ]
+      },
+      {
+        "eyebrow": "Practical support",
+        "title": "Support beyond the medicine",
+        "description": "Find assistance pathways and information that can help you prepare for conversations about your care.",
+        "items": [
+          {
+            "title": "Patient support",
+            "description": "Explore support programs, adherence tools, and assistance information.",
+            "href": "/patient-support",
+            "icon": "heart",
+            "meta": "Care support"
+          },
+          {
+            "title": "Safety information",
+            "description": "Learn how Alvor approaches product quality, safety, and responsible care.",
+            "href": "/compliance",
+            "icon": "shield",
+            "meta": "Safety first"
+          },
+          {
+            "title": "Contact our team",
+            "description": "Get help finding the right information or support pathway.",
+            "href": "/contact",
+            "icon": "message",
+            "meta": "General support"
+          }
+        ]
+      }
+    ],
+    "supportTitle": "Your care team is your best source of advice",
+    "supportDescription": "These resources are educational and do not replace advice from a qualified healthcare professional. Contact your care team with questions about your treatment.",
+    "supportHref": "/faq",
+    "supportLabel": "Read common questions"
+  },
+  {
+    "slug": "clinical-studies",
+    "title": "Clinical Research",
+    "shortTitle": "Clinical Research",
+    "eyebrow": "Evidence and discovery",
+    "description": "Explore our approach to clinical research, evidence generation, responsible study conduct, and scientific collaboration.",
+    "href": "/resources/clinical-studies",
+    "icon": "flask",
+    "tone": "amber",
+    "audience": "Researchers, investigators, institutions, and healthcare professionals",
+    "highlights": [
+      "Research programs",
+      "Published insights",
+      "Responsible conduct"
+    ],
+    "featured": {
+      "title": "Clinical studies overview",
+      "description": "Learn how Alvor Healthcare approaches study design, evidence generation, and research transparency.",
+      "href": "/contact",
+      "icon": "flask",
+      "meta": "Research overview"
+    },
+    "sections": [
+      {
+        "eyebrow": "Research access",
+        "title": "Explore evidence and programs",
+        "description": "Find current research information and related scientific updates across Alvor Healthcare.",
+        "items": [
+          {
+            "title": "Clinical studies",
+            "description": "Review our clinical research focus and evidence-generation approach.",
+            "href": "/clinical-studies",
+            "icon": "flask",
+            "meta": "Study information"
+          },
+          {
+            "title": "Research news",
+            "description": "Read scientific, partnership, and healthcare innovation updates.",
+            "href": "/news",
+            "icon": "file",
+            "meta": "Latest insights"
+          },
+          {
+            "title": "Product portfolio",
+            "description": "Explore the products and therapeutic categories supported by our work.",
+            "href": "/products",
+            "icon": "pill",
+            "meta": "Therapeutic areas"
+          }
+        ]
+      },
+      {
+        "eyebrow": "Responsible research",
+        "title": "Standards, ethics, and collaboration",
+        "description": "Our research pathways are supported by clear quality expectations and responsible engagement.",
+        "items": [
+          {
+            "title": "Ethics and compliance",
+            "description": "Review the principles that guide quality, integrity, and accountability.",
+            "href": "/compliance",
+            "icon": "shield",
+            "meta": "Governance"
+          },
+          {
+            "title": "Research partnerships",
+            "description": "Connect with our team about institutional or scientific collaboration.",
+            "href": "/contact",
+            "icon": "briefcase",
+            "meta": "Collaborate"
+          },
+          {
+            "title": "Healthcare professional hub",
+            "description": "Access clinical and product resources for professional practice.",
+            "href": "/resources/hcp",
+            "icon": "book",
+            "meta": "Clinical library"
+          }
+        ]
+      }
+    ],
+    "supportTitle": "Interested in research collaboration?",
+    "supportDescription": "Connect with Alvor Healthcare to discuss scientific partnerships, investigator interest, or clinical information needs.",
+    "supportHref": "/contact",
+    "supportLabel": "Start a conversation"
+  },
+  {
+    "slug": "education",
+    "title": "Medical Education",
+    "shortTitle": "Continuing Education",
+    "eyebrow": "Learn and apply",
+    "description": "Structured learning resources that connect therapeutic knowledge, clinical evidence, and practical application.",
+    "href": "/resources/education",
+    "icon": "graduation",
+    "tone": "coral",
+    "audience": "Healthcare professionals, educators, and clinical teams",
+    "highlights": [
+      "Learning pathways",
+      "Clinical topics",
+      "Team development"
+    ],
+    "featured": {
+      "title": "Medical education hub",
+      "description": "Explore professional learning, therapeutic education, and clinical knowledge resources.",
+      "href": "/contact",
+      "icon": "graduation",
+      "meta": "Featured pathway"
+    },
+    "sections": [
+      {
+        "eyebrow": "Learning library",
+        "title": "Build knowledge your way",
+        "description": "Choose focused pathways for individual learning, clinical reference, or team discussion.",
+        "items": [
+          {
+            "title": "Medical education",
+            "description": "Access educational topics and professional development resources.",
+            "href": "/medical-education",
+            "icon": "graduation",
+            "meta": "Education hub"
+          },
+          {
+            "title": "Clinical research",
+            "description": "Connect learning with study information and scientific evidence.",
+            "href": "/resources/clinical-studies",
+            "icon": "flask",
+            "meta": "Evidence-based"
+          },
+          {
+            "title": "Product knowledge",
+            "description": "Browse product and therapeutic category information.",
+            "href": "/products",
+            "icon": "pill",
+            "meta": "Product learning"
+          }
+        ]
+      },
+      {
+        "eyebrow": "Put learning into context",
+        "title": "Supporting resources",
+        "description": "Extend each learning pathway with practical product, quality, and professional support.",
+        "items": [
+          {
+            "title": "Prescribing information",
+            "description": "Review the approved product information available through Alvor.",
+            "href": "/prescribing-info",
+            "icon": "file",
+            "meta": "Clinical reference"
+          },
+          {
+            "title": "Quality and compliance",
+            "description": "Understand the standards that support responsible healthcare.",
+            "href": "/compliance",
+            "icon": "shield",
+            "meta": "Standards"
+          },
+          {
+            "title": "Education enquiries",
+            "description": "Contact us about educational resources or institutional needs.",
+            "href": "/contact",
+            "icon": "message",
+            "meta": "Get in touch"
+          }
+        ]
+      }
+    ],
+    "supportTitle": "Planning learning for a clinical team?",
+    "supportDescription": "Tell us what your team needs and we will help direct your enquiry to the appropriate Alvor Healthcare contact.",
+    "supportHref": "/contact",
+    "supportLabel": "Discuss education needs"
+  }
+]
