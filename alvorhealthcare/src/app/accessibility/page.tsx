@@ -1,74 +1,126 @@
-import { Metadata } from "next";
-import { Eye } from "lucide-react";
+import type { Metadata } from "next";
+import { Accessibility } from "lucide-react";
+import { LegalCallout, LegalContact, LegalPage, LegalSection } from "@/components/legal/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Accessibility | Alvor Healthcare",
-  description: "Alvor Healthcare's commitment to web accessibility and inclusive design.",
+  title: "Accessibility Statement",
+  description: "Alvor Healthcare's accessibility commitment, current measures, known limitations, and feedback process.",
 };
+
+const sections = [
+  { id: "commitment", title: "Our commitment" },
+  { id: "standard", title: "Standard and status" },
+  { id: "measures", title: "Measures in place" },
+  { id: "limitations", title: "Known limitations" },
+  { id: "compatibility", title: "Compatibility" },
+  { id: "feedback", title: "Feedback and assistance" },
+  { id: "assessment", title: "Assessment and updates" },
+];
 
 export default function AccessibilityPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-b from-primary-50 via-white to-secondary-50 py-16 lg:py-24">
-        <div className="container max-w-4xl">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600">
-              <Eye className="w-7 h-7" />
-            </div>
-            <div>
-              <h1 className="display-lg font-bold text-neutral-900">Accessibility Statement</h1>
-              <p className="text-neutral-500">Last updated: January 1, 2025</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="section bg-white">
-        <div className="container max-w-4xl prose prose-lg prose-neutral max-w-none">
-          <h2>Our Commitment</h2>
-          <p>
-            Alvor Healthcare is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards to ensure our website is accessible to all visitors.
-          </p>
+    <LegalPage
+      eyebrow="Inclusive access"
+      title="Accessibility Statement"
+      summary="Our goal is to make Alvor Healthcare's website understandable, navigable, and usable by the widest practical range of people, devices, and assistive technologies."
+      updated="July 25, 2026"
+      icon={Accessibility}
+      sections={sections}
+    >
+      <LegalCallout title="Accessibility is an ongoing responsibility, not a one-time claim." tone="teal">
+        If any content or interaction prevents you from getting information, tell us. We will work with you to provide
+        the information through a reasonable alternative.
+      </LegalCallout>
 
-          <h2>Accessibility Standards</h2>
-          <p>
-            We strive to conform to the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA standards. These guidelines outline best practices for making web content accessible to people with a wide range of disabilities.
-          </p>
+      <LegalSection id="commitment" title="1. Our commitment">
+        <p>
+          Alvor Healthcare is committed to providing a website that supports people with visual, hearing, motor,
+          cognitive, speech, and neurological disabilities. We aim to include accessibility in design, content, and
+          engineering decisions and to address reported barriers in a practical and timely way.
+        </p>
+        <p>
+          This statement applies to the public Alvor Healthcare website. Third-party destinations reached through external
+          links are controlled by their respective owners.
+        </p>
+      </LegalSection>
 
-          <h2>Accessibility Features</h2>
-          <p>Our website includes the following accessibility features:</p>
-          <ul>
-            <li>Clear and consistent navigation structure</li>
-            <li>Descriptive alternative text for images</li>
-            <li>Proper heading hierarchy for screen reader compatibility</li>
-            <li>Sufficient color contrast between text and background</li>
-            <li>Keyboard navigable interface</li>
-            <li>Resizable text without loss of functionality</li>
-            <li>ARIA labels and roles for interactive elements</li>
-          </ul>
+      <LegalSection id="standard" title="2. Standard and current status">
+        <p>
+          We use the Web Content Accessibility Guidelines (WCAG) 2.2 Level AA as our target. WCAG organizes accessibility
+          around content that is perceivable, operable, understandable, and robust.
+        </p>
+        <p>
+          We are working toward that target, but we do not currently make a formal claim that every page and document
+          fully conforms to WCAG 2.2 AA. This wording is intentional: a reliable conformance claim requires representative
+          testing across content, browsers, and assistive technologies.
+        </p>
+      </LegalSection>
 
-          <h2>Ongoing Improvements</h2>
-          <p>
-            We regularly evaluate our website using automated testing tools and manual review to identify and fix accessibility issues. Our development team receives ongoing training on accessible design and development practices.
-          </p>
+      <LegalSection id="measures" title="3. Measures currently in place">
+        <p>The website includes measures intended to support accessible use, including:</p>
+        <ul>
+          <li>a skip link and semantic header, navigation, main-content, section, and footer landmarks;</li>
+          <li>logical headings, descriptive page titles, and consistent navigation labels;</li>
+          <li>keyboard-operable links, controls, menus, filters, accordions, and visible focus indicators;</li>
+          <li>programmatic form labels, validation messages, status announcements, and required-field guidance;</li>
+          <li>text alternatives for meaningful images and hidden treatment for decorative graphics;</li>
+          <li>responsive layouts that support browser zoom and reflow across phone, tablet, and desktop widths;</li>
+          <li>light and dark display modes with a system-preference option; and</li>
+          <li>reduced or removed animation when the device requests reduced motion.</li>
+        </ul>
+      </LegalSection>
 
-          <h2>Third-Party Content</h2>
-          <p>
-            While we strive to ensure accessibility across our entire website, some third-party content or services may not be fully accessible. We encourage feedback on any accessibility barriers encountered with third-party content.
-          </p>
+      <LegalSection id="limitations" title="4. Known limitations">
+        <p>Despite our efforts, some barriers may remain:</p>
+        <ul>
+          <li>product brochures or other downloadable documents may be unavailable or may not yet have complete document accessibility;</li>
+          <li>complex animated, filtering, or carousel interfaces may behave differently with some assistive-technology combinations;</li>
+          <li>older content may contain incomplete alternative text, heading structure, or color-contrast treatment; and</li>
+          <li>external social, messaging, map, or linked services may not meet the same accessibility target.</li>
+        </ul>
+        <p>
+          If a document is inaccessible or a feature does not work for you, request the information in an alternative
+          format using the contact details below.
+        </p>
+      </LegalSection>
 
-          <h2>Contact Us</h2>
-          <p>
-            If you encounter any accessibility barriers on our website or have suggestions for improvement, please contact us:
-          </p>
-          <ul>
-            <li>Email: accessibility@alvorhealthcare.com</li>
-            <li>Phone: +1 (555) 123-4567</li>
-          </ul>
-          <p>
-            We aim to respond to accessibility feedback within 5 business days and resolve issues as quickly as possible.
-          </p>
-        </div>
-      </section>
-    </div>
+      <LegalSection id="compatibility" title="5. Technical compatibility">
+        <p>
+          The website is designed for current versions of major browsers and for common platform accessibility features,
+          including keyboard navigation, screen readers, browser zoom, high-contrast settings, and reduced-motion
+          preferences. Results can vary with older browsers, unsupported operating systems, browser extensions, or unusual
+          combinations of assistive technology.
+        </p>
+        <p>
+          For the best experience, use an up-to-date browser and operating system. No specific assistive technology is
+          required to contact us for help.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="feedback" title="6. Feedback and assistance">
+        <p>
+          We welcome reports about accessibility barriers. Please include the page address, a short description of the
+          problem, the browser or assistive technology used if relevant, and the format or outcome you need. Do not include
+          unnecessary medical or confidential information.
+        </p>
+        <p>
+          We will review the report, acknowledge it when contact details are provided, and work toward a reasonable
+          response or alternative. Resolution time depends on the nature and technical complexity of the issue.
+        </p>
+        <LegalContact subject="Accessibility Feedback" />
+      </LegalSection>
+
+      <LegalSection id="assessment" title="7. Assessment and statement updates">
+        <p>
+          Our accessibility approach includes semantic implementation, code review, keyboard-conscious interaction design,
+          responsive testing, and remediation of issues identified during development or reported by users. A formal
+          independent conformance audit has not been represented as completed in this statement.
+        </p>
+        <p>
+          We will update this statement when the site, our assessment status, known limitations, or contact process changes.
+          The date at the top identifies the current version.
+        </p>
+      </LegalSection>
+    </LegalPage>
   );
 }

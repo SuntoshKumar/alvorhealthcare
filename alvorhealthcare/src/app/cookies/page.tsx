@@ -1,73 +1,129 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { Cookie } from "lucide-react";
+import { LegalCallout, LegalContact, LegalPage, LegalSection } from "@/components/legal/LegalPage";
 
 export const metadata: Metadata = {
-  title: "Cookie Policy | Alvor Healthcare",
-  description: "How Alvor Healthcare uses cookies and similar tracking technologies on our website.",
+  title: "Cookie Policy",
+  description: "The cookies and browser storage used by the Alvor Healthcare website.",
 };
+
+const sections = [
+  { id: "summary", title: "Current use" },
+  { id: "definitions", title: "Cookies and local storage" },
+  { id: "inventory", title: "Storage inventory" },
+  { id: "hosting", title: "Hosting and external services" },
+  { id: "controls", title: "Your controls" },
+  { id: "changes", title: "Future changes and contact" },
+];
 
 export default function CookiesPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-b from-primary-50 via-white to-secondary-50 py-16 lg:py-24">
-        <div className="container max-w-4xl">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600">
-              <Cookie className="w-7 h-7" />
-            </div>
-            <div>
-              <h1 className="display-lg font-bold text-neutral-900">Cookie Policy</h1>
-              <p className="text-neutral-500">Last updated: January 1, 2025</p>
-            </div>
-          </div>
+    <LegalPage
+      eyebrow="Browser storage"
+      title="Cookie Policy"
+      summary="A clear inventory of the cookies and similar browser technologies used by the current Alvor Healthcare website."
+      updated="July 25, 2026"
+      icon={Cookie}
+      sections={sections}
+    >
+      <LegalCallout title="The current Alvor Healthcare website does not set first-party cookies.">
+        It does not deploy advertising, remarketing, or first-party analytics cookies. One local-storage value may be
+        saved when you choose a display theme.
+      </LegalCallout>
+
+      <LegalSection id="summary" title="1. Current use">
+        <p>
+          This policy describes browser storage used by the website published at the Alvor Healthcare web address. It
+          should be read with our{" "}
+          <Link href="/privacy" className="font-bold text-blue-700 underline underline-offset-4 dark:text-blue-300">
+            Privacy Policy
+          </Link>
+          .
+        </p>
+        <p>
+          Based on the current site configuration, Alvor Healthcare does not use cookies for advertising, audience
+          profiling, cross-site tracking, analytics, login sessions, shopping carts, or payments.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="definitions" title="2. Cookies and local storage">
+        <p>
+          A cookie is a small text record a website asks a browser to store and return with later requests. Other browser
+          technologies, including local storage, can also save information on a device but operate differently from
+          cookies.
+        </p>
+        <p>
+          This site uses local storage for a user-requested display preference. The value is read by the site in your
+          browser but is not attached to network requests and is not sent to Alvor Healthcare.
+        </p>
+      </LegalSection>
+
+      <LegalSection id="inventory" title="3. Storage inventory">
+        <div className="overflow-x-auto rounded-2xl border border-neutral-200 dark:border-neutral-800">
+          <table className="w-full min-w-[42rem] border-collapse text-left text-sm">
+            <caption className="sr-only">Browser storage used by the Alvor Healthcare website</caption>
+            <thead className="bg-neutral-50 text-neutral-950 dark:bg-neutral-900 dark:text-white">
+              <tr>
+                <th scope="col" className="px-4 py-3 font-bold">Name</th>
+                <th scope="col" className="px-4 py-3 font-bold">Technology</th>
+                <th scope="col" className="px-4 py-3 font-bold">Purpose</th>
+                <th scope="col" className="px-4 py-3 font-bold">Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-t border-neutral-200 align-top dark:border-neutral-800">
+                <td className="px-4 py-4 font-mono text-xs text-neutral-950 dark:text-white">alvor-theme</td>
+                <td className="px-4 py-4">Local storage</td>
+                <td className="px-4 py-4">Remembers light, dark, or system display mode after you use the theme control.</td>
+                <td className="px-4 py-4">Until you change the setting or clear site data.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </section>
-      <section className="section bg-white">
-        <div className="container max-w-4xl prose prose-lg prose-neutral max-w-none">
-          <h2>What Are Cookies</h2>
-          <p>
-            Cookies are small text files that are stored on your device when you visit a website. They help the website remember your preferences, understand how you use the site, and improve your browsing experience.
-          </p>
+        <p>
+          The theme value is functional, contains no direct identifier, and is not used to track browsing activity. If
+          browser storage is blocked, theme switching can still work for the current visit, but the preference may not be
+          remembered.
+        </p>
+      </LegalSection>
 
-          <h2>How We Use Cookies</h2>
-          <p>We use the following types of cookies on our website:</p>
-          <ul>
-            <li><strong>Essential Cookies:</strong> Required for the website to function properly. These include session cookies and security cookies.</li>
-            <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website by collecting anonymous usage data.</li>
-            <li><strong>Preference Cookies:</strong> Remember your settings and preferences to provide a personalized experience.</li>
-            <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements and measure campaign effectiveness.</li>
-          </ul>
+      <LegalSection id="hosting" title="4. Hosting and external services">
+        <p>
+          The current public site is delivered through GitHub Pages. A hosting provider may process ordinary network and
+          security information when delivering a page, but server logs are not the same as a cookie stored by this
+          website. See the provider&apos;s privacy documentation for its own practices.
+        </p>
+        <p>
+          The site contains links to third-party destinations such as social networks and WhatsApp. Those services are not
+          loaded merely because a link appears on the page. If you follow a link, the third party may use cookies or other
+          technologies under its own policy and controls.
+        </p>
+      </LegalSection>
 
-          <h2>Third-Party Cookies</h2>
-          <p>
-            We may use third-party services such as Google Analytics to analyze website traffic and user behavior. These providers may set their own cookies on your device. We do not control these cookies and recommend reviewing the privacy policies of these third-party providers.
-          </p>
+      <LegalSection id="controls" title="5. Your controls">
+        <p>You can control the current site storage in several ways:</p>
+        <ul>
+          <li>use the header theme button to replace the saved theme choice;</li>
+          <li>clear cookies and site data for this website in your browser settings;</li>
+          <li>configure your browser to block or limit cookies and local storage; or</li>
+          <li>use private-browsing controls, noting that storage behavior varies by browser.</li>
+        </ul>
+        <p>
+          Clearing the <code>alvor-theme</code> value resets the website to its system-based default. Because the current
+          site does not set non-essential cookies, it does not display a cookie-consent banner.
+        </p>
+      </LegalSection>
 
-          <h2>Managing Cookies</h2>
-          <p>
-            Most web browsers allow you to control cookies through their settings. You can:
-          </p>
-          <ul>
-            <li>Block all cookies</li>
-            <li>Delete existing cookies</li>
-            <li>Set preferences for specific websites</li>
-            <li>Receive notifications when cookies are set</li>
-          </ul>
-          <p>
-            Please note that blocking essential cookies may affect the functionality of our website.
-          </p>
-
-          <h2>Changes to This Policy</h2>
-          <p>
-            We may update this Cookie Policy from time to time. Changes will be posted on this page with an updated revision date.
-          </p>
-
-          <h2>Contact</h2>
-          <p>
-            If you have questions about our use of cookies, please contact us at privacy@alvorhealthcare.com.
-          </p>
-        </div>
-      </section>
-    </div>
+      <LegalSection id="changes" title="6. Future changes and contact">
+        <p>
+          If we add analytics, embedded media, advertising, or another technology that requires notice or consent, we will
+          update this policy and implement appropriate controls before using it. The &ldquo;Last updated&rdquo; date
+          identifies the current inventory.
+        </p>
+        <p>For questions about browser storage, contact us with the subject &ldquo;Cookie Policy.&rdquo;</p>
+        <LegalContact subject="Cookie Policy" />
+      </LegalSection>
+    </LegalPage>
   );
 }

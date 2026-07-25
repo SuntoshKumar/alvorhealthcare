@@ -14,6 +14,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
     "/news",
     "/resources",
+    "/privacy",
+    "/terms",
+    "/cookies",
+    "/accessibility",
   ];
 
   return [
