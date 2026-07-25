@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { categories, companyInfo, siteContent } from "@/data";
 
 export function Footer() {
@@ -79,16 +80,25 @@ export function Footer() {
               Connect
             </h3>
             <div className="flex flex-wrap gap-3 mb-6">
-              {companyInfo.socialLinks.slice(0, 4).map((link) => (
-                <a
-                  key={link.platform}
-                  href={link.url}
-                  className="w-9 h-9 rounded-lg bg-neutral-800 hover:bg-blue-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all"
-                  aria-label={link.platform}
-                >
-                  <span className="text-xs font-semibold">{link.platform.charAt(0)}</span>
-                </a>
-              ))}
+              {companyInfo.socialLinks.slice(0, 4).map((link) => {
+                const icons: Record<string, React.ReactNode> = {
+                  LinkedIn: <FaLinkedinIn className="w-4 h-4" />,
+                  Twitter: <FaTwitter className="w-4 h-4" />,
+                  Facebook: <FaFacebookF className="w-4 h-4" />,
+                  Instagram: <FaInstagram className="w-4 h-4" />,
+                  YouTube: <FaYoutube className="w-4 h-4" />,
+                };
+                return (
+                  <a
+                    key={link.platform}
+                    href={link.url}
+                    className="w-9 h-9 rounded-lg bg-neutral-800 hover:bg-blue-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all"
+                    aria-label={link.platform}
+                  >
+                    {icons[link.platform] || <span className="text-xs font-semibold">{link.platform.charAt(0)}</span>}
+                  </a>
+                );
+              })}
             </div>
             <h4 className="font-heading font-semibold text-xs uppercase tracking-wider text-neutral-400 mb-3">
               {siteContent.footer.newsletterTitle}

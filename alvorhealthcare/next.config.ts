@@ -71,11 +71,15 @@ const nextConfig: NextConfig = {
   },
   images: {
     unoptimized: isGitHubPages,
-    dangerouslyAllowSVG: true,
+    dangerouslyAllowSVG: false,
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
       },
     ],
     formats: ["image/avif", "image/webp"],
