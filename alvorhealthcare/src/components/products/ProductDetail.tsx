@@ -144,9 +144,9 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={selectedImage}
-                      initial={{ opacity: 0, scale: prefersReducedMotion ? 1 : 0.975, filter: prefersReducedMotion ? "none" : "blur(4px)" }}
+                      initial={{ opacity: 0, scale: prefersReducedMotion ? 1 : 0.975 }}
                       animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: prefersReducedMotion ? 1 : 1.015, filter: prefersReducedMotion ? "none" : "blur(3px)" }}
+                      exit={{ opacity: 0, scale: prefersReducedMotion ? 1 : 1.015 }}
                       transition={{ duration: prefersReducedMotion ? 0.01 : 0.36, ease: [0.22, 1, 0.36, 1] }}
                       className="absolute inset-0"
                     >
