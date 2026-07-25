@@ -16,25 +16,25 @@ const toneStyles: Record<
 > = {
   blue: {
     icon: "bg-blue-600 text-white",
-    border: "hover:border-blue-300 dark:hover:border-blue-700",
+    border: "border-blue-200/80 dark:border-blue-900/70",
     wash: "from-blue-50 to-white dark:from-blue-950/35 dark:to-neutral-900",
     label: "text-blue-600 dark:text-blue-400",
   },
   teal: {
     icon: "bg-teal-600 text-white",
-    border: "hover:border-teal-300 dark:hover:border-teal-700",
+    border: "border-teal-200/80 dark:border-teal-900/70",
     wash: "from-teal-50 to-white dark:from-teal-950/35 dark:to-neutral-900",
     label: "text-teal-600 dark:text-teal-400",
   },
   amber: {
     icon: "bg-amber-400 text-neutral-950",
-    border: "hover:border-amber-300 dark:hover:border-amber-700",
+    border: "border-amber-200/80 dark:border-amber-900/70",
     wash: "from-amber-50 to-white dark:from-amber-950/35 dark:to-neutral-900",
     label: "text-amber-700 dark:text-amber-400",
   },
   coral: {
     icon: "bg-rose-500 text-white",
-    border: "hover:border-rose-300 dark:hover:border-rose-700",
+    border: "border-rose-200/80 dark:border-rose-900/70",
     wash: "from-rose-50 to-white dark:from-rose-950/35 dark:to-neutral-900",
     label: "text-rose-600 dark:text-rose-400",
   },
@@ -136,11 +136,12 @@ export default function ResourcesPage() {
                 <div key={collection.slug}>
                   <Link
                     href={collection.href}
-                    className={`group relative flex min-h-[25rem] h-full flex-col overflow-hidden rounded-[2rem] border border-neutral-200 bg-gradient-to-br p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-neutral-800 sm:p-9 ${tone.border} ${tone.wash}`}
+                    className={`relative flex h-full min-h-[23rem] flex-col overflow-hidden rounded-[2rem] border bg-gradient-to-br p-7 shadow-[0_22px_60px_-48px_rgba(15,23,42,0.65)] outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/60 sm:p-9 ${tone.border} ${tone.wash}`}
                   >
+                    <div className={`absolute inset-y-0 left-0 w-1 ${tone.icon.split(" ")[0]}`} aria-hidden="true" />
                     <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full border border-current opacity-[0.07]" aria-hidden="true" />
                     <div className="relative flex items-start justify-between">
-                      <div className={`flex h-14 w-14 items-center justify-center rounded-2xl shadow-lg ${tone.icon}`}>
+                      <div className={`flex h-14 w-14 items-center justify-center rounded-2xl shadow-md ${tone.icon}`}>
                         <ResourceIcon name={collection.icon} className="h-7 w-7" />
                       </div>
                       <span className={`text-xs font-bold uppercase tracking-[0.16em] ${tone.label}`}>
@@ -162,9 +163,9 @@ export default function ResourcesPage() {
                           </span>
                         ))}
                       </div>
-                      <span className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-neutral-950 dark:text-white">
+                      <span className="mt-8 inline-flex items-center gap-2 border-t border-neutral-200/70 pt-5 text-sm font-bold text-neutral-950 dark:border-neutral-700/70 dark:text-white">
                         Explore collection
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="h-4 w-4" />
                       </span>
                     </div>
                   </Link>
@@ -195,7 +196,7 @@ export default function ResourcesPage() {
                 <div key={item.title}>
                   <Link
                     href={item.href}
-                    className="group grid gap-5 py-7 transition-colors hover:bg-white/[0.03] sm:grid-cols-[3rem_1fr_auto] sm:items-center sm:px-4"
+                    className="grid gap-5 py-7 outline-none hover:bg-white/[0.03] focus-visible:bg-white/[0.05] focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-teal-400 sm:grid-cols-[3rem_1fr_auto] sm:items-center sm:px-4"
                   >
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-teal-300">
                       <item.icon className="h-5 w-5" />
@@ -204,7 +205,7 @@ export default function ResourcesPage() {
                       <h3 className="text-lg font-bold">{item.title}</h3>
                       <p className="mt-1 text-sm text-neutral-400">{item.description}</p>
                     </div>
-                    <ArrowRight className="hidden h-5 w-5 text-neutral-600 transition-all group-hover:translate-x-1 group-hover:text-white sm:block" />
+                    <ArrowRight className="hidden h-5 w-5 text-neutral-500 sm:block" />
                   </Link>
                 </div>
               ))}
@@ -228,7 +229,7 @@ export default function ResourcesPage() {
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-neutral-950 px-6 py-3.5 text-sm font-bold text-white transition-transform hover:-translate-y-0.5 dark:bg-white dark:text-neutral-950"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-neutral-950 px-6 py-3.5 text-sm font-bold text-white outline-none hover:bg-neutral-800 focus-visible:ring-4 focus-visible:ring-neutral-300 dark:bg-white dark:text-neutral-950 dark:hover:bg-neutral-200 dark:focus-visible:ring-neutral-700"
               >
                 Contact our team
                 <ArrowRight className="h-4 w-4" />

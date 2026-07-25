@@ -5,7 +5,7 @@
     "name": "Tablets",
     "description": "Solid oral dosage forms including immediate release, extended release, and effervescent tablets.",
     "icon": "tablet",
-    "image": "/images/categories/tablet.png",
+    "image": "/images/categories/tablets.svg",
     "featured": true,
     "order": 1,
     "subCategories": [
@@ -21,7 +21,7 @@
     "name": "Capsules",
     "description": "Hard and soft gelatin capsules for precise dosing and improved bioavailability.",
     "icon": "capsule",
-    "image": "/images/categories/capsule.png",
+    "image": "/images/categories/capsules.svg",
     "featured": true,
     "order": 2,
     "subCategories": [
@@ -36,7 +36,7 @@
     "name": "Syrups",
     "description": "Palatable liquid formulations for pediatric and geriatric patients.",
     "icon": "droplets",
-    "image": "/images/categories/syrup.png",
+    "image": "/images/categories/syrups.svg",
     "featured": true,
     "order": 3,
     "subCategories": [
@@ -51,7 +51,7 @@
     "name": "Injections",
     "description": "Sterile parenteral formulations including ampoules, vials, and pre-filled syringes.",
     "icon": "syringe",
-    "image": "/images/categories/injection.png",
+    "image": "/images/categories/injections.svg",
     "featured": true,
     "order": 4,
     "subCategories": [
@@ -66,7 +66,7 @@
     "name": "Supplements",
     "description": "Nutraceuticals, vitamins, minerals, and dietary supplements for health maintenance.",
     "icon": "pill",
-    "image": "/images/categories/supplement.png",
+    "image": "/images/categories/supplements.svg",
     "featured": false,
     "order": 5,
     "subCategories": [

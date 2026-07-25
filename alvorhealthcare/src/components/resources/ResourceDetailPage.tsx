@@ -128,7 +128,7 @@ export function ResourceDetailPage({ collection }: ResourceDetailPageProps) {
                   <p className="mt-3 max-w-md leading-7 text-white/80">{collection.featured.description}</p>
                   <Link
                     href={collection.featured.href}
-                    className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-neutral-900 transition-transform hover:-translate-y-0.5"
+                    className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-neutral-900 outline-none hover:bg-neutral-100 focus-visible:ring-4 focus-visible:ring-white/40"
                   >
                     Contact our team
                     <ArrowRight className="h-4 w-4" />
@@ -180,13 +180,13 @@ export function ResourceDetailPage({ collection }: ResourceDetailPageProps) {
                 <div key={item.title}>
                   <Link
                     href={item.href}
-                    className="group flex h-full min-h-72 flex-col rounded-3xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-xl dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-neutral-700 sm:p-7"
+                    className="flex h-full min-h-72 flex-col rounded-3xl border border-neutral-200 bg-white p-6 shadow-[0_18px_48px_-42px_rgba(15,23,42,0.55)] outline-none hover:border-neutral-300 focus-visible:ring-4 focus-visible:ring-blue-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-neutral-700 dark:focus-visible:ring-blue-900/60 sm:p-7"
                   >
                     <div className="flex items-start justify-between">
                       <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${tone.iconSoft}`}>
                         <ResourceIcon name={item.icon} className="h-6 w-6" />
                       </div>
-                      <ExternalLink className="h-4 w-4 text-neutral-300 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-neutral-600 dark:text-neutral-700 dark:group-hover:text-neutral-300" />
+                      <ExternalLink className="h-4 w-4 text-neutral-400 dark:text-neutral-600" />
                     </div>
                     <div className="mt-auto pt-10">
                       {item.meta && (
@@ -194,7 +194,7 @@ export function ResourceDetailPage({ collection }: ResourceDetailPageProps) {
                           {item.meta}
                         </p>
                       )}
-                      <h3 className="text-xl font-bold text-neutral-950 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
+                      <h3 className="text-xl font-bold text-neutral-950 dark:text-white">
                         {item.title}
                       </h3>
                       <p className="mt-3 leading-7 text-neutral-600 dark:text-neutral-400">{item.description}</p>
@@ -222,7 +222,7 @@ export function ResourceDetailPage({ collection }: ResourceDetailPageProps) {
             </div>
             <Link
               href={collection.supportHref}
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-neutral-900 transition-transform hover:-translate-y-0.5"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-neutral-900 outline-none hover:bg-neutral-100 focus-visible:ring-4 focus-visible:ring-white/40"
             >
               {collection.supportLabel}
               <ArrowRight className="h-4 w-4" />

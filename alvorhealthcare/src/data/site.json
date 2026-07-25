@@ -2,7 +2,6 @@
   "navigation": [
     { "label": "Home", "href": "/" },
     { "label": "Products", "href": "/products" },
-    { "label": "Partners", "href": "/#partners" },
     { "label": "Contact", "href": "/contact" },
     { "label": "Resources", "href": "/resources" },
     { "label": "About", "href": "/about" }

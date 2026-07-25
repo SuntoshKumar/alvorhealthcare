@@ -103,7 +103,7 @@ export function ResourceInformationPage({ page }: ResourceInformationPageProps) 
                   <p className="mt-4 leading-7 text-white/80">{page.overviewDescription}</p>
                   <Link
                     href={page.primaryAction.href}
-                    className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-neutral-900 transition-transform hover:-translate-y-0.5"
+                    className="mt-8 inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-neutral-900 outline-none hover:bg-neutral-100 focus-visible:ring-4 focus-visible:ring-white/40"
                   >
                     {page.primaryAction.label}
                     <ArrowRight className="h-4 w-4" />
@@ -159,7 +159,7 @@ export function ResourceInformationPage({ page }: ResourceInformationPageProps) 
             <div className={`flex flex-col justify-center gap-3 bg-gradient-to-br p-7 sm:p-10 lg:w-96 ${tone.panel}`}>
               <Link
                 href={page.primaryAction.href}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-neutral-900 transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-neutral-900 outline-none hover:bg-neutral-100 focus-visible:ring-4 focus-visible:ring-white/40"
               >
                 {page.primaryAction.label}
                 <ArrowRight className="h-4 w-4" />
