@@ -162,7 +162,7 @@ export function AboutTeam() {
                 <HoverScale>
                   <Card variant="elevated" className="group h-full overflow-hidden rounded-[1.6rem] border-neutral-200/80">
                     <div className="relative h-72 overflow-hidden bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20">
-                      <Image src={member.image} alt="" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" />
+                      <Image src={member.image || "/images/team/default-avatar.png"} alt="" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" />
                       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/10 to-transparent" />
                       <a href={member.linkedin} className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-neutral-950/30 text-white backdrop-blur-xl transition-colors hover:bg-blue-600" aria-label={`${member.name} on LinkedIn`}>
                         <LinkedinIcon className="h-4 w-4" />
@@ -207,7 +207,7 @@ export function AboutTeam() {
                   <Card variant="outlined" className="group p-6 text-left">
                     <div className="mb-5 flex items-center gap-4">
                       <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl bg-neutral-100 dark:bg-neutral-800">
-                        <Image src={member.image} alt="" fill className="object-cover" sizes="64px" />
+                        <Image src={member.image || "/images/team/default-avatar.png"} alt="" fill className="object-cover" sizes="64px" />
                       </div>
                       <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
                         {React.createElement(getDepartmentIcon(member.department), { className: "w-5 h-5" })}
