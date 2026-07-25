@@ -13,6 +13,7 @@ import { Select } from "@/components/ui/Select";
 import { Pagination } from "@/components/ui/Navigation";
 import { ProductCard } from "@/components/products/ProductCard";
 import { sortProducts, paginateProducts } from "@/data";
+import { publicAssetPath } from "@/lib/paths";
 import { Category, Product } from "@/types";
 
 interface Props {
@@ -89,7 +90,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
               >
                 <div className="w-28 h-28 mx-auto mb-6 rounded-3xl bg-white dark:bg-neutral-300 shadow-lg border border-neutral-200 dark:border-neutral-700 flex items-center justify-center p-4">
                   <Image
-                    src={categoryImage}
+                    src={publicAssetPath(categoryImage)}
                     alt={category.name}
                     width={80}
                     height={80}

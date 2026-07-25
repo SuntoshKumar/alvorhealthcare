@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { publicAssetPath } from "@/lib/paths";
 
 const categories = [
   {
@@ -92,7 +93,7 @@ export function CategoriesSection() {
               >
                 <div className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br ${cat.gradient} flex items-center justify-center shadow-lg transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110`}>
                   <Image
-                    src={cat.image}
+                    src={publicAssetPath(cat.image)}
                     alt={cat.name}
                     width={24}
                     height={24}
