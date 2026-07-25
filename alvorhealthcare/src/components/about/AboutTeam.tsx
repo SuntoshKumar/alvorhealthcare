@@ -21,7 +21,7 @@ const leadershipTeam = [
     name: "Dr. Sarah Mitchell",
     role: "Chief Executive Officer",
     bio: "Pharmaceutical industry veteran with 30+ years of experience leading global healthcare organizations. PhD in Pharmaceutics from University of London. Previously VP Global Operations at major pharma company.",
-    image: "/images/team/aung.png",
+    image: "/images/team/sarah.png",
     linkedin: "https://linkedin.com/in/sarahmitchell",
     email: "sarah.mitchell@alvorhealthcare.com",
     expertise: ["Strategic Leadership", "Global Operations", "Business Development", "Regulatory Strategy"],
@@ -33,7 +33,7 @@ const leadershipTeam = [
     name: "Dr. James Chen",
     role: "Chief Scientific Officer",
     bio: "Renowned pharmacologist with 50+ peer-reviewed publications and multiple patent holdings. PhD in Pharmacology from Stanford. Leading our R&D innovation pipeline across multiple therapeutic areas.",
-    image: "/images/team/aung.png",
+    image: "/images/team/james.png",
     linkedin: "https://linkedin.com/in/jameschen",
     email: "james.chen@alvorhealthcare.com",
     expertise: ["Drug Discovery", "Clinical Development", "Pharmacology", "Intellectual Property"],
@@ -45,7 +45,7 @@ const leadershipTeam = [
     name: "Maria Rodriguez",
     role: "Chief Operating Officer",
     bio: "Operations expert with extensive experience in global pharmaceutical manufacturing and supply chain management. MBA from Wharton. Six Sigma Black Belt. Previously Senior Director at major contract manufacturer.",
-    image: "/images/team/aung.png",
+    image: "/images/team/mariaa.png",
     linkedin: "https://linkedin.com/in/mariarodriguez",
     email: "maria.rodriguez@alvorhealthcare.com",
     expertise: ["Manufacturing Operations", "Supply Chain", "Quality Systems", "Lean Manufacturing"],
@@ -57,7 +57,7 @@ const leadershipTeam = [
     name: "Dr. Robert Kim",
     role: "Chief Medical Officer",
     bio: "Board-certified physician leading clinical development and medical affairs strategy. MD from Johns Hopkins. Previously Medical Director at global CRO. Expert in clinical trial design and regulatory submissions.",
-    image: "/images/team/aung.png",
+    image: "/images/team/robert.png",
     linkedin: "https://linkedin.com/in/robertkim",
     email: "robert.kim@alvorhealthcare.com",
     expertise: ["Clinical Development", "Medical Affairs", "Regulatory Strategy", "Patient Safety"],
@@ -72,42 +72,42 @@ const seniorLeadership = [
     name: "Dr. Priya Sharma",
     role: "VP Quality Assurance",
     department: "Quality",
-    image: "/images/team/aung.png",
+    image: "/images/team/mariaa.png",
   },
   {
     id: "s2",
     name: "Michael Thompson",
     role: "VP Global Supply Chain",
     department: "Operations",
-    image: "/images/team/aung.png",
+    image: "/images/team/robert.png",
   },
   {
     id: "s3",
     name: "Dr. Ana Santos",
     role: "VP Regulatory Affairs",
     department: "Regulatory",
-    image: "/images/team/aung.png",
+    image: "/images/team/james.png",
   },
   {
     id: "s4",
     name: "David Park",
     role: "VP Commercial Operations",
     department: "Commercial",
-    image: "/images/team/aung.png",
+    image: "/images/team/robert.png",
   },
   {
     id: "s5",
     name: "Dr. Lisa Wang",
     role: "VP Research & Development",
     department: "R&D",
-    image: "/images/team/aung.png",
+    image: "/images/team/mariaa.png",
   },
   {
     id: "s6",
     name: "James O'Connor",
     role: "VP Finance & Strategy",
     department: "Finance",
-    image: "/images/team/aung.png",
+    image: "/images/team/james.png",
   },
 ];
 
@@ -162,7 +162,7 @@ export function AboutTeam() {
               <ScrollReveal>
                 <HoverScale>
                   <Card variant="elevated" className="group h-full overflow-hidden rounded-[1.6rem] border-neutral-200/80">
-                    <div className="relative h-72 overflow-hidden bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20">
+                    <div className="relative h-72 overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20" >
                       <Image src={publicAssetPath(member.image || "/images/team/default-avatar.png")} alt="" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" />
                       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/10 to-transparent" />
                       <a href={member.linkedin} className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-neutral-950/30 text-white backdrop-blur-xl transition-colors hover:bg-blue-600" aria-label={`${member.name} on LinkedIn`}>

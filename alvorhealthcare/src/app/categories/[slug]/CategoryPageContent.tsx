@@ -22,11 +22,11 @@ interface Props {
 }
 
 const categoryImages: Record<string, string> = {
-  Tablets: "/images/categories/tablet.png",
-  Capsules: "/images/categories/capsule.png",
-  Syrups: "/images/categories/syrup.png",
-  Injections: "/images/categories/injection.png",
-  Supplements: "/images/categories/supplement.png",
+  Tablets: "/images/categories/tablet.svg",
+  Capsules: "/images/categories/capsule.svg",
+  Syrups: "/images/categories/syrup.svg",
+  Injections: "/images/categories/injection.svg",
+  Supplements: "/images/categories/supplement.svg",
   "Medical Supplies": "/images/categories/medical-supplies.png",
 };
 
@@ -88,13 +88,22 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="w-28 h-28 mx-auto mb-6 rounded-3xl bg-white dark:bg-neutral-300 shadow-lg border border-neutral-200 dark:border-neutral-700 flex items-center justify-center p-4">
-                  <Image
-                    src={publicAssetPath(categoryImage)}
-                    alt={category.name}
-                    width={80}
-                    height={80}
-                    className="w-20 h-20 object-contain"
+                <div
+                  className="relative w-32 h-32 mx-auto mb-6 rounded-[2rem] bg-gradient-to-br from-white via-blue-50 to-blue-100 dark:from-neutral-900 dark:via-blue-950/40 dark:to-blue-900/60 shadow-xl border border-blue-100/70 dark:border-blue-800/50 flex items-center justify-center p-5 overflow-hidden group"
+                >
+                  <div className="absolute inset-0 rounded-[2rem] bg-blue-500/10 dark:bg-blue-400/10 blur-xl" />
+                  <div
+                    className="relative z-10 w-20 h-20 bg-blue-600 dark:bg-blue-400 transition-all duration-500 group-hover:scale-110 drop-shadow-xl"
+                    style={{
+                      maskImage: `url(${publicAssetPath(categoryImage)})`,
+                      WebkitMaskImage: `url(${publicAssetPath(categoryImage)})`,
+                      maskRepeat: "no-repeat",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskPosition: "center",
+                      WebkitMaskPosition: "center",
+                      maskSize: "contain",
+                      WebkitMaskSize: "contain",
+                    }}
                   />
                 </div>
                 <h1 className="display-xl lg:display-2xl font-bold text-neutral-900 dark:text-white leading-tight mb-6">

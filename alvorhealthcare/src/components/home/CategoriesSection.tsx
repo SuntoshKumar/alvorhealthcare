@@ -11,36 +11,36 @@ const categories = [
     name: "Tablets",
     slug: "tablets",
     count: 14,
-    gradient: "from-blue-100 to-blue-300",
-    image: "/images/categories/tablet.png",
+    gradient: "from-blue-300 to-blue-600",
+    image: "/images/categories/tablet.svg",
   },
   {
     name: "Capsules",
     slug: "capsules",
     count: 10,
-    gradient: "from-teal-100 to-teal-300",
-    image: "/images/categories/capsule.png",
+    gradient: "from-teal-300 to-teal-600",
+    image: "/images/categories/capsule.svg",
   },
   {
     name: "Syrups",
     slug: "syrups",
     count: 8,
-    gradient: "from-emerald-100 to-emerald-300",
-    image: "/images/categories/syrup.png",
+    gradient: "from-emerald-300 to-emerald-600",
+    image: "/images/categories/syrup.svg",
   },
   {
     name: "Injections",
     slug: "injections",
     count: 10,
-    gradient: "from-purple-100 to-purple-300",
-    image: "/images/categories/injection.png",
+    gradient: "from-purple-300 to-purple-600",
+    image: "/images/categories/injection.svg",
   },
   {
     name: "Supplements",
     slug: "supplements",
     count: 8,
-    gradient: "from-amber-100 to-amber-300",
-    image: "/images/categories/supplement.png",
+    gradient: "from-amber-300 to-amber-600",
+    image: "/images/categories/supplement.svg",
   },
 ];
 
@@ -97,7 +97,7 @@ export function CategoriesSection() {
                     alt={cat.name}
                     width={24}
                     height={24}
-                    className="object-contain"
+                    className="object-contain brightness-0 invert"
                   />
                 </div>
                 <h3 className="font-heading font-semibold text-neutral-900 dark:text-white text-sm lg:text-base">
