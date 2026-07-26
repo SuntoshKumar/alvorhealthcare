@@ -58,7 +58,7 @@ describe("Data Layer", () => {
   });
 
   it("companyInfo has required fields", () => {
-    expect(companyInfo.name).toBe("Alvor Healthcare");
+    expect(companyInfo.name).toBe("Alvor Healthcare Company Limited");
     expect(companyInfo.foundedYear).toBeGreaterThan(0);
     expect(companyInfo.countriesServed).toBeGreaterThan(0);
     expect(companyInfo.contact.email).toContain("@");

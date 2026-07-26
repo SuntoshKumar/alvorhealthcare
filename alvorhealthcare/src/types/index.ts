@@ -53,6 +53,8 @@ export interface CompanyInfo {
   tagline: string;
   mission: string;
   vision: string;
+  foundedYear: number;
+  countriesServed: number;
   productsCount: number;
   distributionCapabilities: string[];
   qualityStandards: string[];
