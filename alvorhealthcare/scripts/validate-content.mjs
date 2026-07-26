@@ -7,16 +7,42 @@ const publicRoot = join(root, "public");
 const dataRoot = join(root, "src", "data");
 const errors = [];
 
-const readJson = (name) => JSON.parse(readFileSync(join(dataRoot, name), "utf8"));
+const readJson = (...parts) => JSON.parse(readFileSync(join(dataRoot, ...parts), "utf8"));
 const company = readJson("company.json");
-const categories = readJson("categories.json");
-const products = readJson("products.json");
-const news = readJson("news.json");
+const categories = readJson("products", "categories.json");
+const products = [
+  ...readJson("products", "capsules.json"),
+  ...readJson("products", "injections.json"),
+  ...readJson("products", "supplements.json"),
+  ...readJson("products", "syrups.json"),
+  ...readJson("products", "tablets.json"),
+];
+const news = readJson("news", "articles.json");
 const site = readJson("site.json");
-const home = readJson("home.json");
-const about = readJson("about.json");
-const resources = readJson("resources.json");
-const resourcePages = readJson("resource-pages.json");
+const home = {
+  hero: readJson("home", "hero.json"),
+  whyChoose: readJson("home", "whyChoose.json"),
+  partners: readJson("home", "partners.json"),
+  news: readJson("home", "news.json"),
+  cta: readJson("home", "cta.json"),
+};
+const about = {
+  hero: readJson("about", "hero.json"),
+  mission: readJson("about", "mission.json"),
+  history: readJson("about", "history.json"),
+  services: readJson("about", "services.json"),
+};
+const contact = {
+  hero: readJson("contact", "hero.json"),
+  contactInfo: readJson("contact", "contactInfo.json"),
+  form: readJson("contact", "form.json"),
+  faq: readJson("contact", "faq.json"),
+  locations: readJson("contact", "locations.json"),
+  map: readJson("contact", "map.json"),
+  cta: readJson("contact", "cta.json"),
+};
+const resources = readJson("resources", "collections.json");
+const resourcePages = readJson("resources", "pages.json");
 
 const requireText = (value, path) => {
   if (typeof value !== "string" || value.trim() === "") errors.push(`${path} must be a non-empty string`);
@@ -81,6 +107,12 @@ requireText(company.contact?.email, "company.contact.email");
 if (typeof company.contact?.email === "string" && !company.contact.email.includes("@")) {
   errors.push("company.contact.email must be a valid email address");
 }
+if (!Array.isArray(company.contact?.phones) || company.contact.phones.length === 0) {
+  errors.push("company.contact.phones must contain at least one phone number");
+}
+if (!Array.isArray(company.contact?.locations) || company.contact.locations.length === 0) {
+  errors.push("company.contact.locations must contain at least one location");
+}
 
 requireLinks(site.navigation, "site.navigation");
 requireText(site.headerCta?.label, "site.headerCta.label");
@@ -107,6 +139,19 @@ if (!Array.isArray(about.mission?.coreValues) || about.mission.coreValues.length
 }
 if (!Array.isArray(about.history?.milestones) || about.history.milestones.length === 0) {
   errors.push("about.history.milestones must contain at least one milestone");
+}
+requireText(about.services?.title, "about.services.title");
+if (!Array.isArray(about.services?.items) || about.services.items.length === 0) {
+  errors.push("about.services.items must contain at least one service");
+}
+
+requireText(contact.hero?.description, "contact.hero.description");
+if (!Array.isArray(contact.contactInfo) || contact.contactInfo.length === 0) {
+  errors.push("contact.contactInfo must contain at least one contact method");
+}
+requireText(contact.form?.title, "contact.form.title");
+if (!Array.isArray(contact.faq?.items) || contact.faq.items.length === 0) {
+  errors.push("contact.faq.items must contain at least one item");
 }
 
 requireUnique(categories, "id", "categories.json");

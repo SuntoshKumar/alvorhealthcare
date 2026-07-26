@@ -34,5 +34,38 @@
     "action": "Send Email",
     "link": "mailto:alvorhealthcare@gmail.com",
     "gradient": "from-teal-500 to-teal-600"
+  },
+  {
+    "icon": "viber",
+    "title": "Viber",
+    "subtitle": "Chat with us",
+    "details": [
+      "09952845242"
+    ],
+    "action": "Open Viber",
+    "link": "viber://chat?number=09952845242",
+    "gradient": "from-violet-500 to-violet-600"
+  },
+  {
+    "icon": "whatsapp",
+    "title": "WhatsApp",
+    "subtitle": "Message us",
+    "details": [
+      "09952845242"
+    ],
+    "action": "Open WhatsApp",
+    "link": "https://wa.me/959952845242",
+    "gradient": "from-green-500 to-green-600"
+  },
+  {
+    "icon": "facebook",
+    "title": "Facebook",
+    "subtitle": "Follow us",
+    "details": [
+      "Alvor Healthcare"
+    ],
+    "action": "Visit Page",
+    "link": "https://www.facebook.com/Alvorofficialpage/",
+    "gradient": "from-blue-600 to-blue-700"
   }
 ]

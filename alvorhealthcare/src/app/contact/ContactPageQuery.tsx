@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import ContactPageContent from "./ContactPageContent";
+import { ContactForm } from "@/components/contact/ContactForm";
 
 const inquiryTypes = [
   "general",
@@ -25,7 +25,7 @@ export function ContactPageQuery() {
   const subject = searchParams.get("subject");
 
   return (
-    <ContactPageContent
+    <ContactForm
       initialInquiryType={
         isInquiryType(requestedInquiryType) ? requestedInquiryType : "general"
       }

@@ -4,7 +4,7 @@
     "items": [
       {
         "question": "How can I place an order for Alvor Healthcare products?",
-        "answer": "For wholesale orders, please contact our commercial team through the Contact page. For individual prescriptions, our products are available through authorized distributors and pharmacies worldwide."
+        "answer": "For wholesale orders, please contact our team through the Contact page. For individual prescriptions, ask a pharmacy, hospital, clinic, or healthcare provider in Myanmar about current availability."
       },
       {
         "question": "What is the minimum order quantity?",
@@ -33,7 +33,7 @@
       },
       {
         "question": "What should I do if I experience a side effect?",
-        "answer": "Please report any adverse events to your healthcare provider immediately. You can also report directly to our pharmacovigilance team through the Contact page or by emailing safety@alvorhealthcare.com."
+        "answer": "Please contact a healthcare professional promptly about side effects or urgent medical concerns. Product safety information can also be sent through the Contact page or to alvorhealthcare@gmail.com with the product name, batch number, and relevant details."
       }
     ]
   },
@@ -50,7 +50,7 @@
       },
       {
         "question": "What markets do you currently serve?",
-        "answer": "We serve 45+ countries across North America, Europe, Asia, Africa, and the Middle East. Our expansion roadmap includes additional markets in Southeast Asia and Latin America."
+        "answer": "Alvor Healthcare serves healthcare providers and organizations in Myanmar. Contact our team with the product and location you need so we can confirm current availability."
       }
     ]
   },

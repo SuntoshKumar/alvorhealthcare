@@ -13,7 +13,7 @@ import {
   Shield,
   Sparkles,
 } from "lucide-react";
-import { companyInfo, homeContent } from "@/data";
+import { homeContent } from "@/data";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 

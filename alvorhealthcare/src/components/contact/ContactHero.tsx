@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, ArrowDown } from "lucide-react";
+import { Mail, Phone, MapPin, Building2, ArrowDown } from "lucide-react";
 import { contactContent } from "@/data";
 
 export function ContactHero() {
@@ -99,14 +99,14 @@ export function ContactHero() {
               <div className="relative">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-md">
-                    <Clock className="w-5 h-5 text-white" />
+                    <Building2 className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
-                      Response Time
+                      Myanmar Operations
                     </p>
                     <p className="text-sm font-bold text-neutral-900 dark:text-white">
-                      Within 24 hours
+                      Yangon and Mandalay
                     </p>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export function ContactHero() {
                         key={i}
                         className={`w-9 h-9 rounded-full ${color} border-2 border-white dark:border-neutral-800 flex items-center justify-center text-[11px] font-bold text-white shadow-sm`}
                       >
-                        {["Y", "M", "E"][i]}
+                        {["Y", "M", "P"][i]}
                       </div>
                     ))}
                   </div>
@@ -140,7 +140,7 @@ export function ContactHero() {
                       3 Locations
                     </p>
                     <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                      Yangon, Mandalay & online
+                      Yangon, Mandalay & public listing
                     </p>
                   </div>
                 </div>

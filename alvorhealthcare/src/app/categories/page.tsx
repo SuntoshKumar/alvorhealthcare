@@ -116,8 +116,8 @@ export default function CategoriesPage() {
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
-                                    <span className="font-medium text-neutral-900 dark:text-white">45+</span>
-                                    <span>Countries</span>
+                                    <span className="font-medium text-neutral-900 dark:text-white">Myanmar</span>
+                                    <span>Market</span>
                                 </div>
                                 <div className="flex items-center gap-2">
                                     <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
@@ -248,10 +248,10 @@ export default function CategoriesPage() {
                             {
                                 icon: Shield,
                                 title: "Regulatory Ready",
-                                desc: "Comprehensive documentation for global registrations"
+                                desc: "Product information and documentation support for applicable local requirements"
                             },
                             {icon: Leaf, title: "Responsible Operations", desc: "Practical packaging, transport, and waste-reduction choices"},
-                            {icon: Globe, title: "Global Supply", desc: "Reliable delivery to 45+ countries worldwide"},
+                            {icon: Globe, title: "Myanmar Supply", desc: "Distribution support for healthcare organizations across Myanmar"},
                             {
                                 icon: Users,
                                 title: "Clinical Support",

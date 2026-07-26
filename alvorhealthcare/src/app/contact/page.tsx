@@ -1,13 +1,14 @@
 import { Metadata } from "next";
+import { Suspense } from "react";
 import { ContactHero } from "@/components/contact/ContactHero";
 import { ContactInfo } from "@/components/contact/ContactInfo";
-import { ContactForm } from "@/components/contact/ContactForm";
 import { ContactLocations } from "@/components/contact/ContactLocations";
 import { ContactMap } from "@/components/contact/ContactMap";
 import { ContactCTA } from "@/components/contact/ContactCTA";
+import { ContactPageQuery } from "./ContactPageQuery";
 
 export const metadata: Metadata = {
-  title: "Contact | Alvor Healthcare",
+  title: "Contact",
   description: "Contact Alvor Healthcare in Yangon or Mandalay about products, distribution, partnerships, medical supplies, or general company enquiries.",
   openGraph: {
     title: "Contact | Alvor Healthcare",
@@ -20,7 +21,9 @@ export default function ContactPage() {
     <div>
       <ContactHero />
       <ContactInfo />
-      <ContactForm />
+      <Suspense fallback={<div className="min-h-[48rem] bg-neutral-50 dark:bg-neutral-900/50" />}>
+        <ContactPageQuery />
+      </Suspense>
       <ContactLocations />
       <ContactMap />
       <ContactCTA />

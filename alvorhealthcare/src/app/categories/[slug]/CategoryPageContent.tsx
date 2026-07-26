@@ -143,8 +143,8 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                 )}
                 <div className="flex items-center gap-2">
                   <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                  <span className="font-medium text-neutral-900 dark:text-white">45+</span>
-                  <span>Countries</span>
+                  <span className="font-medium text-neutral-900 dark:text-white">Myanmar</span>
+                  <span>Market</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <FileCheck2 className="w-5 h-5 text-blue-600 dark:text-blue-400" />

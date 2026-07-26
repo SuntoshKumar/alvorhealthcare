@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDownRight, BadgeCheck, Building2, MapPin, PackageSearch, Phone, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDownRight, BadgeCheck, Building2, MapPin, PackageSearch, Phone, Sparkles } from "lucide-react";
 import { aboutContent, companyInfo } from "@/data";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;

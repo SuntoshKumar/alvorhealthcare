@@ -25,7 +25,7 @@ export function FeaturedProducts() {
               Featured Products
             </h2>
             <p className="text-neutral-500 dark:text-neutral-400 mt-2 max-w-lg">
-              Our most trusted pharmaceutical solutions, chosen by healthcare professionals worldwide.
+              Explore selected pharmaceutical and healthcare products from our Myanmar portfolio.
             </p>
           </div>
           <Link

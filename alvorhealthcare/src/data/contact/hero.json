@@ -5,16 +5,16 @@
   "description": "Contact our Myanmar team about products, distribution, partnerships, medical supplies, or general company enquiries.",
   "stats": [
     {
-      "value": "< 24h",
-      "label": "Response Time"
+      "value": "3",
+      "label": "Phone Lines"
     },
     {
       "value": "3",
-      "label": "Office Locations"
+      "label": "Contact Locations"
     },
     {
-      "value": "6+",
-      "label": "Inquiry Types"
+      "value": "1",
+      "label": "Myanmar Network"
     }
   ]
 }

@@ -17,25 +17,27 @@ export function CareersHero() {
       <div className="container relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div>
-            <motion.span
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:border-blue-800 dark:bg-blue-900/40 dark:text-blue-300"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
-              {hero.eyebrow}
-            </motion.span>
+            <div className="flex flex-wrap items-center gap-3">
+              <motion.span
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:border-blue-800 dark:bg-blue-900/40 dark:text-blue-300"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
+                {hero.eyebrow}
+              </motion.span>
 
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-4 inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Now hiring — New Dermatology &amp; Paediatrics division
-            </motion.div>
+              <motion.span
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
+                className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-3.5 py-1.5 text-xs font-semibold text-emerald-700 dark:border-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                Now hiring — New Dermatology &amp; Paediatrics division
+              </motion.span>
+            </div>
 
             <motion.h1
               id="careers-heading"

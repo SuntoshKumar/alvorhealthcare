@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
-import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram, FaYoutube, FaViber, FaWhatsapp } from "react-icons/fa";
 import { categories, companyInfo, siteContent } from "@/data";
 
 export function Footer() {
@@ -24,17 +24,19 @@ export function Footer() {
               {siteContent.footer.description}
             </p>
             <div className="flex flex-col gap-2.5 text-sm text-neutral-400">
-              <a href={`tel:${companyInfo.contact.phone.replace(/\D/g, "")}`} className="flex items-center gap-3 hover:text-blue-400 transition-colors">
-                <Phone className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                {companyInfo.contact.phone}
-              </a>
+              {companyInfo.contact.phones.map((phone) => (
+                <a key={phone} href={`tel:${phone.replace(/\D/g, "")}`} className="flex items-center gap-3 hover:text-blue-400 transition-colors">
+                  <Phone className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                  {phone}
+                </a>
+              ))}
               <a href={`mailto:${companyInfo.contact.email}`} className="flex items-center gap-3 hover:text-blue-400 transition-colors">
                 <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" />
                 {companyInfo.contact.email}
               </a>
               <span className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
-                <span>{companyInfo.contact.address}, {companyInfo.contact.city}, {companyInfo.contact.state} {companyInfo.contact.postalCode}</span>
+                <span>{companyInfo.contact.address}, {companyInfo.contact.city}, {companyInfo.contact.country}</span>
               </span>
             </div>
           </div>
@@ -92,6 +94,8 @@ export function Footer() {
                   <a
                     key={link.platform}
                     href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-9 h-9 rounded-lg bg-neutral-800 hover:bg-blue-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all"
                     aria-label={link.platform}
                   >
@@ -99,6 +103,24 @@ export function Footer() {
                   </a>
                 );
               })}
+              <a
+                href="viber://chat?number=09952845242"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-neutral-800 hover:bg-violet-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all"
+                aria-label="Viber"
+              >
+                <FaViber className="w-4 h-4" />
+              </a>
+              <a
+                href="https://wa.me/959952845242"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-lg bg-neutral-800 hover:bg-green-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all"
+                aria-label="WhatsApp"
+              >
+                <FaWhatsapp className="w-4 h-4" />
+              </a>
             </div>
             <h4 className="font-heading font-semibold text-xs uppercase tracking-wider text-neutral-400 mb-3">
               {siteContent.footer.newsletterTitle}

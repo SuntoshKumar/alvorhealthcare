@@ -1,13 +1,17 @@
 "use client";
 
 import { MapPin, Phone, Mail, ArrowRight } from "lucide-react";
+import { FaViber, FaWhatsapp, FaFacebookF } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { contactContent } from "@/data";
 
-const icons: Record<string, typeof MapPin> = {
+const icons: Record<string, typeof MapPin | typeof FaViber> = {
   mapPin: MapPin,
   phone: Phone,
   mail: Mail,
+  viber: FaViber,
+  whatsapp: FaWhatsapp,
+  facebook: FaFacebookF,
 };
 
 export function ContactInfo() {
@@ -35,7 +39,7 @@ export function ContactInfo() {
         </motion.div>
 
         <motion.div
-          className="grid lg:grid-cols-3 gap-5 items-stretch"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.15 }}

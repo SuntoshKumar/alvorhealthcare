@@ -59,8 +59,9 @@ describe("Data Layer", () => {
 
   it("companyInfo has required fields", () => {
     expect(companyInfo.name).toBe("Alvor Healthcare Company Limited");
-    expect(companyInfo.foundedYear).toBeGreaterThan(0);
-    expect(companyInfo.countriesServed).toBeGreaterThan(0);
+    expect(companyInfo.contact.country).toBe("Myanmar");
+    expect(companyInfo.contact.phones).toHaveLength(3);
+    expect(companyInfo.contact.locations.length).toBeGreaterThanOrEqual(2);
     expect(companyInfo.contact.email).toContain("@");
   });
 });

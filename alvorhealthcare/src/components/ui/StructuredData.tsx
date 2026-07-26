@@ -8,19 +8,18 @@ export function OrganizationStructuredData() {
     description: companyInfo.mission,
     url: "https://alvorhealthcare.com",
     logo: "https://alvorhealthcare.com/images/og-image.svg",
-    foundingDate: `${companyInfo.foundedYear}`,
     slogan: companyInfo.tagline,
-    areaServed: "Worldwide",
-    numberOfEmployees: { "@type": "QuantitativeValue", value: 1200 },
-    contactPoint: [
-      {
+    areaServed: {
+      "@type": "Country",
+      name: "Myanmar",
+    },
+    contactPoint: companyInfo.contact.phones.map((phone) => ({
         "@type": "ContactPoint",
-        telephone: companyInfo.contact.phone,
+        telephone: phone,
         contactType: "customer service",
         email: companyInfo.contact.email,
         availableLanguage: ["English"],
-      },
-    ],
+      })),
     address: {
       "@type": "PostalAddress",
       streetAddress: companyInfo.contact.address,
@@ -32,17 +31,17 @@ export function OrganizationStructuredData() {
     sameAs: companyInfo.socialLinks.map((l) => l.url),
     knowsAbout: [
       "Pharmaceutical Distribution",
-      "Medicine Supply",
-      "Product Documentation",
-      "Batch Traceability",
-      "Healthcare Products",
+      "Medical Supplies",
+      "Diagnostic Products",
+      "Consumer Healthcare",
+      "Healthcare Product Marketing",
     ],
     makesOffer: {
       "@type": "Offer",
       itemOffered: {
         "@type": "Product",
         name: "Pharmaceutical Products",
-        description: "50+ pharmaceutical products across tablets, capsules, syrups, injections, and supplements",
+        description: "Pharmaceutical products, medical supplies, diagnostic products, vitamins, supplements, and over-the-counter healthcare products",
       },
     },
   };

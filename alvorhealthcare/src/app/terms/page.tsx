@@ -163,9 +163,8 @@ export default function TermsPage() {
 
       <LegalSection id="law" title="9. Governing law, general terms, and contact">
         <p>
-          Unless mandatory law requires otherwise, these terms are governed by the laws of the State of New York and
-          applicable United States federal law, without regard to conflict-of-law principles. Courts with jurisdiction in
-          New York County, New York will have exclusive jurisdiction over disputes relating to these terms or the website.
+          These terms are interpreted under the law that applies to Alvor Healthcare and your use of the website.
+          Any dispute will be handled by a court or authority with jurisdiction under applicable law.
         </p>
         <p>
           If a provision is unenforceable, it will be limited or removed only to the minimum extent necessary, and the

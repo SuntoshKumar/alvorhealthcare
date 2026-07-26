@@ -156,7 +156,7 @@ export function LegalCallout({
 }
 
 export function LegalContact({ subject }: { subject: string }) {
-  const address = `${companyInfo.contact.address}, ${companyInfo.contact.city}, ${companyInfo.contact.state} ${companyInfo.contact.postalCode}, ${companyInfo.contact.country}`;
+  const address = `${companyInfo.contact.address}, ${companyInfo.contact.city}, ${companyInfo.contact.state}, ${companyInfo.contact.country}`;
 
   return (
     <div className="grid gap-3 sm:grid-cols-2">

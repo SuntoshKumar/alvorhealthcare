@@ -4,7 +4,7 @@ import { NewsPageContent } from "./NewsPageContent";
 export const metadata: Metadata = {
   title: "Newsroom",
   description:
-    "Read Alvor Healthcare company announcements, product updates, quality milestones, and global healthcare news.",
+    "Read Alvor Healthcare company announcements, product updates, distribution news, and healthcare information from Myanmar.",
 };
 
 export default function NewsPage() {
