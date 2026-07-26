@@ -6,6 +6,8 @@ import newsData from "./news.json";
 import productsData from "./products.json";
 import siteData from "./site.json";
 import aboutData from "./about.json";
+import careersData from "./careers.json";
+import contactData from "./contact.json";
 
 export {
   getResourceCollection,
@@ -41,6 +43,8 @@ export const newsArticles: NewsArticle[] = newsData as NewsArticle[];
 export const siteContent = siteData;
 export const homeContent = homeData;
 export const aboutContent = aboutData;
+export const careersContent = careersData;
+export const contactContent = contactData;
 
 export function getProductBySlug(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);

@@ -7,7 +7,7 @@ import { z } from "zod";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, ChevronDown, Building2, ArrowRight, Navigation } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
-import { Card, CardTitle } from "@/components/ui/Card";
+import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
 import { Textarea } from "@/components/ui/Input";
@@ -93,6 +93,7 @@ export default function ContactPageContent({
       ],
       action: "View Location",
       link: null,
+      gradient: "from-blue-500 to-blue-600",
     },
     {
       icon: Phone,
@@ -101,6 +102,7 @@ export default function ContactPageContent({
       details: companyInfo.contact.phones,
       action: "Call Now",
       link: `tel:${companyInfo.contact.phone.replace(/\D/g, "")}`,
+      gradient: "from-emerald-500 to-emerald-600",
     },
     {
       icon: Mail,
@@ -109,6 +111,7 @@ export default function ContactPageContent({
       details: [companyInfo.contact.email],
       action: "Send Email",
       link: `mailto:${companyInfo.contact.email}`,
+      gradient: "from-teal-500 to-teal-600",
     },
   ];
 
@@ -160,47 +163,42 @@ export default function ContactPageContent({
 
       <section className="section bg-white dark:bg-neutral-950" aria-labelledby="contact-info-heading">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-6 items-stretch">
+          <div className="grid lg:grid-cols-3 gap-5 items-stretch">
             {contactInfo.map((info, index) => (
-              <ScrollReveal key={info.title} delay={index * 0.1}>
-                <StaggerItem delay={index * 0.1}>
-                  <HoverScale>
-                    <Card
-                      variant="elevated"
-                      className="group h-full min-h-[290px] flex flex-col justify-between p-7 border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 hover:shadow-xl transition-all duration-300"
-                    >
-                      <div>
-                        <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/40 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6">
-                          <info.icon className="w-6 h-6" aria-hidden="true" />
-                        </div>
+              <ScrollReveal key={info.title} delay={index * 0.1} className="h-full">
+                <StaggerItem delay={index * 0.1} className="h-full">
+                  <HoverScale className="h-full">
+                    <div className="pharma-card group relative flex h-full flex-col rounded-2xl border border-neutral-100 bg-white p-6 dark:border-neutral-700/50 dark:bg-neutral-800/30 lg:p-7">
+                      <div className={`w-11 h-11 rounded-xl bg-gradient-to-br ${info.gradient} flex items-center justify-center mb-4 shadow-md transition-transform duration-300 group-hover:scale-105`}>
+                        <info.icon className="w-5 h-5 text-white" aria-hidden="true" />
+                      </div>
 
-                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
-                          {info.title}
-                        </h3>
+                      <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
+                        {info.subtitle}
+                      </p>
 
-                        <p className="mt-1 text-sm font-medium text-blue-600 dark:text-blue-400">
-                          {info.subtitle}
-                        </p>
+                      <h3 className="font-heading text-lg font-semibold text-neutral-900 dark:text-white mb-2">
+                        {info.title}
+                      </h3>
 
-                        <div className="mt-5 space-y-1 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
-                          {info.details.map((detail, i) => (
-                            <div key={i}>
-                              {detail}
-                            </div>
-                          ))}
-                        </div>
+                      <div className="flex-1 space-y-1 text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
+                        {info.details.map((detail, i) => (
+                          <p key={i}>{detail}</p>
+                        ))}
                       </div>
 
                       {info.link && (
                         <a
                           href={info.link}
-                          className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 group-hover:gap-3 transition-all"
+                          className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400 transition-colors hover:text-blue-700 dark:hover:text-blue-300"
                         >
                           {info.action}
-                          <ArrowRight className="w-4 h-4" />
+                          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-blue-600 group-hover:text-white dark:bg-blue-900/30 dark:group-hover:bg-blue-600">
+                            <ArrowRight className="h-3.5 w-3.5" />
+                          </span>
                         </a>
                       )}
-                    </Card>
+                    </div>
                   </HoverScale>
                 </StaggerItem>
               </ScrollReveal>
@@ -348,12 +346,12 @@ export default function ContactPageContent({
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-stretch">
             {companyInfo.contact.locations.map((office, index) => (
-              <StaggerItem key={office.name} delay={index * 0.1}>
-                <ScrollReveal>
-                  <HoverScale>
-                    <Card variant="elevated" className="p-6 h-full">
+              <StaggerItem key={office.name} delay={index * 0.1} className="h-full">
+                <ScrollReveal className="h-full">
+                  <HoverScale className="h-full">
+                    <Card variant="elevated" className="p-6 h-full flex flex-col">
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
                           <Building2 className="w-6 h-6" aria-hidden="true" />

@@ -1,0 +1,128 @@
+{
+  "hero": {
+    "eyebrow": "Careers at Alvor",
+    "titlePrefix": "Build Your",
+    "titleHighlight": "Healthcare Career",
+    "description": "Join a team that connects healthcare providers with quality pharmaceutical products across Myanmar. At Alvor Healthcare, your work supports supply, quality, service, and commercial operations that make a real difference.",
+    "primaryCta": { "label": "Explore Roles", "href": "#departments" },
+    "secondaryCta": { "label": "Contact Us", "href": "/contact" },
+    "stats": [
+      { "value": "6+", "label": "Departments" },
+      { "value": "50+", "label": "Team Members" },
+      { "value": "2", "label": "Office Locations" }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Why Alvor",
+    "title": "Why Join Alvor?",
+    "description": "We invest in our people with meaningful growth opportunities, supportive culture, and comprehensive benefits.",
+    "items": [
+      {
+        "icon": "heartPulse",
+        "title": "Health & Wellness",
+        "description": "Comprehensive medical, dental, and vision coverage for you and your family.",
+        "gradient": "from-rose-500 to-rose-600"
+      },
+      {
+        "icon": "graduationCap",
+        "title": "Learning & Development",
+        "description": "Continuous learning opportunities, tuition reimbursement, and professional development programs.",
+        "gradient": "from-blue-500 to-blue-600"
+      },
+      {
+        "icon": "globe",
+        "title": "Global Exposure",
+        "description": "Work with international manufacturer partners and gain cross-border operational experience.",
+        "gradient": "from-teal-500 to-teal-600"
+      },
+      {
+        "icon": "trendingUp",
+        "title": "Career Growth",
+        "description": "Clear career progression paths, mentorship programs, and leadership development.",
+        "gradient": "from-emerald-500 to-emerald-600"
+      },
+      {
+        "icon": "users",
+        "title": "Inclusive Culture",
+        "description": "Diverse and inclusive workplace where every voice is valued and respected.",
+        "gradient": "from-violet-500 to-violet-600"
+      },
+      {
+        "icon": "briefcase",
+        "title": "Work-Life Balance",
+        "description": "Flexible working arrangements, generous paid time off, and family leave policies.",
+        "gradient": "from-amber-500 to-amber-600"
+      }
+    ]
+  },
+  "departments": {
+    "eyebrow": "Open Positions",
+    "title": "Find Your Role",
+    "description": "Explore opportunities across our teams. Each department plays a vital role in delivering quality healthcare products.",
+    "items": [
+      {
+        "name": "Supply Operations",
+        "description": "Coordinate inventory, storage requirements, orders, and reliable product movement across the distribution network.",
+        "gradient": "from-blue-500 to-blue-600"
+      },
+      {
+        "name": "Quality & Compliance",
+        "description": "Support supplier qualification, documentation, traceability, complaints, and recalls to maintain product quality.",
+        "gradient": "from-emerald-500 to-emerald-600"
+      },
+      {
+        "name": "Regulatory Support",
+        "description": "Coordinate product and market information across applicable regulatory requirements for safe distribution.",
+        "gradient": "from-teal-500 to-teal-600"
+      },
+      {
+        "name": "Commercial",
+        "description": "Build responsible relationships with healthcare providers and distribution partners across Myanmar.",
+        "gradient": "from-amber-500 to-amber-600"
+      },
+      {
+        "name": "Customer Operations",
+        "description": "Provide clear product, order, documentation, and service support to healthcare customers.",
+        "gradient": "from-violet-500 to-violet-600"
+      },
+      {
+        "name": "Corporate Functions",
+        "description": "Support our work through finance, people operations, technology, and legal expertise.",
+        "gradient": "from-rose-500 to-rose-600"
+      }
+    ]
+  },
+  "culture": {
+    "eyebrow": "Our Culture",
+    "title": "A Workplace Built on Trust and Growth",
+    "description": "We believe great healthcare distribution starts with a great team. Our culture supports professional growth, mutual respect, and shared purpose.",
+    "values": [
+      {
+        "icon": "award",
+        "title": "Quality First",
+        "description": "Every product we handle meets rigorous quality standards. We take pride in doing things right."
+      },
+      {
+        "icon": "shield",
+        "title": "Integrity",
+        "description": "We build trust through honest communication, ethical practices, and transparent operations."
+      },
+      {
+        "icon": "heart",
+        "title": "People Centered",
+        "description": "Our team's wellbeing and growth drive everything we do. Your success is our success."
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Continuous Improvement",
+        "description": "We encourage new ideas, learning from experience, and finding better ways to serve healthcare needs."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Don't See a Role That Fits?",
+    "description": "We're always looking for talented individuals who share our passion for healthcare. Send us your resume and we'll keep you in mind for future opportunities.",
+    "primaryCta": { "label": "Send Your Resume", "href": "mailto:alvorhealthcare@gmail.com?subject=Career%20Inquiry" },
+    "secondaryCta": { "label": "Get in Touch", "href": "/contact" }
+  }
+}
