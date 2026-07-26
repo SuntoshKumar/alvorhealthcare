@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ProductsPageContent } from "./ProductsPageContent";
+import { ProductsPageSkeleton } from "./ProductsPageSkeleton";
 
 export const metadata: Metadata = {
   title: "Products",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ProductsPage() {
   return (
-    <Suspense>
+    <Suspense fallback={<ProductsPageSkeleton />}>
       <ProductsPageContent />
     </Suspense>
   );

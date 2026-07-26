@@ -163,6 +163,8 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                         type="button"
                         onClick={() => setSelectedImage(index)}
                         whileTap={{ scale: 0.96 }}
+                        whileHover={prefersReducedMotion ? undefined : { y: -2 }}
+                        transition={{ duration: prefersReducedMotion ? 0.01 : 0.2 }}
                         className={`relative h-18 w-18 shrink-0 overflow-hidden rounded-xl border-2 bg-neutral-50 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:bg-neutral-900 sm:h-20 sm:w-20 ${
                           index === selectedImage
                             ? "border-blue-600 shadow-[0_8px_20px_-12px_rgba(37,99,235,0.7)]"
@@ -172,6 +174,13 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                         aria-pressed={index === selectedImage}
                       >
                         <Image src={publicAssetPath(image)} alt="" fill className="object-contain p-1" sizes="80px" />
+                        {index === selectedImage && (
+                          <motion.span
+                            layoutId="selected-product-image"
+                            className="pointer-events-none absolute inset-0 rounded-[0.65rem] ring-2 ring-inset ring-blue-500/70"
+                            transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 420, damping: 34 }}
+                          />
+                        )}
                         <AnimatePresence>
                           {index === selectedImage && (
                             <motion.span layoutId="active-product-thumbnail" className="absolute inset-x-2 bottom-1 h-0.5 rounded-full bg-blue-600" />

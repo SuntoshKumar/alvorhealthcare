@@ -1,8 +1,8 @@
 "use client";
 
 import { useDeferredValue, useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
-import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import { ArrowUpDown, ChevronDown, Grid, List, LoaderCircle, Package, Search, SlidersHorizontal, Sparkles, X } from "lucide-react";
 import { ProductCard } from "@/components/products/ProductCard";
 import { Button } from "@/components/ui/Button";
@@ -48,6 +48,8 @@ function createInitialFilters(initialCategory?: string, initialSubCategory?: str
 
 export function ProductsPageContent() {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
   const rawCategory = searchParams.get("category") ?? undefined;
   const rawSubCategory = searchParams.get("subcategory") ?? undefined;
   const [filters, setFilters] = useState<FilterState>(() => createInitialFilters(rawCategory, rawSubCategory));
@@ -111,6 +113,7 @@ export function ProductsPageContent() {
       sortBy: previous.sortBy,
       viewMode: previous.viewMode,
     }));
+    updateProductUrl("all");
   };
 
   const toggleTag = (tag: string) => {
@@ -123,8 +126,49 @@ export function ProductsPageContent() {
   const rangeEnd = Math.min(filters.page * filters.limit, filteredProducts.length);
   const isSearching = filters.search !== deferredSearch;
   const transitionDuration = prefersReducedMotion ? 0.01 : 0.35;
+  const heroItemVariants = {
+    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 16 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: prefersReducedMotion ? 0.01 : 0.5, ease: [0.22, 1, 0.36, 1] as const },
+    },
+  };
   const activeCategory = categories.find((category) => category.slug === filters.category);
   const activeSubCategory = activeCategory?.subCategories?.find((subCategory) => subCategory.name === filters.subCategory);
+
+  const updateProductUrl = (category: string, subCategory = "") => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    if (category === "all") {
+      params.delete("category");
+      params.delete("subcategory");
+    } else {
+      params.set("category", category);
+      if (subCategory) {
+        const categoryData = categories.find((item) => item.slug === category);
+        const subCategoryData = categoryData?.subCategories?.find((item) => item.name === subCategory);
+        if (subCategoryData) {
+          params.set("subcategory", subCategoryData.slug);
+        }
+      } else {
+        params.delete("subcategory");
+      }
+    }
+
+    const query = params.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+  };
+
+  const selectCategory = (category: string) => {
+    updateFilter("category", category);
+    updateProductUrl(category);
+  };
+
+  const selectSubCategory = (subCategory: string) => {
+    updateFilter("subCategory", subCategory);
+    updateProductUrl(filters.category, subCategory);
+  };
 
   const changePage = (page: number) => {
     updateFilter("page", page);
@@ -134,32 +178,45 @@ export function ProductsPageContent() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950">
+    <motion.div
+      className="min-h-screen bg-white dark:bg-neutral-950"
+      initial={{ opacity: prefersReducedMotion ? 1 : 0.72 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: prefersReducedMotion ? 0.01 : 0.28, ease: "easeOut" }}
+    >
       <section className="relative overflow-hidden border-b border-neutral-100 bg-gradient-to-b from-blue-50 via-white to-white pb-12 pt-28 dark:border-neutral-800 dark:from-blue-950/30 dark:via-neutral-950 dark:to-neutral-950 lg:pb-14">
         <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl dark:bg-blue-800/10" aria-hidden="true" />
         <div className="pharma-grid absolute inset-0 opacity-40 dark:opacity-15" aria-hidden="true" />
         <div className="container relative">
           <motion.div
             className="max-w-3xl"
-            initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: transitionDuration + 0.2, ease: [0.22, 1, 0.36, 1] }}
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: {
+                  delayChildren: prefersReducedMotion ? 0 : 0.04,
+                  staggerChildren: prefersReducedMotion ? 0 : 0.075,
+                },
+              },
+            }}
           >
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-blue-700 shadow-sm backdrop-blur-xl dark:border-blue-800/50 dark:bg-neutral-900/70 dark:text-blue-300">
+            <motion.div variants={heroItemVariants} className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-blue-700 shadow-sm backdrop-blur-xl dark:border-blue-800/50 dark:bg-neutral-900/70 dark:text-blue-300">
               <Package className="h-3.5 w-3.5" />
               Product directory
-            </div>
-            <h1 className="display-lg lg:display-xl font-bold text-neutral-900 dark:text-white">
+            </motion.div>
+            <motion.h1 variants={heroItemVariants} className="display-lg lg:display-xl font-bold text-neutral-900 dark:text-white">
               Find the right product,
               <span className="block bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
                 without the noise.
               </span>
-            </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
+            </motion.h1>
+            <motion.p variants={heroItemVariants} className="mt-5 max-w-2xl text-lg leading-relaxed text-neutral-600 dark:text-neutral-300">
               Browse {products.length} products across {categories.length} categories. Search by product name,
               indication, or therapeutic area.
-            </p>
-            <div className="mt-7 flex flex-wrap gap-2.5 text-sm text-neutral-600 dark:text-neutral-400">
+            </motion.p>
+            <motion.div variants={heroItemVariants} className="mt-7 flex flex-wrap gap-2.5 text-sm text-neutral-600 dark:text-neutral-400">
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-neutral-100 dark:bg-neutral-900 dark:ring-neutral-800">
                 <Package className="h-4 w-4 text-blue-600" />
                 {products.length} products
@@ -168,17 +225,22 @@ export function ProductsPageContent() {
                 <Sparkles className="h-4 w-4 text-teal-600" />
                 {products.filter((product) => product.isNew).length} recent additions
               </span>
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
 
-      <section className="sticky top-16 z-30 border-b border-neutral-100 bg-white/88 shadow-[0_12px_30px_-28px_rgba(15,23,42,0.7)] backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-950/88 lg:top-20">
+      <motion.section
+        className="sticky top-16 z-30 border-b border-neutral-100 bg-white/88 shadow-[0_12px_30px_-28px_rgba(15,23,42,0.7)] backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-950/88 lg:top-20"
+        initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: prefersReducedMotion ? 0.01 : 0.42, delay: prefersReducedMotion ? 0 : 0.08, ease: [0.22, 1, 0.36, 1] }}
+      >
         <div className="container py-3.5">
           <div className="flex gap-2 overflow-x-auto pb-1 scrollbar-hide" aria-label="Product categories">
             <button
               type="button"
-              onClick={() => updateFilter("category", "all")}
+              onClick={() => selectCategory("all")}
               className={`relative shrink-0 overflow-hidden rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                 filters.category === "all" ? "text-white" : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800"
               }`}
@@ -196,7 +258,7 @@ export function ProductsPageContent() {
               <button
                 key={category.id}
                 type="button"
-                onClick={() => updateFilter("category", category.slug)}
+                onClick={() => selectCategory(category.slug)}
                 className={`relative shrink-0 overflow-hidden rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                   filters.category === category.slug ? "text-white" : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:bg-neutral-800"
                 }`}
@@ -212,12 +274,72 @@ export function ProductsPageContent() {
               </button>
             ))}
           </div>
+          <AnimatePresence initial={false}>
+            {activeCategory?.subCategories && activeCategory.subCategories.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, height: 0, y: -6 }}
+                animate={{ opacity: 1, height: "auto", y: 0 }}
+                exit={{ opacity: 0, height: 0, y: -6 }}
+                transition={{ duration: prefersReducedMotion ? 0.01 : 0.24, ease: [0.22, 1, 0.36, 1] }}
+                className="overflow-hidden"
+              >
+                <div className="flex gap-2 overflow-x-auto border-t border-neutral-100 pt-3 scrollbar-hide dark:border-neutral-800" aria-label={`${activeCategory.name} subcategories`}>
+                  <button
+                    type="button"
+                    onClick={() => selectSubCategory("")}
+                    className={`relative shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
+                      !filters.subCategory
+                        ? "text-blue-700 dark:text-blue-300"
+                        : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
+                    }`}
+                  >
+                    {!filters.subCategory && (
+                      <motion.span
+                        layoutId="active-product-subcategory"
+                        className="absolute inset-0 rounded-full bg-blue-50 dark:bg-blue-900/30"
+                        transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 380, damping: 34 }}
+                      />
+                    )}
+                    <span className="relative">All {activeCategory.name.toLowerCase()}</span>
+                  </button>
+                  {activeCategory.subCategories.map((subCategory) => (
+                    <button
+                      key={subCategory.id}
+                      type="button"
+                      onClick={() => selectSubCategory(subCategory.name)}
+                      className={`relative shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
+                        filters.subCategory === subCategory.name
+                          ? "text-blue-700 dark:text-blue-300"
+                          : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
+                      }`}
+                    >
+                      {filters.subCategory === subCategory.name && (
+                        <motion.span
+                          layoutId="active-product-subcategory"
+                          className="absolute inset-0 rounded-full bg-blue-50 dark:bg-blue-900/30"
+                          transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 380, damping: 34 }}
+                        />
+                      )}
+                      <span className="relative">
+                        {subCategory.name} <span className="ml-1 opacity-60">{subCategory.productCount}</span>
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
-      </section>
+      </motion.section>
 
       <section id="product-results" className="scroll-mt-36 bg-neutral-50/70 py-10 dark:bg-neutral-900/30 lg:py-14" aria-label="Product results">
         <div className="container">
-          <div className="mb-7 overflow-hidden rounded-[1.5rem] border border-neutral-200/80 bg-white shadow-[0_18px_55px_-38px_rgba(15,23,42,0.45)] dark:border-neutral-800 dark:bg-neutral-900/80">
+          <motion.div
+            className="mb-7 overflow-hidden rounded-[1.5rem] border border-neutral-200/80 bg-white shadow-[0_18px_55px_-38px_rgba(15,23,42,0.45)] dark:border-neutral-800 dark:bg-neutral-900/80"
+            initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: prefersReducedMotion ? 0.01 : 0.5, delay: prefersReducedMotion ? 0 : 0.14, ease: [0.22, 1, 0.36, 1] }}
+          >
             <div className="grid gap-2.5 p-2.5 lg:grid-cols-[minmax(0,1fr)_220px_auto]">
               <div className="relative">
                 <label htmlFor="product-search" className="sr-only">Search products</label>
@@ -341,9 +463,14 @@ export function ProductsPageContent() {
                 </div>
               </div>
             )}
-          </div>
+          </motion.div>
 
-          <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+          <motion.div
+            className="mb-6 flex flex-wrap items-end justify-between gap-3"
+            initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: prefersReducedMotion ? 0.01 : 0.4, delay: prefersReducedMotion ? 0 : 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
             <div>
               <p className="font-semibold text-neutral-900 dark:text-white" aria-live="polite">
                 {filteredProducts.length} {filteredProducts.length === 1 ? "product" : "products"}
@@ -368,7 +495,7 @@ export function ProductsPageContent() {
                   {activeSubCategory && (
                     <button
                       type="button"
-                      onClick={() => updateFilter("subCategory", "")}
+                      onClick={() => selectSubCategory("")}
                       className="inline-flex items-center gap-1 rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 transition-colors hover:border-blue-200 hover:bg-blue-100 dark:border-blue-800/50 dark:bg-blue-900/30 dark:text-blue-300 dark:hover:bg-blue-900/50"
                     >
                       {activeSubCategory.name}
@@ -391,18 +518,19 @@ export function ProductsPageContent() {
                 </motion.div>
               )}
             </AnimatePresence>
-          </div>
+          </motion.div>
 
-          <AnimatePresence mode="popLayout" initial={false}>
-            <motion.div
-              key={`${filters.viewMode}-${filters.page}-${filters.category}-${filters.subCategory}-${deferredSearch}-${filters.tags.join(",")}-${filters.sortBy}`}
-              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -8 }}
-              transition={{ duration: transitionDuration, ease: [0.22, 1, 0.36, 1] }}
-            >
+          <LayoutGroup id="product-directory-results">
+            <AnimatePresence mode="wait">
               {paginated.data.length === 0 ? (
-                <div className="rounded-3xl border border-dashed border-neutral-200 bg-white px-6 py-20 text-center dark:border-neutral-700 dark:bg-neutral-900/60">
+                <motion.div
+                  key="empty-results"
+                  initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -8 }}
+                  transition={{ duration: transitionDuration, ease: [0.22, 1, 0.36, 1] }}
+                  className="rounded-3xl border border-dashed border-neutral-200 bg-white px-6 py-20 text-center dark:border-neutral-700 dark:bg-neutral-900/60"
+                >
                   <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
                     <Search className="h-6 w-6" />
                   </div>
@@ -413,38 +541,48 @@ export function ProductsPageContent() {
                   <Button className="mt-6" variant="outline" onClick={clearFilters}>
                     Reset product filters
                   </Button>
-                </div>
+                </motion.div>
               ) : filters.viewMode === "grid" ? (
                 <motion.div
+                  key="grid-results"
+                  layout
                   className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3"
-                  initial="hidden"
-                  animate="visible"
-                  variants={{ hidden: {}, visible: { transition: { staggerChildren: prefersReducedMotion ? 0 : 0.045 } } }}
                 >
-                  {paginated.data.map((product) => (
-                    <motion.div
-                      key={product.id}
-                      layout
-                      variants={{
-                        hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 18 },
-                        visible: { opacity: 1, y: 0, transition: { duration: transitionDuration, ease: [0.22, 1, 0.36, 1] } },
-                      }}
-                    >
-                      <ProductCard product={product} />
-                    </motion.div>
-                  ))}
+                  <AnimatePresence mode="popLayout">
+                    {paginated.data.map((product, index) => (
+                      <motion.div
+                        key={product.id}
+                        layout
+                        initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 16, scale: prefersReducedMotion ? 1 : 0.985 }}
+                        animate={{ opacity: 1, y: 0, scale: 1, transition: { duration: transitionDuration, delay: prefersReducedMotion ? 0 : Math.min(index * 0.035, 0.2), ease: [0.22, 1, 0.36, 1] } }}
+                        exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -10, scale: prefersReducedMotion ? 1 : 0.985, transition: { duration: prefersReducedMotion ? 0.01 : 0.18 } }}
+                        transition={{ layout: prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 420, damping: 38 } }}
+                      >
+                        <ProductCard product={product} />
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
                 </motion.div>
               ) : (
-                <motion.div className="space-y-3.5" initial="hidden" animate="visible" variants={{ hidden: {}, visible: { transition: { staggerChildren: prefersReducedMotion ? 0 : 0.045 } } }}>
-                  {paginated.data.map((product) => (
-                    <motion.div key={product.id} layout variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: transitionDuration } } }}>
-                      <ProductCard product={product} variant="list" />
-                    </motion.div>
-                  ))}
+                <motion.div key="list-results" layout className="space-y-3.5">
+                  <AnimatePresence mode="popLayout">
+                    {paginated.data.map((product, index) => (
+                      <motion.div
+                        key={product.id}
+                        layout
+                        initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 14 }}
+                        animate={{ opacity: 1, y: 0, transition: { duration: transitionDuration, delay: prefersReducedMotion ? 0 : Math.min(index * 0.035, 0.2), ease: [0.22, 1, 0.36, 1] } }}
+                        exit={{ opacity: 0, y: prefersReducedMotion ? 0 : -8, transition: { duration: prefersReducedMotion ? 0.01 : 0.18 } }}
+                        transition={{ layout: prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 420, damping: 38 } }}
+                      >
+                        <ProductCard product={product} variant="list" />
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
                 </motion.div>
               )}
-            </motion.div>
-          </AnimatePresence>
+            </AnimatePresence>
+          </LayoutGroup>
 
           {paginated.totalPages > 1 && (
             <div className="mt-12">
@@ -453,6 +591,6 @@ export function ProductsPageContent() {
           )}
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }
