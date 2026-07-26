@@ -13,16 +13,16 @@ const therapeuticCategories = [
 ];
 
 const keyInfoTemplates = [
-  { composition: "Paracetamol 500mg", strength: "500mg", dosageForm: "Tablet", packaging: "Blister pack of 10 tablets", storage: "Below 30°C, protect from moisture", shelfLife: "36 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/001" },
-  { composition: "Ibuprofen 400mg", strength: "400mg", dosageForm: "Tablet", packaging: "Blister pack of 15 tablets", storage: "Below 25°C, protect from light", shelfLife: "36 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/002" },
-  { composition: "Amoxicillin 500mg", strength: "500mg", dosageForm: "Capsule", packaging: "Strip of 10 capsules", storage: "Below 25°C, dry place", shelfLife: "24 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/003" },
-  { composition: "Omeprazole 20mg", strength: "20mg", dosageForm: "Enteric-coated Capsule", packaging: "Blister pack of 14 capsules", storage: "Below 30°C", shelfLife: "24 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/004" },
-  { composition: "Metformin HCl 500mg", strength: "500mg", dosageForm: "Tablet", packaging: "Bottle of 60 tablets", storage: "Below 30°C, protect from moisture", shelfLife: "36 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/005" },
-  { composition: "Atorvastatin Calcium 20mg", strength: "20mg", dosageForm: "Tablet", packaging: "Blister pack of 30 tablets", storage: "Below 25°C", shelfLife: "24 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/006" },
-  { composition: "Amlodipine Besylate 5mg", strength: "5mg", dosageForm: "Tablet", packaging: "Blister pack of 30 tablets", storage: "Below 30°C", shelfLife: "36 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/007" },
-  { composition: "Losartan Potassium 50mg", strength: "50mg", dosageForm: "Tablet", packaging: "Blister pack of 30 tablets", storage: "Below 30°C", shelfLife: "36 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/008" },
-  { composition: "Cetirizine HCl 10mg", strength: "10mg", dosageForm: "Tablet", packaging: "Blister pack of 10 tablets", storage: "Below 25°C", shelfLife: "36 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/009" },
-  { composition: "Vitamin D3 (Cholecalciferol) 1000 IU", strength: "1000 IU", dosageForm: "Softgel Capsule", packaging: "Bottle of 60 softgels", storage: "Below 25°C, protect from light", shelfLife: "24 months", manufacturer: "Alvor Healthcare Ltd.", licenseNumber: "MFG/2023/010" },
+  { composition: "Paracetamol 500mg", strength: "500mg", dosageForm: "Tablet", packaging: "Blister pack of 10 tablets", storage: "Below 30°C, protect from moisture", shelfLife: "36 months" },
+  { composition: "Ibuprofen 400mg", strength: "400mg", dosageForm: "Tablet", packaging: "Blister pack of 15 tablets", storage: "Below 25°C, protect from light", shelfLife: "36 months" },
+  { composition: "Amoxicillin 500mg", strength: "500mg", dosageForm: "Capsule", packaging: "Strip of 10 capsules", storage: "Below 25°C, dry place", shelfLife: "24 months" },
+  { composition: "Omeprazole 20mg", strength: "20mg", dosageForm: "Enteric-coated Capsule", packaging: "Blister pack of 14 capsules", storage: "Below 30°C", shelfLife: "24 months" },
+  { composition: "Metformin HCl 500mg", strength: "500mg", dosageForm: "Tablet", packaging: "Bottle of 60 tablets", storage: "Below 30°C, protect from moisture", shelfLife: "36 months" },
+  { composition: "Atorvastatin Calcium 20mg", strength: "20mg", dosageForm: "Tablet", packaging: "Blister pack of 30 tablets", storage: "Below 25°C", shelfLife: "24 months" },
+  { composition: "Amlodipine Besylate 5mg", strength: "5mg", dosageForm: "Tablet", packaging: "Blister pack of 30 tablets", storage: "Below 30°C", shelfLife: "36 months" },
+  { composition: "Losartan Potassium 50mg", strength: "50mg", dosageForm: "Tablet", packaging: "Blister pack of 30 tablets", storage: "Below 30°C", shelfLife: "36 months" },
+  { composition: "Cetirizine HCl 10mg", strength: "10mg", dosageForm: "Tablet", packaging: "Blister pack of 10 tablets", storage: "Below 25°C", shelfLife: "36 months" },
+  { composition: "Vitamin D3 (Cholecalciferol) 1000 IU", strength: "1000 IU", dosageForm: "Softgel Capsule", packaging: "Bottle of 60 softgels", storage: "Below 25°C, protect from light", shelfLife: "24 months" },
 ];
 
 const productNames = [
@@ -181,7 +181,7 @@ for (let i = 0; i < 52; i++) {
     category: category.name,
     subCategory: subCategory?.name || null,
     shortDescription: descriptions[i],
-    description: `${descriptions[i]} This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.`,
+    description: `${descriptions[i]} Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.`,
     uses: productUses,
     keyInformation: {
       composition: keyInfo.composition,
@@ -190,8 +190,6 @@ for (let i = 0; i < 52; i++) {
       packaging: keyInfo.packaging,
       storage: keyInfo.storage,
       shelfLife: keyInfo.shelfLife,
-      manufacturer: keyInfo.manufacturer,
-      licenseNumber: keyInfo.licenseNumber,
     },
     images: [
       `/images/products/${slug}-1.svg`,
@@ -202,7 +200,6 @@ for (let i = 0; i < 52; i++) {
     featured: i < 6,
     isNew: i % 5 === 0,
     isBestseller: i % 7 === 0,
-    certifications: ["WHO GMP", "ISO 9001", "FDA Registered"],
     relatedProducts: productNames
       .filter((_, idx) => idx !== i && idx % categories.length === categoryIndex)
       .slice(0, 4)

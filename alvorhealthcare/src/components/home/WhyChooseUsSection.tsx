@@ -1,25 +1,25 @@
 "use client";
 
-import { Shield, FlaskConical, Truck, Award, Users, Leaf } from "lucide-react";
+import { Award, PackageCheck, Shield, Truck, Users, Warehouse } from "lucide-react";
 import { motion } from "framer-motion";
 import { homeContent } from "@/data";
 
 const icons: Record<string, typeof Shield> = {
   shield: Shield,
-  flask: FlaskConical,
+  package: PackageCheck,
   truck: Truck,
   award: Award,
   users: Users,
-  leaf: Leaf,
+  warehouse: Warehouse,
 };
 
 const gradients: Record<string, string> = {
   shield: "from-blue-500 to-blue-600",
-  flask: "from-purple-500 to-purple-600",
+  package: "from-teal-500 to-teal-600",
   award: "from-amber-500 to-amber-600",
   truck: "from-cyan-500 to-cyan-600",
   users: "from-rose-500 to-rose-600",
-  leaf: "from-emerald-500 to-emerald-600",
+  warehouse: "from-emerald-500 to-emerald-600",
 };
 
 export function WhyChooseUsSection() {

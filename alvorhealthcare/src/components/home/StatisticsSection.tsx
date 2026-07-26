@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { companyInfo } from "@/data";
+import { categories, companyInfo } from "@/data";
 
 const stats = [
-  { value: companyInfo.experienceYears, suffix: "+", label: "Years of Excellence", desc: `Serving global healthcare since ${companyInfo.foundedYear}` },
-  { value: companyInfo.productsCount, suffix: "+", label: "Pharmaceutical Products", desc: "Across therapeutic categories" },
-  { value: companyInfo.countriesServed, suffix: "+", label: "Countries Served", desc: "Global distribution network" },
-  { value: 500, suffix: "+", label: "Healthcare Partners", desc: "Hospitals & pharmacies worldwide" },
+  { value: companyInfo.productsCount, suffix: "+", label: "Products", desc: "Across the current portfolio" },
+  { value: categories.length, suffix: "", label: "Product Categories", desc: "For varied healthcare needs" },
+  { value: companyInfo.countriesServed, suffix: "+", label: "Markets Served", desc: "Through distribution relationships" },
+  { value: companyInfo.experienceYears, suffix: "+", label: "Years in Healthcare", desc: `Supporting supply since ${companyInfo.foundedYear}` },
 ];
 
 function AnimatedCounter({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {

@@ -31,17 +31,12 @@ export function OrganizationStructuredData() {
     },
     sameAs: companyInfo.socialLinks.map((l) => l.url),
     knowsAbout: [
-      "Pharmaceutical Manufacturing",
-      "Drug Development",
-      "Clinical Research",
+      "Pharmaceutical Distribution",
+      "Medicine Supply",
+      "Product Documentation",
+      "Batch Traceability",
       "Healthcare Products",
-      "Medical Innovation",
     ],
-    hasCertification: companyInfo.certifications.map((c) => ({
-      "@type": "Certification",
-      name: c.name,
-      description: c.description,
-    })),
     makesOffer: {
       "@type": "Offer",
       itemOffered: {

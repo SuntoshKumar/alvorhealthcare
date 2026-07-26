@@ -4,18 +4,17 @@ import { AboutSectionNav } from "@/components/about/AboutSectionNav";
 import { AboutMission } from "@/components/about/AboutMission";
 import { AboutHistory } from "@/components/about/AboutHistory";
 import { AboutQuality } from "@/components/about/AboutQuality";
-import { AboutManufacturing } from "@/components/about/AboutManufacturing";
-import { AboutCertifications } from "@/components/about/AboutCertifications";
+import { AboutDistribution } from "@/components/about/AboutDistribution";
 import { AboutTeam } from "@/components/about/AboutTeam";
 import { CTASection } from "@/components/home/CTASection";
 import { companyInfo } from "@/data";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Learn about ${companyInfo.name}'s ${companyInfo.experienceYears}+ year journey of pharmaceutical excellence. Our mission, vision, quality commitment, manufacturing capabilities, and leadership team.`,
+  description: `Learn about ${companyInfo.name}'s ${companyInfo.experienceYears}+ year journey in pharmaceutical distribution, responsible supply, quality stewardship, and customer service.`,
   openGraph: {
     title: `About ${companyInfo.name} | ${companyInfo.experienceYears}+ Years of Pharmaceutical Excellence`,
-    description: `Leading global pharmaceutical company dedicated to improving health through innovation and quality.`,
+    description: `Pharmaceutical distributor focused on dependable supply, responsible handling, and responsive service.`,
     type: "website",
   },
 };
@@ -28,8 +27,7 @@ export default function AboutPage() {
       <AboutMission />
       <AboutHistory />
       <AboutQuality />
-      <AboutManufacturing />
-      <AboutCertifications />
+      <AboutDistribution />
       <AboutTeam />
       <CTASection />
     </div>

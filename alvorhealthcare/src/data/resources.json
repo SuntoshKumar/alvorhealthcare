@@ -36,10 +36,10 @@
           },
           {
             "title": "Clinical studies",
-            "description": "Explore research programs, study summaries, and clinical evidence.",
+            "description": "Request available study summaries and clinical evidence for a specific distributed product.",
             "href": "/resources/clinical-studies",
             "icon": "flask",
-            "meta": "Evidence library"
+            "meta": "Evidence requests"
           },
           {
             "title": "Product directory",
@@ -64,7 +64,7 @@
           },
           {
             "title": "Quality and compliance",
-            "description": "Understand the standards and governance behind our medicines.",
+            "description": "Understand the distributor-owned controls supporting our product portfolio.",
             "href": "/compliance",
             "icon": "shield",
             "meta": "Quality standards"
@@ -171,45 +171,45 @@
   },
   {
     "slug": "clinical-studies",
-    "title": "Clinical Research",
-    "shortTitle": "Clinical Research",
-    "eyebrow": "Evidence and discovery",
-    "description": "Explore our approach to clinical research, evidence generation, responsible study conduct, and scientific collaboration.",
+    "title": "Clinical Information",
+    "shortTitle": "Clinical Information",
+    "eyebrow": "Evidence requests",
+    "description": "Request available clinical study information, evidence summaries, and scientific documents for products in our distribution portfolio.",
     "href": "/resources/clinical-studies",
     "icon": "flask",
     "tone": "amber",
     "audience": "Researchers, investigators, institutions, and healthcare professionals",
     "highlights": [
-      "Research programs",
-      "Published insights",
-      "Responsible conduct"
+      "Study information",
+      "Evidence summaries",
+      "Product documents"
     ],
     "featured": {
-      "title": "Clinical studies overview",
-      "description": "Learn how Alvor Healthcare approaches study design, evidence generation, and research transparency.",
+      "title": "Request clinical evidence",
+      "description": "Tell us the product, market, organization, and evidence required so we can confirm what information is available.",
       "href": "/contact",
       "icon": "flask",
-      "meta": "Research overview"
+      "meta": "Information request"
     },
     "sections": [
       {
-        "eyebrow": "Research access",
-        "title": "Explore evidence and programs",
-        "description": "Find current research information and related scientific updates across Alvor Healthcare.",
+        "eyebrow": "Evidence access",
+        "title": "Find product-specific information",
+        "description": "Use these pathways to identify a product and request available clinical or scientific documents.",
         "items": [
           {
-            "title": "Clinical studies",
-            "description": "Review our clinical research focus and evidence-generation approach.",
+            "title": "Clinical information requests",
+            "description": "Request available study summaries or evidence for a product and destination market.",
             "href": "/clinical-studies",
             "icon": "flask",
-            "meta": "Study information"
+            "meta": "Product evidence"
           },
           {
-            "title": "Research news",
-            "description": "Read scientific, partnership, and healthcare innovation updates.",
+            "title": "Company news",
+            "description": "Read portfolio, distribution, quality, and partnership updates.",
             "href": "/news",
             "icon": "file",
-            "meta": "Latest insights"
+            "meta": "Latest updates"
           },
           {
             "title": "Product portfolio",
@@ -221,9 +221,9 @@
         ]
       },
       {
-        "eyebrow": "Responsible research",
-        "title": "Standards, ethics, and collaboration",
-        "description": "Our research pathways are supported by clear quality expectations and responsible engagement.",
+        "eyebrow": "Responsible information",
+        "title": "Context, accuracy, and routing",
+        "description": "Clinical information requests are reviewed for product, audience, market, and document availability.",
         "items": [
           {
             "title": "Ethics and compliance",
@@ -233,11 +233,11 @@
             "meta": "Governance"
           },
           {
-            "title": "Research partnerships",
-            "description": "Connect with our team about institutional or scientific collaboration.",
+            "title": "Scientific enquiries",
+            "description": "Submit a focused product question for routing to the appropriate supplier or information contact.",
             "href": "/contact",
             "icon": "briefcase",
-            "meta": "Collaborate"
+            "meta": "Request support"
           },
           {
             "title": "Healthcare professional hub",
@@ -249,10 +249,10 @@
         ]
       }
     ],
-    "supportTitle": "Interested in research collaboration?",
-    "supportDescription": "Connect with Alvor Healthcare to discuss scientific partnerships, investigator interest, or clinical information needs.",
+    "supportTitle": "Need clinical information for a product?",
+    "supportDescription": "Send the product, country, organization, professional role, and specific information required. We will confirm what can be provided or route the enquiry appropriately.",
     "supportHref": "/contact",
-    "supportLabel": "Start a conversation"
+    "supportLabel": "Submit an information request"
   },
   {
     "slug": "education",
@@ -290,8 +290,8 @@
             "meta": "Education hub"
           },
           {
-            "title": "Clinical research",
-            "description": "Connect learning with study information and scientific evidence.",
+            "title": "Clinical information",
+            "description": "Connect learning with available product study information and scientific evidence.",
             "href": "/resources/clinical-studies",
             "icon": "flask",
             "meta": "Evidence-based"

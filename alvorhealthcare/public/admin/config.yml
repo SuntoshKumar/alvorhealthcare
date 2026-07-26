@@ -27,18 +27,7 @@ collections:
           - { label: Vision, name: vision, widget: text }
           - { label: Founded Year, name: foundedYear, widget: number, value_type: int }
           - { label: Countries Served, name: countriesServed, widget: number, value_type: int }
-          - label: Certifications
-            name: certifications
-            widget: list
-            summary: "{{fields.name}}"
-            fields:
-              - { label: ID, name: id, widget: string }
-              - { label: Name, name: name, widget: string }
-              - { label: Logo, name: logo, widget: image }
-              - { label: Description, name: description, widget: text }
-              - { label: Year Obtained, name: yearObtained, widget: number, value_type: int }
-              - { label: Valid Until, name: validUntil, widget: datetime, format: YYYY-MM-DD, date_format: YYYY-MM-DD, time_format: false, required: false }
-          - { label: Manufacturing Capabilities, name: manufacturingCapabilities, widget: list, field: { label: Capability, name: item, widget: string } }
+          - { label: Distribution Capabilities, name: distributionCapabilities, widget: list, field: { label: Capability, name: item, widget: string } }
           - { label: Quality Standards, name: qualityStandards, widget: list, field: { label: Standard, name: item, widget: string } }
           - label: Contact
             name: contact
@@ -130,30 +119,14 @@ collections:
                   - { label: Icon, name: icon, widget: select, options: [shield, flask, award, truck, users, leaf] }
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: text }
-          - label: Partners
+          - label: Care Channels
             name: partners
             widget: object
             fields:
               - { label: Eyebrow, name: eyebrow, widget: string }
               - { label: Title, name: title, widget: string }
               - { label: Description, name: description, widget: text }
-              - { label: Partner Names, name: names, widget: list, field: { label: Name, name: item, widget: string } }
-          - label: Testimonials
-            name: testimonials
-            widget: object
-            fields:
-              - { label: Eyebrow, name: eyebrow, widget: string }
-              - { label: Title, name: title, widget: string }
-              - label: Testimonials
-                name: items
-                widget: list
-                summary: "{{fields.name}}"
-                fields:
-                  - { label: Name, name: name, widget: string }
-                  - { label: Role, name: role, widget: string }
-                  - { label: Company, name: company, widget: string }
-                  - { label: Quote, name: content, widget: text }
-                  - { label: Rating, name: rating, widget: number, value_type: int, min: 1, max: 5 }
+              - { label: Channel Names, name: names, widget: list, field: { label: Name, name: item, widget: string } }
           - label: News Section
             name: news
             widget: object
@@ -217,7 +190,7 @@ collections:
                   - { label: Year, name: year, widget: string }
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: text }
-                  - { label: Icon, name: icon, widget: select, options: [building, flask, award, globe, target, zap, shield, leaf, factory] }
+                  - { label: Icon, name: icon, widget: select, options: [building, flask, award, globe, target, zap, shield, leaf, truck] }
                   - { label: Stat Label, name: statLabel, widget: string }
                   - { label: Stat Value, name: statValue, widget: string }
 
@@ -253,8 +226,6 @@ collections:
                   - { label: Packaging, name: packaging, widget: string, required: false }
                   - { label: Storage, name: storage, widget: string, required: false }
                   - { label: Shelf Life, name: shelfLife, widget: string, required: false }
-                  - { label: Manufacturer, name: manufacturer, widget: string, required: false }
-                  - { label: License Number, name: licenseNumber, widget: string, required: false }
               - { label: Images, name: images, widget: list, field: { label: Image, name: item, widget: image } }
               - { label: Thumbnail, name: thumbnail, widget: image }
               - { label: PDF Brochure, name: pdfBrochure, widget: file, required: false }
@@ -262,7 +233,6 @@ collections:
               - { label: Featured, name: featured, widget: boolean, default: false }
               - { label: New Product, name: isNew, widget: boolean, default: false }
               - { label: Bestseller, name: isBestseller, widget: boolean, default: false }
-              - { label: Certifications, name: certifications, widget: list, field: { label: Certification, name: item, widget: string } }
               - { label: Related Product IDs, name: relatedProducts, widget: list, field: { label: Product ID, name: item, widget: string } }
               - { label: Created At, name: createdAt, widget: datetime }
               - { label: Updated At, name: updatedAt, widget: datetime }

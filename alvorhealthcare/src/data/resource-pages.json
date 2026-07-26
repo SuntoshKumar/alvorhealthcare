@@ -50,7 +50,7 @@
     "topics": [
       {
         "title": "Study information",
-        "description": "Request available information about clinical programs, study design, or evidence supporting an Alvor Healthcare product.",
+        "description": "Request available supplier or product-owner information about clinical studies and evidence supporting a product distributed by Alvor Healthcare.",
         "icon": "file"
       },
       {
@@ -84,7 +84,7 @@
     "icon": "shield",
     "tone": "teal",
     "overviewTitle": "Quality is a system, not a single checkpoint",
-    "overviewDescription": "Our quality approach spans sourcing, manufacturing, documentation, storage, distribution, and continuous review. Certification or market-specific documentation can be requested directly from our team.",
+    "overviewDescription": "Our distributor-owned quality approach spans supplier qualification, product documentation, storage, traceability, distribution, complaints, recalls, and continuous review. Product-specific or market-specific documentation can be requested directly from our team.",
     "topics": [
       {
         "title": "Quality systems",

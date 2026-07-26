@@ -8,8 +8,7 @@ const sections = [
   { id: "mission", label: "Foundation" },
   { id: "history", label: "Journey" },
   { id: "quality", label: "Quality" },
-  { id: "manufacturing", label: "Manufacturing" },
-  { id: "certifications", label: "Standards" },
+  { id: "distribution", label: "Distribution" },
   { id: "leadership", label: "Leadership" },
 ];
 

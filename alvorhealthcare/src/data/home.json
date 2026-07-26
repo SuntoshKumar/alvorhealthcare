@@ -1,69 +1,42 @@
 {
   "hero": {
-    "eyebrow": "Trusted Worldwide",
-    "titlePrefix": "Advancing Global",
-    "titleHighlight": "Health",
-    "titleSuffix": "Through Innovation",
-    "description": "Alvor Healthcare delivers premium pharmaceutical solutions trusted by healthcare professionals worldwide. Quality, innovation, and patient care drive everything we do.",
+    "eyebrow": "Pharmaceutical Distribution",
+    "titlePrefix": "Reliable Access to",
+    "titleHighlight": "Trusted",
+    "titleSuffix": "Medicines",
+    "description": "Alvor Healthcare sources and distributes pharmaceutical products for healthcare providers, pharmacies, and supply partners. We focus on dependable availability, clear documentation, responsible handling, and responsive service.",
     "primaryCta": { "label": "Explore Products", "href": "/products" },
-    "secondaryCta": { "label": "Learn About Us", "href": "/about" },
-    "trustBadges": ["WHO GMP Certified", "ISO 9001:2015", "FDA Registered"]
+    "secondaryCta": { "label": "Partner With Us", "href": "/contact?inquiryType=partnership" },
+    "trustBadges": ["Qualified sourcing", "Product documentation", "Reliable delivery"]
   },
   "whyChoose": {
     "eyebrow": "Why Alvor",
-    "title": "Why Healthcare Professionals Choose Us",
-    "description": "Decades of pharmaceutical expertise, unwavering commitment to quality, and a patient-first approach make us a trusted partner worldwide.",
+    "title": "A Distribution Partner Built Around Dependable Supply",
+    "description": "We connect pharmaceutical supply partners with healthcare channels through practical coordination, transparent communication, and careful product handling.",
     "items": [
-      { "icon": "shield", "title": "WHO GMP Certified", "description": "All facilities meet the highest international quality standards for pharmaceutical manufacturing." },
-      { "icon": "flask", "title": "Advanced R&D", "description": "State-of-the-art research facilities driving innovation in drug formulation and delivery." },
-      { "icon": "award", "title": "Premium Quality", "description": "Rigorous quality control at every stage, from raw materials to finished products." },
-      { "icon": "truck", "title": "Global Distribution", "description": "Reliable supply chain with temperature-controlled logistics across international markets." },
-      { "icon": "users", "title": "Expert Team", "description": "Skilled professionals dedicated to pharmaceutical excellence and patient care." },
-      { "icon": "leaf", "title": "Sustainable Practices", "description": "Responsible manufacturing focused on reducing environmental impact." }
+      { "icon": "shield", "title": "Qualified Supply Partners", "description": "Products are sourced through reviewed pharmaceutical suppliers and brand partners." },
+      { "icon": "package", "title": "Broad Product Portfolio", "description": "A focused range across key therapeutic categories supports varied healthcare needs." },
+      { "icon": "award", "title": "Documentation Support", "description": "Our team coordinates available product, batch, and market documentation for customers." },
+      { "icon": "truck", "title": "Reliable Distribution", "description": "Inventory planning and delivery coordination support consistent product availability." },
+      { "icon": "users", "title": "Responsive Service", "description": "Commercial and supply teams provide direct support from inquiry through fulfilment." },
+      { "icon": "warehouse", "title": "Responsible Handling", "description": "Storage, stock rotation, and transport follow each product's labelled requirements." }
     ]
   },
   "partners": {
-    "eyebrow": "Partners",
-    "title": "Trusted by Global Healthcare Leaders",
-    "description": "We partner with respected healthcare organizations to deliver quality medicines globally.",
-    "names": ["WHO", "FDA", "NIH", "EMA", "CVS Health", "McKesson", "Mayo Clinic", "Kaiser"]
-  },
-  "testimonials": {
-    "eyebrow": "Testimonials",
-    "title": "Trusted by Healthcare Professionals",
-    "items": [
-      {
-        "name": "Dr. Emily Watson",
-        "role": "Chief of Pharmacy",
-        "company": "Metropolitan Hospital",
-        "content": "Alvor Healthcare's products consistently meet our stringent quality standards. Their reliable supply chain and comprehensive documentation make them a preferred partner for our hospital system.",
-        "rating": 5
-      },
-      {
-        "name": "James Patterson",
-        "role": "Procurement Director",
-        "company": "National Pharmacy Chain",
-        "content": "We've partnered with Alvor for over a decade. Their commitment to quality, competitive pricing, and exceptional customer service sets them apart in the industry.",
-        "rating": 5
-      },
-      {
-        "name": "Dr. Michael Torres",
-        "role": "Medical Director",
-        "company": "Regional Health System",
-        "content": "The therapeutic efficacy of Alvor's products is evident in our patient outcomes. Their portfolio breadth allows us to consolidate vendors without compromising quality.",
-        "rating": 5
-      }
-    ]
+    "eyebrow": "Who We Serve",
+    "title": "Built for Every Healthcare Channel",
+    "description": "Our distribution approach supports organizations that need clear communication, dependable fulfilment, and responsible medicine handling.",
+    "names": ["Hospitals", "Pharmacies", "Clinics", "Wholesalers", "Retail Networks", "Medical Centers", "Health Programs", "Care Providers"]
   },
   "news": {
     "eyebrow": "News",
     "title": "From the Newsroom",
-    "description": "Explore company announcements, product developments, quality milestones, and partnerships from across Alvor Healthcare.",
+    "description": "Explore company announcements, portfolio updates, distribution quality milestones, and partnerships from across Alvor Healthcare.",
     "linkLabel": "All News"
   },
   "cta": {
     "title": "Ready to Partner with Alvor Healthcare?",
-    "description": "Let's discuss how our pharmaceutical expertise can support your healthcare needs.",
+    "description": "Talk with our team about product availability, distribution support, documentation, and supply requirements.",
     "primaryCta": { "label": "Contact Our Team", "href": "/contact" },
     "secondaryCta": { "label": "Browse Products", "href": "/products" }
   }

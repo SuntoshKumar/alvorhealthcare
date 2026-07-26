@@ -6,7 +6,7 @@
     "category": "Tablets",
     "subCategory": "Immediate Release",
     "shortDescription": "Effective relief from pain and fever with rapid onset of action.",
-    "description": "Effective relief from pain and fever with rapid onset of action. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Effective relief from pain and fever with rapid onset of action. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Pain relief",
       "Fever reduction",
@@ -19,9 +19,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/001"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorpar-500-1.svg",
@@ -40,11 +38,6 @@
     "featured": true,
     "isNew": true,
     "isBestseller": true,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-2",
       "prod-3",
@@ -61,7 +54,7 @@
     "category": "Capsules",
     "subCategory": "Soft Gelatin",
     "shortDescription": "Anti-inflammatory medication for pain, swelling, and joint stiffness.",
-    "description": "Anti-inflammatory medication for pain, swelling, and joint stiffness. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Anti-inflammatory medication for pain, swelling, and joint stiffness. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Arthritis pain",
       "Inflammation",
@@ -74,9 +67,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 15 tablets",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/002"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorfen-400-1.svg",
@@ -92,11 +83,6 @@
     "featured": true,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-3",
       "prod-4",
@@ -113,7 +99,7 @@
     "category": "Syrups",
     "subCategory": "Sugar-Free",
     "shortDescription": "Broad-spectrum antibiotic for bacterial infections.",
-    "description": "Broad-spectrum antibiotic for bacterial infections. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Broad-spectrum antibiotic for bacterial infections. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Respiratory infections",
       "Urinary tract infections",
@@ -126,9 +112,7 @@
       "dosageForm": "Capsule",
       "packaging": "Strip of 10 capsules",
       "storage": "Below 25°C, dry place",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/003"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorcillin-500-1.svg",
@@ -144,11 +128,6 @@
     "featured": true,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-4",
       "prod-5",
@@ -165,7 +144,7 @@
     "category": "Injections",
     "subCategory": "Ampoules",
     "shortDescription": "Proton pump inhibitor for acid reflux and stomach ulcers.",
-    "description": "Proton pump inhibitor for acid reflux and stomach ulcers. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Proton pump inhibitor for acid reflux and stomach ulcers. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "GERD",
       "Peptic ulcers",
@@ -178,9 +157,7 @@
       "dosageForm": "Enteric-coated Capsule",
       "packaging": "Blister pack of 14 capsules",
       "storage": "Below 30°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/004"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorprazole-20-1.svg",
@@ -196,11 +173,6 @@
     "featured": true,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-5",
       "prod-6",
@@ -217,7 +189,7 @@
     "category": "Supplements",
     "subCategory": "Minerals",
     "shortDescription": "First-line treatment for type 2 diabetes mellitus.",
-    "description": "First-line treatment for type 2 diabetes mellitus. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "First-line treatment for type 2 diabetes mellitus. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Type 2 diabetes",
       "PCOS",
@@ -230,9 +202,7 @@
       "dosageForm": "Tablet",
       "packaging": "Bottle of 60 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/005"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorformin-500-1.svg",
@@ -248,11 +218,6 @@
     "featured": true,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-6",
       "prod-7",
@@ -269,7 +234,7 @@
     "category": "Tablets",
     "subCategory": "Extended Release",
     "shortDescription": "Statin medication for lowering cholesterol levels.",
-    "description": "Statin medication for lowering cholesterol levels. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Statin medication for lowering cholesterol levels. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "High cholesterol",
       "Cardiovascular prevention",
@@ -282,9 +247,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/006"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorstatin-20-1.svg",
@@ -301,11 +264,6 @@
     "featured": true,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-7",
       "prod-8",
@@ -322,7 +280,7 @@
     "category": "Capsules",
     "subCategory": "Hard Gelatin",
     "shortDescription": "Calcium channel blocker for hypertension management.",
-    "description": "Calcium channel blocker for hypertension management. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Calcium channel blocker for hypertension management. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Hypertension",
       "Angina",
@@ -335,9 +293,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/007"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvordipine-5-1.svg",
@@ -353,11 +309,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-8",
       "prod-9",
@@ -374,7 +325,7 @@
     "category": "Syrups",
     "subCategory": "Adult Syrups",
     "shortDescription": "Angiotensin II receptor blocker for blood pressure control.",
-    "description": "Angiotensin II receptor blocker for blood pressure control. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Angiotensin II receptor blocker for blood pressure control. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Hypertension",
       "Heart failure",
@@ -387,9 +338,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/008"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorsartan-50-1.svg",
@@ -406,11 +355,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": true,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-9",
       "prod-10",
@@ -427,7 +371,7 @@
     "category": "Injections",
     "subCategory": "Pre-filled Syringes",
     "shortDescription": "Non-drowsy antihistamine for allergy relief.",
-    "description": "Non-drowsy antihistamine for allergy relief. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Non-drowsy antihistamine for allergy relief. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Seasonal allergies",
       "Chronic urticaria",
@@ -440,9 +384,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/009"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorzine-10-1.svg",
@@ -458,11 +400,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-10",
       "prod-11",
@@ -479,7 +416,7 @@
     "category": "Supplements",
     "subCategory": "Vitamins",
     "shortDescription": "Essential vitamin for bone health and immune function.",
-    "description": "Essential vitamin for bone health and immune function. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Essential vitamin for bone health and immune function. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Vitamin D deficiency",
       "Osteoporosis",
@@ -492,9 +429,7 @@
       "dosageForm": "Softgel Capsule",
       "packaging": "Bottle of 60 softgels",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/010"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvord3-1000-1.svg",
@@ -510,11 +445,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-11",
       "prod-12",
@@ -531,7 +461,7 @@
     "category": "Tablets",
     "subCategory": "Effervescent",
     "shortDescription": "Vital nutrient for nerve function and red blood cell formation.",
-    "description": "Vital nutrient for nerve function and red blood cell formation. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Vital nutrient for nerve function and red blood cell formation. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "B12 deficiency",
       "Pernicious anemia",
@@ -544,9 +474,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/001"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorb12-500-1.svg",
@@ -563,11 +491,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-12",
       "prod-13",
@@ -584,7 +507,7 @@
     "category": "Capsules",
     "subCategory": "Enteric Coated",
     "shortDescription": "Combination supplement for iron deficiency anemia prevention.",
-    "description": "Combination supplement for iron deficiency anemia prevention. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Combination supplement for iron deficiency anemia prevention. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Iron deficiency anemia",
       "Pregnancy",
@@ -597,9 +520,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 15 tablets",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/002"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvoriron-plus-1.svg",
@@ -616,11 +537,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-13",
       "prod-14",
@@ -637,7 +553,7 @@
     "category": "Syrups",
     "subCategory": "Pediatric Syrups",
     "shortDescription": "Bone health supplement with optimal calcium and vitamin D ratio.",
-    "description": "Bone health supplement with optimal calcium and vitamin D ratio. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Bone health supplement with optimal calcium and vitamin D ratio. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Osteoporosis prevention",
       "Bone health",
@@ -650,9 +566,7 @@
       "dosageForm": "Capsule",
       "packaging": "Strip of 10 capsules",
       "storage": "Below 25°C, dry place",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/003"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorcal-d-1.svg",
@@ -668,11 +582,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-14",
       "prod-15",
@@ -689,7 +598,7 @@
     "category": "Injections",
     "subCategory": "Vials",
     "shortDescription": "High-purity omega-3 fatty acids for cardiovascular health.",
-    "description": "High-purity omega-3 fatty acids for cardiovascular health. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "High-purity omega-3 fatty acids for cardiovascular health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Heart health",
       "Brain function",
@@ -702,9 +611,7 @@
       "dosageForm": "Enteric-coated Capsule",
       "packaging": "Blister pack of 14 capsules",
       "storage": "Below 30°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/004"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvoromega-1.svg",
@@ -720,11 +627,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-15",
       "prod-16",
@@ -741,7 +643,7 @@
     "category": "Supplements",
     "subCategory": "Herbal Extracts",
     "shortDescription": "Coenzyme Q10 for cellular energy production and heart health.",
-    "description": "Coenzyme Q10 for cellular energy production and heart health. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Coenzyme Q10 for cellular energy production and heart health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Heart failure",
       "Statin-induced myopathy",
@@ -754,9 +656,7 @@
       "dosageForm": "Tablet",
       "packaging": "Bottle of 60 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/005"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorq10-1.svg",
@@ -773,11 +673,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": true,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-16",
       "prod-17",
@@ -794,7 +689,7 @@
     "category": "Tablets",
     "subCategory": "Chewable",
     "shortDescription": "Multi-strain probiotic for digestive and immune health.",
-    "description": "Multi-strain probiotic for digestive and immune health. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Multi-strain probiotic for digestive and immune health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Digestive health",
       "Immune support",
@@ -807,9 +702,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/006"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorbiotic-1.svg",
@@ -826,11 +719,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-17",
       "prod-18",
@@ -847,7 +735,7 @@
     "category": "Capsules",
     "subCategory": "Soft Gelatin",
     "shortDescription": "Natural sleep aid for occasional sleeplessness.",
-    "description": "Natural sleep aid for occasional sleeplessness. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Natural sleep aid for occasional sleeplessness. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Insomnia",
       "Jet lag",
@@ -860,9 +748,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/007"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvormel-1.svg",
@@ -878,11 +764,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-18",
       "prod-19",
@@ -899,7 +780,7 @@
     "category": "Syrups",
     "subCategory": "Sugar-Free",
     "shortDescription": "Joint health formula with glucosamine and chondroitin.",
-    "description": "Joint health formula with glucosamine and chondroitin. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Joint health formula with glucosamine and chondroitin. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Osteoarthritis",
       "Joint pain",
@@ -912,9 +793,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/008"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorjoint-1.svg",
@@ -930,11 +809,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-19",
       "prod-20",
@@ -951,7 +825,7 @@
     "category": "Injections",
     "subCategory": "Ampoules",
     "shortDescription": "Multi-symptom cold and flu relief formula.",
-    "description": "Multi-symptom cold and flu relief formula. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Multi-symptom cold and flu relief formula. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Common cold",
       "Flu symptoms",
@@ -964,9 +838,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/009"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorcold-relief-1.svg",
@@ -982,11 +854,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-20",
       "prod-21",
@@ -1003,7 +870,7 @@
     "category": "Supplements",
     "subCategory": "Minerals",
     "shortDescription": "24-hour allergy relief without drowsiness.",
-    "description": "24-hour allergy relief without drowsiness. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "24-hour allergy relief without drowsiness. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Hay fever",
       "Pet allergies",
@@ -1016,9 +883,7 @@
       "dosageForm": "Softgel Capsule",
       "packaging": "Bottle of 60 softgels",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/010"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorallergy-1.svg",
@@ -1034,11 +899,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-21",
       "prod-22",
@@ -1055,7 +915,7 @@
     "category": "Tablets",
     "subCategory": "Immediate Release",
     "shortDescription": "Fast-acting antacid for heartburn and indigestion.",
-    "description": "Fast-acting antacid for heartburn and indigestion. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Fast-acting antacid for heartburn and indigestion. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Heartburn",
       "Indigestion",
@@ -1068,9 +928,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/001"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorgastric-1.svg",
@@ -1087,11 +945,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-22",
       "prod-23",
@@ -1108,7 +961,7 @@
     "category": "Capsules",
     "subCategory": "Hard Gelatin",
     "shortDescription": "Comprehensive blood pressure management formula.",
-    "description": "Comprehensive blood pressure management formula. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Comprehensive blood pressure management formula. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Hypertension",
       "Blood pressure control",
@@ -1120,9 +973,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 15 tablets",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/002"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorbp-control-1.svg",
@@ -1139,11 +990,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": true,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-23",
       "prod-24",
@@ -1160,7 +1006,7 @@
     "category": "Syrups",
     "subCategory": "Adult Syrups",
     "shortDescription": "Blood sugar support with natural ingredients.",
-    "description": "Blood sugar support with natural ingredients. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Blood sugar support with natural ingredients. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Blood sugar control",
       "Insulin sensitivity",
@@ -1172,9 +1018,7 @@
       "dosageForm": "Capsule",
       "packaging": "Strip of 10 capsules",
       "storage": "Below 25°C, dry place",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/003"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorsugar-balance-1.svg",
@@ -1191,11 +1035,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-24",
       "prod-25",
@@ -1212,7 +1051,7 @@
     "category": "Injections",
     "subCategory": "Pre-filled Syringes",
     "shortDescription": "Cholesterol management with plant sterols.",
-    "description": "Cholesterol management with plant sterols. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Cholesterol management with plant sterols. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Cholesterol reduction",
       "Lipid management",
@@ -1224,9 +1063,7 @@
       "dosageForm": "Enteric-coated Capsule",
       "packaging": "Blister pack of 14 capsules",
       "storage": "Below 30°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/004"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorcholest-1.svg",
@@ -1242,11 +1079,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-25",
       "prod-26",
@@ -1263,7 +1095,7 @@
     "category": "Supplements",
     "subCategory": "Vitamins",
     "shortDescription": "Rapid pain relief for headaches and muscle aches.",
-    "description": "Rapid pain relief for headaches and muscle aches. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Rapid pain relief for headaches and muscle aches. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Headache",
       "Muscle pain",
@@ -1276,9 +1108,7 @@
       "dosageForm": "Tablet",
       "packaging": "Bottle of 60 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/005"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorpain-away-1.svg",
@@ -1294,11 +1124,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-26",
       "prod-27",
@@ -1315,7 +1140,7 @@
     "category": "Tablets",
     "subCategory": "Extended Release",
     "shortDescription": "Fever reducer for adults and children.",
-    "description": "Fever reducer for adults and children. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Fever reducer for adults and children. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Fever",
       "Post-vaccination fever",
@@ -1328,9 +1153,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/006"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorfever-down-1.svg",
@@ -1347,11 +1170,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-27",
       "prod-28",
@@ -1368,7 +1186,7 @@
     "category": "Capsules",
     "subCategory": "Enteric Coated",
     "shortDescription": "Soothing cough syrup for dry and productive cough.",
-    "description": "Soothing cough syrup for dry and productive cough. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Soothing cough syrup for dry and productive cough. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Dry cough",
       "Productive cough",
@@ -1381,9 +1199,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/007"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorcough-syrup-1.svg",
@@ -1399,11 +1215,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-28",
       "prod-29",
@@ -1420,7 +1231,7 @@
     "category": "Syrups",
     "subCategory": "Pediatric Syrups",
     "shortDescription": "Complete daily vitamin and mineral complex.",
-    "description": "Complete daily vitamin and mineral complex. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Complete daily vitamin and mineral complex. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Nutritional gaps",
       "Daily wellness",
@@ -1433,9 +1244,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/008"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorvitamin-complex-1.svg",
@@ -1451,11 +1260,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-29",
       "prod-30",
@@ -1472,7 +1276,7 @@
     "category": "Injections",
     "subCategory": "Vials",
     "shortDescription": "Essential minerals for overall health maintenance.",
-    "description": "Essential minerals for overall health maintenance. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Essential minerals for overall health maintenance. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Mineral deficiency",
       "Bone health",
@@ -1485,9 +1289,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/009"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvormineral-plus-1.svg",
@@ -1504,11 +1306,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": true,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-30",
       "prod-31",
@@ -1525,7 +1322,7 @@
     "category": "Supplements",
     "subCategory": "Herbal Extracts",
     "shortDescription": "Herbal formula for relaxation and stress relief.",
-    "description": "Herbal formula for relaxation and stress relief. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Herbal formula for relaxation and stress relief. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Anxiety",
       "Stress",
@@ -1538,9 +1335,7 @@
       "dosageForm": "Softgel Capsule",
       "packaging": "Bottle of 60 softgels",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/010"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorherbal-calm-1.svg",
@@ -1556,11 +1351,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-31",
       "prod-32",
@@ -1577,7 +1367,7 @@
     "category": "Tablets",
     "subCategory": "Effervescent",
     "shortDescription": "Natural energy booster with B-vitamins and adaptogens.",
-    "description": "Natural energy booster with B-vitamins and adaptogens. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Natural energy booster with B-vitamins and adaptogens. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Fatigue",
       "Low energy",
@@ -1590,9 +1380,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/001"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorenergy-boost-1.svg",
@@ -1609,11 +1397,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-32",
       "prod-33",
@@ -1630,7 +1413,7 @@
     "category": "Capsules",
     "subCategory": "Soft Gelatin",
     "shortDescription": "Immune system support with vitamins, zinc, and elderberry.",
-    "description": "Immune system support with vitamins, zinc, and elderberry. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Immune system support with vitamins, zinc, and elderberry. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Cold prevention",
       "Flu season",
@@ -1643,9 +1426,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 15 tablets",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/002"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorimmune-support-1.svg",
@@ -1661,11 +1442,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-33",
       "prod-34",
@@ -1682,7 +1458,7 @@
     "category": "Syrups",
     "subCategory": "Sugar-Free",
     "shortDescription": "Bone density support with calcium, D3, K2, and magnesium.",
-    "description": "Bone density support with calcium, D3, K2, and magnesium. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Bone density support with calcium, D3, K2, and magnesium. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Bone density",
       "Fracture prevention",
@@ -1695,9 +1471,7 @@
       "dosageForm": "Capsule",
       "packaging": "Strip of 10 capsules",
       "storage": "Below 25°C, dry place",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/003"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorbone-health-1.svg",
@@ -1713,11 +1487,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-34",
       "prod-35",
@@ -1734,7 +1503,7 @@
     "category": "Injections",
     "subCategory": "Ampoules",
     "shortDescription": "Cardiovascular health with CoQ10, omega-3, and antioxidants.",
-    "description": "Cardiovascular health with CoQ10, omega-3, and antioxidants. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Cardiovascular health with CoQ10, omega-3, and antioxidants. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Heart health",
       "Blood pressure",
@@ -1747,9 +1516,7 @@
       "dosageForm": "Enteric-coated Capsule",
       "packaging": "Blister pack of 14 capsules",
       "storage": "Below 30°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/004"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorheart-care-1.svg",
@@ -1766,11 +1533,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-35",
       "prod-36",
@@ -1787,7 +1549,7 @@
     "category": "Supplements",
     "subCategory": "Minerals",
     "shortDescription": "Cognitive function support with nootropics and vitamins.",
-    "description": "Cognitive function support with nootropics and vitamins. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Cognitive function support with nootropics and vitamins. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Memory",
       "Focus",
@@ -1800,9 +1562,7 @@
       "dosageForm": "Tablet",
       "packaging": "Bottle of 60 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/005"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvormind-focus-1.svg",
@@ -1818,11 +1578,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-36",
       "prod-37",
@@ -1839,7 +1594,7 @@
     "category": "Tablets",
     "subCategory": "Chewable",
     "shortDescription": "Skin health formula with collagen, biotin, and antioxidants.",
-    "description": "Skin health formula with collagen, biotin, and antioxidants. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Skin health formula with collagen, biotin, and antioxidants. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Anti-aging",
       "Skin elasticity",
@@ -1852,9 +1607,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/006"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorskin-glow-1.svg",
@@ -1872,11 +1625,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": true,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-37",
       "prod-38",
@@ -1893,7 +1641,7 @@
     "category": "Capsules",
     "subCategory": "Hard Gelatin",
     "shortDescription": "Eye health with lutein, zeaxanthin, and vitamins.",
-    "description": "Eye health with lutein, zeaxanthin, and vitamins. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Eye health with lutein, zeaxanthin, and vitamins. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Macular degeneration",
       "Eye strain",
@@ -1906,9 +1654,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/007"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvoreye-care-1.svg",
@@ -1924,11 +1670,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-38",
       "prod-39",
@@ -1945,7 +1686,7 @@
     "category": "Syrups",
     "subCategory": "Adult Syrups",
     "shortDescription": "Liver support with milk thistle, NAC, and antioxidants.",
-    "description": "Liver support with milk thistle, NAC, and antioxidants. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Liver support with milk thistle, NAC, and antioxidants. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Liver detox",
       "Fatty liver",
@@ -1958,9 +1699,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/008"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorliver-detox-1.svg",
@@ -1976,11 +1715,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-39",
       "prod-40",
@@ -1997,7 +1731,7 @@
     "category": "Injections",
     "subCategory": "Pre-filled Syringes",
     "shortDescription": "Kidney health with cranberry, D-mannose, and herbs.",
-    "description": "Kidney health with cranberry, D-mannose, and herbs. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Kidney health with cranberry, D-mannose, and herbs. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Kidney stones",
       "UTI prevention",
@@ -2010,9 +1744,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/009"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorkidney-support-1.svg",
@@ -2028,11 +1760,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-40",
       "prod-41",
@@ -2049,7 +1776,7 @@
     "category": "Supplements",
     "subCategory": "Vitamins",
     "shortDescription": "Thyroid function support with selenium, iodine, and zinc.",
-    "description": "Thyroid function support with selenium, iodine, and zinc. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Thyroid function support with selenium, iodine, and zinc. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Thyroid function",
       "Metabolism",
@@ -2062,9 +1789,7 @@
       "dosageForm": "Softgel Capsule",
       "packaging": "Bottle of 60 softgels",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/010"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorthyroid-balance-1.svg",
@@ -2080,11 +1805,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-41",
       "prod-42",
@@ -2101,7 +1821,7 @@
     "category": "Tablets",
     "subCategory": "Immediate Release",
     "shortDescription": "Hormonal balance support for women's health.",
-    "description": "Hormonal balance support for women's health. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Hormonal balance support for women's health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "PMS",
       "Menopause",
@@ -2114,9 +1834,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/001"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorhormone-harmony-1.svg",
@@ -2133,11 +1851,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-42",
       "prod-43",
@@ -2154,7 +1867,7 @@
     "category": "Capsules",
     "subCategory": "Enteric Coated",
     "shortDescription": "Natural sleep formula with melatonin, magnesium, and herbs.",
-    "description": "Natural sleep formula with melatonin, magnesium, and herbs. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Natural sleep formula with melatonin, magnesium, and herbs. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Insomnia",
       "Sleep quality",
@@ -2167,9 +1880,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 15 tablets",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/002"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorsleep-well-1.svg",
@@ -2185,11 +1896,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-43",
       "prod-44",
@@ -2206,7 +1912,7 @@
     "category": "Syrups",
     "subCategory": "Pediatric Syrups",
     "shortDescription": "Stress management with adaptogens and B-vitamins.",
-    "description": "Stress management with adaptogens and B-vitamins. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Stress management with adaptogens and B-vitamins. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Chronic stress",
       "Adrenal fatigue",
@@ -2219,9 +1925,7 @@
       "dosageForm": "Capsule",
       "packaging": "Strip of 10 capsules",
       "storage": "Below 25°C, dry place",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/003"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorstress-relief-1.svg",
@@ -2238,11 +1942,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": true,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-44",
       "prod-45",
@@ -2259,7 +1958,7 @@
     "category": "Injections",
     "subCategory": "Vials",
     "shortDescription": "Digestive enzyme blend for optimal nutrient absorption.",
-    "description": "Digestive enzyme blend for optimal nutrient absorption. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Digestive enzyme blend for optimal nutrient absorption. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Bloating",
       "Gas",
@@ -2272,9 +1971,7 @@
       "dosageForm": "Enteric-coated Capsule",
       "packaging": "Blister pack of 14 capsules",
       "storage": "Below 30°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/004"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvordigest-plus-1.svg",
@@ -2290,11 +1987,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-45",
       "prod-46",
@@ -2311,7 +2003,7 @@
     "category": "Supplements",
     "subCategory": "Herbal Extracts",
     "shortDescription": "Advanced probiotic with prebiotics for gut health.",
-    "description": "Advanced probiotic with prebiotics for gut health. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Advanced probiotic with prebiotics for gut health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Gut health",
       "Microbiome balance",
@@ -2324,9 +2016,7 @@
       "dosageForm": "Tablet",
       "packaging": "Bottle of 60 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/005"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorprobiotic-plus-1.svg",
@@ -2343,11 +2033,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-46",
       "prod-47",
@@ -2364,7 +2049,7 @@
     "category": "Tablets",
     "subCategory": "Extended Release",
     "shortDescription": "Potent antioxidant blend with vitamins C, E, and selenium.",
-    "description": "Potent antioxidant blend with vitamins C, E, and selenium. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Potent antioxidant blend with vitamins C, E, and selenium. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Free radical damage",
       "Aging",
@@ -2377,9 +2062,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/006"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvorantioxidant-1.svg",
@@ -2396,11 +2079,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-47",
       "prod-48",
@@ -2417,7 +2095,7 @@
     "category": "Capsules",
     "subCategory": "Soft Gelatin",
     "shortDescription": "Hydrolyzed collagen peptides for skin, hair, and joints.",
-    "description": "Hydrolyzed collagen peptides for skin, hair, and joints. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Hydrolyzed collagen peptides for skin, hair, and joints. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Skin aging",
       "Joint health",
@@ -2430,9 +2108,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/007"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorcollagen-1.svg",
@@ -2448,11 +2124,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-48",
       "prod-49",
@@ -2469,7 +2140,7 @@
     "category": "Syrups",
     "subCategory": "Sugar-Free",
     "shortDescription": "High-potency biotin for hair, skin, and nail health.",
-    "description": "High-potency biotin for hair, skin, and nail health. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "High-potency biotin for hair, skin, and nail health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Hair loss",
       "Brittle nails",
@@ -2482,9 +2153,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 30 tablets",
       "storage": "Below 30°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/008"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorbiotin-1.svg",
@@ -2500,11 +2169,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-49",
       "prod-50",
@@ -2521,7 +2185,7 @@
     "category": "Injections",
     "subCategory": "Ampoules",
     "shortDescription": "Zinc complex for immune support and wound healing.",
-    "description": "Zinc complex for immune support and wound healing. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Zinc complex for immune support and wound healing. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Immune function",
       "Wound healing",
@@ -2534,9 +2198,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 25°C",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/009"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorzinc-plus-1.svg",
@@ -2552,11 +2214,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-50",
       "prod-51",
@@ -2573,7 +2230,7 @@
     "category": "Supplements",
     "subCategory": "Minerals",
     "shortDescription": "Magnesium glycinate for relaxation and muscle health.",
-    "description": "Magnesium glycinate for relaxation and muscle health. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Magnesium glycinate for relaxation and muscle health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Muscle relaxation",
       "Sleep quality",
@@ -2586,9 +2243,7 @@
       "dosageForm": "Softgel Capsule",
       "packaging": "Bottle of 60 softgels",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "24 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/010"
+      "shelfLife": "24 months"
     },
     "images": [
       "/images/products/alvormagnesium-1.svg",
@@ -2605,11 +2260,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": true,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-51",
       "prod-52",
@@ -2626,7 +2276,7 @@
     "category": "Tablets",
     "subCategory": "Effervescent",
     "shortDescription": "Potassium supplement for electrolyte balance.",
-    "description": "Potassium supplement for electrolyte balance. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Potassium supplement for electrolyte balance. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Heart rhythm",
       "Muscle function",
@@ -2639,9 +2289,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 10 tablets",
       "storage": "Below 30°C, protect from moisture",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/001"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvorpotassium-1.svg",
@@ -2658,11 +2306,6 @@
     "featured": false,
     "isNew": true,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-52",
       "prod-1",
@@ -2679,7 +2322,7 @@
     "category": "Capsules",
     "subCategory": "Hard Gelatin",
     "shortDescription": "Multivitamin and mineral complex for comprehensive daily nutrition.",
-    "description": "Multivitamin and mineral complex for comprehensive daily nutrition. This formulation is manufactured under strict WHO GMP guidelines ensuring consistent quality and efficacy. Each batch undergoes comprehensive testing including identity, potency, purity, and stability assessments.",
+    "description": "Multivitamin and mineral complex for comprehensive daily nutrition. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
     "uses": [
       "Pain relief",
       "Fever reduction",
@@ -2692,9 +2335,7 @@
       "dosageForm": "Tablet",
       "packaging": "Blister pack of 15 tablets",
       "storage": "Below 25°C, protect from light",
-      "shelfLife": "36 months",
-      "manufacturer": "Alvor Healthcare Ltd.",
-      "licenseNumber": "MFG/2023/002"
+      "shelfLife": "36 months"
     },
     "images": [
       "/images/products/alvormulti-complete-1.svg",
@@ -2710,11 +2351,6 @@
     "featured": false,
     "isNew": false,
     "isBestseller": false,
-    "certifications": [
-      "WHO GMP",
-      "ISO 9001",
-      "FDA Registered"
-    ],
     "relatedProducts": [
       "prod-1",
       "prod-2",

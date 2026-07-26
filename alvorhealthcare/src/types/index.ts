@@ -14,8 +14,6 @@ export interface Product {
     packaging?: string;
     storage?: string;
     shelfLife?: string;
-    manufacturer?: string;
-    licenseNumber?: string;
   };
   images: string[];
   thumbnail: string;
@@ -24,7 +22,6 @@ export interface Product {
   featured: boolean;
   isNew: boolean;
   isBestseller: boolean;
-  certifications: string[];
   relatedProducts: string[];
   createdAt: string;
   updatedAt: string;
@@ -60,20 +57,10 @@ export interface CompanyInfo {
   experienceYears: number;
   productsCount: number;
   countriesServed: number;
-  certifications: Certification[];
-  manufacturingCapabilities: string[];
+  distributionCapabilities: string[];
   qualityStandards: string[];
   contact: ContactInfo;
   socialLinks: SocialLink[];
-}
-
-export interface Certification {
-  id: string;
-  name: string;
-  logo: string;
-  description: string;
-  yearObtained: number;
-  validUntil?: string;
 }
 
 export interface ContactInfo {
@@ -94,24 +81,6 @@ export interface SocialLink {
   platform: string;
   url: string;
   icon: string;
-}
-
-export interface Partner {
-  id: string;
-  name: string;
-  logo: string;
-  website: string;
-  category: 'hospital' | 'pharmacy' | 'distributor' | 'regulatory' | 'research';
-}
-
-export interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  linkedin?: string;
-  twitter?: string;
 }
 
 export interface NewsArticle {
@@ -192,29 +161,4 @@ export interface FooterLink {
 export interface FooterSection {
   title: string;
   links: FooterLink[];
-}
-
-export interface Statistic {
-  label: string;
-  value: string | number;
-  suffix?: string;
-  prefix?: string;
-  icon?: string;
-  animationDelay?: number;
-}
-
-export interface Feature {
-  icon: string;
-  title: string;
-  description: string;
-}
-
-export interface Testimonial {
-  id: string;
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  image: string;
-  rating: number;
 }

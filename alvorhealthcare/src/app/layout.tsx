@@ -11,10 +11,10 @@ export const metadata: Metadata = {
     template: "%s | Alvor Healthcare",
   },
   description:
-    "Alvor Healthcare is a leading global pharmaceutical company dedicated to improving health through innovative, high-quality medicines. Explore 50+ products across tablets, capsules, syrups, injections, and supplements.",
+    "Alvor Healthcare is a pharmaceutical distributor connecting healthcare providers and supply partners with a broad portfolio of medicines and healthcare products.",
   keywords: [
     "pharmaceutical", "healthcare", "medicines", "pharma company",
-    "drug manufacturer", "WHO GMP certified", "pharmaceutical distributor",
+    "medicine supplier", "pharmaceutical distribution", "pharmaceutical distributor",
   ],
   authors: [{ name: "Alvor Healthcare" }],
   creator: "Alvor Healthcare",
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     url: "https://alvorhealthcare.com",
     siteName: "Alvor Healthcare",
     title: "Alvor Healthcare | Premium Pharmaceutical Products",
-    description: "Leading global pharmaceutical company with 50+ high-quality products. WHO GMP certified, trusted by healthcare professionals worldwide.",
+    description: "Pharmaceutical distribution, product sourcing, documentation support, and dependable supply for healthcare organizations.",
     images: [{ url: "/images/og-image.svg", width: 1200, height: 630, alt: "Alvor Healthcare" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Alvor Healthcare | Premium Pharmaceutical Products",
-    description: "Leading global pharmaceutical company with 50+ high-quality products. WHO GMP certified.",
+    description: "A pharmaceutical distributor supporting healthcare organizations with dependable product supply.",
     images: ["/images/og-image.svg"],
   },
 };
@@ -67,12 +67,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: "Alvor Healthcare",
               alternateName: "Alvor Healthcare Ltd.",
               url: "https://alvorhealthcare.com",
-              description: "Leading global pharmaceutical company dedicated to improving health through innovative, high-quality medicines.",
+              description: "Pharmaceutical distributor supporting healthcare organizations with product sourcing, documentation, and dependable supply.",
               logo: "https://alvorhealthcare.com/images/logo.svg",
               foundingDate: "1998",
               numberOfEmployees: "200+",
               areaServed: "Worldwide",
-              medicalSpecialty: "Pharmaceutical Manufacturing",
+              medicalSpecialty: "Pharmaceutical Distribution",
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+1-555-0123",

@@ -1,11 +1,11 @@
 {
   "hero": {
-    "eyebrow": "Pharmaceutical Excellence",
-    "titlePrefix": "Advancing Health Through",
-    "titleHighlight": "Innovation & Quality",
-    "description": "Alvor Healthcare has grown from a regional pharmaceutical manufacturer to a globally recognized healthcare company committed to quality, innovation, and patient care.",
+    "eyebrow": "Pharmaceutical Distribution",
+    "titlePrefix": "Connecting Supply With",
+    "titleHighlight": "Healthcare Need",
+    "description": "Alvor Healthcare has grown as a pharmaceutical distribution company focused on dependable supply, responsible product handling, and responsive service.",
     "primaryCtaLabel": "Our Story",
-    "secondaryCtaLabel": "View Certifications"
+    "secondaryCtaLabel": "How We Distribute"
   },
   "mission": {
     "title": "Mission, Vision & Values",
@@ -13,12 +13,12 @@
     "valuesTitle": "Our Core Values",
     "valuesSummary": "Patient safety, quality excellence, innovation, integrity, sustainability, and global accessibility guide every decision we make.",
     "coreValues": [
-      { "icon": "shield", "title": "Patient Safety First", "description": "Every product undergoes rigorous testing to support safety, quality, and efficacy." },
-      { "icon": "award", "title": "Quality Excellence", "description": "Quality systems and certified facilities support consistent manufacturing standards." },
-      { "icon": "lightbulb", "title": "Continuous Innovation", "description": "Research and development programs improve formulations and delivery methods." },
+      { "icon": "shield", "title": "Responsible Supply", "description": "Supplier review, product documentation, traceability, and complaint routing guide our work." },
+      { "icon": "award", "title": "Quality Stewardship", "description": "Distribution controls support responsible handling from supplier to customer." },
+      { "icon": "lightbulb", "title": "Practical Improvement", "description": "We continuously improve inventory planning, customer communication, and delivery coordination." },
       { "icon": "heart", "title": "Patient-Centric Care", "description": "Accessible medicines and support programs remain central to our work." },
       { "icon": "globe", "title": "Global Accessibility", "description": "Reliable distribution partnerships help medicines reach international markets." },
-      { "icon": "leaf", "title": "Sustainable Practices", "description": "Responsible manufacturing initiatives reduce waste and environmental impact." }
+      { "icon": "leaf", "title": "Responsible Operations", "description": "Stock rotation, consolidated logistics, and careful handling help reduce avoidable waste." }
     ]
   },
   "history": {
@@ -26,14 +26,14 @@
     "title": "A Journey of Excellence",
     "description": "Every milestone reflects our continuing commitment to quality healthcare.",
     "milestones": [
-      { "year": "1998", "title": "Company Founded", "description": "Alvor Healthcare was established as a regional pharmaceutical manufacturer.", "icon": "building", "statLabel": "Founded", "statValue": "1998" },
-      { "year": "2002", "title": "First GMP Certification", "description": "The company achieved its first Good Manufacturing Practice certification.", "icon": "award", "statLabel": "Certification", "statValue": "GMP" },
-      { "year": "2005", "title": "WHO GMP Certified", "description": "WHO GMP certification supported expansion into international markets.", "icon": "globe", "statLabel": "Standard", "statValue": "WHO GMP" },
-      { "year": "2008", "title": "R&D Center Established", "description": "A dedicated research center was launched for formulation development.", "icon": "flask", "statLabel": "Focus", "statValue": "R&D" },
-      { "year": "2012", "title": "FDA Facility Registration", "description": "Manufacturing facilities were registered with the U.S. FDA.", "icon": "shield", "statLabel": "Standard", "statValue": "US FDA" },
-      { "year": "2015", "title": "EMA Compliance", "description": "Compliance work supported access to European markets.", "icon": "award", "statLabel": "Region", "statValue": "EU" },
-      { "year": "2018", "title": "Sterile Injectable Facility", "description": "A new facility expanded sterile injectable manufacturing capacity.", "icon": "factory", "statLabel": "Facility", "statValue": "Sterile" },
-      { "year": "2020", "title": "Sustainability Program", "description": "Environmental initiatives expanded across manufacturing operations.", "icon": "leaf", "statLabel": "Focus", "statValue": "Sustainability" }
+      { "year": "1998", "title": "Company Founded", "description": "Alvor Healthcare began serving regional pharmaceutical supply needs.", "icon": "building", "statLabel": "Founded", "statValue": "1998" },
+      { "year": "2002", "title": "Portfolio Expansion", "description": "The distributed portfolio expanded across additional dosage forms and therapeutic categories.", "icon": "award", "statLabel": "Focus", "statValue": "Portfolio" },
+      { "year": "2005", "title": "Regional Partnerships", "description": "New supplier and healthcare-channel relationships extended regional access.", "icon": "globe", "statLabel": "Growth", "statValue": "Regional" },
+      { "year": "2008", "title": "Documentation Team", "description": "A dedicated team was established to coordinate product and market documentation.", "icon": "flask", "statLabel": "Focus", "statValue": "Support" },
+      { "year": "2012", "title": "Supply Controls", "description": "Batch traceability and inventory-review processes were strengthened across operations.", "icon": "shield", "statLabel": "Focus", "statValue": "Traceability" },
+      { "year": "2015", "title": "International Expansion", "description": "Distribution relationships expanded into additional markets.", "icon": "award", "statLabel": "Growth", "statValue": "International" },
+      { "year": "2018", "title": "Logistics Network", "description": "Storage and delivery coordination capabilities were expanded for a broader portfolio.", "icon": "truck", "statLabel": "Focus", "statValue": "Logistics" },
+      { "year": "2020", "title": "Responsible Operations", "description": "Stock rotation, consolidated delivery, and waste-reduction practices were strengthened.", "icon": "leaf", "statLabel": "Focus", "statValue": "Responsibility" }
     ]
   }
 }

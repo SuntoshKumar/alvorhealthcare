@@ -3,14 +3,12 @@
 import { FeaturedProducts } from "@/components/products/FeaturedProducts";
 import { CategoriesSection } from "@/components/home/CategoriesSection";
 import { WhyChooseUsSection } from "@/components/home/WhyChooseUsSection";
-import { TrustedPartnersSection } from "@/components/home/TrustedPartnersSection";
+import { CareChannelsSection } from "@/components/home/CareChannelsSection";
 import { StatisticsSection } from "@/components/home/StatisticsSection";
 import { HeroSection } from "@/components/home/HeroSection";
 import { CTASection } from "@/components/home/CTASection";
-import { TestimonialsSection } from "@/components/home/TestimonialsSection";
-import { NewsSection } from "@/components/home/NewsSection";
-import { ManufacturingSection } from "@/components/home/ManufacturingSection";
-import { QualityCertificationsSection } from "@/components/home/QualityCertificationsSection";
+import { DistributionSection } from "@/components/home/DistributionSection";
+import { DistributionQualitySection } from "@/components/home/DistributionQualitySection";
 
 export default function HomePage() {
   return (
@@ -20,11 +18,9 @@ export default function HomePage() {
       <CategoriesSection />
       <FeaturedProducts />
       <WhyChooseUsSection />
-      <ManufacturingSection />
-      <QualityCertificationsSection />
-      <TrustedPartnersSection />
-      <TestimonialsSection />
-      <NewsSection />
+      <DistributionSection />
+      <DistributionQualitySection />
+      <CareChannelsSection />
       <CTASection />
     </>
   );

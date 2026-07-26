@@ -99,7 +99,7 @@ export function NewsPageContent() {
                 <span className="block text-blue-300">documented.</span>
               </h1>
               <p className="mt-7 max-w-2xl text-lg leading-8 text-blue-100/70 sm:text-xl">
-                Company announcements, product developments, quality milestones, and the partnerships shaping our work in healthcare.
+                Company announcements, portfolio updates, distribution quality milestones, and the partnerships shaping our work in healthcare.
               </p>
             </motion.div>
 

@@ -3,8 +3,8 @@ import { ResourceDetailPage } from "@/components/resources/ResourceDetailPage";
 import { getResourceCollection } from "@/data";
 
 export const metadata: Metadata = {
-  title: "Clinical Research Resources",
-  description: "Explore Alvor Healthcare clinical research, evidence, responsible study conduct, and scientific collaboration.",
+  title: "Clinical Information Resources",
+  description: "Request available clinical study information and scientific documents for products distributed by Alvor Healthcare.",
 };
 
 export default function ClinicalStudiesPage() {

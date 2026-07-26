@@ -134,12 +134,12 @@ export default function ContactPageContent({
       a: "Alvor Healthcare products are registered in 45+ countries. Availability varies by market due to local regulatory requirements. Contact us with your country and product of interest, and our team will provide specific availability and registration status information.",
     },
     {
-      q: "Do you offer contract manufacturing services?",
-      a: "Yes, we offer contract manufacturing for tablets, capsules, liquids, and sterile injectables. Our facilities are WHO GMP, FDA, and EMA compliant. Contact our business development team with your project requirements for a feasibility assessment and quotation.",
+      q: "What distribution support do you provide?",
+      a: "We support qualified healthcare and distribution partners with product availability information, documentation coordination, order planning, storage requirements, shipment visibility, and market-specific enquiries.",
     },
     {
-      q: "What certifications do your manufacturing facilities hold?",
-      a: "Our facilities hold WHO GMP certification, ISO 9001:2015, FDA registration, EMA compliance, HALAL certification, and Green Manufacturing certification. We undergo regular audits and maintain zero critical observations from major regulatory authorities.",
+      q: "Can I request product and supplier documentation?",
+      a: "Yes. Tell us the product, destination market, organization, and document required. Our team will review the request and confirm which product-specific or supplier-provided documents are available.",
     },
   ];
 
@@ -339,8 +339,8 @@ export default function ContactPageContent({
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { city: "New York, USA", role: "Global Headquarters", icon: Building2, details: ["Corporate HQ", "R&D Center", "Regulatory Affairs"] },
-              { city: "London, UK", role: "European Operations", icon: Globe, details: ["EMA Compliance", "EU Distribution", "Clinical Ops"] },
+              { city: "New York, USA", role: "Global Headquarters", icon: Building2, details: ["Corporate Operations", "Portfolio Support", "Partner Relations"] },
+              { city: "London, UK", role: "European Operations", icon: Globe, details: ["Market Support", "EU Distribution", "Documentation"] },
               { city: "Singapore", role: "Asia-Pacific Hub", icon: Users, details: ["APAC Sales", "Regulatory", "Supply Chain"] },
               { city: "Dubai, UAE", role: "MENA Regional Office", icon: MapPin, details: ["GCC Markets", "Regulatory", "Distribution"] },
             ].map((office, index) => (

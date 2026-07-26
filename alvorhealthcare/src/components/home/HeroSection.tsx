@@ -7,8 +7,8 @@ import {
   ArrowRight,
   Award,
   BadgeCheck,
+  Boxes,
   ChevronDown,
-  Dna,
   Globe,
   Shield,
   Sparkles,
@@ -57,7 +57,7 @@ function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
         <div className="absolute left-[12%] top-[12%] flex items-center gap-2">
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_0_5px_rgba(16,185,129,0.1)]" />
           <span className="text-[9px] font-bold uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
-            Precision medicine
+            Reliable medicine access
           </span>
         </div>
 
@@ -85,13 +85,13 @@ function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
             <div className="absolute left-[13%] top-[32%] h-px w-[52%] bg-blue-200" />
             <div className="absolute left-[13%] top-[39%] max-w-[65%]">
               <p className="text-[clamp(0.62rem,1.1vw,0.82rem)] font-bold leading-tight text-slate-900">
-                Advanced Therapeutics
+                Trusted Medicines
               </p>
-              <p className="mt-1 text-[7px] uppercase tracking-[0.16em] text-slate-400">Precision formulation</p>
+              <p className="mt-1 text-[7px] uppercase tracking-[0.16em] text-slate-400">Distributed portfolio</p>
             </div>
             <div className="absolute bottom-[11%] left-[13%] right-[18%]">
               <div className="mb-2 flex items-center justify-between text-[7px] font-semibold uppercase tracking-[0.12em] text-blue-700">
-                <span>Clinical grade</span>
+                <span>Batch tracked</span>
                 <span>30 units</span>
               </div>
               <div className="h-7 overflow-hidden rounded-md bg-gradient-to-r from-blue-600 via-blue-500 to-teal-400">
@@ -113,7 +113,7 @@ function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
             <div className="absolute inset-x-0 bottom-0 h-[35%] bg-gradient-to-t from-blue-500/35 to-transparent" />
             <div className="absolute inset-x-[16%] top-[30%] rounded-lg border border-blue-100 bg-white/80 px-1 py-2 text-center">
               <p className="font-display text-[clamp(0.55rem,1vw,0.72rem)] font-bold text-blue-700">AHC</p>
-              <p className="mt-0.5 text-[6px] font-bold uppercase tracking-[0.15em] text-slate-400">Formula 01</p>
+              <p className="mt-0.5 text-[6px] font-bold uppercase tracking-[0.15em] text-slate-400">Supply 01</p>
             </div>
           </div>
         </motion.div>
@@ -131,11 +131,11 @@ function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
         transition={{ duration: 6.2, repeat: Infinity, ease: "easeInOut" }}
       >
         <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-500/20">
-          <Dna className="h-4.5 w-4.5" />
+          <Boxes className="h-4.5 w-4.5" />
         </span>
         <div>
-          <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-neutral-400">Innovation engine</p>
-          <p className="mt-0.5 text-xs font-bold text-neutral-900 dark:text-white">Molecule to medicine</p>
+          <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-neutral-400">Sourcing network</p>
+          <p className="mt-0.5 text-xs font-bold text-neutral-900 dark:text-white">Source to care</p>
         </div>
       </motion.div>
 
@@ -148,8 +148,8 @@ function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
           <BadgeCheck className="h-4.5 w-4.5" />
         </span>
         <div>
-          <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-neutral-400">Quality released</p>
-          <p className="mt-0.5 text-xs font-bold text-neutral-900 dark:text-white">WHO GMP verified</p>
+          <p className="text-[9px] font-semibold uppercase tracking-[0.14em] text-neutral-400">Supply checked</p>
+          <p className="mt-0.5 text-xs font-bold text-neutral-900 dark:text-white">Documentation ready</p>
         </div>
       </motion.div>
 

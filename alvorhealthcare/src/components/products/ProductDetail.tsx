@@ -9,7 +9,6 @@ import {
   CheckCircle,
   ChevronRight,
   Download,
-  Factory,
   Mail,
   Package,
   Share2,
@@ -65,12 +64,6 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
       : null,
     product.keyInformation.shelfLife
       ? { icon: Shield, label: "Shelf life", value: product.keyInformation.shelfLife }
-      : null,
-    product.keyInformation.manufacturer
-      ? { icon: Factory, label: "Manufacturer", value: product.keyInformation.manufacturer }
-      : null,
-    product.keyInformation.licenseNumber
-      ? { icon: Shield, label: "License number", value: product.keyInformation.licenseNumber }
       : null,
   ];
   const specifications = specificationCandidates.filter((item): item is Specification => item !== null);
@@ -308,23 +301,6 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                 </ScrollReveal>
               )}
 
-              {product.certifications.length > 0 && (
-                <ScrollReveal delay={0.2}>
-                  <div className="mt-10">
-                    <h3 className="heading-md font-semibold text-neutral-900 dark:text-white">
-                      Certifications listed for this product
-                    </h3>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {product.certifications.map((certification) => (
-                        <Badge key={certification} variant="outline" className="px-4 py-2">
-                          <Shield className="mr-1.5 h-4 w-4 text-blue-600 dark:text-blue-400" />
-                          {certification}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </ScrollReveal>
-              )}
             </div>
 
             <div className="space-y-5 lg:sticky lg:top-28 lg:self-start">

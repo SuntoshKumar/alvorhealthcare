@@ -2,9 +2,8 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronRight, Package, Globe, Award, Search, Tag, RotateCcw } from "lucide-react";
+import { ChevronRight, Package, Globe, FileCheck2, Search, Tag, RotateCcw } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 
@@ -148,9 +147,9 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                   <span>Countries</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                  <span className="font-medium text-neutral-900 dark:text-white">WHO GMP</span>
-                  <span>Certified</span>
+                  <FileCheck2 className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <span className="font-medium text-neutral-900 dark:text-white">Product</span>
+                  <span>Documentation</span>
                 </div>
               </motion.div>
             </ScrollReveal>

@@ -1,20 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, FlaskConical, Truck, Leaf, Users, Award } from "lucide-react";
+import { Shield, FileCheck2, Truck, Leaf, Users, ClipboardCheck } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardTitle, CardDescription } from "@/components/ui/Card";
 
 const features = [
   {
     icon: Shield,
-    title: "WHO GMP Certified",
-    description: "All products manufactured in WHO GMP certified facilities ensuring international quality standards.",
+    title: "Supplier Qualification",
+    description: "Portfolio onboarding is supported by supplier review and product documentation.",
   },
   {
-    icon: FlaskConical,
-    title: "Advanced R&D",
-    description: "State-of-the-art research center with 120+ scientists driving pharmaceutical innovation.",
+    icon: FileCheck2,
+    title: "Documentation Support",
+    description: "We coordinate available product and market documents for qualified requests.",
   },
   {
     icon: Truck,
@@ -23,8 +23,8 @@ const features = [
   },
   {
     icon: Leaf,
-    title: "Sustainable Practices",
-    description: "Green manufacturing with reduced carbon footprint and eco-friendly packaging.",
+    title: "Responsible Operations",
+    description: "Practical logistics, packaging, and waste-reduction choices guide our operations.",
   },
   {
     icon: Users,
@@ -32,9 +32,9 @@ const features = [
     description: "Focused on improving patient outcomes through affordable and accessible medications.",
   },
   {
-    icon: Award,
-    title: "Regulatory Excellence",
-    description: "Compliance with FDA, EMA, WHO, and local regulatory requirements worldwide.",
+    icon: ClipboardCheck,
+    title: "Market Coordination",
+    description: "Product availability and documentation are managed according to market requirements.",
   },
 ];
 
@@ -48,7 +48,7 @@ export function WhyChooseUs() {
               Why Choose Alvor Healthcare
             </h2>
             <p className="body-lg text-neutral-600 mt-4">
-              Our commitment to quality, innovation, and patient care sets us apart in the pharmaceutical industry
+              Distributor-owned controls support dependable service from product onboarding through delivery.
             </p>
           </div>
         </ScrollReveal>

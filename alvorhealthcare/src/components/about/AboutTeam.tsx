@@ -32,11 +32,11 @@ const leadershipTeam = [
     id: "t2",
     name: "Dr. James Chen",
     role: "Chief Scientific Officer",
-    bio: "Renowned pharmacologist with 50+ peer-reviewed publications and multiple patent holdings. PhD in Pharmacology from Stanford. Leading our R&D innovation pipeline across multiple therapeutic areas.",
+    bio: "Pharmacology leader supporting product knowledge, medical information, and portfolio review across multiple therapeutic areas.",
     image: "/images/team/james.png",
     linkedin: "https://linkedin.com/in/jameschen",
     email: "james.chen@alvorhealthcare.com",
-    expertise: ["Drug Discovery", "Clinical Development", "Pharmacology", "Intellectual Property"],
+    expertise: ["Medical Information", "Portfolio Review", "Pharmacology", "Product Education"],
     education: "PhD Pharmacology, Stanford University",
     experience: "25+ years",
   },
@@ -44,11 +44,11 @@ const leadershipTeam = [
     id: "t3",
     name: "Maria Rodriguez",
     role: "Chief Operating Officer",
-    bio: "Operations expert with extensive experience in global pharmaceutical manufacturing and supply chain management. MBA from Wharton. Six Sigma Black Belt. Previously Senior Director at major contract manufacturer.",
+    bio: "Operations leader with extensive experience in pharmaceutical distribution, inventory planning, supplier coordination, and supply-chain management.",
     image: "/images/team/mariaa.png",
     linkedin: "https://linkedin.com/in/mariarodriguez",
     email: "maria.rodriguez@alvorhealthcare.com",
-    expertise: ["Manufacturing Operations", "Supply Chain", "Quality Systems", "Lean Manufacturing"],
+    expertise: ["Distribution Operations", "Supply Chain", "Quality Systems", "Inventory Planning"],
     education: "MBA, Wharton School",
     experience: "20+ years",
   },
@@ -56,11 +56,11 @@ const leadershipTeam = [
     id: "t4",
     name: "Dr. Robert Kim",
     role: "Chief Medical Officer",
-    bio: "Board-certified physician leading clinical development and medical affairs strategy. MD from Johns Hopkins. Previously Medical Director at global CRO. Expert in clinical trial design and regulatory submissions.",
+    bio: "Physician supporting medical affairs, product information, safety communication, and regulatory coordination.",
     image: "/images/team/robert.png",
     linkedin: "https://linkedin.com/in/robertkim",
     email: "robert.kim@alvorhealthcare.com",
-    expertise: ["Clinical Development", "Medical Affairs", "Regulatory Strategy", "Patient Safety"],
+    expertise: ["Medical Affairs", "Product Information", "Regulatory Strategy", "Patient Safety"],
     education: "MD, Johns Hopkins University",
     experience: "18+ years",
   },
@@ -98,8 +98,8 @@ const seniorLeadership = [
   {
     id: "s5",
     name: "Dr. Lisa Wang",
-    role: "VP Research & Development",
-    department: "R&D",
+    role: "VP Portfolio & Medical Information",
+    department: "Portfolio",
     image: "/images/team/mariaa.png",
   },
   {
@@ -122,16 +122,12 @@ const departmentIcons: Record<string, React.ComponentType<{ className?: string }
   Operations: Building2,
   Regulatory: FileCheckIcon,
   Commercial: Users,
-  RD: FlaskConical,
+  Portfolio: FlaskConical,
   Finance: Briefcase,
 };
 
 const getDepartmentIcon = (department: string) => {
-  const keyMap: Record<string, string> = {
-    "R&D": "RD",
-    "R and D": "RD",
-  };
-  return departmentIcons[keyMap[department] || department] || Building2;
+  return departmentIcons[department] || Building2;
 };
 
 export function AboutTeam() {
@@ -231,7 +227,7 @@ export function AboutTeam() {
             <h3 className="relative font-display text-3xl font-bold tracking-[-0.04em] sm:text-4xl">Build what healthcare needs next.</h3>
             <p className="relative mt-4 max-w-2xl text-base leading-relaxed text-blue-100 lg:text-lg">
               We&apos;re always looking for passionate professionals who share our commitment to healthcare excellence.
-              Explore career opportunities across R&D, manufacturing, quality, regulatory, and commercial functions.
+              Explore career opportunities across supply chain, quality, regulatory, medical information, and commercial functions.
             </p>
             <Link href="/careers" className="relative mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-blue-700 transition-transform hover:-translate-y-0.5">
               View Career Opportunities

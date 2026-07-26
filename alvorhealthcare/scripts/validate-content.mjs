@@ -97,9 +97,6 @@ requireText(home.cta?.title, "home.cta.title");
 if (!Array.isArray(home.whyChoose?.items) || home.whyChoose.items.length === 0) {
   errors.push("home.whyChoose.items must contain at least one item");
 }
-if (!Array.isArray(home.testimonials?.items) || home.testimonials.items.length === 0) {
-  errors.push("home.testimonials.items must contain at least one testimonial");
-}
 
 requireText(about.hero?.titlePrefix, "about.hero.titlePrefix");
 requireText(about.hero?.titleHighlight, "about.hero.titleHighlight");
@@ -295,11 +292,6 @@ resourcePages.forEach((page, index) => {
     requireInternalHref(page[actionName]?.href, `${path}.${actionName}.href`);
   }
 });
-
-for (const [index, certification] of (company.certifications ?? []).entries()) {
-  requireAsset(certification.logo, `company.certifications[${index}].logo`);
-  if (certification.validUntil) requireDate(certification.validUntil, `company.certifications[${index}].validUntil`);
-}
 
 if (errors.length > 0) {
   console.error(`Content validation failed with ${errors.length} error(s):`);

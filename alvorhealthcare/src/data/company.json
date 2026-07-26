@@ -1,79 +1,31 @@
 {
   "name": "Alvor Healthcare",
-  "tagline": "Advancing Health Through Innovation",
-  "mission": "To improve the quality of life for patients worldwide by developing, manufacturing, and delivering innovative, high-quality, and affordable pharmaceutical products that meet the highest standards of safety and efficacy.",
-  "vision": "To be a globally recognized leader in the pharmaceutical industry, known for our unwavering commitment to quality, innovation, and patient-centric care.",
+  "tagline": "Dependable Medicines. Reliable Distribution.",
+  "mission": "To improve access to dependable pharmaceutical products through responsible sourcing, clear documentation, careful handling, and reliable distribution.",
+  "vision": "To be a trusted pharmaceutical distribution partner known for dependable supply, responsive service, and responsible product stewardship.",
   "foundedYear": 1998,
   "countriesServed": 45,
-  "certifications": [
-    {
-      "id": "who-gmp",
-      "name": "WHO GMP Certified",
-      "logo": "/images/certifications/who-gmp.svg",
-      "description": "World Health Organization Good Manufacturing Practices certification ensuring international quality standards.",
-      "yearObtained": 2005,
-      "validUntil": "2026-12-31"
-    },
-    {
-      "id": "iso-9001",
-      "name": "ISO 9001:2015",
-      "logo": "/images/certifications/iso-9001.svg",
-      "description": "International quality management system certification.",
-      "yearObtained": 2010,
-      "validUntil": "2027-06-15"
-    },
-    {
-      "id": "fda",
-      "name": "FDA Registered Facility",
-      "logo": "/images/certifications/fda.svg",
-      "description": "US Food and Drug Administration registered manufacturing facility.",
-      "yearObtained": 2012
-    },
-    {
-      "id": "ema",
-      "name": "EMA Compliant",
-      "logo": "/images/certifications/ema.svg",
-      "description": "European Medicines Agency regulatory compliance.",
-      "yearObtained": 2015
-    },
-    {
-      "id": "halal",
-      "name": "Halal Certified",
-      "logo": "/images/certifications/halal.svg",
-      "description": "Halal certification for pharmaceutical products.",
-      "yearObtained": 2018,
-      "validUntil": "2026-03-20"
-    },
-    {
-      "id": "green",
-      "name": "Green Manufacturing",
-      "logo": "/images/certifications/green.svg",
-      "description": "Environmentally sustainable manufacturing practices certification.",
-      "yearObtained": 2020,
-      "validUntil": "2026-09-10"
-    }
-  ],
-  "manufacturingCapabilities": [
-    "Tablet Compression (Single & Multi-layer)",
-    "Hard & Soft Gelatin Capsule Filling",
-    "Liquid & Syrup Manufacturing",
-    "Sterile Injectable Production (Ampoules, Vials, Pre-filled Syringes)",
-    "Nutraceutical & Supplement Production",
-    "Blister, Strip, & Bottle Packaging Lines",
-    "Quality Control & Analytical Testing Labs",
-    "Stability Chambers (ICH Conditions)",
-    "Cleanroom Class A/B/C/D Facilities",
-    "Continuous Manufacturing Technology"
+  "distributionCapabilities": [
+    "Supplier and product qualification",
+    "Product and market documentation coordination",
+    "Batch and shipment traceability",
+    "Storage-condition oversight",
+    "Expiry and stock-rotation monitoring",
+    "Wholesale order coordination",
+    "Healthcare-channel fulfilment",
+    "Product availability support",
+    "Quality complaint routing",
+    "Supplier recall coordination"
   ],
   "qualityStandards": [
-    "ICH Q7/Q9/Q10 Guidelines Compliance",
-    "Pharmacopoeia Standards (USP, BP, EP, JP, IP)",
-    "21 CFR Part 11 Electronic Records",
-    "Data Integrity (ALCOA+ Principles)",
-    "Vendor Qualification & Audit Program",
-    "Annual Product Quality Reviews (APQR)",
-    "Change Control & Deviation Management",
-    "CAPA System with Root Cause Analysis"
+    "Supplier qualification and review",
+    "Product documentation verification",
+    "Batch and shipment record control",
+    "Labelled storage-condition monitoring",
+    "Expiry and stock-rotation controls",
+    "Quality complaint escalation",
+    "Adverse-event routing",
+    "Recall communication procedures"
   ],
   "contact": {
     "address": "123 Healthcare Boulevard",

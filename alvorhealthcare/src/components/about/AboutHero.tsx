@@ -2,16 +2,16 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDownRight, Award, BadgeCheck, FlaskConical, Globe, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDownRight, Award, BadgeCheck, Globe, PackageSearch, ShieldCheck, Sparkles } from "lucide-react";
 import { aboutContent, companyInfo } from "@/data";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 const heroStats = [
   { label: "Years of excellence", value: companyInfo.experienceYears, suffix: "+", icon: Award },
-  { label: "Healthcare products", value: companyInfo.productsCount, suffix: "+", icon: FlaskConical },
+  { label: "Healthcare products", value: companyInfo.productsCount, suffix: "+", icon: PackageSearch },
   { label: "Countries reached", value: companyInfo.countriesServed, suffix: "+", icon: Globe },
-  { label: "Global standards", value: companyInfo.certifications.length, suffix: "", icon: ShieldCheck },
+  { label: "Supply controls", value: companyInfo.qualityStandards.length, suffix: "", icon: ShieldCheck },
 ];
 
 export function AboutHero() {
@@ -85,7 +85,7 @@ export function AboutHero() {
                 {content.primaryCtaLabel}
                 <ArrowDownRight className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
               </Link>
-              <Link href="#certifications" className="pharma-button-secondary about-hero-secondary">
+              <Link href="#distribution" className="pharma-button-secondary about-hero-secondary">
                 {content.secondaryCtaLabel}
               </Link>
             </motion.div>
@@ -102,8 +102,8 @@ export function AboutHero() {
             <div className="relative overflow-hidden rounded-[2rem] border border-white/90 bg-white/72 p-5 shadow-[0_45px_110px_-55px_rgba(30,64,175,0.75)] backdrop-blur-2xl dark:border-white/10 dark:bg-neutral-950/70 sm:p-7">
               <div className="flex items-center justify-between border-b border-blue-100/80 pb-5 dark:border-blue-900/40">
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">Alvor quality network</p>
-                  <p className="mt-1 font-display text-xl font-bold text-neutral-950 dark:text-white">From science to patient</p>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">Alvor supply network</p>
+                  <p className="mt-1 font-display text-xl font-bold text-neutral-950 dark:text-white">From source to care</p>
                 </div>
                 <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-500/25">
                   <BadgeCheck className="h-5 w-5" />
@@ -125,7 +125,7 @@ export function AboutHero() {
                     <p className="mt-1 text-[8px] font-bold uppercase tracking-[0.22em] text-blue-200">Healthcare</p>
                   </div>
                 </div>
-                {["Research", "Quality", "Manufacturing", "Access"].map((label, index) => (
+                {["Source", "Verify", "Store", "Deliver"].map((label, index) => (
                   <motion.div
                     key={label}
                     className={[
@@ -144,7 +144,7 @@ export function AboutHero() {
               </div>
 
               <div className="mt-5 grid grid-cols-3 gap-2">
-                {["WHO GMP", "ISO quality", "Global access"].map((label) => (
+                {["Traceable supply", "Document support", "Reliable access"].map((label) => (
                   <div key={label} className="rounded-xl bg-blue-50 px-2 py-3 text-center text-[10px] font-bold uppercase tracking-[0.08em] text-blue-700 dark:bg-blue-950/50 dark:text-blue-300">
                     {label}
                   </div>

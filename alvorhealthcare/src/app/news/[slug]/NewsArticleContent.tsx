@@ -248,7 +248,7 @@ export function NewsArticleContent({ article, relatedArticles }: NewsArticleCont
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-teal-300">Alvor newsroom</p>
               <h2 className="mt-3 text-3xl font-bold tracking-[-0.035em] sm:text-4xl">Explore every company update.</h2>
               <p className="mt-4 text-lg leading-8 text-neutral-400">
-                Browse announcements, product developments, quality milestones, and global expansion news.
+                Browse announcements, portfolio updates, distribution quality milestones, and global expansion news.
               </p>
             </div>
             <Link

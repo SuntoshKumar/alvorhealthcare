@@ -7,13 +7,13 @@ import {
   Building2,
   ChevronLeft,
   ChevronRight,
-  Factory,
   FlaskConical,
   Globe,
   Leaf,
   MapPin,
   Shield,
   Target,
+  Truck,
   Zap,
 } from "lucide-react";
 import { aboutContent } from "@/data";
@@ -27,7 +27,7 @@ const historyIcons = {
   zap: Zap,
   shield: Shield,
   leaf: Leaf,
-  factory: Factory,
+  truck: Truck,
 };
 
 const milestones = aboutContent.history.milestones.map((item) => ({

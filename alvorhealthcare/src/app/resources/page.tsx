@@ -7,7 +7,7 @@ import { resourceCollections, type ResourceTone } from "@/data";
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "Explore healthcare resources, clinical research, educational materials, and support information from Alvor Healthcare.",
+    "Explore product information, clinical evidence request pathways, educational materials, and support information from Alvor Healthcare.",
 };
 
 const toneStyles: Record<
@@ -94,7 +94,7 @@ export default function ResourcesPage() {
             <div className="animate-resource-enter [animation-delay:120ms]">
               <div className="border-l-2 border-blue-600 pl-6 dark:border-blue-400">
                 <p className="text-lg leading-8 text-neutral-600 dark:text-neutral-300">
-                  Find clinical references, patient guidance, research information, and professional learning through one clear resource library.
+                  Find product references, patient guidance, clinical information pathways, and professional learning through one clear resource library.
                 </p>
                 <div className="mt-7 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-neutral-700 dark:text-neutral-200">
                   {["Clear pathways", "Audience focused", "Easy to navigate"].map((item) => (

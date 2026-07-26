@@ -3,9 +3,6 @@
 import {motion} from "framer-motion";
 import Link from "next/link";
 import {
-    Tablet,
-    Droplets,
-    Syringe,
     ChevronRight,
     Package,
     Users,
@@ -15,8 +12,7 @@ import {
     Leaf,
     Star,
     Cpu,
-    Factory,
-    HeartPulse
+    Truck
 } from "lucide-react";
 import {ScrollReveal, StaggerContainer, StaggerItem, HoverScale} from "@/components/animations/Animations";
 import {Card, CardContent, CardTitle, CardDescription} from "@/components/ui/Card";
@@ -100,8 +96,8 @@ export default function CategoriesPage() {
                                 transition={{duration: 0.6}}
                                 className="body-lg lg:text-xl text-neutral-600 dark:text-neutral-300 max-w-2xl mx-auto mb-10"
                             >
-                                Discover our comprehensive portfolio organized by dosage form. Each category represents
-                                our commitment to quality, innovation, and patient-centric healthcare solutions.
+                                Explore a broad portfolio organized by dosage form, with clear product information and
+                                distribution support for healthcare and supply partners.
                             </motion.p>
                         </ScrollReveal>
 
@@ -124,14 +120,14 @@ export default function CategoriesPage() {
                                     <span>Countries</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Award className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
-                                    <span className="font-medium text-neutral-900 dark:text-white">WHO GMP</span>
-                                    <span>Certified</span>
+                                    <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
+                                    <span className="font-medium text-neutral-900 dark:text-white">Documented</span>
+                                    <span>Product Records</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
-                                    <span className="font-medium text-neutral-900 dark:text-white">ISO 9001</span>
-                                    <span>Compliant</span>
+                                    <Truck className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
+                                    <span className="font-medium text-neutral-900 dark:text-white">Coordinated</span>
+                                    <span>Supply</span>
                                 </div>
                             </motion.div>
                         </ScrollReveal>
@@ -148,8 +144,8 @@ export default function CategoriesPage() {
                                 All Product Categories
                             </h2>
                             <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
-                                Each category is manufactured under strict WHO GMP guidelines with comprehensive quality
-                                control
+                                Each category is supported by supplier documentation, storage-condition controls,
+                                traceability, and responsive distribution service.
                             </p>
                         </div>
                     </ScrollReveal>
@@ -237,7 +233,7 @@ export default function CategoriesPage() {
                                 Why Choose Alvor Categories
                             </h2>
                             <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
-                                Every product category benefits from our unified quality and manufacturing standards
+                                Every category benefits from the same distributor-owned quality and service controls.
                             </p>
                         </div>
                     </ScrollReveal>
@@ -246,15 +242,15 @@ export default function CategoriesPage() {
                         {[
                             {
                                 icon: Award,
-                                title: "Uniform Quality",
-                                desc: "All categories manufactured to same WHO GMP standards"
+                                title: "Supplier Review",
+                                desc: "Products are onboarded through documented supplier and portfolio review"
                             },
                             {
                                 icon: Shield,
                                 title: "Regulatory Ready",
                                 desc: "Comprehensive documentation for global registrations"
                             },
-                            {icon: Leaf, title: "Sustainable", desc: "Green manufacturing across all dosage forms"},
+                            {icon: Leaf, title: "Responsible Operations", desc: "Practical packaging, transport, and waste-reduction choices"},
                             {icon: Globe, title: "Global Supply", desc: "Reliable delivery to 45+ countries worldwide"},
                             {
                                 icon: Users,
@@ -273,8 +269,8 @@ export default function CategoriesPage() {
                             },
                             {
                                 icon: Award,
-                                title: "Continuous Improvement",
-                                desc: "Ongoing R&D for formulation optimization"
+                                title: "Continuous Review",
+                                desc: "Documentation, service, and supply processes are reviewed over time"
                             },
                         ].map((item, index) => (
                             <StaggerItem key={item.title} delay={index * 0.1}>

@@ -40,7 +40,7 @@ export function AboutMission() {
               Principles that stay constant as we grow.
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-neutral-600 dark:text-neutral-300 lg:text-lg">
-              {content.description} They connect scientific ambition with the responsibility of serving patients.
+              {content.description} They connect dependable supply with the responsibility of serving healthcare needs.
             </p>
             <div className="mt-8 h-px w-24 bg-gradient-to-r from-blue-600 to-teal-400" />
           </motion.div>
