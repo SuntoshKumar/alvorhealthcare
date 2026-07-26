@@ -41,12 +41,17 @@ export function Header() {
   }, []);
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
+  const toggleMobile = useCallback(() => {
+    if (!mobileOpen) {
+      lastScrollY.current = window.scrollY;
+      setIsHidden(false);
+    }
+
+    setMobileOpen((open) => !open);
+  }, [mobileOpen]);
 
   useEffect(() => {
     if (!mobileOpen) return;
-
-    lastScrollY.current = window.scrollY;
-    setIsHidden(false);
 
     const previousOverflow = document.body.style.overflow;
     const onKeyDown = (event: KeyboardEvent) => {
@@ -175,7 +180,7 @@ export function Header() {
             </Link>
 
             <button
-              onClick={() => setMobileOpen((open) => !open)}
+              onClick={toggleMobile}
               className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-600 text-white shadow-[0_8px_18px_-10px_rgba(37,99,235,0.9)] transition-all duration-200 hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-neutral-950 lg:hidden"
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}

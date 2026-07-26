@@ -22,7 +22,6 @@ import { toast } from "react-hot-toast";
 import { ScrollReveal, StaggerContainer, StaggerItem } from "@/components/animations/Animations";
 import { ProductCard } from "@/components/products/ProductCard";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Breadcrumb } from "@/components/ui/Navigation";
 import { categories } from "@/data";
