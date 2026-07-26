@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
 import { LegalCallout, LegalContact, LegalPage, LegalSection } from "@/components/legal/LegalPage";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Privacy Policy",
   description: "How Alvor Healthcare handles personal information when you visit our website or contact our team.",
-};
+  path: "/privacy",
+});
 
 const sections = [
   { id: "scope", title: "Scope and who we are" },

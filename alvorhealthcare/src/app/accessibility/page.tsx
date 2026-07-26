@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { Accessibility } from "lucide-react";
 import { LegalCallout, LegalContact, LegalPage, LegalSection } from "@/components/legal/LegalPage";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Accessibility Statement",
   description: "Alvor Healthcare's accessibility commitment, current measures, known limitations, and feedback process.",
-};
+  path: "/accessibility",
+});
 
 const sections = [
   { id: "commitment", title: "Our commitment" },

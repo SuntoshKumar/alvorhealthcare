@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { Cookie } from "lucide-react";
 import { LegalCallout, LegalContact, LegalPage, LegalSection } from "@/components/legal/LegalPage";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Cookie Policy",
   description: "The cookies and browser storage used by the Alvor Healthcare website.",
-};
+  path: "/cookies",
+});
 
 const sections = [
   { id: "summary", title: "Current use" },

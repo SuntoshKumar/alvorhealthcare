@@ -1,12 +1,13 @@
-import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ClipboardCheck, Leaf, PackageCheck, Recycle, Route, Users } from "lucide-react";
 import { HoverScale, ScrollReveal, StaggerContainer, StaggerItem } from "@/components/animations/Animations";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Sustainability | Alvor Healthcare",
+export const metadata = createPageMetadata({
+  title: "Sustainability",
   description: "Our approach to responsible pharmaceutical distribution, logistics, packaging, and community access.",
-};
+  path: "/sustainability",
+});
 
 const initiatives = [
   {

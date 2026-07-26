@@ -8,9 +8,9 @@ publish_mode: editorial_workflow
 media_folder: alvorhealthcare/public/images/uploads
 public_folder: /images/uploads
 
-site_url: https://alvorhealthcare.com
-display_url: https://alvorhealthcare.com
-logo_url: /images/og-image.svg
+site_url: https://suntoshkumar.github.io/alvorhealthcare/
+display_url: https://suntoshkumar.github.io/alvorhealthcare/
+logo_url: https://suntoshkumar.github.io/alvorhealthcare/images/og-image.png
 
 collections:
   - name: settings

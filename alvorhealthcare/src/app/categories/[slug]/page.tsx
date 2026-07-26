@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { BreadcrumbStructuredData } from "@/components/ui/StructuredData";
 import { categories, getProductsByCategory } from "@/data";
+import { createPageMetadata } from "@/lib/seo";
 import { CategoryPageContent } from "./CategoryPageContent";
 
 interface Props {
@@ -19,15 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Category Not Found" };
   }
 
-  return {
-    title: `${category.name} | Alvor Healthcare`,
+  return createPageMetadata({
+    title: category.name,
     description: category.description,
-    openGraph: {
-      title: `${category.name} | Alvor Healthcare`,
-      description: category.description,
-      type: "website",
-    },
-  };
+    path: `/categories/${category.slug}`,
+    openGraphTitle: `${category.name} | Alvor Healthcare`,
+  });
 }
 
 export default async function CategoryPage({ params }: Props) {
@@ -40,5 +39,16 @@ export default async function CategoryPage({ params }: Props) {
 
   const categoryProducts = getProductsByCategory(slug);
 
-  return <CategoryPageContent category={category} products={categoryProducts} />;
+  return (
+    <>
+      <BreadcrumbStructuredData
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Product Categories", path: "/categories" },
+          { name: category.name, path: `/categories/${category.slug}` },
+        ]}
+      />
+      <CategoryPageContent category={category} products={categoryProducts} />
+    </>
+  );
 }

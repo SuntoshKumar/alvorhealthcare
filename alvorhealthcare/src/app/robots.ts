@@ -1,17 +1,16 @@
 import type { MetadataRoute } from "next";
+import { absoluteSiteUrl, siteUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://alvorhealthcare.com";
-
   return {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/admin/", "/_next/", "/private/"],
+      disallow: ["/api/", "/admin/", "/private/"],
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    sitemap: absoluteSiteUrl("/sitemap.xml"),
+    host: siteUrl,
   };
 }

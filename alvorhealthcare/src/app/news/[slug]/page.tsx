@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { BreadcrumbStructuredData, NewsArticleStructuredData } from "@/components/ui/StructuredData";
 import { newsArticles } from "@/data";
-import { publicAssetPath } from "@/lib/paths";
+import { absoluteSiteUrl } from "@/lib/seo";
 import { NewsArticleContent } from "./NewsArticleContent";
 
 interface Props {
@@ -16,23 +17,32 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Article Not Found" };
   }
 
+  const articleUrl = absoluteSiteUrl(`/news/${article.slug}`);
+  const imageUrl = absoluteSiteUrl(article.featuredImage);
+
   return {
     title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: articleUrl,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       type: "article",
+      url: articleUrl,
+      siteName: "Alvor Healthcare",
+      locale: "en_MM",
       publishedTime: article.publishDate,
       authors: [article.author],
       tags: article.tags,
-      images: [{ url: publicAssetPath(article.featuredImage), alt: article.title }],
+      images: [{ url: imageUrl, alt: article.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.excerpt,
-      images: [publicAssetPath(article.featuredImage)],
+      images: [imageUrl],
     },
   };
 }
@@ -57,5 +67,17 @@ export default async function NewsDetailPage({ params }: Props) {
     )
     .slice(0, 2);
 
-  return <NewsArticleContent article={article} relatedArticles={relatedArticles} />;
+  return (
+    <>
+      <NewsArticleStructuredData article={article} />
+      <BreadcrumbStructuredData
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Newsroom", path: "/news" },
+          { name: article.title, path: `/news/${article.slug}` },
+        ]}
+      />
+      <NewsArticleContent article={article} relatedArticles={relatedArticles} />
+    </>
+  );
 }

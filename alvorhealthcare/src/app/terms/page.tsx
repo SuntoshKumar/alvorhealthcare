@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { FileCheck2 } from "lucide-react";
 import { LegalCallout, LegalContact, LegalPage, LegalSection } from "@/components/legal/LegalPage";
+import { createPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Terms of Use",
   description: "The terms that apply when you access and use the Alvor Healthcare website.",
-};
+  path: "/terms",
+});
 
 const sections = [
   { id: "agreement", title: "Agreement and scope" },

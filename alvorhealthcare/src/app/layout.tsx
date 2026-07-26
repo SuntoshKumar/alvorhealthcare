@@ -3,10 +3,11 @@ import { Providers } from "./providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { OrganizationStructuredData } from "@/components/ui/StructuredData";
+import { absoluteSiteUrl, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://alvorhealthcare.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Alvor Healthcare | Pharmaceutical & Healthcare Distribution in Myanmar",
     template: "%s | Alvor Healthcare",
@@ -25,20 +26,23 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
   },
+  alternates: {
+    canonical: absoluteSiteUrl("/"),
+  },
   openGraph: {
     type: "website",
     locale: "en_MM",
-    url: "https://alvorhealthcare.com",
+    url: absoluteSiteUrl("/"),
     siteName: "Alvor Healthcare",
     title: "Alvor Healthcare | Healthcare Distribution in Myanmar",
     description: "Pharmaceutical products, medical supplies, diagnostics, and consumer healthcare distribution across Myanmar.",
-    images: [{ url: "/images/og-image.svg", width: 1200, height: 630, alt: "Alvor Healthcare" }],
+    images: [{ url: absoluteSiteUrl("/images/og-image.png"), width: 1200, height: 630, alt: "Alvor Healthcare" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Alvor Healthcare | Healthcare Distribution in Myanmar",
     description: "A Myanmar healthcare company supporting pharmacies, hospitals, clinics, and healthcare organizations.",
-    images: ["/images/og-image.svg"],
+    images: [absoluteSiteUrl("/images/og-image.png")],
   },
 };
 
