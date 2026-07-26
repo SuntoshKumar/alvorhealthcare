@@ -103,7 +103,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
 
   return (
     <>
-      <nav className="border-b border-neutral-100 bg-neutral-50 pt-16 dark:border-neutral-800 dark:bg-neutral-900/50 lg:pt-20" aria-label="Breadcrumb">
+      <nav className="border-b border-neutral-100 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900/50" aria-label="Breadcrumb">
         <div className="container py-4">
           <Breadcrumb
             items={[
@@ -131,7 +131,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
               transition={{ duration: prefersReducedMotion ? 0.01 : 0.65, ease: [0.22, 1, 0.36, 1] }}
             >
               <div>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-neutral-100 bg-gradient-to-br from-neutral-50 via-white to-blue-50 shadow-[0_30px_70px_-48px_rgba(30,64,175,0.55)] dark:border-neutral-800 dark:from-neutral-900 dark:via-neutral-900 dark:to-blue-950/30">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-neutral-100 bg-gradient-to-br from-neutral-50 via-white to-blue-50 shadow-[0_30px_70px_-48px_rgba(30,64,175,0.55)] dark:border-neutral-800 dark:from-neutral-900 dark:via-neutral-900 dark:to-blue-950/30 sm:aspect-[3/2] lg:aspect-[4/3]">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.95),transparent_50%)] opacity-80 dark:opacity-10" aria-hidden="true" />
                   <div className="absolute inset-x-[25%] bottom-8 h-5 rounded-[50%] bg-blue-950/10 blur-lg dark:bg-black/35" aria-hidden="true" />
                   <AnimatePresence mode="wait">
@@ -202,7 +202,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                 <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
                   {product.category}{product.subCategory ? ` / ${product.subCategory}` : ""}
                 </p>
-                <h1 id="product-title" className="mt-3 display-sm font-bold text-neutral-900 dark:text-white lg:display-md">
+                <h1 id="product-title" className="mt-3 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
                   {product.name}
                 </h1>
 
@@ -226,41 +226,66 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                   {product.shortDescription}
                 </p>
 
-                <motion.dl
-                  className="mt-7 grid gap-2.5 sm:grid-cols-2"
-                  initial="hidden"
-                  animate="visible"
-                  variants={{ hidden: {}, visible: { transition: { staggerChildren: prefersReducedMotion ? 0 : 0.06, delayChildren: prefersReducedMotion ? 0 : 0.2 } } }}
-                >
-                  {specifications.slice(0, 4).map((item) => (
-                    <motion.div
-                      key={item.label}
-                      className="rounded-2xl border border-neutral-100 bg-neutral-50 p-4 dark:border-neutral-800 dark:bg-neutral-900/60"
-                      variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } } }}
-                    >
-                      <dt className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
-                        {item.label}
-                      </dt>
-                      <dd className="mt-1 font-medium text-neutral-900 dark:text-white">{item.value}</dd>
-                    </motion.div>
-                  ))}
-                </motion.dl>
+                {specifications.length > 0 && (
+                  <div className="mt-7 flex flex-wrap gap-3">
+                    {specifications.slice(0, 3).map((item) => (
+                      <div
+                        key={item.label}
+                        className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-neutral-50 px-3.5 py-2.5 dark:border-neutral-800 dark:bg-neutral-900/60"
+                      >
+                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                          <item.icon className="h-3.5 w-3.5" />
+                        </div>
+                        <div>
+                          <p className="text-[10px] font-bold uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
+                            {item.label}
+                          </p>
+                          <p className="text-sm font-semibold text-neutral-900 dark:text-white">{item.value}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
 
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <Link href={inquiryHref} className="btn btn-primary btn-lg sm:flex-none">
-                    <Mail className="h-5 w-5" />
-                    Ask about this product
+                <div className="mt-7 space-y-4">
+                  <Link
+                    href={inquiryHref}
+                    className="group flex items-center gap-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-5 text-white shadow-lg shadow-blue-500/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/30 dark:from-blue-500 dark:to-blue-600"
+                  >
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm">
+                      <Mail className="h-6 w-6" />
+                    </span>
+                    <div className="flex-1">
+                      <p className="font-bold">Request product information</p>
+                      <p className="mt-0.5 text-sm text-blue-100 dark:text-blue-200">
+                        Availability, prescribing details, and documentation
+                      </p>
+                    </div>
+                    <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Link>
-                  {product.pdfBrochure && (
-                    <Button variant="outline" size="lg" onClick={handleDownloadBrochure}>
-                      <Download className="mr-2 h-5 w-5" />
-                      Brochure
-                    </Button>
-                  )}
-                  <Button variant="ghost" size="lg" onClick={handleShare}>
-                    <Share2 className="mr-2 h-5 w-5" />
-                    Share
-                  </Button>
+
+                  <div className="flex gap-3">
+                    {product.pdfBrochure && (
+                      <button
+                        type="button"
+                        onClick={handleDownloadBrochure}
+                        className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-700 transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:border-blue-700 dark:hover:bg-blue-950/50 dark:hover:text-blue-300"
+                      >
+                        <Download className="h-4 w-4" />
+                        Download brochure
+                      </button>
+                    )}
+                    <div className="relative flex-1">
+                      <button
+                        type="button"
+                        onClick={handleShare}
+                        className="flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-700 transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:border-blue-700 dark:hover:bg-blue-950/50 dark:hover:text-blue-300"
+                      >
+                        <Share2 className="h-4 w-4" />
+                        Share
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </motion.div>

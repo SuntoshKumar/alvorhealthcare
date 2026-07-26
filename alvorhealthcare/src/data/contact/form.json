@@ -1,0 +1,33 @@
+{
+  "title": "Send Us a Message",
+  "description": "Fill out the form below to open a pre-addressed email draft for the Alvor Healthcare team.",
+  "inquiryTypes": [
+    {
+      "value": "general",
+      "label": "General Inquiry"
+    },
+    {
+      "value": "product-inquiry",
+      "label": "Product Inquiry"
+    },
+    {
+      "value": "partnership",
+      "label": "Partnership & Distribution"
+    },
+    {
+      "value": "career",
+      "label": "Career Opportunities"
+    },
+    {
+      "value": "complaint",
+      "label": "Quality Complaint"
+    },
+    {
+      "value": "media",
+      "label": "Media & Press"
+    }
+  ],
+  "submitLabel": "Open Email App",
+  "successMessage": "Your email app has been opened with a draft. Review it and press Send to complete your inquiry.",
+  "errorMessage": "Failed to send message. Please try again or contact us directly at alvorhealthcare@gmail.com."
+}

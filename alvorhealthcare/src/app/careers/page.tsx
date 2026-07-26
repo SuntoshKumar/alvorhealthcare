@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { CareersHero } from "@/components/careers/CareersHero";
 import { CareersBenefits } from "@/components/careers/CareersBenefits";
 import { CareersDepartments } from "@/components/careers/CareersDepartments";
+import { CareersJobs } from "@/components/careers/CareersJobs";
 import { CareersCulture } from "@/components/careers/CareersCulture";
 import { CareersCTA } from "@/components/careers/CareersCTA";
 
@@ -20,6 +21,7 @@ export default function CareersPage() {
       <CareersHero />
       <CareersBenefits />
       <CareersDepartments />
+      <CareersJobs />
       <CareersCulture />
       <CareersCTA />
     </div>

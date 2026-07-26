@@ -36,7 +36,7 @@ export function AboutSectionNav() {
 
   return (
     <nav
-      className="sticky top-16 z-40 border-y border-neutral-200/80 bg-white/88 shadow-[0_14px_35px_-30px_rgba(15,23,42,0.8)] backdrop-blur-2xl dark:border-neutral-800 dark:bg-neutral-950/88 lg:top-20"
+      className="border-y border-neutral-200/80 bg-white/88 backdrop-blur-2xl dark:border-neutral-800 dark:bg-neutral-950/88"
       aria-label="About page sections"
     >
       <div className="container">

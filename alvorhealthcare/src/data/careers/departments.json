@@ -1,0 +1,37 @@
+{
+  "eyebrow": "Open Positions",
+  "title": "Find Your Role",
+  "description": "Explore opportunities across our teams. Each department plays a vital role in delivering quality healthcare products.",
+  "items": [
+    {
+      "name": "Supply Operations",
+      "description": "Coordinate inventory, storage requirements, orders, and reliable product movement across the distribution network.",
+      "gradient": "from-blue-500 to-blue-600"
+    },
+    {
+      "name": "Quality & Compliance",
+      "description": "Support supplier qualification, documentation, traceability, complaints, and recalls to maintain product quality.",
+      "gradient": "from-emerald-500 to-emerald-600"
+    },
+    {
+      "name": "Regulatory Support",
+      "description": "Coordinate product and market information across applicable regulatory requirements for safe distribution.",
+      "gradient": "from-teal-500 to-teal-600"
+    },
+    {
+      "name": "Commercial",
+      "description": "Build responsible relationships with healthcare providers and distribution partners across Myanmar.",
+      "gradient": "from-amber-500 to-amber-600"
+    },
+    {
+      "name": "Customer Operations",
+      "description": "Provide clear product, order, documentation, and service support to healthcare customers.",
+      "gradient": "from-violet-500 to-violet-600"
+    },
+    {
+      "name": "Corporate Functions",
+      "description": "Support our work through finance, people operations, technology, and legal expertise.",
+      "gradient": "from-rose-500 to-rose-600"
+    }
+  ]
+}

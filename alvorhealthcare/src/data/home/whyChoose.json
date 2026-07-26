@@ -1,0 +1,37 @@
+{
+  "eyebrow": "Why Alvor",
+  "title": "A Healthcare Partner Built Around Quality and Reliability",
+  "description": "We connect international manufacturers with healthcare providers and communities across Myanmar through professional importation, marketing, and distribution.",
+  "items": [
+    {
+      "icon": "shield",
+      "title": "Quality Focus",
+      "description": "We source healthcare products from trusted international manufacturers."
+    },
+    {
+      "icon": "package",
+      "title": "Diverse Portfolio",
+      "description": "Our portfolio includes pharmaceuticals, medical supplies, diagnostics, vitamins, OTC products, and wellness products."
+    },
+    {
+      "icon": "award",
+      "title": "Professional Support",
+      "description": "Our team provides product information, healthcare education, marketing, and sales support."
+    },
+    {
+      "icon": "truck",
+      "title": "Reliable Distribution",
+      "description": "We supply pharmacies, hospitals, clinics, and healthcare organizations across Myanmar."
+    },
+    {
+      "icon": "users",
+      "title": "Customer Focus",
+      "description": "We build dependable relationships around healthcare-provider and community needs."
+    },
+    {
+      "icon": "warehouse",
+      "title": "Responsible Operations",
+      "description": "Our importation and distribution work supports applicable local healthcare requirements."
+    }
+  ]
+}

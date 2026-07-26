@@ -1,0 +1,43 @@
+{
+  "eyebrow": "Why Alvor",
+  "title": "Why Join Alvor?",
+  "description": "We invest in our people with meaningful growth opportunities, supportive culture, and comprehensive benefits.",
+  "items": [
+    {
+      "icon": "heartPulse",
+      "title": "Health & Wellness",
+      "description": "Comprehensive medical, dental, and vision coverage for you and your family.",
+      "gradient": "from-rose-500 to-rose-600"
+    },
+    {
+      "icon": "graduationCap",
+      "title": "Learning & Development",
+      "description": "Continuous learning opportunities, tuition reimbursement, and professional development programs.",
+      "gradient": "from-blue-500 to-blue-600"
+    },
+    {
+      "icon": "globe",
+      "title": "Global Exposure",
+      "description": "Work with international manufacturer partners and gain cross-border operational experience.",
+      "gradient": "from-teal-500 to-teal-600"
+    },
+    {
+      "icon": "trendingUp",
+      "title": "Career Growth",
+      "description": "Clear career progression paths, mentorship programs, and leadership development.",
+      "gradient": "from-emerald-500 to-emerald-600"
+    },
+    {
+      "icon": "users",
+      "title": "Inclusive Culture",
+      "description": "Diverse and inclusive workplace where every voice is valued and respected.",
+      "gradient": "from-violet-500 to-violet-600"
+    },
+    {
+      "icon": "briefcase",
+      "title": "Work-Life Balance",
+      "description": "Flexible working arrangements, generous paid time off, and family leave policies.",
+      "gradient": "from-amber-500 to-amber-600"
+    }
+  ]
+}

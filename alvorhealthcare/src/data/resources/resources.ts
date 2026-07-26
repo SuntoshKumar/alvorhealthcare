@@ -1,5 +1,5 @@
-import resourcesData from "./resources.json";
-import resourcePagesData from "./resource-pages.json";
+import resourcesData from "./collections.json";
+import resourcePagesData from "./pages.json";
 
 export type ResourceIconName =
   | "book"

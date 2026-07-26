@@ -1,0 +1,13 @@
+{
+  "eyebrow": "Careers at Alvor",
+  "titlePrefix": "Build Your",
+  "titleHighlight": "Healthcare Career",
+  "description": "Join a team that connects healthcare providers with quality pharmaceutical products across Myanmar. At Alvor Healthcare, your work supports supply, quality, service, and commercial operations that make a real difference.",
+  "primaryCta": { "label": "Explore Roles", "href": "#openings" },
+  "secondaryCta": { "label": "Contact Us", "href": "/contact" },
+  "stats": [
+    { "value": "6+", "label": "Departments" },
+    { "value": "50+", "label": "Team Members" },
+    { "value": "2", "label": "Office Locations" }
+  ]
+}

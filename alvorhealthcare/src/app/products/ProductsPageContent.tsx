@@ -231,7 +231,7 @@ export function ProductsPageContent() {
       </section>
 
       <motion.section
-        className="sticky top-16 z-30 border-b border-neutral-100 bg-white/88 shadow-[0_12px_30px_-28px_rgba(15,23,42,0.7)] backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-950/88 lg:top-20"
+        className="border-b border-neutral-100 bg-white/88 backdrop-blur-xl dark:border-neutral-800 dark:bg-neutral-950/88"
         initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: prefersReducedMotion ? 0.01 : 0.42, delay: prefersReducedMotion ? 0 : 0.08, ease: [0.22, 1, 0.36, 1] }}

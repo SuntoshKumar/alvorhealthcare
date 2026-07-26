@@ -1,0 +1,454 @@
+[
+  {
+    "id": "prod-3",
+    "slug": "alvorcillin-500",
+    "name": "AlvorCillin 500",
+    "category": "Syrups",
+    "subCategory": "Sugar-Free",
+    "shortDescription": "Broad-spectrum antibiotic for bacterial infections.",
+    "description": "Broad-spectrum antibiotic for bacterial infections. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Respiratory infections",
+      "Urinary tract infections",
+      "Skin infections",
+      "Ear infections"
+    ],
+    "keyInformation": {
+      "composition": "Amoxicillin 500mg",
+      "strength": "500mg",
+      "dosageForm": "Capsule",
+      "packaging": "Strip of 10 capsules",
+      "storage": "Below 25\u00b0C, dry place",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvorcillin-500-1.svg",
+      "/images/products/alvorcillin-500-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorcillin-500-thumb.svg",
+    "tags": [
+      "syrups",
+      "gastroenterology",
+      "sugar-free",
+      "otc"
+    ],
+    "featured": true,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-4",
+      "prod-5",
+      "prod-6",
+      "prod-7"
+    ],
+    "createdAt": "2024-01-02T17:30:00.000Z",
+    "updatedAt": "2025-01-02T17:30:00.000Z"
+  },
+  {
+    "id": "prod-8",
+    "slug": "alvorsartan-50",
+    "name": "AlvorSartan 50",
+    "category": "Syrups",
+    "subCategory": "Adult Syrups",
+    "shortDescription": "Angiotensin II receptor blocker for blood pressure control.",
+    "description": "Angiotensin II receptor blocker for blood pressure control. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Hypertension",
+      "Heart failure",
+      "Diabetic nephropathy",
+      "Left ventricular hypertrophy"
+    ],
+    "keyInformation": {
+      "composition": "Losartan Potassium 50mg",
+      "strength": "50mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorsartan-50-1.svg",
+      "/images/products/alvorsartan-50-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorsartan-50-thumb.svg",
+    "tags": [
+      "syrups",
+      "dermatology",
+      "adult-syrups",
+      "otc",
+      "bestseller"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": true,
+    "relatedProducts": [
+      "prod-9",
+      "prod-10",
+      "prod-11",
+      "prod-12"
+    ],
+    "createdAt": "2024-01-07T17:30:00.000Z",
+    "updatedAt": "2025-01-07T17:30:00.000Z"
+  },
+  {
+    "id": "prod-13",
+    "slug": "alvorcal-d",
+    "name": "AlvorCal-D",
+    "category": "Syrups",
+    "subCategory": "Pediatric Syrups",
+    "shortDescription": "Bone health supplement with optimal calcium and vitamin D ratio.",
+    "description": "Bone health supplement with optimal calcium and vitamin D ratio. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Osteoporosis prevention",
+      "Bone health",
+      "Calcium deficiency",
+      "Postmenopausal women"
+    ],
+    "keyInformation": {
+      "composition": "Amoxicillin 500mg",
+      "strength": "500mg",
+      "dosageForm": "Capsule",
+      "packaging": "Strip of 10 capsules",
+      "storage": "Below 25\u00b0C, dry place",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvorcal-d-1.svg",
+      "/images/products/alvorcal-d-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorcal-d-thumb.svg",
+    "tags": [
+      "syrups",
+      "gastroenterology",
+      "pediatric-syrups",
+      "rx"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-14",
+      "prod-15",
+      "prod-16",
+      "prod-17"
+    ],
+    "createdAt": "2024-01-12T17:30:00.000Z",
+    "updatedAt": "2025-01-12T17:30:00.000Z"
+  },
+  {
+    "id": "prod-18",
+    "slug": "alvorjoint",
+    "name": "AlvorJoint",
+    "category": "Syrups",
+    "subCategory": "Sugar-Free",
+    "shortDescription": "Joint health formula with glucosamine and chondroitin.",
+    "description": "Joint health formula with glucosamine and chondroitin. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Osteoarthritis",
+      "Joint pain",
+      "Cartilage protection",
+      "Mobility support"
+    ],
+    "keyInformation": {
+      "composition": "Losartan Potassium 50mg",
+      "strength": "50mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorjoint-1.svg",
+      "/images/products/alvorjoint-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorjoint-thumb.svg",
+    "tags": [
+      "syrups",
+      "dermatology",
+      "sugar-free",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-19",
+      "prod-20",
+      "prod-21",
+      "prod-22"
+    ],
+    "createdAt": "2024-01-17T17:30:00.000Z",
+    "updatedAt": "2025-01-17T17:30:00.000Z"
+  },
+  {
+    "id": "prod-23",
+    "slug": "alvorsugar-balance",
+    "name": "AlvorSugar Balance",
+    "category": "Syrups",
+    "subCategory": "Adult Syrups",
+    "shortDescription": "Blood sugar support with natural ingredients.",
+    "description": "Blood sugar support with natural ingredients. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Blood sugar control",
+      "Insulin sensitivity",
+      "Metabolic health"
+    ],
+    "keyInformation": {
+      "composition": "Amoxicillin 500mg",
+      "strength": "500mg",
+      "dosageForm": "Capsule",
+      "packaging": "Strip of 10 capsules",
+      "storage": "Below 25\u00b0C, dry place",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvorsugar-balance-1.svg",
+      "/images/products/alvorsugar-balance-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorsugar-balance-thumb.svg",
+    "tags": [
+      "syrups",
+      "gastroenterology",
+      "adult-syrups",
+      "otc",
+      "featured"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-24",
+      "prod-25",
+      "prod-26",
+      "prod-27"
+    ],
+    "createdAt": "2024-01-22T17:30:00.000Z",
+    "updatedAt": "2025-01-22T17:30:00.000Z"
+  },
+  {
+    "id": "prod-28",
+    "slug": "alvorvitamin-complex",
+    "name": "AlvorVitamin Complex",
+    "category": "Syrups",
+    "subCategory": "Pediatric Syrups",
+    "shortDescription": "Complete daily vitamin and mineral complex.",
+    "description": "Complete daily vitamin and mineral complex. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Nutritional gaps",
+      "Daily wellness",
+      "Energy support",
+      "Immune function"
+    ],
+    "keyInformation": {
+      "composition": "Losartan Potassium 50mg",
+      "strength": "50mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorvitamin-complex-1.svg",
+      "/images/products/alvorvitamin-complex-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorvitamin-complex-thumb.svg",
+    "tags": [
+      "syrups",
+      "dermatology",
+      "pediatric-syrups",
+      "rx"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-29",
+      "prod-30",
+      "prod-31",
+      "prod-32"
+    ],
+    "createdAt": "2024-01-27T17:30:00.000Z",
+    "updatedAt": "2025-01-27T17:30:00.000Z"
+  },
+  {
+    "id": "prod-33",
+    "slug": "alvorbone-health",
+    "name": "AlvorBone Health",
+    "category": "Syrups",
+    "subCategory": "Sugar-Free",
+    "shortDescription": "Bone density support with calcium, D3, K2, and magnesium.",
+    "description": "Bone density support with calcium, D3, K2, and magnesium. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Bone density",
+      "Fracture prevention",
+      "Calcium absorption",
+      "Joint health"
+    ],
+    "keyInformation": {
+      "composition": "Amoxicillin 500mg",
+      "strength": "500mg",
+      "dosageForm": "Capsule",
+      "packaging": "Strip of 10 capsules",
+      "storage": "Below 25\u00b0C, dry place",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvorbone-health-1.svg",
+      "/images/products/alvorbone-health-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorbone-health-thumb.svg",
+    "tags": [
+      "syrups",
+      "gastroenterology",
+      "sugar-free",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-34",
+      "prod-35",
+      "prod-36",
+      "prod-37"
+    ],
+    "createdAt": "2024-02-01T17:30:00.000Z",
+    "updatedAt": "2025-02-01T17:30:00.000Z"
+  },
+  {
+    "id": "prod-38",
+    "slug": "alvorliver-detox",
+    "name": "AlvorLiver Detox",
+    "category": "Syrups",
+    "subCategory": "Adult Syrups",
+    "shortDescription": "Liver support with milk thistle, NAC, and antioxidants.",
+    "description": "Liver support with milk thistle, NAC, and antioxidants. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Liver detox",
+      "Fatty liver",
+      "Alcohol recovery",
+      "Toxin elimination"
+    ],
+    "keyInformation": {
+      "composition": "Losartan Potassium 50mg",
+      "strength": "50mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorliver-detox-1.svg",
+      "/images/products/alvorliver-detox-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorliver-detox-thumb.svg",
+    "tags": [
+      "syrups",
+      "dermatology",
+      "adult-syrups",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-39",
+      "prod-40",
+      "prod-41",
+      "prod-42"
+    ],
+    "createdAt": "2024-02-06T17:30:00.000Z",
+    "updatedAt": "2025-02-06T17:30:00.000Z"
+  },
+  {
+    "id": "prod-43",
+    "slug": "alvorstress-relief",
+    "name": "AlvorStress Relief",
+    "category": "Syrups",
+    "subCategory": "Pediatric Syrups",
+    "shortDescription": "Stress management with adaptogens and B-vitamins.",
+    "description": "Stress management with adaptogens and B-vitamins. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Chronic stress",
+      "Adrenal fatigue",
+      "Burnout",
+      "Anxiety"
+    ],
+    "keyInformation": {
+      "composition": "Amoxicillin 500mg",
+      "strength": "500mg",
+      "dosageForm": "Capsule",
+      "packaging": "Strip of 10 capsules",
+      "storage": "Below 25\u00b0C, dry place",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvorstress-relief-1.svg",
+      "/images/products/alvorstress-relief-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorstress-relief-thumb.svg",
+    "tags": [
+      "syrups",
+      "gastroenterology",
+      "pediatric-syrups",
+      "rx",
+      "bestseller"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": true,
+    "relatedProducts": [
+      "prod-44",
+      "prod-45",
+      "prod-46",
+      "prod-47"
+    ],
+    "createdAt": "2024-02-11T17:30:00.000Z",
+    "updatedAt": "2025-02-11T17:30:00.000Z"
+  },
+  {
+    "id": "prod-48",
+    "slug": "alvorbiotin",
+    "name": "AlvorBiotin",
+    "category": "Syrups",
+    "subCategory": "Sugar-Free",
+    "shortDescription": "High-potency biotin for hair, skin, and nail health.",
+    "description": "High-potency biotin for hair, skin, and nail health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Hair loss",
+      "Brittle nails",
+      "Skin health",
+      "Metabolism"
+    ],
+    "keyInformation": {
+      "composition": "Losartan Potassium 50mg",
+      "strength": "50mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorbiotin-1.svg",
+      "/images/products/alvorbiotin-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorbiotin-thumb.svg",
+    "tags": [
+      "syrups",
+      "dermatology",
+      "sugar-free",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-49",
+      "prod-50",
+      "prod-51",
+      "prod-52"
+    ],
+    "createdAt": "2024-02-16T17:30:00.000Z",
+    "updatedAt": "2025-02-16T17:30:00.000Z"
+  }
+]

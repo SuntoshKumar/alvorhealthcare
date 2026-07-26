@@ -95,123 +95,131 @@ export function NewsPageContent() {
           className="absolute -bottom-48 left-[8%] h-96 w-96 rounded-full bg-teal-300/10 blur-3xl dark:bg-teal-400/15"
           aria-hidden="true"
         />
-        <motion.div
-          animate={prefersReducedMotion ? {} : { x: [-6, 6, -6] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute left-1/2 top-1/3 h-64 w-64 rounded-full bg-violet-300/10 blur-3xl dark:bg-violet-400/10"
-          aria-hidden="true"
-        />
-        <div className="absolute right-[15%] top-[20%] h-40 w-40 rounded-full bg-gradient-to-br from-blue-200/30 to-teal-200/20 blur-2xl dark:from-blue-400/10 dark:to-teal-400/10" aria-hidden="true" />
 
-        <div className="container relative pb-16 lg:pb-24">
-          <div className="grid items-end gap-12 lg:grid-cols-[1fr_0.72fr] lg:gap-20">
-            <div>
-              <motion.div
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 32 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={revealTransition}
-              >
-                <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-neutral-700 shadow-sm backdrop-blur-xl dark:border-white/15 dark:bg-white/[0.07] dark:text-blue-100">
-                  <Sparkles className="h-4 w-4 text-blue-600 dark:text-teal-300" aria-hidden="true" />
-                  Alvor newsroom
-                </span>
-              </motion.div>
+        <div className="container relative pb-12 lg:pb-16">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={revealTransition}
+            >
+              <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-neutral-700 shadow-sm backdrop-blur-xl dark:border-white/15 dark:bg-white/[0.07] dark:text-blue-100">
+                <Sparkles className="h-4 w-4 text-blue-600 dark:text-teal-300" aria-hidden="true" />
+                Alvor newsroom
+              </span>
+            </motion.div>
 
-              <motion.h1
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 32 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.08 }}
-                className="mt-7 max-w-4xl text-5xl font-bold tracking-[-0.055em] text-neutral-950 dark:text-white sm:text-6xl lg:text-8xl"
-              >
-                Progress,
-                <span className="block text-blue-600 dark:text-blue-300">documented.</span>
-              </motion.h1>
+            <motion.h1
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.08 }}
+              className="mt-7 text-5xl font-bold tracking-[-0.055em] text-neutral-950 dark:text-white sm:text-6xl lg:text-7xl"
+            >
+              Healthcare
+              <span className="block text-blue-600 dark:text-blue-300">news & updates</span>
+            </motion.h1>
 
-              <motion.p
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.16 }}
-                className="mt-7 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-blue-100/70 sm:text-xl"
-              >
-                Company announcements, portfolio updates, distribution quality
-                milestones, and the partnerships shaping our work in healthcare.
-              </motion.p>
+            <motion.p
+              initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.16 }}
+              className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-blue-100/70"
+            >
+              Company announcements, portfolio updates, distribution quality
+              milestones, and the partnerships shaping our work in healthcare.
+            </motion.p>
+          </div>
 
-              <motion.div
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.24 }}
-                className="mt-9 flex items-center gap-6"
-              >
-                <a
-                  href="#news-archive"
-                  className="group inline-flex items-center gap-2 rounded-xl bg-neutral-950 px-5 py-3 text-sm font-bold text-white outline-none transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 focus-visible:ring-4 focus-visible:ring-blue-200 dark:bg-white dark:text-neutral-950 dark:hover:bg-blue-100 dark:focus-visible:ring-blue-900"
+          <motion.div
+            initial={prefersReducedMotion ? false : { opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.24 }}
+            className="mt-10 grid gap-6 lg:grid-cols-[1fr_0.42fr]"
+          >
+            <div className="space-y-4">
+              <label className="relative block">
+                <span className="sr-only">Search news articles</span>
+                <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-neutral-400" aria-hidden="true" />
+                <input
+                  type="search"
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  placeholder="Search by headline, topic, or keyword..."
+                  className="h-14 w-full rounded-2xl border border-neutral-200 bg-white pl-12 pr-12 text-sm font-medium text-neutral-950 shadow-sm outline-none transition-[border-color,box-shadow,background-color] placeholder:text-neutral-400 focus:border-blue-400 focus:ring-4 focus:ring-blue-100 dark:border-neutral-800 dark:bg-neutral-900 dark:text-white dark:focus:border-blue-700 dark:focus:ring-blue-950"
+                />
+                {search && (
+                  <button
+                    type="button"
+                    onClick={() => setSearch("")}
+                    className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-neutral-400 outline-none hover:bg-neutral-100 hover:text-neutral-700 focus-visible:ring-2 focus-visible:ring-blue-500 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+                    aria-label="Clear search"
+                  >
+                    <X className="h-4 w-4" aria-hidden="true" />
+                  </button>
+                )}
+              </label>
+
+              <div className="flex flex-wrap gap-2" aria-label="Filter by category">
+                <button
+                  type="button"
+                  onClick={() => updateCategory("all")}
+                  aria-pressed={category === "all"}
+                  className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold outline-none transition-all focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                    category === "all"
+                      ? "bg-neutral-950 text-white shadow-md dark:bg-white dark:text-neutral-950"
+                      : "border border-neutral-200 text-neutral-600 hover:border-blue-300 hover:text-blue-700 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-blue-800 dark:hover:text-blue-300"
+                  }`}
                 >
-                  Browse all stories
-                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
-                </a>
-                <span className="text-sm font-semibold text-neutral-400 dark:text-blue-100/40">
-                  {sortedArticles.length} articles published
-                </span>
-              </motion.div>
+                  All news
+                  <span className="ml-1.5 opacity-60">{sortedArticles.length}</span>
+                </button>
+                {availableCategories.map((categoryName) => (
+                  <button
+                    key={categoryName}
+                    type="button"
+                    onClick={() => updateCategory(categoryName)}
+                    aria-pressed={category === categoryName}
+                    className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold outline-none transition-all focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                      category === categoryName
+                        ? "bg-neutral-950 text-white shadow-md dark:bg-white dark:text-neutral-950"
+                        : "border border-neutral-200 text-neutral-600 hover:border-blue-300 hover:text-blue-700 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-blue-800 dark:hover:text-blue-300"
+                    }`}
+                  >
+                    {categoryLabels[categoryName]}
+                    <span className="ml-1.5 opacity-60">
+                      {sortedArticles.filter((a) => a.category === categoryName).length}
+                    </span>
+                  </button>
+                ))}
+              </div>
             </div>
 
-            <motion.div
-              initial={prefersReducedMotion ? false : { opacity: 0, x: 32 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.12 }}
-              className="relative"
-            >
-              <div className="overflow-hidden rounded-[1.75rem] border border-neutral-200 bg-white/70 shadow-lg backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.04]">
-                <div className="h-1 w-full bg-gradient-to-r from-blue-500 via-teal-400 to-violet-500" aria-hidden="true" />
-                <div className="grid grid-cols-3 divide-x divide-neutral-100 p-6 dark:divide-white/10">
-                  <div className="px-5 text-center first:text-left">
-                    <p className="text-3xl font-bold tracking-tight text-neutral-950 dark:text-white lg:text-4xl">
-                      {sortedArticles.length}
-                    </p>
-                    <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-400 dark:text-blue-100/50">
-                      Stories
-                    </p>
-                  </div>
-                  <div className="px-5 text-center">
-                    <p className="text-3xl font-bold tracking-tight text-neutral-950 dark:text-white lg:text-4xl">
-                      {availableCategories.length}
-                    </p>
-                    <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-400 dark:text-blue-100/50">
-                      Topics
-                    </p>
-                  </div>
-                  <div className="pl-5 text-center last:text-right">
-                    <p className="text-3xl font-bold tracking-tight text-neutral-950 dark:text-white lg:text-4xl">
-                      {format(new Date(sortedArticles[0].publishDate), "yyyy")}
-                    </p>
-                    <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-400 dark:text-blue-100/50">
-                      Archive
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <motion.div
-                initial={prefersReducedMotion ? false : { opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.3 }}
-                className="mt-8 flex justify-center"
-              >
-                <div className="flex flex-col items-center gap-2 text-neutral-300 dark:text-blue-100/30">
-                  <span className="text-[10px] font-bold uppercase tracking-[0.2em]">
-                    Scroll
+            <div className="flex flex-col gap-2.5">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-blue-100/50">
+                Latest headlines
+              </p>
+              {sortedArticles.slice(0, 2).map((article, i) => (
+                <Link
+                  key={article.id}
+                  href={`/news/${article.slug}`}
+                  className="group flex items-center gap-3 rounded-xl border border-neutral-100 bg-white/70 p-3 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-neutral-800 dark:bg-white/[0.03] dark:hover:border-blue-800"
+                >
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-[11px] font-bold text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                    {String(i + 1).padStart(2, "0")}
                   </span>
-                  <motion.div
-                    animate={prefersReducedMotion ? {} : { y: [0, 6, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    <ArrowRight className="h-4 w-4 rotate-90" aria-hidden="true" />
-                  </motion.div>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="line-clamp-1 text-sm font-semibold text-neutral-900 transition-colors group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-300">
+                      {article.title}
+                    </p>
+                    <span className="text-[11px] text-neutral-400 dark:text-neutral-500">
+                      {format(new Date(article.publishDate), "MMM d")} · {article.readTime} min read
+                    </span>
+                  </div>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-neutral-300 transition-all group-hover:translate-x-0.5 group-hover:text-blue-600 dark:text-neutral-600 dark:group-hover:text-blue-400" aria-hidden="true" />
+                </Link>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -292,62 +300,44 @@ export function NewsPageContent() {
               </p>
             </div>
 
-            <div className="space-y-4">
-              <label className="relative block">
-                <span className="sr-only">Search news articles</span>
-                <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-neutral-400" aria-hidden="true" />
-                <input
-                  type="search"
-                  value={search}
-                  onChange={(event) => setSearch(event.target.value)}
-                  placeholder="Search by headline, topic, or keyword"
-                  className="h-13 w-full rounded-2xl border border-neutral-200 bg-neutral-50 pl-12 pr-12 text-sm font-medium text-neutral-950 outline-none transition-[border-color,box-shadow,background-color] placeholder:text-neutral-400 focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-100 dark:border-neutral-800 dark:bg-neutral-900 dark:text-white dark:focus:border-blue-700 dark:focus:bg-neutral-900 dark:focus:ring-blue-950"
-                />
+            {(search || category !== "all") && (
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-sm text-neutral-500 dark:text-neutral-400">Active filters:</span>
                 {search && (
-                  <button
-                    type="button"
-                    onClick={() => setSearch("")}
-                    className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-neutral-400 outline-none hover:bg-neutral-200 hover:text-neutral-700 focus-visible:ring-2 focus-visible:ring-blue-500 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
-                    aria-label="Clear news search"
-                  >
-                    <X className="h-4 w-4" aria-hidden="true" />
-                  </button>
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-sm font-medium dark:border-neutral-700 dark:bg-neutral-900">
+                    &quot;{search}&quot;
+                    <button
+                      type="button"
+                      onClick={() => setSearch("")}
+                      className="ml-0.5 text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
+                      aria-label="Remove search filter"
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  </span>
                 )}
-              </label>
-
-              <div className="scrollbar-hide flex gap-2 overflow-x-auto pb-1" aria-label="Filter news by category">
+                {category !== "all" && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1.5 text-sm font-medium dark:border-neutral-700 dark:bg-neutral-900">
+                    {categoryLabels[category]}
+                    <button
+                      type="button"
+                      onClick={() => updateCategory("all")}
+                      className="ml-0.5 text-neutral-400 hover:text-neutral-700 dark:hover:text-neutral-200"
+                      aria-label="Remove category filter"
+                    >
+                      <X className="h-3.5 w-3.5" />
+                    </button>
+                  </span>
+                )}
                 <button
                   type="button"
-                  onClick={() => updateCategory("all")}
-                  aria-pressed={category === "all"}
-                  className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 ${
-                    category === "all"
-                      ? "bg-neutral-950 text-white dark:bg-white dark:text-neutral-950"
-                      : "border border-neutral-200 text-neutral-600 hover:border-blue-300 hover:text-blue-700 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-blue-800 dark:hover:text-blue-300"
-                  }`}
+                  onClick={clearFilters}
+                  className="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                 >
-                  All news
+                  Clear all
                 </button>
-                {availableCategories.map((categoryName) => (
-                  <button
-                    key={categoryName}
-                    type="button"
-                    onClick={() => updateCategory(categoryName)}
-                    aria-pressed={category === categoryName}
-                    className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold outline-none transition-colors focus-visible:ring-2 focus-visible:ring-blue-500 ${
-                      category === categoryName
-                        ? "bg-neutral-950 text-white dark:bg-white dark:text-neutral-950"
-                        : "border border-neutral-200 text-neutral-600 hover:border-blue-300 hover:text-blue-700 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-blue-800 dark:hover:text-blue-300"
-                    }`}
-                  >
-                    {categoryLabels[categoryName]}
-                    <span className="ml-2 opacity-55">
-                      {sortedArticles.filter((article) => article.category === categoryName).length}
-                    </span>
-                  </button>
-                ))}
               </div>
-            </div>
+            )}
           </div>
 
           <motion.div layout className="mt-10 grid gap-6 md:grid-cols-2 lg:mt-14">

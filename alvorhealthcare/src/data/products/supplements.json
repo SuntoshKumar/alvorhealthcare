@@ -1,0 +1,455 @@
+[
+  {
+    "id": "prod-5",
+    "slug": "alvorformin-500",
+    "name": "AlvorFormin 500",
+    "category": "Supplements",
+    "subCategory": "Minerals",
+    "shortDescription": "First-line treatment for type 2 diabetes mellitus.",
+    "description": "First-line treatment for type 2 diabetes mellitus. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Type 2 diabetes",
+      "PCOS",
+      "Insulin resistance",
+      "Prediabetes"
+    ],
+    "keyInformation": {
+      "composition": "Metformin HCl 500mg",
+      "strength": "500mg",
+      "dosageForm": "Tablet",
+      "packaging": "Bottle of 60 tablets",
+      "storage": "Below 30\u00b0C, protect from moisture",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorformin-500-1.svg",
+      "/images/products/alvorformin-500-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorformin-500-thumb.svg",
+    "tags": [
+      "supplements",
+      "anti-infective",
+      "minerals",
+      "otc"
+    ],
+    "featured": true,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-6",
+      "prod-7",
+      "prod-8",
+      "prod-9"
+    ],
+    "createdAt": "2024-01-04T17:30:00.000Z",
+    "updatedAt": "2025-01-04T17:30:00.000Z"
+  },
+  {
+    "id": "prod-10",
+    "slug": "alvord3-1000",
+    "name": "AlvorD3 1000",
+    "category": "Supplements",
+    "subCategory": "Vitamins",
+    "shortDescription": "Essential vitamin for bone health and immune function.",
+    "description": "Essential vitamin for bone health and immune function. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Vitamin D deficiency",
+      "Osteoporosis",
+      "Immune support",
+      "Mood support"
+    ],
+    "keyInformation": {
+      "composition": "Vitamin D3 (Cholecalciferol) 1000 IU",
+      "strength": "1000 IU",
+      "dosageForm": "Softgel Capsule",
+      "packaging": "Bottle of 60 softgels",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvord3-1000-1.svg",
+      "/images/products/alvord3-1000-2.svg"
+    ],
+    "thumbnail": "/images/products/alvord3-1000-thumb.svg",
+    "tags": [
+      "supplements",
+      "psychiatry",
+      "vitamins",
+      "rx"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-11",
+      "prod-12",
+      "prod-13",
+      "prod-14"
+    ],
+    "createdAt": "2024-01-09T17:30:00.000Z",
+    "updatedAt": "2025-01-09T17:30:00.000Z"
+  },
+  {
+    "id": "prod-15",
+    "slug": "alvorq10",
+    "name": "AlvorQ10",
+    "category": "Supplements",
+    "subCategory": "Herbal Extracts",
+    "shortDescription": "Coenzyme Q10 for cellular energy production and heart health.",
+    "description": "Coenzyme Q10 for cellular energy production and heart health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Heart failure",
+      "Statin-induced myopathy",
+      "Migraine prevention",
+      "Energy production"
+    ],
+    "keyInformation": {
+      "composition": "Metformin HCl 500mg",
+      "strength": "500mg",
+      "dosageForm": "Tablet",
+      "packaging": "Bottle of 60 tablets",
+      "storage": "Below 30\u00b0C, protect from moisture",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorq10-1.svg",
+      "/images/products/alvorq10-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorq10-thumb.svg",
+    "tags": [
+      "supplements",
+      "anti-infective",
+      "herbal-extracts",
+      "otc",
+      "bestseller"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": true,
+    "relatedProducts": [
+      "prod-16",
+      "prod-17",
+      "prod-18",
+      "prod-19"
+    ],
+    "createdAt": "2024-01-14T17:30:00.000Z",
+    "updatedAt": "2025-01-14T17:30:00.000Z"
+  },
+  {
+    "id": "prod-20",
+    "slug": "alvorallergy",
+    "name": "AlvorAllergy",
+    "category": "Supplements",
+    "subCategory": "Minerals",
+    "shortDescription": "24-hour allergy relief without drowsiness.",
+    "description": "24-hour allergy relief without drowsiness. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Hay fever",
+      "Pet allergies",
+      "Dust allergies",
+      "Skin reactions"
+    ],
+    "keyInformation": {
+      "composition": "Vitamin D3 (Cholecalciferol) 1000 IU",
+      "strength": "1000 IU",
+      "dosageForm": "Softgel Capsule",
+      "packaging": "Bottle of 60 softgels",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvorallergy-1.svg",
+      "/images/products/alvorallergy-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorallergy-thumb.svg",
+    "tags": [
+      "supplements",
+      "psychiatry",
+      "minerals",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-21",
+      "prod-22",
+      "prod-23",
+      "prod-24"
+    ],
+    "createdAt": "2024-01-19T17:30:00.000Z",
+    "updatedAt": "2025-01-19T17:30:00.000Z"
+  },
+  {
+    "id": "prod-25",
+    "slug": "alvorpain-away",
+    "name": "AlvorPain Away",
+    "category": "Supplements",
+    "subCategory": "Vitamins",
+    "shortDescription": "Rapid pain relief for headaches and muscle aches.",
+    "description": "Rapid pain relief for headaches and muscle aches. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Headache",
+      "Muscle pain",
+      "Back pain",
+      "Dental pain"
+    ],
+    "keyInformation": {
+      "composition": "Metformin HCl 500mg",
+      "strength": "500mg",
+      "dosageForm": "Tablet",
+      "packaging": "Bottle of 60 tablets",
+      "storage": "Below 30\u00b0C, protect from moisture",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorpain-away-1.svg",
+      "/images/products/alvorpain-away-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorpain-away-thumb.svg",
+    "tags": [
+      "supplements",
+      "anti-infective",
+      "vitamins",
+      "rx"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-26",
+      "prod-27",
+      "prod-28",
+      "prod-29"
+    ],
+    "createdAt": "2024-01-24T17:30:00.000Z",
+    "updatedAt": "2025-01-24T17:30:00.000Z"
+  },
+  {
+    "id": "prod-30",
+    "slug": "alvorherbal-calm",
+    "name": "AlvorHerbal Calm",
+    "category": "Supplements",
+    "subCategory": "Herbal Extracts",
+    "shortDescription": "Herbal formula for relaxation and stress relief.",
+    "description": "Herbal formula for relaxation and stress relief. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Anxiety",
+      "Stress",
+      "Mood support",
+      "Relaxation"
+    ],
+    "keyInformation": {
+      "composition": "Vitamin D3 (Cholecalciferol) 1000 IU",
+      "strength": "1000 IU",
+      "dosageForm": "Softgel Capsule",
+      "packaging": "Bottle of 60 softgels",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvorherbal-calm-1.svg",
+      "/images/products/alvorherbal-calm-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorherbal-calm-thumb.svg",
+    "tags": [
+      "supplements",
+      "psychiatry",
+      "herbal-extracts",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-31",
+      "prod-32",
+      "prod-33",
+      "prod-34"
+    ],
+    "createdAt": "2024-01-29T17:30:00.000Z",
+    "updatedAt": "2025-01-29T17:30:00.000Z"
+  },
+  {
+    "id": "prod-35",
+    "slug": "alvormind-focus",
+    "name": "AlvorMind Focus",
+    "category": "Supplements",
+    "subCategory": "Minerals",
+    "shortDescription": "Cognitive function support with nootropics and vitamins.",
+    "description": "Cognitive function support with nootropics and vitamins. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Memory",
+      "Focus",
+      "Mental clarity",
+      "Cognitive performance"
+    ],
+    "keyInformation": {
+      "composition": "Metformin HCl 500mg",
+      "strength": "500mg",
+      "dosageForm": "Tablet",
+      "packaging": "Bottle of 60 tablets",
+      "storage": "Below 30\u00b0C, protect from moisture",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvormind-focus-1.svg",
+      "/images/products/alvormind-focus-2.svg"
+    ],
+    "thumbnail": "/images/products/alvormind-focus-thumb.svg",
+    "tags": [
+      "supplements",
+      "anti-infective",
+      "minerals",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-36",
+      "prod-37",
+      "prod-38",
+      "prod-39"
+    ],
+    "createdAt": "2024-02-03T17:30:00.000Z",
+    "updatedAt": "2025-02-03T17:30:00.000Z"
+  },
+  {
+    "id": "prod-40",
+    "slug": "alvorthyroid-balance",
+    "name": "AlvorThyroid Balance",
+    "category": "Supplements",
+    "subCategory": "Vitamins",
+    "shortDescription": "Thyroid function support with selenium, iodine, and zinc.",
+    "description": "Thyroid function support with selenium, iodine, and zinc. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Thyroid function",
+      "Metabolism",
+      "Energy",
+      "Weight management"
+    ],
+    "keyInformation": {
+      "composition": "Vitamin D3 (Cholecalciferol) 1000 IU",
+      "strength": "1000 IU",
+      "dosageForm": "Softgel Capsule",
+      "packaging": "Bottle of 60 softgels",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvorthyroid-balance-1.svg",
+      "/images/products/alvorthyroid-balance-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorthyroid-balance-thumb.svg",
+    "tags": [
+      "supplements",
+      "psychiatry",
+      "vitamins",
+      "rx"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-41",
+      "prod-42",
+      "prod-43",
+      "prod-44"
+    ],
+    "createdAt": "2024-02-08T17:30:00.000Z",
+    "updatedAt": "2025-02-08T17:30:00.000Z"
+  },
+  {
+    "id": "prod-45",
+    "slug": "alvorprobiotic-plus",
+    "name": "AlvorProbiotic Plus",
+    "category": "Supplements",
+    "subCategory": "Herbal Extracts",
+    "shortDescription": "Advanced probiotic with prebiotics for gut health.",
+    "description": "Advanced probiotic with prebiotics for gut health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Gut health",
+      "Microbiome balance",
+      "Regularity",
+      "Immune function"
+    ],
+    "keyInformation": {
+      "composition": "Metformin HCl 500mg",
+      "strength": "500mg",
+      "dosageForm": "Tablet",
+      "packaging": "Bottle of 60 tablets",
+      "storage": "Below 30\u00b0C, protect from moisture",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorprobiotic-plus-1.svg",
+      "/images/products/alvorprobiotic-plus-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorprobiotic-plus-thumb.svg",
+    "tags": [
+      "supplements",
+      "anti-infective",
+      "herbal-extracts",
+      "otc",
+      "featured"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-46",
+      "prod-47",
+      "prod-48",
+      "prod-49"
+    ],
+    "createdAt": "2024-02-13T17:30:00.000Z",
+    "updatedAt": "2025-02-13T17:30:00.000Z"
+  },
+  {
+    "id": "prod-50",
+    "slug": "alvormagnesium",
+    "name": "AlvorMagnesium",
+    "category": "Supplements",
+    "subCategory": "Minerals",
+    "shortDescription": "Magnesium glycinate for relaxation and muscle health.",
+    "description": "Magnesium glycinate for relaxation and muscle health. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Muscle relaxation",
+      "Sleep quality",
+      "Anxiety",
+      "Migraine prevention"
+    ],
+    "keyInformation": {
+      "composition": "Vitamin D3 (Cholecalciferol) 1000 IU",
+      "strength": "1000 IU",
+      "dosageForm": "Softgel Capsule",
+      "packaging": "Bottle of 60 softgels",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "24 months"
+    },
+    "images": [
+      "/images/products/alvormagnesium-1.svg",
+      "/images/products/alvormagnesium-2.svg"
+    ],
+    "thumbnail": "/images/products/alvormagnesium-thumb.svg",
+    "tags": [
+      "supplements",
+      "psychiatry",
+      "minerals",
+      "otc",
+      "bestseller"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": true,
+    "relatedProducts": [
+      "prod-51",
+      "prod-52",
+      "prod-1",
+      "prod-2"
+    ],
+    "createdAt": "2024-02-18T17:30:00.000Z",
+    "updatedAt": "2025-02-18T17:30:00.000Z"
+  }
+]

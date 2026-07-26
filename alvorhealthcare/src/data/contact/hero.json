@@ -1,0 +1,20 @@
+{
+  "eyebrow": "Contact Us",
+  "titlePrefix": "Get in",
+  "titleHighlight": "Touch",
+  "description": "Contact our Myanmar team about products, distribution, partnerships, medical supplies, or general company enquiries.",
+  "stats": [
+    {
+      "value": "< 24h",
+      "label": "Response Time"
+    },
+    {
+      "value": "3",
+      "label": "Office Locations"
+    },
+    {
+      "value": "6+",
+      "label": "Inquiry Types"
+    }
+  ]
+}

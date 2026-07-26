@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, ChevronRight, Menu, Moon, Plus, Sun, X } from "lucide-react";
@@ -12,21 +12,41 @@ import { siteContent } from "@/data";
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
   const { resolved, toggle } = useTheme();
   const prefersReducedMotion = useReducedMotion();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    onScroll();
+    const mq = window.matchMedia("(max-width: 1023px)");
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 20);
+      setIsHidden(mq.matches && y > lastScrollY.current && y > 80);
+      lastScrollY.current = y;
+    };
+
+    const onResize = () => {
+      if (!mq.matches) setIsHidden(false);
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    mq.addEventListener("change", onResize);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      mq.removeEventListener("change", onResize);
+    };
   }, []);
 
   const closeMobile = useCallback(() => setMobileOpen(false), []);
 
   useEffect(() => {
     if (!mobileOpen) return;
+
+    lastScrollY.current = window.scrollY;
+    setIsHidden(false);
 
     const previousOverflow = document.body.style.overflow;
     const onKeyDown = (event: KeyboardEvent) => {
@@ -49,7 +69,12 @@ export function Header() {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 h-16 lg:h-20">
+    <header
+      className={clsx(
+        "fixed inset-x-0 top-0 z-50 h-16 transition-transform duration-300 lg:h-20",
+        isHidden && "-translate-y-full"
+      )}
+    >
       <div className="container flex h-full items-center">
         <motion.div
           initial={prefersReducedMotion ? false : { opacity: 0, y: -12 }}

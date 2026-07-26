@@ -1,0 +1,27 @@
+{
+  "eyebrow": "Our Culture",
+  "title": "A Workplace Built on Trust and Growth",
+  "description": "We believe great healthcare distribution starts with a great team. Our culture supports professional growth, mutual respect, and shared purpose.",
+  "values": [
+    {
+      "icon": "award",
+      "title": "Quality First",
+      "description": "Every product we handle meets rigorous quality standards. We take pride in doing things right."
+    },
+    {
+      "icon": "shield",
+      "title": "Integrity",
+      "description": "We build trust through honest communication, ethical practices, and transparent operations."
+    },
+    {
+      "icon": "heart",
+      "title": "People Centered",
+      "description": "Our team's wellbeing and growth drive everything we do. Your success is our success."
+    },
+    {
+      "icon": "lightbulb",
+      "title": "Continuous Improvement",
+      "description": "We encourage new ideas, learning from experience, and finding better ways to serve healthcare needs."
+    }
+  ]
+}

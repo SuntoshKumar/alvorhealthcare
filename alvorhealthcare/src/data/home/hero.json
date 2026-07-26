@@ -1,0 +1,20 @@
+{
+  "eyebrow": "Healthcare Distribution in Myanmar",
+  "titlePrefix": "Dependable Access to",
+  "titleHighlight": "Quality",
+  "titleSuffix": "Healthcare Products",
+  "description": "Alvor Healthcare Company Limited imports, markets, and distributes pharmaceutical products, medical supplies, diagnostic products, and consumer healthcare products across Myanmar.",
+  "primaryCta": {
+    "label": "Explore Products",
+    "href": "/products"
+  },
+  "secondaryCta": {
+    "label": "Partner With Us",
+    "href": "/contact?inquiryType=partnership"
+  },
+  "trustBadges": [
+    "Trusted manufacturer partnerships",
+    "Professional support",
+    "Reliable distribution"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "eyebrow": "Open Positions",
+  "title": "Current Openings",
+  "description": "We're growing across Myanmar. Explore our open roles and find where you fit.",
+  "items": [
+    {
+      "id": "national-business-manager",
+      "title": "National Business Manager",
+      "department": "Commercial",
+      "location": "Yangon",
+      "type": "Full-time",
+      "postCount": 1,
+      "summary": "Lead our commercial operations and drive sustainable business growth across Myanmar.",
+      "responsibilities": [
+        "Develop and implement national business and sales strategies to achieve company objectives",
+        "Recruit and lead the sales team to maximize performance and productivity",
+        "Drive sales growth by identifying new business opportunities and strengthening existing customer relationships",
+        "Collaborate with the Marketing and Medical teams to ensure successful execution of business plans",
+        "Monitor market trends, competitor activities, and business performance to identify growth opportunities",
+        "Prepare sales forecasts, budgets, and business reports for senior management",
+        "Build and maintain strong relationships with key stakeholders, healthcare professionals, distributors, and business partners"
+      ],
+      "requirements": [
+        "Bachelor's degree in Pharmacy, Medicine, Nursing or a related field",
+        "Minimum 8-10 years of experience in the pharmaceutical industry, with proven success in a leadership role",
+        "Must have prior experience in marketing management and regional management",
+        "Excellent communication, negotiation, and people management abilities",
+        "Willing to travel nationwide"
+      ]
+    },
+    {
+      "id": "regulatory-affairs-manager",
+      "title": "Regulatory Affairs Manager",
+      "department": "Regulatory Support",
+      "location": "Yangon",
+      "type": "Full-time",
+      "postCount": 1,
+      "summary": "Oversee product registrations and ensure compliance with Myanmar pharmaceutical regulations.",
+      "responsibilities": [
+        "Manage product registration and renewal processes with regulatory authorities",
+        "Prepare and submit regulatory documentation for new and existing products",
+        "Monitor changes in pharmaceutical regulations across Myanmar and the region",
+        "Advise internal teams on regulatory requirements and compliance obligations",
+        "Coordinate with international partners on regulatory submissions"
+      ],
+      "requirements": [
+        "Bachelor's degree in Pharmacy or a related scientific field",
+        "Minimum 5 years of experience in regulatory affairs within the pharmaceutical industry",
+        "Strong knowledge of Myanmar FDA and ASEAN pharmaceutical regulations",
+        "Excellent written and verbal communication skills in English and Myanmar"
+      ]
+    },
+    {
+      "id": "quality-assurance-specialist",
+      "title": "Quality Assurance Specialist",
+      "department": "Quality & Compliance",
+      "location": "Mandalay",
+      "type": "Full-time",
+      "postCount": 1,
+      "summary": "Ensure products meet quality standards throughout the distribution process.",
+      "responsibilities": [
+        "Conduct quality audits and inspections across warehouse operations",
+        "Manage supplier qualification and documentation processes",
+        "Handle product complaints, investigations, and corrective actions",
+        "Maintain batch records and product traceability documentation",
+        "Support GMP compliance and preparation for regulatory inspections"
+      ],
+      "requirements": [
+        "Bachelor's degree in Pharmacy, Chemistry, or a related field",
+        "Minimum 3 years of experience in quality assurance in pharmaceutical distribution or manufacturing",
+        "Familiarity with GMP, GDP, and ISO quality standards",
+        "Detail-oriented with strong documentation and analytical skills"
+      ]
+    },
+    {
+      "id": "warehouse-supervisor",
+      "title": "Warehouse Supervisor",
+      "department": "Supply Operations",
+      "location": "Yangon",
+      "type": "Full-time",
+      "postCount": 2,
+      "summary": "Manage daily warehouse operations and ensure efficient product storage and dispatch.",
+      "responsibilities": [
+        "Supervise daily warehouse activities including receiving, storage, and dispatch",
+        "Ensure proper inventory management and stock control procedures",
+        "Maintain warehouse cleanliness, organization, and cold chain compliance",
+        "Coordinate with logistics partners for timely product deliveries",
+        "Train and manage warehouse staff on SOPs and safety protocols"
+      ],
+      "requirements": [
+        "Bachelor's degree in Supply Chain Management, Business, or a related field",
+        "Minimum 3 years of experience in warehouse or logistics operations",
+        "Experience in pharmaceutical or FMCG distribution preferred",
+        "Strong organizational and leadership skills"
+      ]
+    },
+    {
+      "id": "medical-representative",
+      "title": "Medical Representative",
+      "department": "Commercial",
+      "location": "Mandalay",
+      "type": "Full-time",
+      "postCount": 3,
+      "summary": "Promote pharmaceutical products to healthcare professionals and build lasting relationships.",
+      "responsibilities": [
+        "Present pharmaceutical products to doctors, pharmacists, and hospital administrators",
+        "Build and maintain relationships with healthcare professionals in assigned territory",
+        "Achieve monthly and quarterly sales targets for assigned product portfolio",
+        "Collect and report market intelligence, competitor activity, and customer feedback",
+        "Attend medical conferences, seminars, and trade events as required"
+      ],
+      "requirements": [
+        "Bachelor's degree in Pharmacy, Science, or a related field",
+        "Prior experience in pharmaceutical sales or medical representation preferred",
+        "Strong interpersonal and communication skills",
+        "Willing to travel within assigned territory",
+        "Self-motivated with a results-driven approach"
+      ]
+    },
+    {
+      "id": "customer-service-officer",
+      "title": "Customer Service Officer",
+      "department": "Customer Operations",
+      "location": "Yangon",
+      "type": "Full-time",
+      "postCount": 1,
+      "summary": "Provide product and order support to healthcare customers and ensure satisfaction.",
+      "responsibilities": [
+        "Handle customer inquiries regarding product availability, orders, and documentation",
+        "Process orders and coordinate with supply team for timely fulfillment",
+        "Manage customer accounts and maintain accurate records in the system",
+        "Resolve customer complaints and escalate issues as needed",
+        "Prepare reports on customer feedback and service metrics"
+      ],
+      "requirements": [
+        "Bachelor's degree in Business Administration or a related field",
+        "Minimum 2 years of experience in customer service, preferably in pharmaceutical or healthcare",
+        "Excellent communication and problem-solving skills",
+        "Proficiency in Microsoft Office and CRM systems"
+      ]
+    }
+  ]
+}

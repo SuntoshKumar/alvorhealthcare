@@ -1,0 +1,39 @@
+{
+  "eyebrow": "Our Journey",
+  "title": "Our Journey",
+  "description": "From our founding to today, each milestone marks our commitment to improving healthcare access in Myanmar.",
+  "milestones": [
+    {
+      "year": "2018",
+      "icon": "building",
+      "title": "Founded",
+      "description": "Alvor Healthcare was established to improve access to quality healthcare products in Myanmar.",
+      "statLabel": "Year Established",
+      "statValue": "2018"
+    },
+    {
+      "year": "2020",
+      "icon": "handshake",
+      "title": "Strategic Partnerships",
+      "description": "Expanded our network of international pharmaceutical manufacturers.",
+      "statLabel": "Partners Added",
+      "statValue": "5+"
+    },
+    {
+      "year": "2022",
+      "icon": "truck",
+      "title": "National Distribution",
+      "description": "Built a nationwide distribution network reaching hospitals and pharmacies across Myanmar.",
+      "statLabel": "Coverage",
+      "statValue": "Nationwide"
+    },
+    {
+      "year": "2024",
+      "icon": "heart",
+      "title": "Community Impact",
+      "description": "Supporting healthcare providers and communities with reliable access to medical supplies.",
+      "statLabel": "Providers Served",
+      "statValue": "1000+"
+    }
+  ]
+}

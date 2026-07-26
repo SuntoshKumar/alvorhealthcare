@@ -1,0 +1,33 @@
+{
+  "title": "Mission, Vision & Values",
+  "description": "Quality, reliability, and customer satisfaction guide how we support healthcare providers and communities.",
+  "valuesTitle": "Our Core Values",
+  "valuesSummary": "Quality, integrity, reliability, partnership, and innovation guide our relationships and daily work.",
+  "coreValues": [
+    {
+      "icon": "award",
+      "title": "Quality",
+      "description": "Committed to delivering healthcare products that meet quality standards."
+    },
+    {
+      "icon": "shield",
+      "title": "Integrity",
+      "description": "Building trust through ethical business practices."
+    },
+    {
+      "icon": "heart",
+      "title": "Reliability",
+      "description": "Providing consistent supply and dependable service."
+    },
+    {
+      "icon": "globe",
+      "title": "Partnership",
+      "description": "Working closely with healthcare providers and international partners."
+    },
+    {
+      "icon": "lightbulb",
+      "title": "Innovation",
+      "description": "Continuously improving healthcare solutions and services."
+    }
+  ]
+}

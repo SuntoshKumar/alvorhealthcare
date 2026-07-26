@@ -1,0 +1,498 @@
+[
+  {
+    "id": "prod-2",
+    "slug": "alvorfen-400",
+    "name": "AlvorFen 400",
+    "category": "Capsules",
+    "subCategory": "Soft Gelatin",
+    "shortDescription": "Anti-inflammatory medication for pain, swelling, and joint stiffness.",
+    "description": "Anti-inflammatory medication for pain, swelling, and joint stiffness. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Arthritis pain",
+      "Inflammation",
+      "Menstrual cramps",
+      "Sports injuries"
+    ],
+    "keyInformation": {
+      "composition": "Ibuprofen 400mg",
+      "strength": "400mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 15 tablets",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorfen-400-1.svg",
+      "/images/products/alvorfen-400-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorfen-400-thumb.svg",
+    "tags": [
+      "capsules",
+      "neurology",
+      "soft-gelatin",
+      "otc"
+    ],
+    "featured": true,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-3",
+      "prod-4",
+      "prod-5",
+      "prod-6"
+    ],
+    "createdAt": "2024-01-01T17:30:00.000Z",
+    "updatedAt": "2025-01-01T17:30:00.000Z"
+  },
+  {
+    "id": "prod-7",
+    "slug": "alvordipine-5",
+    "name": "AlvorDipine 5",
+    "category": "Capsules",
+    "subCategory": "Hard Gelatin",
+    "shortDescription": "Calcium channel blocker for hypertension management.",
+    "description": "Calcium channel blocker for hypertension management. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Hypertension",
+      "Angina",
+      "Coronary artery disease",
+      "Raynaud's phenomenon"
+    ],
+    "keyInformation": {
+      "composition": "Amlodipine Besylate 5mg",
+      "strength": "5mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvordipine-5-1.svg",
+      "/images/products/alvordipine-5-2.svg"
+    ],
+    "thumbnail": "/images/products/alvordipine-5-thumb.svg",
+    "tags": [
+      "capsules",
+      "endocrinology",
+      "hard-gelatin",
+      "rx"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-8",
+      "prod-9",
+      "prod-10",
+      "prod-11"
+    ],
+    "createdAt": "2024-01-06T17:30:00.000Z",
+    "updatedAt": "2025-01-06T17:30:00.000Z"
+  },
+  {
+    "id": "prod-12",
+    "slug": "alvoriron-plus",
+    "name": "AlvorIron Plus",
+    "category": "Capsules",
+    "subCategory": "Enteric Coated",
+    "shortDescription": "Combination supplement for iron deficiency anemia prevention.",
+    "description": "Combination supplement for iron deficiency anemia prevention. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Iron deficiency anemia",
+      "Pregnancy",
+      "Heavy menstrual bleeding",
+      "Vegetarian diet"
+    ],
+    "keyInformation": {
+      "composition": "Ibuprofen 400mg",
+      "strength": "400mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 15 tablets",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvoriron-plus-1.svg",
+      "/images/products/alvoriron-plus-2.svg"
+    ],
+    "thumbnail": "/images/products/alvoriron-plus-thumb.svg",
+    "tags": [
+      "capsules",
+      "neurology",
+      "enteric-coated",
+      "otc",
+      "featured"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-13",
+      "prod-14",
+      "prod-15",
+      "prod-16"
+    ],
+    "createdAt": "2024-01-11T17:30:00.000Z",
+    "updatedAt": "2025-01-11T17:30:00.000Z"
+  },
+  {
+    "id": "prod-17",
+    "slug": "alvormel",
+    "name": "AlvorMel",
+    "category": "Capsules",
+    "subCategory": "Soft Gelatin",
+    "shortDescription": "Natural sleep aid for occasional sleeplessness.",
+    "description": "Natural sleep aid for occasional sleeplessness. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Insomnia",
+      "Jet lag",
+      "Shift work",
+      "Sleep onset latency"
+    ],
+    "keyInformation": {
+      "composition": "Amlodipine Besylate 5mg",
+      "strength": "5mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvormel-1.svg",
+      "/images/products/alvormel-2.svg"
+    ],
+    "thumbnail": "/images/products/alvormel-thumb.svg",
+    "tags": [
+      "capsules",
+      "endocrinology",
+      "soft-gelatin",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-18",
+      "prod-19",
+      "prod-20",
+      "prod-21"
+    ],
+    "createdAt": "2024-01-16T17:30:00.000Z",
+    "updatedAt": "2025-01-16T17:30:00.000Z"
+  },
+  {
+    "id": "prod-22",
+    "slug": "alvorbp-control",
+    "name": "AlvorBP Control",
+    "category": "Capsules",
+    "subCategory": "Hard Gelatin",
+    "shortDescription": "Comprehensive blood pressure management formula.",
+    "description": "Comprehensive blood pressure management formula. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Hypertension",
+      "Blood pressure control",
+      "Cardiovascular protection"
+    ],
+    "keyInformation": {
+      "composition": "Ibuprofen 400mg",
+      "strength": "400mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 15 tablets",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorbp-control-1.svg",
+      "/images/products/alvorbp-control-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorbp-control-thumb.svg",
+    "tags": [
+      "capsules",
+      "neurology",
+      "hard-gelatin",
+      "rx",
+      "bestseller"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": true,
+    "relatedProducts": [
+      "prod-23",
+      "prod-24",
+      "prod-25",
+      "prod-26"
+    ],
+    "createdAt": "2024-01-21T17:30:00.000Z",
+    "updatedAt": "2025-01-21T17:30:00.000Z"
+  },
+  {
+    "id": "prod-27",
+    "slug": "alvorcough-syrup",
+    "name": "AlvorCough Syrup",
+    "category": "Capsules",
+    "subCategory": "Enteric Coated",
+    "shortDescription": "Soothing cough syrup for dry and productive cough.",
+    "description": "Soothing cough syrup for dry and productive cough. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Dry cough",
+      "Productive cough",
+      "Throat irritation",
+      "Bronchial congestion"
+    ],
+    "keyInformation": {
+      "composition": "Amlodipine Besylate 5mg",
+      "strength": "5mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorcough-syrup-1.svg",
+      "/images/products/alvorcough-syrup-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorcough-syrup-thumb.svg",
+    "tags": [
+      "capsules",
+      "endocrinology",
+      "enteric-coated",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-28",
+      "prod-29",
+      "prod-30",
+      "prod-31"
+    ],
+    "createdAt": "2024-01-26T17:30:00.000Z",
+    "updatedAt": "2025-01-26T17:30:00.000Z"
+  },
+  {
+    "id": "prod-32",
+    "slug": "alvorimmune-support",
+    "name": "AlvorImmune Support",
+    "category": "Capsules",
+    "subCategory": "Soft Gelatin",
+    "shortDescription": "Immune system support with vitamins, zinc, and elderberry.",
+    "description": "Immune system support with vitamins, zinc, and elderberry. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Cold prevention",
+      "Flu season",
+      "Immune boost",
+      "Recovery support"
+    ],
+    "keyInformation": {
+      "composition": "Ibuprofen 400mg",
+      "strength": "400mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 15 tablets",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorimmune-support-1.svg",
+      "/images/products/alvorimmune-support-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorimmune-support-thumb.svg",
+    "tags": [
+      "capsules",
+      "neurology",
+      "soft-gelatin",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-33",
+      "prod-34",
+      "prod-35",
+      "prod-36"
+    ],
+    "createdAt": "2024-01-31T17:30:00.000Z",
+    "updatedAt": "2025-01-31T17:30:00.000Z"
+  },
+  {
+    "id": "prod-37",
+    "slug": "alvoreye-care",
+    "name": "AlvorEye Care",
+    "category": "Capsules",
+    "subCategory": "Hard Gelatin",
+    "shortDescription": "Eye health with lutein, zeaxanthin, and vitamins.",
+    "description": "Eye health with lutein, zeaxanthin, and vitamins. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Macular degeneration",
+      "Eye strain",
+      "Night vision",
+      "Blue light protection"
+    ],
+    "keyInformation": {
+      "composition": "Amlodipine Besylate 5mg",
+      "strength": "5mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvoreye-care-1.svg",
+      "/images/products/alvoreye-care-2.svg"
+    ],
+    "thumbnail": "/images/products/alvoreye-care-thumb.svg",
+    "tags": [
+      "capsules",
+      "endocrinology",
+      "hard-gelatin",
+      "rx"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-38",
+      "prod-39",
+      "prod-40",
+      "prod-41"
+    ],
+    "createdAt": "2024-02-05T17:30:00.000Z",
+    "updatedAt": "2025-02-05T17:30:00.000Z"
+  },
+  {
+    "id": "prod-42",
+    "slug": "alvorsleep-well",
+    "name": "AlvorSleep Well",
+    "category": "Capsules",
+    "subCategory": "Enteric Coated",
+    "shortDescription": "Natural sleep formula with melatonin, magnesium, and herbs.",
+    "description": "Natural sleep formula with melatonin, magnesium, and herbs. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Insomnia",
+      "Sleep quality",
+      "Relaxation",
+      "Circadian rhythm"
+    ],
+    "keyInformation": {
+      "composition": "Ibuprofen 400mg",
+      "strength": "400mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 15 tablets",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorsleep-well-1.svg",
+      "/images/products/alvorsleep-well-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorsleep-well-thumb.svg",
+    "tags": [
+      "capsules",
+      "neurology",
+      "enteric-coated",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-43",
+      "prod-44",
+      "prod-45",
+      "prod-46"
+    ],
+    "createdAt": "2024-02-10T17:30:00.000Z",
+    "updatedAt": "2025-02-10T17:30:00.000Z"
+  },
+  {
+    "id": "prod-47",
+    "slug": "alvorcollagen",
+    "name": "AlvorCollagen",
+    "category": "Capsules",
+    "subCategory": "Soft Gelatin",
+    "shortDescription": "Hydrolyzed collagen peptides for skin, hair, and joints.",
+    "description": "Hydrolyzed collagen peptides for skin, hair, and joints. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Skin aging",
+      "Joint health",
+      "Hair strength",
+      "Nail growth"
+    ],
+    "keyInformation": {
+      "composition": "Amlodipine Besylate 5mg",
+      "strength": "5mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 30 tablets",
+      "storage": "Below 30\u00b0C",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvorcollagen-1.svg",
+      "/images/products/alvorcollagen-2.svg"
+    ],
+    "thumbnail": "/images/products/alvorcollagen-thumb.svg",
+    "tags": [
+      "capsules",
+      "endocrinology",
+      "soft-gelatin",
+      "otc"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-48",
+      "prod-49",
+      "prod-50",
+      "prod-51"
+    ],
+    "createdAt": "2024-02-15T17:30:00.000Z",
+    "updatedAt": "2025-02-15T17:30:00.000Z"
+  },
+  {
+    "id": "prod-52",
+    "slug": "alvormulti-complete",
+    "name": "AlvorMulti Complete",
+    "category": "Capsules",
+    "subCategory": "Hard Gelatin",
+    "shortDescription": "Multivitamin and mineral complex for comprehensive daily nutrition.",
+    "description": "Multivitamin and mineral complex for comprehensive daily nutrition. Alvor Healthcare supports product availability through supplier coordination, documentation review, storage-condition controls, batch traceability, and reliable distribution.",
+    "uses": [
+      "Pain relief",
+      "Fever reduction",
+      "Headache",
+      "Muscle aches"
+    ],
+    "keyInformation": {
+      "composition": "Ibuprofen 400mg",
+      "strength": "400mg",
+      "dosageForm": "Tablet",
+      "packaging": "Blister pack of 15 tablets",
+      "storage": "Below 25\u00b0C, protect from light",
+      "shelfLife": "36 months"
+    },
+    "images": [
+      "/images/products/alvormulti-complete-1.svg",
+      "/images/products/alvormulti-complete-2.svg"
+    ],
+    "thumbnail": "/images/products/alvormulti-complete-thumb.svg",
+    "tags": [
+      "capsules",
+      "neurology",
+      "hard-gelatin",
+      "rx"
+    ],
+    "featured": false,
+    "isNew": false,
+    "isBestseller": false,
+    "relatedProducts": [
+      "prod-1",
+      "prod-2",
+      "prod-3",
+      "prod-4"
+    ],
+    "createdAt": "2024-02-20T17:30:00.000Z",
+    "updatedAt": "2025-02-20T17:30:00.000Z"
+  }
+]

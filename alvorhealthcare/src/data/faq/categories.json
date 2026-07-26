@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Products & Orders",
+    "items": [
+      {
+        "question": "How can I place an order for Alvor Healthcare products?",
+        "answer": "For wholesale orders, please contact our commercial team through the Contact page. For individual prescriptions, our products are available through authorized distributors and pharmacies worldwide."
+      },
+      {
+        "question": "What is the minimum order quantity?",
+        "answer": "Minimum order quantities vary by product and market. Please contact our sales team for specific MOQ information for your region."
+      },
+      {
+        "question": "Do you offer product samples?",
+        "answer": "Yes, we provide product samples to qualified healthcare professionals for evaluation purposes. Please submit a request through our Contact page."
+      },
+      {
+        "question": "How can I check product availability in my country?",
+        "answer": "Product availability varies by market. Please contact our regional sales team or use the Contact form to inquire about availability in your country."
+      }
+    ]
+  },
+  {
+    "category": "Quality & Safety",
+    "items": [
+      {
+        "question": "Are Alvor Healthcare products approved in my country?",
+        "answer": "Product registration and approval status varies by product and market. Contact our team with the product and country so we can confirm the applicable availability and documentation."
+      },
+      {
+        "question": "How do you ensure product quality?",
+        "answer": "As a distributor, we focus on supplier qualification, product documentation, storage requirements, batch traceability, stock rotation, complaint handling, and recall coordination. Product-specific quality documents can be requested from our team."
+      },
+      {
+        "question": "What should I do if I experience a side effect?",
+        "answer": "Please report any adverse events to your healthcare provider immediately. You can also report directly to our pharmacovigilance team through the Contact page or by emailing safety@alvorhealthcare.com."
+      }
+    ]
+  },
+  {
+    "category": "Partnerships & Distribution",
+    "items": [
+      {
+        "question": "How can I become a distributor?",
+        "answer": "We are always looking for qualified distribution partners. Please visit our Distributors page or contact our business development team with information about your organization and target market."
+      },
+      {
+        "question": "What services do you provide to distribution partners?",
+        "answer": "We support portfolio review, market and product enquiries, documentation coordination, availability planning, order management, storage information, shipment visibility, and post-distribution quality communication."
+      },
+      {
+        "question": "What markets do you currently serve?",
+        "answer": "We serve 45+ countries across North America, Europe, Asia, Africa, and the Middle East. Our expansion roadmap includes additional markets in Southeast Asia and Latin America."
+      }
+    ]
+  },
+  {
+    "category": "Patients & Consumers",
+    "items": [
+      {
+        "question": "Where can I buy Alvor Healthcare products?",
+        "answer": "Our products are available through pharmacies, hospitals, and healthcare providers. Please consult your healthcare provider or use our distributor locator to find a supplier near you."
+      },
+      {
+        "question": "Do you offer patient assistance programs?",
+        "answer": "Yes, we offer patient support programs in select markets. These programs may include medication adherence support, educational resources, and financial assistance for eligible patients."
+      },
+      {
+        "question": "How should I store my medication?",
+        "answer": "Storage requirements vary by product. Please refer to the storage instructions on the product packaging and the patient information leaflet. Most products should be stored at room temperature, away from moisture and direct sunlight."
+      }
+    ]
+  }
+]

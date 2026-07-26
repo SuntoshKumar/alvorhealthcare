@@ -1,14 +1,13 @@
 import type { Category, CompanyInfo, Product, NewsArticle } from "@/types";
-import categoriesData from "./categories.json";
 import companyData from "./company.json";
-import homeData from "./home.json";
-import newsData from "./news.json";
-import productsData from "./products.json";
+import homeData from "./home";
+import newsData from "./news";
+import { products as productsData, categories as categoriesData } from "./products";
 import siteData from "./site.json";
-import aboutData from "./about.json";
-import careersData from "./careers.json";
-import contactData from "./contact.json";
-import faqData from "./faq.json";
+import aboutData from "./about";
+import careersData from "./careers";
+import contactData from "./contact";
+import faqData from "./faq";
 
 export {
   getResourceCollection,

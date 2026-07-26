@@ -1,0 +1,54 @@
+{
+  "eyebrow": "What We Do",
+  "title": "Healthcare supply built for Myanmar",
+  "description": "Through international manufacturer partnerships and an established distribution network, we support healthcare providers with products, information, and dependable service.",
+  "items": [
+    {
+      "icon": "ship",
+      "title": "Importation",
+      "description": "We source and import pharmaceutical products and healthcare supplies from trusted international manufacturers while supporting applicable local regulatory requirements."
+    },
+    {
+      "icon": "truck",
+      "title": "Distribution",
+      "description": "We distribute healthcare products to pharmacies, hospitals, clinics, and healthcare organizations across Myanmar."
+    },
+    {
+      "icon": "megaphone",
+      "title": "Marketing & Sales",
+      "description": "Our team provides product marketing, healthcare education, and professional support for healthcare providers."
+    },
+    {
+      "icon": "heart",
+      "title": "Healthcare Solutions",
+      "description": "We provide pharmaceutical products, medical supplies, diagnostic products, and consumer healthcare products for professional and community needs."
+    }
+  ],
+  "productGroups": [
+    {
+      "title": "Pharmaceuticals",
+      "items": [
+        "Prescription medicines",
+        "Specialty medicines",
+        "Chronic disease management products",
+        "General healthcare medicines"
+      ]
+    },
+    {
+      "title": "Medical Supplies",
+      "items": [
+        "Medical devices",
+        "Healthcare equipment",
+        "Diagnostic products"
+      ]
+    },
+    {
+      "title": "Consumer Healthcare",
+      "items": [
+        "Vitamins and supplements",
+        "Over-the-counter products",
+        "Wellness products"
+      ]
+    }
+  ]
+}
