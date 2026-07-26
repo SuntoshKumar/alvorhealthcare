@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Globe, Users, ChevronDown, Building2, ArrowRight, Navigation } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, ChevronDown, Building2, ArrowRight, Navigation } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -85,33 +85,29 @@ export default function ContactPageContent({
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Corporate Headquarters",
+      title: "Yangon Office",
+      subtitle: "Main Headquarters",
       details: [
         companyInfo.contact.address,
-        `${companyInfo.contact.city}, ${companyInfo.contact.state} ${companyInfo.contact.postalCode}`,
-        companyInfo.contact.country,
+        `${companyInfo.contact.city}, ${companyInfo.contact.country}`,
       ],
+      action: "View Location",
       link: null,
     },
     {
       icon: Phone,
-      title: "Phone Support",
-      details: [
-        companyInfo.contact.phone,
-        companyInfo.contact.workingHours,
-        companyInfo.contact.whatsapp ? `WhatsApp: ${companyInfo.contact.whatsapp}` : null,
-      ].filter(Boolean),
+      title: "Phone",
+      subtitle: "Talk to our team",
+      details: companyInfo.contact.phones,
+      action: "Call Now",
       link: `tel:${companyInfo.contact.phone.replace(/\D/g, "")}`,
     },
     {
       icon: Mail,
       title: "Email",
-      details: [
-        companyInfo.contact.email,
-        "partner@alvorhealthcare.com (Partnerships)",
-        "careers@alvorhealthcare.com (Careers)",
-        "safety@alvorhealthcare.com (Adverse Events)",
-      ],
+      subtitle: "Business enquiries",
+      details: [companyInfo.contact.email],
+      action: "Send Email",
       link: `mailto:${companyInfo.contact.email}`,
     },
   ];
@@ -119,19 +115,19 @@ export default function ContactPageContent({
   const faqs = [
     {
       q: "How can I become a distributor for Alvor Healthcare products?",
-      a: "We welcome qualified distributors globally. Please submit a partnership inquiry through our contact form or email partner@alvorhealthcare.com with your company profile, target markets, and distribution capabilities. Our business development team will review and respond within 5 business days.",
+      a: `Send a partnership inquiry through this page or email ${companyInfo.contact.email} with your company profile, service area, and distribution capabilities.`,
     },
     {
       q: "Where can I find prescribing information for your products?",
-      a: "Prescribing information is available for healthcare professionals through our HCP portal. You can request access by contacting us with your medical license number and practice details. Product brochures are also available for download on individual product pages.",
+      a: "Contact our team with the product name and the information you require. We will confirm which product information or manufacturer-provided documents are available.",
     },
     {
       q: "How do I report an adverse event or product quality complaint?",
-      a: "For adverse events, email safety@alvorhealthcare.com or call our 24/7 pharmacovigilance hotline. For quality complaints, use our contact form with 'Quality Complaint' selected. Include product name, batch number, and details. We investigate all reports within 24 hours.",
+      a: `Contact a healthcare professional for urgent medical concerns. Product quality or safety information can be sent to ${companyInfo.contact.email}; include the product name, batch number, contact details, and a clear description.`,
     },
     {
-      q: "Are your products available in my country?",
-      a: "Alvor Healthcare products are registered in 45+ countries. Availability varies by market due to local regulatory requirements. Contact us with your country and product of interest, and our team will provide specific availability and registration status information.",
+      q: "Where are your products available?",
+      a: "Alvor Healthcare serves healthcare providers and organizations in Myanmar. Contact us with the product and location you need so our team can confirm current availability.",
     },
     {
       q: "What distribution support do you provide?",
@@ -155,8 +151,7 @@ export default function ContactPageContent({
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4 max-w-2xl mx-auto">
-                Have questions about our products, need partnership information, or want to join our team? 
-                Our global team is ready to assist you.
+                Contact our Myanmar team about products, distribution, partnerships, medical supplies, or general company enquiries.
               </p>
             </ScrollReveal>
           </div>
@@ -165,29 +160,46 @@ export default function ContactPageContent({
 
       <section className="section bg-white dark:bg-neutral-950" aria-labelledby="contact-info-heading">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid lg:grid-cols-3 gap-6 items-stretch">
             {contactInfo.map((info, index) => (
               <ScrollReveal key={info.title} delay={index * 0.1}>
                 <StaggerItem delay={index * 0.1}>
                   <HoverScale>
-                    <Card variant="elevated" className="h-full p-8 text-center">
-                      <div className="w-16 h-16 mx-auto mb-6 bg-blue-50 dark:bg-blue-900/30 rounded-2xl flex items-center justify-center text-blue-600 dark:text-blue-400">
-                        <info.icon className="w-8 h-8" aria-hidden="true" />
+                    <Card
+                      variant="elevated"
+                      className="group h-full min-h-[290px] flex flex-col justify-between p-7 border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 hover:shadow-xl transition-all duration-300"
+                    >
+                      <div>
+                        <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-950/40 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-6">
+                          <info.icon className="w-6 h-6" aria-hidden="true" />
+                        </div>
+
+                        <h3 className="text-xl font-bold text-neutral-900 dark:text-white">
+                          {info.title}
+                        </h3>
+
+                        <p className="mt-1 text-sm font-medium text-blue-600 dark:text-blue-400">
+                          {info.subtitle}
+                        </p>
+
+                        <div className="mt-5 space-y-1 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+                          {info.details.map((detail, i) => (
+                            <div key={i}>
+                              {detail}
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                      <CardTitle className="text-neutral-900 dark:text-white">{info.title}</CardTitle>
-                      <div className="mt-4 space-y-2 text-neutral-600 dark:text-neutral-300">
-                        {info.details.map((detail, i) => (
-                          <div key={i} className="body-sm">
-                            {info.link && detail === info.details[0] ? (
-                              <a href={info.link} className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
-                                {detail}
-                              </a>
-                            ) : (
-                              detail
-                            )}
-                          </div>
-                        ))}
-                      </div>
+
+                      {info.link && (
+                        <a
+                          href={info.link}
+                          className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 group-hover:gap-3 transition-all"
+                        >
+                          {info.action}
+                          <ArrowRight className="w-4 h-4" />
+                        </a>
+                      )}
                     </Card>
                   </HoverScale>
                 </StaggerItem>
@@ -208,8 +220,7 @@ export default function ContactPageContent({
               </ScrollReveal>
               <ScrollReveal delay={0.1}>
                 <p className="body-lg text-neutral-600 dark:text-neutral-300 mb-8">
-                  Fill out the form below and we&apos;ll route your inquiry to the appropriate team member.
-                  We typically respond within 24 hours during business days.
+                  Fill out the form below to open a pre-addressed email draft for the Alvor Healthcare team.
                 </p>
               </ScrollReveal>
 
@@ -234,7 +245,7 @@ export default function ContactPageContent({
                   <div className="grid sm:grid-cols-2 gap-6">
                     <Input
                       label="Phone Number"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="09-XXXXXXXXX"
                       error={errors.phone?.message}
                       {...register("phone")}
                     />
@@ -329,40 +340,30 @@ export default function ContactPageContent({
           <ScrollReveal>
             <div className="text-center max-w-2xl mx-auto mb-16">
               <h2 id="offices-heading" className="display-md font-bold text-neutral-900 dark:text-white">
-                Global Offices & Partners
+                Our Locations
               </h2>
               <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
-                Strategic locations worldwide to serve our global healthcare network
+                Contact Alvor Healthcare in Yangon or Mandalay.
               </p>
             </div>
           </ScrollReveal>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { city: "New York, USA", role: "Global Headquarters", icon: Building2, details: ["Corporate Operations", "Portfolio Support", "Partner Relations"] },
-              { city: "London, UK", role: "European Operations", icon: Globe, details: ["Market Support", "EU Distribution", "Documentation"] },
-              { city: "Singapore", role: "Asia-Pacific Hub", icon: Users, details: ["APAC Sales", "Regulatory", "Supply Chain"] },
-              { city: "Dubai, UAE", role: "MENA Regional Office", icon: MapPin, details: ["GCC Markets", "Regulatory", "Distribution"] },
-            ].map((office, index) => (
-              <StaggerItem key={office.city} delay={index * 0.1}>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {companyInfo.contact.locations.map((office, index) => (
+              <StaggerItem key={office.name} delay={index * 0.1}>
                 <ScrollReveal>
                   <HoverScale>
                     <Card variant="elevated" className="p-6 h-full">
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
-                          <office.icon className="w-6 h-6" aria-hidden="true" />
+                          <Building2 className="w-6 h-6" aria-hidden="true" />
                         </div>
                         <div>
-                          <h4 className="font-semibold text-neutral-900 dark:text-white">{office.city}</h4>
-                          <p className="text-blue-600 dark:text-blue-400 text-sm font-medium mt-1">{office.role}</p>
-                          <ul className="mt-3 space-y-1 text-sm text-neutral-600 dark:text-neutral-300">
-                            {office.details.map((detail) => (
-                              <li key={detail} className="flex items-center gap-2">
-                                <CheckCircle className="w-4 h-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
-                                {detail}
-                              </li>
-                            ))}
-                          </ul>
+                          <h4 className="font-semibold text-neutral-900 dark:text-white">{office.name}</h4>
+                          <p className="text-blue-600 dark:text-blue-400 text-sm font-medium mt-1">{office.city}</p>
+                          <p className="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
+                            {office.address}, {office.region}, {office.country}
+                          </p>
                         </div>
                       </div>
                     </Card>
@@ -382,7 +383,7 @@ export default function ContactPageContent({
                 Find Us
               </h2>
               <p className="body-lg text-neutral-600 dark:text-neutral-300 mt-4">
-                Visit our global headquarters. Schedule a meeting with our team.
+                Find our primary Yangon office at SOHO Tower in Botahtaung Township.
               </p>
             </div>
           </ScrollReveal>
@@ -396,7 +397,7 @@ export default function ContactPageContent({
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Alvor Healthcare Corporate Headquarters"
+                title="Alvor Healthcare Yangon Office"
                 className="w-full"
               />
               <div className="absolute bottom-4 left-4 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-soft flex items-center gap-3">
@@ -404,8 +405,8 @@ export default function ContactPageContent({
                   <Navigation className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-neutral-900 dark:text-white">Corporate Headquarters</p>
-                  <p className="text-xs text-neutral-600 dark:text-neutral-300">{companyInfo.contact.address}, {companyInfo.contact.city}, {companyInfo.contact.state} {companyInfo.contact.postalCode}</p>
+                  <p className="text-sm font-semibold text-neutral-900 dark:text-white">Yangon Office</p>
+                  <p className="text-xs text-neutral-600 dark:text-neutral-300">{companyInfo.contact.address}, {companyInfo.contact.city}</p>
                 </div>
               </div>
             </div>
@@ -424,7 +425,7 @@ export default function ContactPageContent({
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
               <p className="body-lg text-blue-100 dark:text-blue-300 mb-8">
-                Join 45+ countries trusting our pharmaceutical expertise. Let&apos;s discuss how we can support your healthcare needs.
+                Let&apos;s discuss how Alvor Healthcare can support your product, distribution, or healthcare supply needs in Myanmar.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={0.2}>

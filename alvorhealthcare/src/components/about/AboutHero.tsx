@@ -2,16 +2,16 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowDownRight, Award, BadgeCheck, Globe, PackageSearch, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDownRight, BadgeCheck, Building2, MapPin, PackageSearch, Phone, ShieldCheck, Sparkles } from "lucide-react";
 import { aboutContent, companyInfo } from "@/data";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
 const heroStats = [
-  { label: "Years of excellence", value: companyInfo.experienceYears, suffix: "+", icon: Award },
-  { label: "Healthcare products", value: companyInfo.productsCount, suffix: "+", icon: PackageSearch },
-  { label: "Countries reached", value: companyInfo.countriesServed, suffix: "+", icon: Globe },
-  { label: "Supply controls", value: companyInfo.qualityStandards.length, suffix: "", icon: ShieldCheck },
+  { label: "Primary market", value: "Myanmar", icon: MapPin },
+  { label: "Healthcare products", value: `${companyInfo.productsCount}+`, icon: PackageSearch },
+  { label: "Contact locations", value: `${companyInfo.contact.locations.length}`, icon: Building2 },
+  { label: "Direct phone lines", value: `${companyInfo.contact.phones.length}`, icon: Phone },
 ];
 
 export function AboutHero() {
@@ -53,7 +53,7 @@ export function AboutHero() {
               className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-white/75 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-700 shadow-sm backdrop-blur-xl dark:border-blue-800/60 dark:bg-blue-950/35 dark:text-blue-300"
             >
               <Sparkles className="h-3.5 w-3.5" />
-              Since {companyInfo.foundedYear}
+              Yangon & Mandalay
               <span className="h-1 w-1 rounded-full bg-blue-400" />
               {content.eyebrow}
             </motion.div>
@@ -81,7 +81,7 @@ export function AboutHero() {
               transition={{ duration: 0.65, ease: easeOut }}
               className="mt-9 flex flex-col gap-3 sm:flex-row"
             >
-              <Link href="#history" className="pharma-button group">
+              <Link href="#services" className="pharma-button group">
                 {content.primaryCtaLabel}
                 <ArrowDownRight className="h-4.5 w-4.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5" />
               </Link>
@@ -167,7 +167,7 @@ export function AboutHero() {
               </span>
               <div>
                 <p className="font-display text-2xl font-bold tracking-tight text-neutral-950 dark:text-white">
-                  {stat.value}{stat.suffix}
+                  {stat.value}
                 </p>
                 <p className="text-xs font-medium text-neutral-500 dark:text-neutral-400">{stat.label}</p>
               </div>

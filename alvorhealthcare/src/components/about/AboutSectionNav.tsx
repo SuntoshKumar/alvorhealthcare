@@ -6,10 +6,9 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const sections = [
   { id: "mission", label: "Foundation" },
-  { id: "history", label: "Journey" },
+  { id: "services", label: "Services" },
   { id: "quality", label: "Quality" },
   { id: "distribution", label: "Distribution" },
-  { id: "leadership", label: "Leadership" },
 ];
 
 export function AboutSectionNav() {

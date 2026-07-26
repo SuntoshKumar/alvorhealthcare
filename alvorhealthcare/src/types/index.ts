@@ -53,14 +53,19 @@ export interface CompanyInfo {
   tagline: string;
   mission: string;
   vision: string;
-  foundedYear: number;
-  experienceYears: number;
   productsCount: number;
-  countriesServed: number;
   distributionCapabilities: string[];
   qualityStandards: string[];
   contact: ContactInfo;
   socialLinks: SocialLink[];
+}
+
+export interface OfficeLocation {
+  name: string;
+  address: string;
+  city: string;
+  region?: string;
+  country: string;
 }
 
 export interface ContactInfo {
@@ -70,11 +75,13 @@ export interface ContactInfo {
   country: string;
   postalCode: string;
   phone: string;
+  phones: string[];
   email: string;
   fax?: string;
   whatsapp?: string;
-  workingHours: string;
+  workingHours?: string;
   mapEmbedUrl: string;
+  locations: OfficeLocation[];
 }
 
 export interface SocialLink {

@@ -6,8 +6,8 @@ import { categories, companyInfo } from "@/data";
 const stats = [
   { value: companyInfo.productsCount, suffix: "+", label: "Products", desc: "Across the current portfolio" },
   { value: categories.length, suffix: "", label: "Product Categories", desc: "For varied healthcare needs" },
-  { value: companyInfo.countriesServed, suffix: "+", label: "Markets Served", desc: "Through distribution relationships" },
-  { value: companyInfo.experienceYears, suffix: "+", label: "Years in Healthcare", desc: `Supporting supply since ${companyInfo.foundedYear}` },
+  { value: companyInfo.contact.locations.length, suffix: "", label: "Contact Locations", desc: "In Yangon and Mandalay" },
+  { value: companyInfo.contact.phones.length, suffix: "", label: "Direct Phone Lines", desc: "For company enquiries" },
 ];
 
 function AnimatedCounter({ end, suffix = "", duration = 2000 }: { end: number; suffix?: string; duration?: number }) {

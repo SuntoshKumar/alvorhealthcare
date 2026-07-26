@@ -34,8 +34,7 @@ export const categories: Category[] = categoriesData.map((category) => ({
   })),
 }));
 export const companyInfo: CompanyInfo = {
-  ...(companyData as Omit<CompanyInfo, "experienceYears" | "productsCount">),
-  experienceYears: new Date().getFullYear() - companyData.foundedYear,
+  ...(companyData as Omit<CompanyInfo, "productsCount">),
   productsCount: products.length,
 };
 export const newsArticles: NewsArticle[] = newsData as NewsArticle[];

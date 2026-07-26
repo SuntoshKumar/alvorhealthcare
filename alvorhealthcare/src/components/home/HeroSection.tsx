@@ -63,7 +63,7 @@ function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
 
         <div className="absolute right-[12%] top-[12%] text-right">
           <p className="font-display text-[10px] font-bold tracking-[0.16em] text-blue-600 dark:text-blue-400">AHC / 01</p>
-          <p className="mt-0.5 text-[8px] uppercase tracking-[0.18em] text-neutral-400">Global series</p>
+          <p className="mt-0.5 text-[8px] uppercase tracking-[0.18em] text-neutral-400">Myanmar portfolio</p>
         </div>
 
         <motion.div
@@ -201,7 +201,7 @@ export function HeroSection() {
               <Sparkles className="h-3.5 w-3.5" />
               {hero.eyebrow}
               <span className="h-1 w-1 rounded-full bg-blue-300" />
-              {companyInfo.countriesServed}+ countries
+              Yangon & Mandalay
             </motion.div>
 
             <motion.h1

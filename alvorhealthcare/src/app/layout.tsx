@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               },
               sameAs: [
                 "https://linkedin.com/company/alvorhealthcare",
-                "https://facebook.com/alvorhealthcare",
+                "https://www.facebook.com/Alvorofficialpage/",
               ],
             }),
           }}

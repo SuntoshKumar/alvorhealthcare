@@ -1,39 +1,64 @@
 {
   "hero": {
-    "eyebrow": "Pharmaceutical Distribution",
-    "titlePrefix": "Connecting Supply With",
-    "titleHighlight": "Healthcare Need",
-    "description": "Alvor Healthcare has grown as a pharmaceutical distribution company focused on dependable supply, responsible product handling, and responsive service.",
-    "primaryCtaLabel": "Our Story",
+    "eyebrow": "Healthcare in Myanmar",
+    "titlePrefix": "Improving Access to",
+    "titleHighlight": "Quality Healthcare",
+    "description": "Alvor Healthcare Company Limited imports, markets, and distributes pharmaceutical products, medical supplies, and healthcare products for pharmacies, hospitals, clinics, healthcare professionals, and communities across Myanmar.",
+    "primaryCtaLabel": "Our Services",
     "secondaryCtaLabel": "How We Distribute"
   },
   "mission": {
     "title": "Mission, Vision & Values",
-    "description": "Our founding principles guide every decision and action.",
+    "description": "Quality, reliability, and customer satisfaction guide how we support healthcare providers and communities.",
     "valuesTitle": "Our Core Values",
-    "valuesSummary": "Patient safety, quality excellence, innovation, integrity, sustainability, and global accessibility guide every decision we make.",
+    "valuesSummary": "Quality, integrity, reliability, partnership, and innovation guide our relationships and daily work.",
     "coreValues": [
-      { "icon": "shield", "title": "Responsible Supply", "description": "Supplier review, product documentation, traceability, and complaint routing guide our work." },
-      { "icon": "award", "title": "Quality Stewardship", "description": "Distribution controls support responsible handling from supplier to customer." },
-      { "icon": "lightbulb", "title": "Practical Improvement", "description": "We continuously improve inventory planning, customer communication, and delivery coordination." },
-      { "icon": "heart", "title": "Patient-Centric Care", "description": "Accessible medicines and support programs remain central to our work." },
-      { "icon": "globe", "title": "Global Accessibility", "description": "Reliable distribution partnerships help medicines reach international markets." },
-      { "icon": "leaf", "title": "Responsible Operations", "description": "Stock rotation, consolidated logistics, and careful handling help reduce avoidable waste." }
+      { "icon": "award", "title": "Quality", "description": "Committed to delivering healthcare products that meet quality standards." },
+      { "icon": "shield", "title": "Integrity", "description": "Building trust through ethical business practices." },
+      { "icon": "heart", "title": "Reliability", "description": "Providing consistent supply and dependable service." },
+      { "icon": "globe", "title": "Partnership", "description": "Working closely with healthcare providers and international partners." },
+      { "icon": "lightbulb", "title": "Innovation", "description": "Continuously improving healthcare solutions and services." }
     ]
   },
-  "history": {
-    "eyebrow": "Our Legacy",
-    "title": "A Journey of Excellence",
-    "description": "Every milestone reflects our continuing commitment to quality healthcare.",
-    "milestones": [
-      { "year": "1998", "title": "Company Founded", "description": "Alvor Healthcare began serving regional pharmaceutical supply needs.", "icon": "building", "statLabel": "Founded", "statValue": "1998" },
-      { "year": "2002", "title": "Portfolio Expansion", "description": "The distributed portfolio expanded across additional dosage forms and therapeutic categories.", "icon": "award", "statLabel": "Focus", "statValue": "Portfolio" },
-      { "year": "2005", "title": "Regional Partnerships", "description": "New supplier and healthcare-channel relationships extended regional access.", "icon": "globe", "statLabel": "Growth", "statValue": "Regional" },
-      { "year": "2008", "title": "Documentation Team", "description": "A dedicated team was established to coordinate product and market documentation.", "icon": "flask", "statLabel": "Focus", "statValue": "Support" },
-      { "year": "2012", "title": "Supply Controls", "description": "Batch traceability and inventory-review processes were strengthened across operations.", "icon": "shield", "statLabel": "Focus", "statValue": "Traceability" },
-      { "year": "2015", "title": "International Expansion", "description": "Distribution relationships expanded into additional markets.", "icon": "award", "statLabel": "Growth", "statValue": "International" },
-      { "year": "2018", "title": "Logistics Network", "description": "Storage and delivery coordination capabilities were expanded for a broader portfolio.", "icon": "truck", "statLabel": "Focus", "statValue": "Logistics" },
-      { "year": "2020", "title": "Responsible Operations", "description": "Stock rotation, consolidated delivery, and waste-reduction practices were strengthened.", "icon": "leaf", "statLabel": "Focus", "statValue": "Responsibility" }
+  "services": {
+    "eyebrow": "What We Do",
+    "title": "Healthcare supply built for Myanmar",
+    "description": "Through international manufacturer partnerships and an established distribution network, we support healthcare providers with products, information, and dependable service.",
+    "items": [
+      {
+        "icon": "ship",
+        "title": "Importation",
+        "description": "We source and import pharmaceutical products and healthcare supplies from trusted international manufacturers while supporting applicable local regulatory requirements."
+      },
+      {
+        "icon": "truck",
+        "title": "Distribution",
+        "description": "We distribute healthcare products to pharmacies, hospitals, clinics, and healthcare organizations across Myanmar."
+      },
+      {
+        "icon": "megaphone",
+        "title": "Marketing & Sales",
+        "description": "Our team provides product marketing, healthcare education, and professional support for healthcare providers."
+      },
+      {
+        "icon": "heart",
+        "title": "Healthcare Solutions",
+        "description": "We provide pharmaceutical products, medical supplies, diagnostic products, and consumer healthcare products for professional and community needs."
+      }
+    ],
+    "productGroups": [
+      {
+        "title": "Pharmaceuticals",
+        "items": ["Prescription medicines", "Specialty medicines", "Chronic disease management products", "General healthcare medicines"]
+      },
+      {
+        "title": "Medical Supplies",
+        "items": ["Medical devices", "Healthcare equipment", "Diagnostic products"]
+      },
+      {
+        "title": "Consumer Healthcare",
+        "items": ["Vitamins and supplements", "Over-the-counter products", "Wellness products"]
+      }
     ]
   }
 }

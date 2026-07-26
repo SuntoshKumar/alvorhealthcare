@@ -18,8 +18,8 @@ const features = [
   },
   {
     icon: Truck,
-    title: "Global Distribution",
-    description: "Efficient supply chain serving 45+ countries with temperature-controlled logistics.",
+    title: "Myanmar Distribution",
+    description: "Healthcare products are distributed to pharmacies, hospitals, clinics, and healthcare organizations across Myanmar.",
   },
   {
     icon: Leaf,

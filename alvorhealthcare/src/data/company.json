@@ -1,70 +1,66 @@
 {
-  "name": "Alvor Healthcare",
-  "tagline": "Dependable Medicines. Reliable Distribution.",
-  "mission": "To improve access to dependable pharmaceutical products through responsible sourcing, clear documentation, careful handling, and reliable distribution.",
-  "vision": "To be a trusted pharmaceutical distribution partner known for dependable supply, responsive service, and responsible product stewardship.",
-  "foundedYear": 1998,
-  "countriesServed": 45,
+  "name": "Alvor Healthcare Company Limited",
+  "tagline": "Quality Healthcare Products. Dependable Distribution.",
+  "mission": "To improve healthcare accessibility by delivering safe, effective, and affordable healthcare products through professional distribution and customer-focused services.",
+  "vision": "To become a trusted healthcare partner in Myanmar by providing quality products and dependable healthcare solutions.",
   "distributionCapabilities": [
-    "Supplier and product qualification",
-    "Product and market documentation coordination",
-    "Batch and shipment traceability",
-    "Storage-condition oversight",
-    "Expiry and stock-rotation monitoring",
-    "Wholesale order coordination",
-    "Healthcare-channel fulfilment",
-    "Product availability support",
-    "Quality complaint routing",
-    "Supplier recall coordination"
+    "Pharmaceutical and healthcare product importation",
+    "Distribution to pharmacies, hospitals, and clinics",
+    "Product marketing and professional sales support",
+    "Healthcare education and product information",
+    "Medical supplies and diagnostic product distribution",
+    "Consumer healthcare and OTC product distribution"
   ],
   "qualityStandards": [
-    "Supplier qualification and review",
-    "Product documentation verification",
-    "Batch and shipment record control",
-    "Labelled storage-condition monitoring",
-    "Expiry and stock-rotation controls",
-    "Quality complaint escalation",
-    "Adverse-event routing",
-    "Recall communication procedures"
+    "Quality-focused product sourcing",
+    "Responsible importation and distribution",
+    "Reliable supply and customer service",
+    "Ethical business practices",
+    "Professional support for healthcare providers"
   ],
   "contact": {
-    "address": "123 Healthcare Boulevard",
-    "city": "New York",
-    "state": "NY",
-    "country": "USA",
-    "postalCode": "10001",
-    "phone": "+1 (800) 555-0123",
-    "email": "info@alvorhealthcare.com",
-    "fax": "+1 (212) 555-0124",
-    "whatsapp": "+1 (800) 555-0123",
-    "workingHours": "Mon-Fri: 8:00 AM - 6:00 PM EST",
-    "mapEmbedUrl": "https://www.google.com/maps/embed"
+    "address": "Room 1005, SOHO Tower, corner of Bo Myat Htun Road and Maha Bandula Road",
+    "city": "Botahtaung Township, Yangon",
+    "state": "Yangon Region",
+    "country": "Myanmar",
+    "postalCode": "",
+    "phone": "09-250666200",
+    "phones": [
+      "09-250666200",
+      "09-254006618",
+      "09-952845242"
+    ],
+    "email": "alvorhealthcare@gmail.com",
+    "mapEmbedUrl": "https://www.google.com/maps?q=SOHO+Tower+Botahtaung+Yangon+Myanmar&output=embed",
+    "locations": [
+      {
+        "name": "Yangon Office",
+        "address": "Room 1005, SOHO Tower, corner of Bo Myat Htun Road and Maha Bandula Road",
+        "city": "Botahtaung Township, Yangon",
+        "region": "Yangon Region",
+        "country": "Myanmar"
+      },
+      {
+        "name": "Mandalay Office",
+        "address": "32A, between 73rd and 74th Streets",
+        "city": "Chan Aye Thar San Township, Mandalay",
+        "region": "Mandalay Region",
+        "country": "Myanmar"
+      },
+      {
+        "name": "Public Listing Address",
+        "address": "Room 108, 4th Floor, Htee Dan Street, Htee Dan Housing",
+        "city": "Kyeemyindaing Township, Yangon",
+        "region": "Yangon Region",
+        "country": "Myanmar"
+      }
+    ]
   },
   "socialLinks": [
     {
-      "platform": "LinkedIn",
-      "url": "https://linkedin.com/company/alvorhealthcare",
-      "icon": "linkedin"
-    },
-    {
-      "platform": "Twitter",
-      "url": "https://twitter.com/alvorhealthcare",
-      "icon": "twitter"
-    },
-    {
       "platform": "Facebook",
-      "url": "https://facebook.com/alvorhealthcare",
+      "url": "https://www.facebook.com/Alvorofficialpage/",
       "icon": "facebook"
-    },
-    {
-      "platform": "Instagram",
-      "url": "https://instagram.com/alvorhealthcare",
-      "icon": "instagram"
-    },
-    {
-      "platform": "YouTube",
-      "url": "https://youtube.com/@alvorhealthcare",
-      "icon": "youtube"
     }
   ]
 }
