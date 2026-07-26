@@ -78,49 +78,138 @@ export function NewsPageContent() {
 
   return (
     <div className="min-h-screen overflow-hidden bg-white dark:bg-neutral-950">
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#061524] pt-28 text-white lg:pt-40">
-        <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:56px_56px]" aria-hidden="true" />
-        <div className="absolute -right-32 top-16 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl" aria-hidden="true" />
-        <div className="absolute -bottom-48 left-[8%] h-96 w-96 rounded-full bg-teal-400/15 blur-3xl" aria-hidden="true" />
+      <section className="relative overflow-hidden border-b border-neutral-200 bg-gradient-to-br from-[#f0f4f8] via-white to-[#eef4f0] pt-28 dark:border-white/10 dark:from-[#061524] dark:via-[#0a1e30] dark:to-[#061524] lg:pt-40">
+        <div
+          className="absolute inset-0 opacity-[0.04] dark:opacity-25 [background-image:linear-gradient(rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px)] [background-size:56px_56px] dark:[background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)]"
+          aria-hidden="true"
+        />
+        <motion.div
+          animate={prefersReducedMotion ? {} : { y: [-10, 10, -10] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -right-32 top-16 h-96 w-96 rounded-full bg-blue-400/10 blur-3xl dark:bg-blue-500/20"
+          aria-hidden="true"
+        />
+        <motion.div
+          animate={prefersReducedMotion ? {} : { y: [8, -8, 8] }}
+          transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -bottom-48 left-[8%] h-96 w-96 rounded-full bg-teal-300/10 blur-3xl dark:bg-teal-400/15"
+          aria-hidden="true"
+        />
+        <motion.div
+          animate={prefersReducedMotion ? {} : { x: [-6, 6, -6] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute left-1/2 top-1/3 h-64 w-64 rounded-full bg-violet-300/10 blur-3xl dark:bg-violet-400/10"
+          aria-hidden="true"
+        />
+        <div className="absolute right-[15%] top-[20%] h-40 w-40 rounded-full bg-gradient-to-br from-blue-200/30 to-teal-200/20 blur-2xl dark:from-blue-400/10 dark:to-teal-400/10" aria-hidden="true" />
 
         <div className="container relative pb-16 lg:pb-24">
           <div className="grid items-end gap-12 lg:grid-cols-[1fr_0.72fr] lg:gap-20">
-            <motion.div
-              initial={prefersReducedMotion ? false : { y: 28 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={revealTransition}
-            >
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.07] px-3.5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-blue-100 backdrop-blur-xl">
-                <Sparkles className="h-4 w-4 text-teal-300" aria-hidden="true" />
-                Alvor newsroom
-              </span>
-              <h1 className="mt-7 max-w-4xl text-5xl font-bold tracking-[-0.055em] sm:text-6xl lg:text-8xl">
+            <div>
+              <motion.div
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 32 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={revealTransition}
+              >
+                <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-neutral-700 shadow-sm backdrop-blur-xl dark:border-white/15 dark:bg-white/[0.07] dark:text-blue-100">
+                  <Sparkles className="h-4 w-4 text-blue-600 dark:text-teal-300" aria-hidden="true" />
+                  Alvor newsroom
+                </span>
+              </motion.div>
+
+              <motion.h1
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 32 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.08 }}
+                className="mt-7 max-w-4xl text-5xl font-bold tracking-[-0.055em] text-neutral-950 dark:text-white sm:text-6xl lg:text-8xl"
+              >
                 Progress,
-                <span className="block text-blue-300">documented.</span>
-              </h1>
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-blue-100/70 sm:text-xl">
-                Company announcements, portfolio updates, distribution quality milestones, and the partnerships shaping our work in healthcare.
-              </p>
-            </motion.div>
+                <span className="block text-blue-600 dark:text-blue-300">documented.</span>
+              </motion.h1>
+
+              <motion.p
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.16 }}
+                className="mt-7 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-blue-100/70 sm:text-xl"
+              >
+                Company announcements, portfolio updates, distribution quality
+                milestones, and the partnerships shaping our work in healthcare.
+              </motion.p>
+
+              <motion.div
+                initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.24 }}
+                className="mt-9 flex items-center gap-6"
+              >
+                <a
+                  href="#news-archive"
+                  className="group inline-flex items-center gap-2 rounded-xl bg-neutral-950 px-5 py-3 text-sm font-bold text-white outline-none transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-700 focus-visible:ring-4 focus-visible:ring-blue-200 dark:bg-white dark:text-neutral-950 dark:hover:bg-blue-100 dark:focus-visible:ring-blue-900"
+                >
+                  Browse all stories
+                  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+                </a>
+                <span className="text-sm font-semibold text-neutral-400 dark:text-blue-100/40">
+                  {sortedArticles.length} articles published
+                </span>
+              </motion.div>
+            </div>
 
             <motion.div
-              initial={prefersReducedMotion ? false : { x: 28 }}
+              initial={prefersReducedMotion ? false : { opacity: 0, x: 32 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.12 }}
-              className="grid grid-cols-3 divide-x divide-white/10 border-y border-white/10 py-6"
+              className="relative"
             >
-              <div className="pr-5">
-                <p className="text-3xl font-bold">{sortedArticles.length}</p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-blue-100/50">Stories</p>
+              <div className="overflow-hidden rounded-[1.75rem] border border-neutral-200 bg-white/70 shadow-lg backdrop-blur-sm dark:border-white/10 dark:bg-white/[0.04]">
+                <div className="h-1 w-full bg-gradient-to-r from-blue-500 via-teal-400 to-violet-500" aria-hidden="true" />
+                <div className="grid grid-cols-3 divide-x divide-neutral-100 p-6 dark:divide-white/10">
+                  <div className="px-5 text-center first:text-left">
+                    <p className="text-3xl font-bold tracking-tight text-neutral-950 dark:text-white lg:text-4xl">
+                      {sortedArticles.length}
+                    </p>
+                    <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-400 dark:text-blue-100/50">
+                      Stories
+                    </p>
+                  </div>
+                  <div className="px-5 text-center">
+                    <p className="text-3xl font-bold tracking-tight text-neutral-950 dark:text-white lg:text-4xl">
+                      {availableCategories.length}
+                    </p>
+                    <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-400 dark:text-blue-100/50">
+                      Topics
+                    </p>
+                  </div>
+                  <div className="pl-5 text-center last:text-right">
+                    <p className="text-3xl font-bold tracking-tight text-neutral-950 dark:text-white lg:text-4xl">
+                      {format(new Date(sortedArticles[0].publishDate), "yyyy")}
+                    </p>
+                    <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-neutral-400 dark:text-blue-100/50">
+                      Archive
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="px-5">
-                <p className="text-3xl font-bold">{availableCategories.length}</p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-blue-100/50">Topics</p>
-              </div>
-              <div className="pl-5">
-                <p className="text-3xl font-bold">{format(new Date(sortedArticles[0].publishDate), "yyyy")}</p>
-                <p className="mt-1 text-xs font-semibold uppercase tracking-[0.12em] text-blue-100/50">Archive</p>
-              </div>
+
+              <motion.div
+                initial={prefersReducedMotion ? false : { opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.3 }}
+                className="mt-8 flex justify-center"
+              >
+                <div className="flex flex-col items-center gap-2 text-neutral-300 dark:text-blue-100/30">
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em]">
+                    Scroll
+                  </span>
+                  <motion.div
+                    animate={prefersReducedMotion ? {} : { y: [0, 6, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <ArrowRight className="h-4 w-4 rotate-90" aria-hidden="true" />
+                  </motion.div>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
         </div>

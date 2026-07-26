@@ -8,6 +8,7 @@ import siteData from "./site.json";
 import aboutData from "./about.json";
 import careersData from "./careers.json";
 import contactData from "./contact.json";
+import faqData from "./faq.json";
 
 export {
   getResourceCollection,
@@ -45,6 +46,7 @@ export const homeContent = homeData;
 export const aboutContent = aboutData;
 export const careersContent = careersData;
 export const contactContent = contactData;
+export const faqContent = faqData;
 
 export function getProductBySlug(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);

@@ -22,7 +22,8 @@
       { "label": "Resources", "href": "/resources" },
       { "label": "Sustainability", "href": "/sustainability" },
       { "label": "Contact", "href": "/contact" },
-      { "label": "Careers", "href": "/careers" }
+      { "label": "Careers", "href": "/careers" },
+      { "label": "FAQ", "href": "/faq" }
     ],
     "legalLinks": [
       { "label": "Privacy Policy", "href": "/privacy" },
