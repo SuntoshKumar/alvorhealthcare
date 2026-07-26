@@ -80,6 +80,8 @@ export function ContactInfo() {
                   {info.link && (
                     <a
                       href={info.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400 transition-colors hover:text-blue-700 dark:hover:text-blue-300"
                     >
                       {info.action}

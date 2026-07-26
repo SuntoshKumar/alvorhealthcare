@@ -19,8 +19,8 @@
         "Room 1005, SOHO Tower, corner of Bo Myat Htun Road and Maha Bandula Road",
         "Botahtaung Township, Yangon, Myanmar"
       ],
-      "action": "View Location",
-      "link": null,
+      "action": "How to Reach Us",
+      "link": "https://www.google.com/maps/search/?api=1&query=Room+1005+SOHO+Tower+Botahtaung+Yangon+Myanmar",
       "gradient": "from-blue-500 to-blue-600"
     },
     {
