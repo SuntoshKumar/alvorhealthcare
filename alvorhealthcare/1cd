@@ -1,2 +1,402 @@
 [36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
 [36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[31m    at Set.forEach (<anonymous>)[39m [2m(<anonymous>)[22m
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m Encountered two children with the same key, `supplements`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[31m[1m⨯[22m[39m ReferenceError: theme is not defined
+    at Header (src/components/layout/Header.tsx:179:25)
+  177 |             <LogoIcon
+  178 |               size="md"
+> 179 |               darkMode={theme === "dark"}
+      |                         ^
+  180 |               className="transition-transform duration-300 group-hove...
+  181 |             />
+  182 |             <Logo size="sm" darkMode={theme === "dark"} showTagline={... {
+  digest: '4148956780'
+}
+[31m[1m⨯[22m[39m ReferenceError: theme is not defined
+    at Header (src/components/layout/Header.tsx:179:25)
+  177 |             <LogoIcon
+  178 |               size="md"
+> 179 |               darkMode={theme === "dark"}
+      |                         ^
+  180 |               className="transition-transform duration-300 group-hove...
+  181 |             />
+  182 |             <Logo size="sm" darkMode={theme === "dark"} showTagline={... {
+  digest: '4148956780'
+}
+[36m[browser][39m [31mUncaught ReferenceError: theme is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:179:25)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m177 |[0m             <[33mLogoIcon[0m
+  [90m178 |[0m               size=[32m"md"[0m
+[31m[1m>[0m [90m179 |[0m               darkMode={theme === [32m"dark"[0m}
+  [90m    |[0m                         [31m[1m^[0m
+  [90m180 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+  [90m181 |[0m             />
+  [90m182 |[0m             <[33mLogo[0m size=[32m"sm"[0m darkMode={theme === [32m"dark"[0m} showTagline={...
+[36m[browser][39m [31mUncaught ReferenceError: theme is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:179:25)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m177 |[0m             <[33mLogoIcon[0m
+  [90m178 |[0m               size=[32m"md"[0m
+[31m[1m>[0m [90m179 |[0m               darkMode={theme === [32m"dark"[0m}
+  [90m    |[0m                         [31m[1m^[0m
+  [90m180 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+  [90m181 |[0m             />
+  [90m182 |[0m             <[33mLogo[0m size=[32m"sm"[0m darkMode={theme === [32m"dark"[0m} showTagline={...
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[31m[1m⨯[22m[39m ReferenceError: theme is not defined
+    at Header (src/components/layout/Header.tsx:179:25)
+  177 |             <LogoIcon
+  178 |               size="md"
+> 179 |               darkMode={theme === "dark"}
+      |                         ^
+  180 |               className="transition-transform duration-300 group-hove...
+  181 |             />
+  182 |             <Logo size="sm" darkMode={theme === "dark"} showTagline={... {
+  digest: '4148956780'
+}
+[31m[1m⨯[22m[39m ReferenceError: theme is not defined
+    at Header (src/components/layout/Header.tsx:179:25)
+  177 |             <LogoIcon
+  178 |               size="md"
+> 179 |               darkMode={theme === "dark"}
+      |                         ^
+  180 |               className="transition-transform duration-300 group-hove...
+  181 |             />
+  182 |             <Logo size="sm" darkMode={theme === "dark"} showTagline={... {
+  digest: '4148956780'
+}
+[36m[browser][39m [31mUncaught ReferenceError: theme is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:179:25)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m177 |[0m             <[33mLogoIcon[0m
+  [90m178 |[0m               size=[32m"md"[0m
+[31m[1m>[0m [90m179 |[0m               darkMode={theme === [32m"dark"[0m}
+  [90m    |[0m                         [31m[1m^[0m
+  [90m180 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+  [90m181 |[0m             />
+  [90m182 |[0m             <[33mLogo[0m size=[32m"sm"[0m darkMode={theme === [32m"dark"[0m} showTagline={...
+[36m[browser][39m [31mUncaught ReferenceError: theme is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:179:25)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m177 |[0m             <[33mLogoIcon[0m
+  [90m178 |[0m               size=[32m"md"[0m
+[31m[1m>[0m [90m179 |[0m               darkMode={theme === [32m"dark"[0m}
+  [90m    |[0m                         [31m[1m^[0m
+  [90m180 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+  [90m181 |[0m             />
+  [90m182 |[0m             <[33mLogo[0m size=[32m"sm"[0m darkMode={theme === [32m"dark"[0m} showTagline={...
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[31m[1m⨯[22m[39m ReferenceError: theme is not defined
+    at Header (src/components/layout/Header.tsx:179:25)
+  177 |             <LogoIcon
+  178 |               size="md"
+> 179 |               darkMode={theme === "dark"}
+      |                         ^
+  180 |               className="transition-transform duration-300 group-hove...
+  181 |             />
+  182 |             <Logo size="sm" darkMode={theme === "dark"} showTagline={... {
+  digest: '4148956780'
+}
+[31m[1m⨯[22m[39m ReferenceError: theme is not defined
+    at Header (src/components/layout/Header.tsx:179:25)
+  177 |             <LogoIcon
+  178 |               size="md"
+> 179 |               darkMode={theme === "dark"}
+      |                         ^
+  180 |               className="transition-transform duration-300 group-hove...
+  181 |             />
+  182 |             <Logo size="sm" darkMode={theme === "dark"} showTagline={... {
+  digest: '4148956780'
+}
+[36m[browser][39m [31mUncaught ReferenceError: theme is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:179:25)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m177 |[0m             <[33mLogoIcon[0m
+  [90m178 |[0m               size=[32m"md"[0m
+[31m[1m>[0m [90m179 |[0m               darkMode={theme === [32m"dark"[0m}
+  [90m    |[0m                         [31m[1m^[0m
+  [90m180 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+  [90m181 |[0m             />
+  [90m182 |[0m             <[33mLogo[0m size=[32m"sm"[0m darkMode={theme === [32m"dark"[0m} showTagline={...
+[36m[browser][39m [31mUncaught ReferenceError: theme is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:179:25)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m177 |[0m             <[33mLogoIcon[0m
+  [90m178 |[0m               size=[32m"md"[0m
+[31m[1m>[0m [90m179 |[0m               darkMode={theme === [32m"dark"[0m}
+  [90m    |[0m                         [31m[1m^[0m
+  [90m180 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+  [90m181 |[0m             />
+  [90m182 |[0m             <[33mLogo[0m size=[32m"sm"[0m darkMode={theme === [32m"dark"[0m} showTagline={...
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[31m[1m⨯[22m[39m ReferenceError: LogoIcon is not defined
+    at Header (src/components/layout/Header.tsx:175:14)
+  173 |             aria-label="Alvor Healthcare Home"
+  174 |           >
+> 175 |             <LogoIcon
+      |              ^
+  176 |               size="md"
+  177 |               darkMode={resolved === "dark"}
+  178 |               className="transition-transform duration-300 group-hove... {
+  digest: '2151289610'
+}
+[31m[1m⨯[22m[39m ReferenceError: LogoIcon is not defined
+    at Header (src/components/layout/Header.tsx:175:14)
+  173 |             aria-label="Alvor Healthcare Home"
+  174 |           >
+> 175 |             <LogoIcon
+      |              ^
+  176 |               size="md"
+  177 |               darkMode={resolved === "dark"}
+  178 |               className="transition-transform duration-300 group-hove... {
+  digest: '2151289610'
+}
+[36m[browser][39m [31mUncaught ReferenceError: LogoIcon is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:175:14)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m173 |[0m             aria-label=[32m"Alvor Healthcare Home"[0m
+  [90m174 |[0m           >
+[31m[1m>[0m [90m175 |[0m             <[33mLogoIcon[0m
+  [90m    |[0m              [31m[1m^[0m
+  [90m176 |[0m               size=[32m"md"[0m
+  [90m177 |[0m               darkMode={resolved === [32m"dark"[0m}
+  [90m178 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+[36m[browser][39m [31mUncaught ReferenceError: LogoIcon is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:175:14)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m173 |[0m             aria-label=[32m"Alvor Healthcare Home"[0m
+  [90m174 |[0m           >
+[31m[1m>[0m [90m175 |[0m             <[33mLogoIcon[0m
+  [90m    |[0m              [31m[1m^[0m
+  [90m176 |[0m               size=[32m"md"[0m
+  [90m177 |[0m               darkMode={resolved === [32m"dark"[0m}
+  [90m178 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[31m[1m⨯[22m[39m ReferenceError: LogoIcon is not defined
+    at Header (src/components/layout/Header.tsx:176:14)
+  174 |             aria-label="Alvor Healthcare Home"
+  175 |           >
+> 176 |             <LogoIcon
+      |              ^
+  177 |               size="md"
+  178 |               darkMode={resolved === "dark"}
+  179 |               className="transition-transform duration-300 group-hove... {
+  digest: '2967644895'
+}
+[31m[1m⨯[22m[39m ReferenceError: LogoIcon is not defined
+    at Header (src/components/layout/Header.tsx:176:14)
+  174 |             aria-label="Alvor Healthcare Home"
+  175 |           >
+> 176 |             <LogoIcon
+      |              ^
+  177 |               size="md"
+  178 |               darkMode={resolved === "dark"}
+  179 |               className="transition-transform duration-300 group-hove... {
+  digest: '2967644895'
+}
+[36m[browser][39m [31mUncaught ReferenceError: LogoIcon is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:175:14)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m173 |[0m             aria-label=[32m"Alvor Healthcare Home"[0m
+  [90m174 |[0m           >
+[31m[1m>[0m [90m175 |[0m             <[33mLogoIcon[0m
+  [90m    |[0m              [31m[1m^[0m
+  [90m176 |[0m               size=[32m"md"[0m
+  [90m177 |[0m               darkMode={resolved === [32m"dark"[0m}
+  [90m178 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+[36m[browser][39m [31mUncaught ReferenceError: LogoIcon is not defined[39m
+[31m    at Header (src/components/layout/Header.tsx:175:14)
+    at RootLayout (src/app/layout.tsx:73:11)[39m
+  [90m173 |[0m             aria-label=[32m"Alvor Healthcare Home"[0m
+  [90m174 |[0m           >
+[31m[1m>[0m [90m175 |[0m             <[33mLogoIcon[0m
+  [90m    |[0m              [31m[1m^[0m
+  [90m176 |[0m               size=[32m"md"[0m
+  [90m177 |[0m               darkMode={resolved === [32m"dark"[0m}
+  [90m178 |[0m               className=[32m"transition-transform duration-300 group-hove...[0m
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[31m[1m⨯[22m[39m ReferenceError: LogoIcon is not defined
+    at Footer (src/components/layout/Footer.tsx:15:16)
+  13 |           <div className="lg:col-span-2">
+  14 |             <Link href="/" className="inline-flex items-center gap-3 m...
+> 15 |               <LogoIcon size="md" darkMode={true} />
+     |                ^
+  16 |               <Logo size="sm" darkMode={true} showTagline={false} />
+  17 |             </Link>
+  18 |             <p className="text-neutral-400 text-sm leading-relaxed max... {
+  digest: '3485545661'
+}
+[31m[1m⨯[22m[39m ReferenceError: LogoIcon is not defined
+    at Footer (src/components/layout/Footer.tsx:15:16)
+  13 |           <div className="lg:col-span-2">
+  14 |             <Link href="/" className="inline-flex items-center gap-3 m...
+> 15 |               <LogoIcon size="md" darkMode={true} />
+     |                ^
+  16 |               <Logo size="sm" darkMode={true} showTagline={false} />
+  17 |             </Link>
+  18 |             <p className="text-neutral-400 text-sm leading-relaxed max... {
+  digest: '3485545661'
+}
+[36m[browser][39m [31mUncaught ReferenceError: LogoIcon is not defined[39m
+[31m    at Footer (src/components/layout/Footer.tsx:15:16)
+    at RootLayout (src/app/layout.tsx:77:11)[39m
+  [90m13 |[0m           <div className=[32m"lg:col-span-2"[0m>
+  [90m14 |[0m             <[33mLink[0m href=[32m"/"[0m className=[32m"inline-flex items-center gap-3 m...[0m
+[31m[1m>[0m [90m15 |[0m               <[33mLogoIcon[0m size=[32m"md"[0m darkMode={[36mtrue[0m} />
+  [90m   |[0m                [31m[1m^[0m
+  [90m16 |[0m               <[33mLogo[0m size=[32m"sm"[0m darkMode={[36mtrue[0m} showTagline={[36mfalse[0m} />
+  [90m17 |[0m             </[33mLink[0m>
+  [90m18 |[0m             <p className=[32m"text-neutral-400 text-sm leading-relaxed max...[0m
+[36m[browser][39m [31mUncaught ReferenceError: LogoIcon is not defined[39m
+[31m    at Footer (src/components/layout/Footer.tsx:15:16)
+    at RootLayout (src/app/layout.tsx:77:11)[39m
+  [90m13 |[0m           <div className=[32m"lg:col-span-2"[0m>
+  [90m14 |[0m             <[33mLink[0m href=[32m"/"[0m className=[32m"inline-flex items-center gap-3 m...[0m
+[31m[1m>[0m [90m15 |[0m               <[33mLogoIcon[0m size=[32m"md"[0m darkMode={[36mtrue[0m} />
+  [90m   |[0m                [31m[1m^[0m
+  [90m16 |[0m               <[33mLogo[0m size=[32m"sm"[0m darkMode={[36mtrue[0m} showTagline={[36mfalse[0m} />
+  [90m17 |[0m             </[33mLink[0m>
+  [90m18 |[0m             <p className=[32m"text-neutral-400 text-sm leading-relaxed max...[0m
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m [33mImage with src "/images/products/alvorfen-400-thumb.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m
+[36m[browser][39m [33mDetected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior[39m

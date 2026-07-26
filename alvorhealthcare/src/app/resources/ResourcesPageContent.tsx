@@ -259,7 +259,7 @@ export function ResourcesPageContent() {
                         {collection.highlights.map((highlight) => (
                           <span
                             key={highlight}
-                            className="rounded-full border border-neutral-200/80 bg-white/70 px-3 py-1.5 text-xs font-semibold text-neutral-600 backdrop-blur-sm transition-colors duration-200 group-hover:border-neutral-300/80 group-hover:bg-white dark:border-neutral-700 dark:bg-neutral-900/60 dark:text-neutral-300 dark:group-hover:border-neutral-600"
+                            className="rounded-full border border-neutral-200/80 bg-white/70 px-3 py-1.5 text-xs font-semibold text-neutral-600 backdrop-blur-sm transition-colors duration-200 group-hover:border-neutral-300/80 group-hover:bg-white dark:border-neutral-700 dark:bg-neutral-900/60 dark:text-neutral-300 dark:group-hover:border-white dark:group-hover:bg-white dark:group-hover:text-black"
                           >
                             {highlight}
                           </span>
