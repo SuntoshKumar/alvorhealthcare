@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Breadcrumb } from "@/components/ui/Navigation";
 import { BreadcrumbStructuredData } from "@/components/ui/StructuredData";
 import { categories, getProductsByCategory } from "@/data";
 import { createPageMetadata } from "@/lib/seo";
@@ -48,6 +49,17 @@ export default async function CategoryPage({ params }: Props) {
           { name: category.name, path: `/categories/${category.slug}` },
         ]}
       />
+      <div className="absolute left-0 right-0 top-0 z-20 pt-28 lg:pt-32">
+        <div className="container">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Categories", href: "/categories" },
+              { label: category.name },
+            ]}
+          />
+        </div>
+      </div>
       <CategoryPageContent category={category} products={categoryProducts} />
     </>
   );
