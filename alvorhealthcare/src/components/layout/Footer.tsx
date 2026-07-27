@@ -43,7 +43,7 @@ export function Footer() {
 
           <div>
             <h3 className="font-heading font-semibold text-sm uppercase tracking-wider text-neutral-300 mb-5">
-              Products
+              Categories
             </h3>
             <ul className="space-y-3">
               {categories.map((category) => (
@@ -56,6 +56,14 @@ export function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/categories"
+                  className="text-sm text-neutral-400 hover:text-blue-400 transition-colors"
+                >
+                  View All Categories
+                </Link>
+              </li>
             </ul>
           </div>
 

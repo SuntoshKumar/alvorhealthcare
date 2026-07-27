@@ -54,6 +54,9 @@ export function Header() {
   const lastScrollY = useRef(0);
   const companyMenuRef = useRef<HTMLDivElement>(null);
   const companyButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
+  const mobilePanelRef = useRef<HTMLElement>(null);
+  const mobileCloseButtonRef = useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
   const { resolved, toggle } = useTheme();
   const prefersReducedMotion = useReducedMotion();
@@ -65,11 +68,22 @@ export function Header() {
 
     const onScroll = () => {
       const y = window.scrollY;
+      const delta = y - lastScrollY.current;
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
       setScrolled(y > 12);
       setScrollProgress(maxScroll > 0 ? Math.min(y / maxScroll, 1) : 0);
-      setIsHidden(mq.matches && y > lastScrollY.current && y > 80);
-      lastScrollY.current = y;
+
+      if (!mq.matches || y <= 80) {
+        setIsHidden(false);
+      } else if (delta > 6) {
+        setIsHidden(true);
+      } else if (delta < -6) {
+        setIsHidden(false);
+      }
+
+      if (Math.abs(delta) > 6 || y <= 80) {
+        lastScrollY.current = y;
+      }
     };
 
     const onResize = () => {
@@ -104,15 +118,45 @@ export function Header() {
     if (!mobileOpen) return;
 
     const previousOverflow = document.body.style.overflow;
+    const previousActiveElement = document.activeElement as HTMLElement | null;
+    const mobileMenuButton = mobileMenuButtonRef.current;
+    const focusTimer = window.setTimeout(() => mobileCloseButtonRef.current?.focus(), 0);
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") closeMobile();
+      if (event.key === "Escape") {
+        closeMobile();
+        return;
+      }
+
+      if (event.key !== "Tab") return;
+
+      const focusable = mobilePanelRef.current?.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusable?.length) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
 
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKeyDown);
     return () => {
+      window.clearTimeout(focusTimer);
       document.body.style.overflow = previousOverflow;
       window.removeEventListener("keydown", onKeyDown);
+      if (previousActiveElement?.isConnected) {
+        previousActiveElement.focus();
+      } else {
+        mobileMenuButton?.focus();
+      }
     };
   }, [closeMobile, mobileOpen]);
 
@@ -154,11 +198,8 @@ export function Header() {
         isHidden && "-translate-y-full"
       )}
     >
-      <motion.div
+      <div
         ref={companyMenuRef}
-        initial={prefersReducedMotion ? false : { opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
         className={clsx(
           "relative h-full border-b backdrop-blur-2xl transition-[background-color,border-color,box-shadow] duration-500",
           scrolled
@@ -183,7 +224,7 @@ export function Header() {
               <span className="block whitespace-nowrap font-heading text-[15px] font-bold leading-none text-neutral-950 dark:text-white xl:text-base">
                 Alvor Healthcare
               </span>
-              <span className="mt-1.5 block whitespace-nowrap text-[8px] font-bold uppercase leading-none tracking-[0.18em] text-primary-600 dark:text-primary-400">
+              <span className="mt-1.5 block whitespace-nowrap text-[9px] font-bold uppercase leading-none tracking-[0.14em] text-primary-600 dark:text-primary-400">
                 Distribution in Myanmar
               </span>
             </span>
@@ -226,7 +267,6 @@ export function Header() {
                 onClick={() => setCompanyOpen((open) => !open)}
                 aria-expanded={companyOpen}
                 aria-controls="company-navigation"
-                aria-haspopup="menu"
                 className={clsx(
                   "relative flex items-center gap-1.5 rounded-lg px-3.5 py-2 text-[13px] font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500",
                   companyActive
@@ -282,6 +322,7 @@ export function Header() {
             </Link>
 
             <button
+              ref={mobileMenuButtonRef}
               type="button"
               onClick={toggleMobile}
               className="flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 bg-white text-neutral-800 transition-colors duration-200 hover:border-primary-200 hover:text-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-white/10 dark:bg-white/[0.06] dark:text-white dark:hover:text-primary-300 xl:hidden"
@@ -308,7 +349,8 @@ export function Header() {
           {companyOpen && (
             <motion.div
               id="company-navigation"
-              role="menu"
+              role="navigation"
+              aria-label="Company navigation"
               initial={prefersReducedMotion ? false : { opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={prefersReducedMotion ? undefined : { opacity: 0, y: -8 }}
@@ -337,7 +379,6 @@ export function Header() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        role="menuitem"
                         aria-current={active ? "page" : undefined}
                         onClick={() => setCompanyOpen(false)}
                         className={clsx(
@@ -379,7 +420,7 @@ export function Header() {
           transition={prefersReducedMotion ? { duration: 0 } : { duration: 0.12, ease: "easeOut" }}
           aria-hidden="true"
         />
-      </motion.div>
+      </div>
 
       <AnimatePresence>
         {mobileOpen && (
@@ -392,8 +433,12 @@ export function Header() {
               aria-hidden="true"
             />
             <motion.aside
+              ref={mobilePanelRef}
               id="mobile-navigation"
+              role="dialog"
+              aria-modal="true"
               aria-label="Mobile navigation panel"
+              tabIndex={-1}
               className="absolute inset-y-0 right-0 flex w-full max-w-[25rem] flex-col overflow-hidden border-l border-neutral-200 bg-white shadow-[-24px_0_70px_-32px_rgba(2,6,23,0.65)] dark:border-white/10 dark:bg-[#07101f]"
               variants={{
                 open: { opacity: 1, x: 0 },
@@ -417,12 +462,13 @@ export function Header() {
                     <span className="block font-heading text-base font-bold leading-none text-neutral-950 dark:text-white">
                       Alvor Healthcare
                     </span>
-                    <span className="mt-1.5 block text-[8px] font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">
+                    <span className="mt-1.5 block text-[9px] font-bold uppercase tracking-[0.14em] text-primary-600 dark:text-primary-400">
                       Distribution in Myanmar
                     </span>
                   </span>
                 </Link>
                 <button
+                  ref={mobileCloseButtonRef}
                   type="button"
                   onClick={closeMobile}
                   className="flex h-9 w-9 items-center justify-center rounded-lg border border-neutral-200 text-neutral-600 transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-white/10 dark:text-neutral-300 dark:hover:bg-white/[0.06]"
