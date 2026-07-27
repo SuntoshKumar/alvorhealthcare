@@ -41,6 +41,7 @@ interface Specification {
 
 export function ProductDetail({ product, relatedProducts }: ProductDetailProps) {
   const [selectedImage, setSelectedImage] = useState(0);
+  const [mainImageLoaded, setMainImageLoaded] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const category = categories.find((item) => item.name === product.category);
   const images = product.images.length > 0 ? product.images : [product.thumbnail];
@@ -142,13 +143,17 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                       transition={{ duration: prefersReducedMotion ? 0.01 : 0.36, ease: [0.22, 1, 0.36, 1] }}
                       className="absolute inset-0"
                     >
+                      {!mainImageLoaded && (
+                        <div className="absolute inset-0 animate-shimmer rounded-[2rem]" />
+                      )}
                       <Image
                         src={publicAssetPath(images[selectedImage])}
                         alt={`${product.name} product image ${selectedImage + 1}`}
                         fill
-                        className="object-contain p-6 sm:p-10"
+                        className={`object-contain p-6 transition-opacity duration-500 sm:p-10 ${mainImageLoaded ? "opacity-100" : "opacity-0"}`}
                         priority
                         sizes="(max-width: 1024px) 100vw, 52vw"
+                        onLoad={() => setMainImageLoaded(true)}
                       />
                     </motion.div>
                   </AnimatePresence>
@@ -160,7 +165,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                       <motion.button
                         key={image}
                         type="button"
-                        onClick={() => setSelectedImage(index)}
+                        onClick={() => { setMainImageLoaded(false); setSelectedImage(index); }}
                         whileTap={{ scale: 0.96 }}
                         whileHover={prefersReducedMotion ? undefined : { y: -2 }}
                         transition={{ duration: prefersReducedMotion ? 0.01 : 0.2 }}

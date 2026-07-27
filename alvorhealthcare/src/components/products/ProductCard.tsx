@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { ChevronRight, Download, Sparkles, Star } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { Badge } from "@/components/ui/Badge";
@@ -43,6 +44,8 @@ function ProductBadges({ product }: { product: Product }) {
 }
 
 export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   const specifications = [
     product.keyInformation.strength,
     product.keyInformation.dosageForm,
@@ -53,12 +56,16 @@ export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
       <article className="group relative grid gap-5 rounded-[1.35rem] border border-neutral-100 bg-white p-4 transition-[transform,border-color,box-shadow] duration-400 ease-out hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_20px_45px_-32px_rgba(30,64,175,0.55)] dark:border-neutral-700/50 dark:bg-neutral-800/30 dark:hover:border-blue-700 sm:grid-cols-[144px_minmax(0,1fr)_auto] sm:items-center sm:p-4">
         <div className="relative aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-50 via-white to-blue-50 dark:from-neutral-800 dark:via-neutral-900 dark:to-blue-950/40">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.9),transparent_45%)] opacity-70 dark:opacity-10" aria-hidden="true" />
+          {!imageLoaded && (
+            <div className="absolute inset-0 animate-shimmer rounded-2xl" />
+          )}
           <Image
             src={publicAssetPath(product.thumbnail)}
             alt={`${product.name} product artwork`}
             fill
-            className="object-contain p-3 transition-transform duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-[1.04]"
+            className={`object-contain p-3 transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-[1.04] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
             sizes="(max-width: 640px) 100vw, 144px"
+            onLoad={() => setImageLoaded(true)}
           />
           <div className="absolute right-2 top-2">
             <ProductBadges product={product} />
@@ -116,12 +123,16 @@ export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
       <div className={`relative overflow-hidden bg-gradient-to-br from-neutral-50 via-white to-blue-50 dark:from-neutral-800 dark:via-neutral-900 dark:to-blue-950/40 ${isRelated ? "h-48" : "h-56 xl:h-60"}`}>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_28%,rgba(255,255,255,0.95),transparent_48%)] opacity-80 transition-opacity duration-500 group-hover:opacity-100 dark:opacity-10" aria-hidden="true" />
         <div className="absolute inset-x-[18%] bottom-4 h-4 rounded-[50%] bg-blue-950/10 blur-md transition-all duration-500 group-hover:inset-x-[22%] group-hover:opacity-70 dark:bg-black/30" aria-hidden="true" />
+        {!imageLoaded && (
+          <div className="absolute inset-0 animate-shimmer" />
+        )}
         <Image
           src={publicAssetPath(product.thumbnail)}
           alt={`${product.name} product artwork`}
           fill
-          className="object-contain p-4 transition-transform duration-500 ease-out group-hover:-translate-y-1.5 group-hover:scale-[1.045]"
+          className={`object-contain p-4 transition-all duration-500 ease-out group-hover:-translate-y-1.5 group-hover:scale-[1.045] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
           sizes={isRelated ? "(max-width: 640px) 100vw, 25vw" : "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"}
+          onLoad={() => setImageLoaded(true)}
         />
         <div className="absolute right-3 top-3">
           <ProductBadges product={product} />
