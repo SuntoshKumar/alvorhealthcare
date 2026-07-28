@@ -18,7 +18,7 @@ export function OrganizationStructuredData() {
     name: companyInfo.name,
     description: companyInfo.mission,
     url: absoluteSiteUrl("/"),
-    logo: absoluteSiteUrl("/images/og-image.png"),
+    logo: absoluteSiteUrl("/images/alvor.png"),
     slogan: companyInfo.tagline,
     areaServed: {
       "@type": "Country",
@@ -98,7 +98,7 @@ export function NewsArticleStructuredData({ article }: { article: NewsArticle })
       name: companyInfo.name,
       logo: {
         "@type": "ImageObject",
-        url: absoluteSiteUrl("/images/og-image.png"),
+        url: absoluteSiteUrl("/images/alvor.png"),
       },
     },
     mainEntityOfPage: {

@@ -1,4 +1,5 @@
-import { Plus } from "lucide-react";
+import Image from "next/image";
+import { publicAssetPath } from "@/lib/paths";
 
 export function PageLoader() {
   return (
@@ -17,10 +18,14 @@ export function PageLoader() {
         </span>
 
         <span className="page-loader__brand">
-          <span className="page-loader__letter">A</span>
-          <span className="page-loader__plus">
-            <Plus />
-          </span>
+          <Image
+            src={publicAssetPath("/images/alvor.svg")}
+            alt=""
+            fill
+            priority
+            className="page-loader__logo"
+            sizes="72px"
+          />
         </span>
       </div>
 

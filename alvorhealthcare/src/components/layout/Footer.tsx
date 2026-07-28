@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram, FaYoutube, FaViber, FaWhatsapp } from "react-icons/fa";
 import { categories, companyInfo, siteContent } from "@/data";
+import { publicAssetPath } from "@/lib/paths";
 
 export function Footer() {
   return (
@@ -12,8 +14,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
-                <span className="text-white font-bold font-heading">A</span>
+              <div className="relative h-11 w-11">
+                <Image
+                  src={publicAssetPath("/images/alvor.svg")}
+                  alt=""
+                  fill
+                  className="object-contain drop-shadow-[0_10px_16px_rgba(0,124,255,0.22)]"
+                  sizes="44px"
+                />
               </div>
               <div>
                 <span className="font-heading font-bold text-lg leading-tight block -mb-0.5">Alvor</span>

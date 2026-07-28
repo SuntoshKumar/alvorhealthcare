@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight, BadgeCheck, Building2, MapPin, PackageSearch, Phone, Sparkles } from "lucide-react";
 import { aboutContent, companyInfo } from "@/data";
+import { publicAssetPath } from "@/lib/paths";
 
 const easeOut = [0.22, 1, 0.36, 1] as const;
 
@@ -125,9 +127,14 @@ export function AboutHero() {
                 </motion.div>
                 <div className="absolute left-1/2 top-1/2 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-blue-200/50 bg-white/28 p-2 shadow-[0_30px_70px_-42px_rgba(30,64,175,0.7)] backdrop-blur-md dark:border-blue-700/30 dark:bg-blue-950/18 sm:h-44 sm:w-44">
                   <div className="flex h-full w-full items-center justify-center rounded-full border border-white/85 bg-white/60 text-center backdrop-blur-xl dark:border-white/10 dark:bg-blue-950/48">
-                    <div>
-                      <p className="font-display text-2xl font-bold text-blue-950 dark:text-white sm:text-3xl">ALVOR</p>
-                      <p className="mt-1 text-[8px] font-bold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-200">Healthcare</p>
+                    <div className="relative h-[68%] w-[68%]">
+                      <Image
+                        src={publicAssetPath("/images/alvor.svg")}
+                        alt=""
+                        fill
+                        className="object-contain drop-shadow-[0_16px_22px_rgba(37,99,235,0.2)]"
+                        sizes="120px"
+                      />
                     </div>
                   </div>
                 </div>

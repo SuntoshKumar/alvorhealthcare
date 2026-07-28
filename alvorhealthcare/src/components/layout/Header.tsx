@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -17,7 +18,6 @@ import {
   Moon,
   Newspaper,
   PackageSearch,
-  Plus,
   Sun,
   X,
   type LucideIcon,
@@ -26,6 +26,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { clsx } from "clsx";
 import { useTheme } from "@/components/layout/ThemeProvider";
 import { siteContent } from "@/data";
+import { publicAssetPath } from "@/lib/paths";
 
 const navigationIcons: Record<string, LucideIcon> = {
   Home: House,
@@ -214,11 +215,15 @@ export function Header() {
             className="group flex min-w-0 flex-shrink-0 items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-4 dark:focus-visible:ring-offset-[#07101f]"
             aria-label="Alvor Healthcare Home"
           >
-            <span className="relative flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-lg bg-primary-600 text-white shadow-[0_8px_20px_-9px_rgba(37,99,235,0.9)] transition-transform duration-300 group-hover:-rotate-2 group-hover:scale-[1.04] xl:h-10 xl:w-10">
-              <span className="font-display text-base font-bold xl:text-lg">A</span>
-              <span className="absolute -bottom-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-emerald-400 text-emerald-950 ring-2 ring-white dark:ring-[#07101f]">
-                <Plus className="h-2.5 w-2.5 stroke-[3]" aria-hidden="true" />
-              </span>
+            <span className="relative h-10 w-10 flex-shrink-0 transition-transform duration-300 group-hover:-rotate-2 group-hover:scale-[1.04] xl:h-11 xl:w-11">
+              <Image
+                src={publicAssetPath("/images/alvor.svg")}
+                alt=""
+                fill
+                priority
+                className="object-contain drop-shadow-[0_8px_12px_rgba(37,99,235,0.18)]"
+                sizes="44px"
+              />
             </span>
             <span className="min-w-0">
               <span className="block whitespace-nowrap font-heading text-[15px] font-bold leading-none text-neutral-950 dark:text-white xl:text-base">
@@ -452,11 +457,14 @@ export function Header() {
                   onClick={closeMobile}
                   className="flex items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                 >
-                  <span className="relative flex h-10 w-10 items-center justify-center rounded-lg bg-primary-600 text-white shadow-[0_8px_20px_-9px_rgba(37,99,235,0.9)]">
-                    <span className="font-display text-lg font-bold">A</span>
-                    <span className="absolute -bottom-0.5 -right-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-emerald-400 text-emerald-950 ring-2 ring-white dark:ring-[#07101f]">
-                      <Plus className="h-2.5 w-2.5 stroke-[3]" aria-hidden="true" />
-                    </span>
+                  <span className="relative h-11 w-11 flex-shrink-0">
+                    <Image
+                      src={publicAssetPath("/images/alvor.svg")}
+                      alt=""
+                      fill
+                      className="object-contain drop-shadow-[0_8px_12px_rgba(37,99,235,0.18)]"
+                      sizes="44px"
+                    />
                   </span>
                   <span>
                     <span className="block font-heading text-base font-bold leading-none text-neutral-950 dark:text-white">
