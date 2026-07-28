@@ -98,38 +98,42 @@ export function AboutHero() {
             className="relative mx-auto w-full max-w-[640px]"
             aria-hidden="true"
           >
-            <div className="absolute -inset-8 rounded-[4rem] bg-blue-400/15 blur-3xl dark:bg-blue-700/15" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/90 bg-white/72 p-5 shadow-[0_45px_110px_-55px_rgba(30,64,175,0.75)] backdrop-blur-2xl dark:border-white/10 dark:bg-neutral-950/70 sm:p-7">
-              <div className="flex items-center justify-between border-b border-blue-100/80 pb-5 dark:border-blue-900/40">
+            <div className="absolute -inset-12 rounded-full bg-[radial-gradient(circle,rgba(96,165,250,0.2),rgba(45,212,191,0.08)_42%,transparent_72%)] blur-2xl dark:bg-[radial-gradient(circle,rgba(29,78,216,0.2),rgba(15,118,110,0.08)_44%,transparent_74%)]" />
+            <div className="relative p-2 sm:p-4">
+              <div className="flex items-end justify-between px-2 pb-3 sm:px-3">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">Alvor supply network</p>
                   <p className="mt-1 font-display text-xl font-bold text-neutral-950 dark:text-white">From source to care</p>
                 </div>
-                <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-500/25">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full border border-blue-200/80 bg-white/55 text-blue-600 shadow-sm backdrop-blur-lg dark:border-blue-700/40 dark:bg-blue-950/35 dark:text-blue-300">
                   <BadgeCheck className="h-5 w-5" />
                 </span>
               </div>
 
-              <div className="relative mt-6 aspect-[1.18/1] overflow-hidden rounded-[1.6rem] bg-gradient-to-br from-blue-950 via-blue-900 to-teal-900 p-5 text-white sm:p-7">
-                <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(255,255,255,0.09)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.09)_1px,transparent_1px)] [background-size:38px_38px]" />
+              <div className="relative mt-2 aspect-[1.18/1] p-5 sm:p-7">
+                <div className="absolute inset-[4%] rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.18),rgba(45,212,191,0.08)_42%,transparent_70%)] blur-xl dark:bg-[radial-gradient(circle,rgba(37,99,235,0.24),rgba(13,148,136,0.1)_42%,transparent_72%)]" />
+                <div className="absolute inset-[7%] rounded-full opacity-45 [background-image:linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] [background-size:38px_38px] [mask-image:radial-gradient(circle,black_25%,transparent_72%)] dark:opacity-25 dark:[background-image:linear-gradient(rgba(147,197,253,0.16)_1px,transparent_1px),linear-gradient(90deg,rgba(147,197,253,0.16)_1px,transparent_1px)]" />
+                <div className="absolute left-1/2 top-1/2 h-[86%] w-[86%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-200/35 dark:border-blue-700/20" />
                 <motion.div
-                  className="absolute left-1/2 top-1/2 h-[68%] w-[68%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-300/25"
+                  className="absolute left-1/2 top-1/2 h-[68%] w-[68%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-300/55 dark:border-blue-500/30"
                   animate={prefersReducedMotion ? undefined : { rotate: 360 }}
                   transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
                 >
-                  <span className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-300 shadow-[0_0_0_8px_rgba(94,234,212,0.12)]" />
+                  <span className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-teal-400 shadow-[0_0_0_8px_rgba(45,212,191,0.12)] dark:border-blue-950" />
                 </motion.div>
-                <div className="absolute left-1/2 top-1/2 flex h-28 w-28 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-white/10 text-center shadow-2xl backdrop-blur-xl sm:h-36 sm:w-36">
-                  <div>
-                    <p className="font-display text-2xl font-bold sm:text-3xl">ALVOR</p>
-                    <p className="mt-1 text-[8px] font-bold uppercase tracking-[0.22em] text-blue-200">Healthcare</p>
+                <div className="absolute left-1/2 top-1/2 flex h-36 w-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-blue-200/50 bg-white/28 p-2 shadow-[0_30px_70px_-42px_rgba(30,64,175,0.7)] backdrop-blur-md dark:border-blue-700/30 dark:bg-blue-950/18 sm:h-44 sm:w-44">
+                  <div className="flex h-full w-full items-center justify-center rounded-full border border-white/85 bg-white/60 text-center backdrop-blur-xl dark:border-white/10 dark:bg-blue-950/48">
+                    <div>
+                      <p className="font-display text-2xl font-bold text-blue-950 dark:text-white sm:text-3xl">ALVOR</p>
+                      <p className="mt-1 text-[8px] font-bold uppercase tracking-[0.22em] text-blue-600 dark:text-blue-200">Healthcare</p>
+                    </div>
                   </div>
                 </div>
                 {["Source", "Verify", "Store", "Deliver"].map((label, index) => (
                   <motion.div
                     key={label}
                     className={[
-                      "absolute rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] backdrop-blur-lg",
+                      "absolute flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.14em] text-blue-800 dark:text-blue-200",
                       index === 0 && "left-[7%] top-[16%]",
                       index === 1 && "right-[6%] top-[23%]",
                       index === 2 && "bottom-[16%] left-[7%]",
@@ -138,14 +142,15 @@ export function AboutHero() {
                     animate={prefersReducedMotion ? undefined : { y: index % 2 === 0 ? [-3, 3, -3] : [3, -3, 3] }}
                     transition={{ duration: 4.5 + index * 0.35, repeat: Infinity, ease: "easeInOut" }}
                   >
+                    <span className="h-1.5 w-1.5 rounded-full bg-teal-400 shadow-[0_0_0_4px_rgba(45,212,191,0.12)]" />
                     {label}
                   </motion.div>
                 ))}
               </div>
 
-              <div className="mt-5 grid grid-cols-3 gap-2">
-                {["Traceable supply", "Document support", "Reliable access"].map((label) => (
-                  <div key={label} className="rounded-xl bg-blue-50 px-2 py-3 text-center text-[10px] font-bold uppercase tracking-[0.08em] text-blue-700 dark:bg-blue-950/50 dark:text-blue-300">
+              <div className="mx-2 mt-2 grid grid-cols-3 border-t border-blue-200/60 pt-4 dark:border-blue-800/35 sm:mx-3">
+                {["Traceable supply", "Document support", "Reliable access"].map((label, index) => (
+                  <div key={label} className={`px-2 text-center text-[9px] font-bold uppercase tracking-[0.1em] text-blue-700 dark:text-blue-300 ${index > 0 ? "border-l border-blue-200/60 dark:border-blue-800/35" : ""}`}>
                     {label}
                   </div>
                 ))}

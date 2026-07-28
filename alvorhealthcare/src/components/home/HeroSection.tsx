@@ -31,13 +31,13 @@ function PharmaVisual({ reducedMotion }: { reducedMotion: boolean }) {
       transition={{ duration: 1, delay: 0.2, ease: easeOut }}
       aria-hidden="true"
     >
-      <div className="absolute inset-x-[7%] bottom-[2%] h-[14%] rounded-[50%] bg-blue-950/15 blur-2xl dark:bg-black/50" />
-      <div className="absolute inset-x-[12%] bottom-[7%] h-px bg-gradient-to-r from-transparent via-blue-300/70 to-transparent dark:via-blue-600/50" />
+      <div className="absolute inset-x-[7%] bottom-[2%] h-[14%] rounded-[50%] bg-blue-950/10 blur-3xl dark:bg-black/35" />
+      <div className="absolute inset-x-[12%] bottom-[7%] h-px bg-gradient-to-r from-transparent via-blue-300/45 to-transparent dark:via-blue-600/35" />
 
-      <div className="absolute inset-x-[8%] bottom-[9%] top-[3%] overflow-hidden rounded-[48%_48%_2.8rem_2.8rem/34%_34%_2.8rem_2.8rem] border border-white/80 bg-gradient-to-b from-white/65 via-blue-50/70 to-blue-100/55 shadow-[0_50px_110px_-52px_rgba(30,64,175,0.65)] backdrop-blur-xl dark:border-white/10 dark:from-blue-950/55 dark:via-neutral-950/72 dark:to-blue-950/55">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.95),transparent_34%),linear-gradient(115deg,transparent_35%,rgba(255,255,255,0.35)_49%,transparent_63%)] dark:bg-[radial-gradient(circle_at_50%_30%,rgba(59,130,246,0.28),transparent_34%),linear-gradient(115deg,transparent_35%,rgba(96,165,250,0.08)_49%,transparent_63%)]" />
-        <div className="absolute inset-x-[12%] top-[12%] h-px bg-gradient-to-r from-transparent via-blue-300/80 to-transparent dark:via-blue-500/50" />
-        <div className="absolute inset-x-[19%] top-[17%] h-px bg-gradient-to-r from-transparent via-teal-300/60 to-transparent dark:via-teal-600/40" />
+      <div className="absolute inset-x-[8%] bottom-[9%] top-[3%]">
+        <div className="absolute inset-[-8%] bg-[radial-gradient(ellipse_at_50%_43%,rgba(255,255,255,0.72),rgba(219,234,254,0.22)_40%,transparent_72%)] dark:bg-[radial-gradient(ellipse_at_50%_43%,rgba(30,58,138,0.2),rgba(10,15,30,0.08)_44%,transparent_74%)]" />
+        <div className="absolute inset-x-[12%] top-[12%] h-px bg-gradient-to-r from-transparent via-blue-300/45 to-transparent dark:via-blue-500/30" />
+        <div className="absolute inset-x-[19%] top-[17%] h-px bg-gradient-to-r from-transparent via-teal-300/35 to-transparent dark:via-teal-600/25" />
 
         <motion.div
           className="absolute left-1/2 top-[15%] h-[58%] w-[58%] -translate-x-1/2 rounded-full border border-blue-200/70 dark:border-blue-600/30"
