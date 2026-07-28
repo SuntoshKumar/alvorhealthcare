@@ -31,7 +31,15 @@ export function AboutServices() {
               {content.title}
             </h2>
           </motion.div>
-          <p className="max-w-2xl text-base leading-relaxed text-blue-100/75 sm:text-lg">{content.description}</p>
+          <motion.p
+            initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, delay: prefersReducedMotion ? 0 : 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="max-w-2xl text-base leading-relaxed text-blue-100/75 sm:text-lg"
+          >
+            {content.description}
+          </motion.p>
         </div>
 
         <div className="mt-14 grid gap-5 md:grid-cols-2">
@@ -43,8 +51,8 @@ export function AboutServices() {
                 initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : index * 0.07 }}
-                className="border border-white/10 bg-white/[0.065] p-7 backdrop-blur-xl sm:p-8"
+                transition={{ duration: 0.65, delay: prefersReducedMotion ? 0 : index * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                className="transform-gpu border border-white/10 bg-white/[0.065] p-7 backdrop-blur-xl sm:p-8"
               >
                 <span className="flex h-12 w-12 items-center justify-center bg-gradient-to-br from-blue-500 to-teal-500 text-white">
                   <Icon className="h-6 w-6" aria-hidden="true" />
@@ -57,8 +65,15 @@ export function AboutServices() {
         </div>
 
         <div className="mt-14 grid gap-5 lg:grid-cols-3">
-          {content.productGroups.map((group) => (
-            <article key={group.title} className="border-t border-teal-300/45 pt-6">
+          {content.productGroups.map((group, index) => (
+            <motion.article
+              key={group.title}
+              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : index * 0.07, ease: [0.22, 1, 0.36, 1] }}
+              className="transform-gpu border-t border-teal-300/45 pt-6"
+            >
               <h3 className="font-display text-xl font-bold">{group.title}</h3>
               <ul className="mt-4 space-y-3">
                 {group.items.map((item) => (
@@ -68,7 +83,7 @@ export function AboutServices() {
                   </li>
                 ))}
               </ul>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>

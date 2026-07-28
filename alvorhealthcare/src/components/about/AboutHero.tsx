@@ -42,14 +42,11 @@ export function AboutHero() {
 
       <div className="container relative z-10">
         <div className="grid items-center gap-14 lg:grid-cols-[1.02fr_0.98fr] lg:gap-10 xl:gap-20">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{ hidden: {}, visible: { transition: { staggerChildren: prefersReducedMotion ? 0 : 0.1 } } }}
-          >
+          <div>
             <motion.div
-              variants={{ hidden: { opacity: 1, y: 18 }, visible: { opacity: 1, y: 0 } }}
-              transition={{ duration: 0.6, ease: easeOut }}
+              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: prefersReducedMotion ? 0 : 0.08, ease: easeOut }}
               className="mb-7 inline-flex items-center gap-2 rounded-full border border-blue-200/80 bg-white/75 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.16em] text-blue-700 shadow-sm backdrop-blur-xl dark:border-blue-800/60 dark:bg-blue-950/35 dark:text-blue-300"
             >
               <Sparkles className="h-3.5 w-3.5" />
@@ -60,8 +57,9 @@ export function AboutHero() {
 
             <motion.h1
               id="about-hero-heading"
-              variants={{ hidden: { opacity: 1, y: 26 }, visible: { opacity: 1, y: 0 } }}
-              transition={{ duration: 0.75, ease: easeOut }}
+              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: prefersReducedMotion ? 0 : 0.2, ease: easeOut }}
               className="max-w-4xl break-words font-display text-[clamp(3rem,6.8vw,6.4rem)] font-bold leading-[0.91] tracking-[-0.065em] text-neutral-950 dark:text-white"
             >
               {content.titlePrefix}
@@ -69,16 +67,18 @@ export function AboutHero() {
             </motion.h1>
 
             <motion.p
-              variants={{ hidden: { opacity: 1, y: 20 }, visible: { opacity: 1, y: 0 } }}
-              transition={{ duration: 0.7, ease: easeOut }}
+              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: prefersReducedMotion ? 0 : 0.32, ease: easeOut }}
               className="mt-7 max-w-2xl text-base leading-relaxed text-neutral-600 dark:text-neutral-300 sm:text-lg lg:text-xl"
             >
               {content.description}
             </motion.p>
 
             <motion.div
-              variants={{ hidden: { opacity: 1, y: 18 }, visible: { opacity: 1, y: 0 } }}
-              transition={{ duration: 0.65, ease: easeOut }}
+              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: prefersReducedMotion ? 0 : 0.44, ease: easeOut }}
               className="mt-9 flex flex-col gap-3 sm:flex-row"
             >
               <Link href="#services" className="pharma-button group">
@@ -89,17 +89,19 @@ export function AboutHero() {
                 {content.secondaryCtaLabel}
               </Link>
             </motion.div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 1, x: 34, scale: 0.97 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.15, ease: easeOut }}
+          <div
             className="relative mx-auto w-full max-w-[640px]"
             aria-hidden="true"
           >
             <div className="absolute -inset-12 rounded-full bg-[radial-gradient(circle,rgba(96,165,250,0.2),rgba(45,212,191,0.08)_42%,transparent_72%)] blur-2xl dark:bg-[radial-gradient(circle,rgba(29,78,216,0.2),rgba(15,118,110,0.08)_44%,transparent_74%)]" />
-            <div className="relative p-2 sm:p-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.94, x: 24 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.2, ease: easeOut }}
+              className="relative transform-gpu p-2 sm:p-4"
+            >
               <div className="flex items-end justify-between px-2 pb-3 sm:px-3">
                 <div>
                   <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400">Alvor supply network</p>
@@ -117,7 +119,7 @@ export function AboutHero() {
                 <motion.div
                   className="absolute left-1/2 top-1/2 h-[68%] w-[68%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-300/55 dark:border-blue-500/30"
                   animate={prefersReducedMotion ? undefined : { rotate: 360 }}
-                  transition={{ duration: 28, repeat: Infinity, ease: "linear" }}
+                  transition={{ duration: 28, delay: 0.9, repeat: Infinity, ease: "linear" }}
                 >
                   <span className="absolute left-1/2 top-0 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-white bg-teal-400 shadow-[0_0_0_8px_rgba(45,212,191,0.12)] dark:border-blue-950" />
                 </motion.div>
@@ -140,7 +142,7 @@ export function AboutHero() {
                       index === 3 && "bottom-[12%] right-[8%]",
                     ].filter(Boolean).join(" ")}
                     animate={prefersReducedMotion ? undefined : { y: index % 2 === 0 ? [-3, 3, -3] : [3, -3, 3] }}
-                    transition={{ duration: 4.5 + index * 0.35, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{ duration: 4.5 + index * 0.35, delay: 0.8 + index * 0.08, repeat: Infinity, ease: "easeInOut" }}
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-teal-400 shadow-[0_0_0_4px_rgba(45,212,191,0.12)]" />
                     {label}
@@ -155,15 +157,15 @@ export function AboutHero() {
                   </div>
                 ))}
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
 
         <motion.div
-          initial={{ opacity: 1, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.75, delay: 0.5, ease: easeOut }}
-          className="mt-14 grid overflow-hidden rounded-[1.6rem] border border-white/80 bg-white/68 shadow-[0_24px_70px_-48px_rgba(15,23,42,0.65)] backdrop-blur-xl dark:border-white/10 dark:bg-neutral-950/55 sm:grid-cols-2 lg:mt-18 lg:grid-cols-4"
+          transition={{ duration: 0.75, delay: 0.78, ease: easeOut }}
+          className="mt-14 grid transform-gpu overflow-hidden rounded-[1.6rem] border border-white/80 bg-white/68 shadow-[0_24px_70px_-48px_rgba(15,23,42,0.65)] backdrop-blur-xl dark:border-white/10 dark:bg-neutral-950/55 sm:grid-cols-2 lg:mt-18 lg:grid-cols-4"
         >
           {heroStats.map((stat, index) => (
             <div key={stat.label} className={`flex items-center gap-4 p-5 lg:p-6 ${index > 0 ? "border-t border-blue-100/70 sm:border-l sm:border-t-0 dark:border-blue-900/40" : ""} ${index === 2 ? "sm:border-l-0 lg:border-l" : ""}`}>

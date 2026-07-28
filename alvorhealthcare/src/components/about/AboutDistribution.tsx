@@ -12,7 +12,8 @@ import {
   Truck,
   Warehouse,
 } from "lucide-react";
-import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
+import { motion, useReducedMotion } from "framer-motion";
+import { HoverScale } from "@/components/animations/Animations";
 import { Card, CardDescription, CardTitle } from "@/components/ui/Card";
 import { companyInfo } from "@/data";
 
@@ -56,10 +57,17 @@ const distributionCapabilities = [
 ];
 
 export function AboutDistribution() {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <section id="distribution" className="relative scroll-mt-32 overflow-hidden bg-white py-20 dark:bg-neutral-950 sm:py-24 lg:py-32" aria-labelledby="distribution-heading">
       <div className="container">
-        <ScrollReveal>
+        <motion.div
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="mb-14 grid gap-5 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:gap-16">
             <div>
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-teal-600 dark:text-teal-400">Distribution operations</span>
@@ -71,38 +79,48 @@ export function AboutDistribution() {
               Our role is to connect qualified pharmaceutical supply with healthcare organizations through clear processes and responsive service.
             </p>
           </div>
-        </ScrollReveal>
+        </motion.div>
 
-        <StaggerContainer className="mb-16 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mb-16 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {distributionCapabilities.map((capability, index) => (
-            <StaggerItem key={capability.title} delay={index * 0.1}>
-              <ScrollReveal>
-                <HoverScale>
-                  <Card variant="outlined" className="group h-full rounded-[1.5rem] border-neutral-200/80 p-6 transition-all hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_28px_70px_-48px_rgba(30,64,175,0.75)] dark:border-neutral-800 lg:p-8">
-                    <div className="flex gap-4">
-                      <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
-                        <capability.icon className="h-7 w-7" aria-hidden="true" />
-                      </div>
-                      <div>
-                        <CardTitle className="text-neutral-900 dark:text-white">{capability.title}</CardTitle>
-                        <CardDescription className="mt-2">{capability.description}</CardDescription>
-                        <div className="mt-4 flex flex-wrap gap-2">
-                          {capability.features.map((feature) => (
-                            <span key={feature} className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-700 dark:border-neutral-700/50 dark:bg-neutral-800/50 dark:text-neutral-300">
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
+            <motion.div
+              key={capability.title}
+              initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 22 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{ duration: 0.62, delay: prefersReducedMotion ? 0 : (index % 2) * 0.07, ease: [0.22, 1, 0.36, 1] }}
+              className="transform-gpu"
+            >
+              <HoverScale>
+                <Card variant="outlined" className="group h-full rounded-[1.5rem] border-neutral-200/80 p-6 transition-all hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_28px_70px_-48px_rgba(30,64,175,0.75)] dark:border-neutral-800 lg:p-8">
+                  <div className="flex gap-4">
+                    <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                      <capability.icon className="h-7 w-7" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <CardTitle className="text-neutral-900 dark:text-white">{capability.title}</CardTitle>
+                      <CardDescription className="mt-2">{capability.description}</CardDescription>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {capability.features.map((feature) => (
+                          <span key={feature} className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-700 dark:border-neutral-700/50 dark:bg-neutral-800/50 dark:text-neutral-300">
+                            {feature}
+                          </span>
+                        ))}
                       </div>
                     </div>
-                  </Card>
-                </HoverScale>
-              </ScrollReveal>
-            </StaggerItem>
+                  </div>
+                </Card>
+              </HoverScale>
+            </motion.div>
           ))}
-        </StaggerContainer>
+        </div>
 
-        <ScrollReveal delay={0.2}>
+        <motion.div
+          initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 22 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-70px" }}
+          transition={{ duration: 0.7, delay: prefersReducedMotion ? 0 : 0.08, ease: [0.22, 1, 0.36, 1] }}
+        >
           <div className="rounded-[2rem] border border-neutral-200/80 bg-neutral-50 p-8 dark:border-neutral-800 dark:bg-neutral-900/50 lg:p-12">
             <div className="grid items-center gap-8 lg:grid-cols-2">
               <div>
@@ -140,7 +158,7 @@ export function AboutDistribution() {
               </div>
             </div>
           </div>
-        </ScrollReveal>
+        </motion.div>
       </div>
     </section>
   );

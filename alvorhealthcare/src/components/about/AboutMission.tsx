@@ -50,12 +50,12 @@ export function AboutMission() {
               {missionVision.map((item, index) => (
                 <motion.article
                   key={item.title}
-                  initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 28 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.65, delay: prefersReducedMotion ? 0 : index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-                  whileHover={prefersReducedMotion ? undefined : { x: 5 }}
-                  className="group relative overflow-hidden rounded-[1.6rem] border border-neutral-200/80 bg-neutral-50/80 p-6 transition-colors hover:border-blue-200 hover:bg-blue-50/55 dark:border-neutral-800 dark:bg-neutral-900/60 dark:hover:border-blue-800/70 dark:hover:bg-blue-950/20 sm:p-8"
+                  transition={{ duration: 0.65, delay: prefersReducedMotion ? 0 : index * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                  whileHover={prefersReducedMotion ? undefined : { y: -2 }}
+                  className="group relative transform-gpu overflow-hidden rounded-[1.6rem] border border-neutral-200/80 bg-neutral-50/80 p-6 transition-colors hover:border-blue-200 hover:bg-blue-50/55 dark:border-neutral-800 dark:bg-neutral-900/60 dark:hover:border-blue-800/70 dark:hover:bg-blue-950/20 sm:p-8"
                 >
                   <div className={`absolute inset-y-0 left-0 w-1 ${item.accent === "teal" ? "bg-teal-500" : "bg-blue-600"}`} />
                   <div className="grid gap-5 sm:grid-cols-[auto_1fr] sm:items-start">
@@ -90,8 +90,8 @@ export function AboutMission() {
                       initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 18 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: "-60px" }}
-                      transition={{ duration: 0.55, delay: prefersReducedMotion ? 0 : (index % 2) * 0.07 }}
-                      className="group flex gap-4 rounded-2xl border border-neutral-200/70 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-[0_18px_50px_-38px_rgba(13,148,136,0.7)] dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-teal-800/60"
+                      transition={{ duration: 0.6, delay: prefersReducedMotion ? 0 : (index % 2) * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                      className="group flex transform-gpu gap-4 rounded-2xl border border-neutral-200/70 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-[0_18px_50px_-38px_rgba(13,148,136,0.7)] dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-teal-800/60"
                     >
                       <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal-50 text-teal-600 transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105 dark:bg-teal-900/30 dark:text-teal-400">
                         <Icon className="h-5 w-5" />
