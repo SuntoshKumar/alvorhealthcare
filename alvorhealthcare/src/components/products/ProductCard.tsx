@@ -96,10 +96,13 @@ export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
         </div>
 
         <div className="relative z-10 flex items-center gap-2 sm:flex-col sm:items-end sm:gap-3">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white dark:bg-blue-900/30 dark:text-blue-400 dark:group-hover:bg-blue-600 dark:group-hover:text-white">
+          <Link
+            href={`/products/${product.slug}`}
+            className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-600 transition-colors hover:bg-blue-600 hover:text-white dark:bg-blue-900/30 dark:text-blue-400 dark:hover:bg-blue-600 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-500"
+          >
             View product
             <ChevronRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-          </span>
+          </Link>
           {product.pdfBrochure && (
             <button
               type="button"

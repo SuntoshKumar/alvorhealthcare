@@ -39,10 +39,25 @@ function createInitialFilters(initialCategory?: string, initialSubCategory?: str
   const category = categories.find((item) => item.slug === initialCategory);
   const subCategory = category?.subCategories?.find((item) => item.slug === initialSubCategory);
 
+  let viewMode: ViewMode = "grid";
+  let sortBy: SortOption = "featured";
+  let search = "";
+  if (typeof window !== "undefined") {
+    const savedView = localStorage.getItem("productViewMode");
+    if (savedView === "grid" || savedView === "list") viewMode = savedView;
+    const savedSort = localStorage.getItem("productSortBy") as SortOption | null;
+    if (savedSort && ["name", "newest", "popular", "featured"].includes(savedSort)) sortBy = savedSort;
+    const savedSearch = localStorage.getItem("productSearch");
+    if (savedSearch) search = savedSearch;
+  }
+
   return {
     ...defaultFilters,
     category: category?.slug ?? "all",
     subCategory: subCategory?.name ?? "",
+    viewMode,
+    sortBy,
+    search,
   };
 }
 
@@ -105,6 +120,11 @@ export function ProductsPageContent() {
       ...(key === "category" ? { subCategory: "" } : {}),
       ...(key === "page" ? {} : { page: 1 }),
     }));
+    if (typeof window !== "undefined") {
+      if (key === "viewMode") localStorage.setItem("productViewMode", value as string);
+      if (key === "sortBy") localStorage.setItem("productSortBy", value as string);
+      if (key === "search") localStorage.setItem("productSearch", value as string);
+    }
   };
 
   const clearFilters = () => {
@@ -113,6 +133,7 @@ export function ProductsPageContent() {
       sortBy: previous.sortBy,
       viewMode: previous.viewMode,
     }));
+    if (typeof window !== "undefined") localStorage.removeItem("productSearch");
     updateProductUrl("all");
   };
 
@@ -346,7 +367,7 @@ export function ProductsPageContent() {
                 <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-600 dark:text-blue-400" />
                 <input
                   id="product-search"
-                  type="search"
+                  type="text"
                   placeholder="Search by product, indication, or therapeutic area"
                   value={filters.search}
                   onChange={(event) => updateFilter("search", event.target.value)}

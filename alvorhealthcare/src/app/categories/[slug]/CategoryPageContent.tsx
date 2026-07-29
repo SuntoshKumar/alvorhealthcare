@@ -79,12 +79,25 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
   const { colors } = category;
   const transitionDuration = prefersReducedMotion ? 0.01 : 0.35;
 
-  const [filters, setFilters] = useState({
-    search: "",
-    sortBy: "name" as SortOption,
-    viewMode: "grid" as ViewMode,
-    page: 1,
-    limit: 12,
+  const [filters, setFilters] = useState(() => {
+    let viewMode: ViewMode = "grid";
+    let sortBy: SortOption = "name";
+    let search = "";
+    if (typeof window !== "undefined") {
+      const savedView = localStorage.getItem("productViewMode");
+      if (savedView === "grid" || savedView === "list") viewMode = savedView;
+      const savedSort = localStorage.getItem("productSortBy") as SortOption | null;
+      if (savedSort && ["name", "newest", "popular", "featured"].includes(savedSort)) sortBy = savedSort;
+      const savedSearch = localStorage.getItem("productSearch");
+      if (savedSearch) search = savedSearch;
+    }
+    return {
+      search,
+      sortBy,
+      viewMode,
+      page: 1,
+      limit: 12,
+    };
   });
 
   const deferredSearch = useDeferredValue(filters.search);
@@ -111,6 +124,11 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
 
   const handleFilterChange = (key: string, value: unknown) => {
     setFilters((prev) => ({ ...prev, [key]: value, page: 1 }));
+    if (typeof window !== "undefined") {
+      if (key === "viewMode") localStorage.setItem("productViewMode", value as string);
+      if (key === "sortBy") localStorage.setItem("productSortBy", value as string);
+      if (key === "search") localStorage.setItem("productSearch", value as string);
+    }
   };
 
   const clearFilters = () => {
@@ -119,6 +137,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
       search: "",
       page: 1,
     }));
+    if (typeof window !== "undefined") localStorage.removeItem("productSearch");
   };
 
   const rangeStart = filteredProducts.length === 0 ? 0 : (filters.page - 1) * filters.limit + 1;
@@ -347,7 +366,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                   <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-600 dark:text-blue-400" />
                   <input
                     id="category-product-search"
-                    type="search"
+                    type="text"
                     placeholder="Search products in this category..."
                     value={filters.search}
                     onChange={(e) => handleFilterChange("search", e.target.value)}
