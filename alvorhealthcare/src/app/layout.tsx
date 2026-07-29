@@ -44,6 +44,13 @@ export const metadata: Metadata = {
     description: "A Myanmar healthcare company supporting pharmacies, hospitals, clinics, and healthcare organizations.",
     images: [absoluteSiteUrl("/images/og-image.png")],
   },
+  icons: {
+    icon: [
+      { url: "/icon.png", type: "image/png", sizes: "48x48" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
