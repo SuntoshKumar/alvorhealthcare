@@ -94,7 +94,7 @@ export function AboutHero() {
           </div>
 
           <div
-            className="relative mx-auto w-full max-w-[640px]"
+            className="relative mx-auto hidden w-full max-w-[640px] lg:block"
             aria-hidden="true"
           >
             <div className="absolute -inset-12 rounded-full bg-[radial-gradient(circle,rgba(96,165,250,0.2),rgba(45,212,191,0.08)_42%,transparent_72%)] blur-2xl dark:bg-[radial-gradient(circle,rgba(29,78,216,0.2),rgba(15,118,110,0.08)_44%,transparent_74%)]" />

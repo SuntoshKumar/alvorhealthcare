@@ -2,6 +2,7 @@
 
 import {useEffect, useState} from "react";
 import {motion, useReducedMotion} from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import {
     ChevronRight,
@@ -19,9 +20,10 @@ import {Card, CardContent, CardTitle, CardDescription} from "@/components/ui/Car
 import {Badge} from "@/components/ui/Badge";
 import {LinkButton} from "@/components/ui/Button";
 import {categories} from "@/data";
+import {categoryPresentation} from "@/components/products/category-presentation";
+import {publicAssetPath} from "@/lib/paths";
 import {
     getCategoryColors,
-    getCategoryIcon,
     AnimatedCounter,
     TiltCard,
 } from "@/components/products/category-utils";
@@ -193,6 +195,7 @@ export function CategoriesPageContent() {
                     <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {categories.map((category, index) => {
                             const colors = getCategoryColors(category.name);
+                            const presentation = categoryPresentation[category.slug] ?? categoryPresentation.tablets;
                             const rowIndex = Math.floor(index / 3);
                             const rowDelay = rowIndex * 0.08;
                             return (
@@ -202,30 +205,49 @@ export function CategoriesPageContent() {
                                             <TiltCard>
                                                 <Link href={`/categories/${category.slug}`} className="block group">
                                                     <Card variant="elevated"
-                                                          className={`h-full overflow-hidden border-neutral-100 dark:border-neutral-700/50 ${colors.hoverBorder} transition-all duration-300 hover:shadow-[0_20px_50px_-32px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_50px_-32px_rgba(0,0,0,0.4)]`}>
-                                                        <div className={`relative h-52 bg-gradient-to-br ${colors.gradient} dark:from-neutral-800/80 dark:via-neutral-800/50 dark:to-neutral-900/80 overflow-hidden`}>
-                                                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.8),transparent_55%)] opacity-80 dark:opacity-[0.03]" aria-hidden="true" />
-                                                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                                            <div className="absolute inset-0 flex items-center justify-center">
-                                                                {getCategoryIcon(category.name, colors)}
+                                                          className={`h-full overflow-hidden rounded-[1.5rem] border-neutral-100 bg-white/90 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.45)] transition-all duration-500 ${colors.hoverBorder} hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(30,64,175,0.3)] dark:border-white/10 dark:bg-neutral-900/80 dark:hover:shadow-[0_26px_60px_-34px_rgba(0,0,0,0.45)]`}>
+                                                        <div className={`relative h-56 overflow-hidden bg-gradient-to-br ${presentation.surface}`}>
+                                                            <span className={`absolute -right-12 top-6 h-48 w-48 rounded-full ${presentation.glow} blur-3xl transition-transform duration-700 group-hover:scale-110`} />
+                                                            <span className="absolute -right-8 top-7 h-40 w-40 rounded-full border border-white/75 dark:border-white/10" />
+                                                            <span className="absolute right-4 top-16 h-28 w-28 rounded-full border border-white/65 dark:border-white/[0.08]" />
+
+                                                            <div className="relative flex items-center justify-between p-5">
+                                                                <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${presentation.text}`}>
+                                                                    Category {String(index + 1).padStart(2, "0")}
+                                                                </span>
+                                                                <Badge variant="outline" className={`${presentation.text} border-current/20 bg-white/55 dark:bg-neutral-950/25`}>
+                                                                    {category.productCount} products
+                                                                </Badge>
                                                             </div>
-                                                            <Badge variant="primary" className="absolute top-4 right-4 shadow-sm">
-                                                                {category.productCount} Products
-                                                            </Badge>
+
+                                                            <div className={`absolute right-8 top-20 flex h-28 w-28 items-center justify-center rounded-[1.8rem] bg-gradient-to-br ${presentation.accent} shadow-[0_22px_40px_-20px_rgba(15,23,42,0.6)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06]`}>
+                                                                <Image
+                                                                    src={publicAssetPath(category.image)}
+                                                                    alt=""
+                                                                    width={72}
+                                                                    height={72}
+                                                                    className="h-16 w-16 object-contain brightness-0 invert"
+                                                                />
+                                                            </div>
+
                                                             {category.featured && (
-                                                                <Badge variant="secondary" className="absolute top-4 left-4 shadow-sm">
-                                                                    <Star className="w-3 h-3 mr-1 fill-current"/>
+                                                                <Badge variant="secondary" className="absolute bottom-5 left-5 bg-white/65 shadow-sm backdrop-blur dark:bg-neutral-950/35">
+                                                                    <Star className="mr-1 h-3 w-3 fill-current"/>
                                                                     Featured
                                                                 </Badge>
                                                             )}
                                                         </div>
                                                         <CardContent className="p-6">
-                                                            <CardTitle
-                                                                className="text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                                                                {category.name}
-                                                            </CardTitle>
-                                                            <CardDescription
-                                                                className="mt-2 line-clamp-2">{category.description}</CardDescription>
+                                                            <div className="flex items-start justify-between gap-4">
+                                                                <div>
+                                                                    <CardTitle
+                                                                        className="text-neutral-900 transition-colors duration-300 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
+                                                                        {category.name}
+                                                                    </CardTitle>
+                                                                    <CardDescription className="mt-2 line-clamp-2">{category.description}</CardDescription>
+                                                                </div>
+                                                                <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-neutral-300 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-blue-600 dark:text-neutral-600 dark:group-hover:text-blue-400"/>
+                                                            </div>
 
                                                             {category.subCategories && category.subCategories.length > 0 && (
                                                                 <div className="mt-4 flex flex-wrap gap-1.5">
@@ -244,7 +266,7 @@ export function CategoriesPageContent() {
 
                                                             <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400">
                                                                 <span className="group-hover:underline">View Products</span>
-                                                                <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5"/>
+                                                                <span className="h-px w-5 bg-current transition-all duration-300 group-hover:w-8"/>
                                                             </div>
                                                         </CardContent>
                                                     </Card>

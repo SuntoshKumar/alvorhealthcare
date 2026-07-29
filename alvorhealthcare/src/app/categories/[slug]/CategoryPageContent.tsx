@@ -1,6 +1,7 @@
 "use client";
 
 import { useDeferredValue, useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from "framer-motion";
 import {
@@ -24,9 +25,9 @@ import { Button, LinkButton } from "@/components/ui/Button";
 import { Pagination } from "@/components/ui/Navigation";
 import { ProductCard } from "@/components/products/ProductCard";
 import { sortProducts, paginateProducts } from "@/data";
+import { categoryPresentation } from "@/components/products/category-presentation";
 import { publicAssetPath } from "@/lib/paths";
 import {
-  categoryIcons,
   getCategoryColors,
   AnimatedCounter,
   TiltCard,
@@ -78,6 +79,7 @@ function HeroDecor({ reducedMotion }: { reducedMotion: boolean }) {
 export function CategoryPageContent({ category, products: categoryProducts }: Props) {
   const prefersReducedMotion = useReducedMotion();
   const colors = getCategoryColors(category.name);
+  const presentation = categoryPresentation[category.slug] ?? categoryPresentation.tablets;
   const transitionDuration = prefersReducedMotion ? 0.01 : 0.35;
 
   const [filters, setFilters] = useState({
@@ -169,20 +171,22 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
               animate="visible"
               transition={{ duration: prefersReducedMotion ? 0.01 : 0.6 }}
             >
-              <div className="relative w-32 h-32 mx-auto mb-6 rounded-[2rem] bg-gradient-to-br from-white via-blue-50 to-blue-100 dark:from-neutral-900 dark:via-blue-950/40 dark:to-blue-900/60 shadow-xl border border-blue-100/70 dark:border-blue-800/50 flex items-center justify-center p-5 overflow-hidden group">
-                <div className="absolute inset-0 rounded-[2rem] bg-blue-500/10 dark:bg-blue-400/10 blur-xl" />
-                <div
-                  className="relative z-10 w-20 h-20 bg-blue-600 dark:bg-blue-400 transition-all duration-500 group-hover:scale-110 drop-shadow-xl"
-                  style={{
-                    maskImage: `url(${publicAssetPath(categoryIcons[category.name] || "")})`,
-                    WebkitMaskImage: `url(${publicAssetPath(categoryIcons[category.name] || "")})`,
-                    maskRepeat: "no-repeat",
-                    WebkitMaskRepeat: "no-repeat",
-                    maskPosition: "center",
-                    WebkitMaskPosition: "center",
-                    maskSize: "contain",
-                    WebkitMaskSize: "contain",
-                  }}
+              <div className="group relative mx-auto mb-8 flex h-44 w-44 items-center justify-center rounded-full border border-white/25 bg-white/[0.07] p-2 shadow-[0_28px_70px_-38px_rgba(15,23,42,0.75)] backdrop-blur-[2px] sm:h-48 sm:w-48 sm:p-3">
+                <div className={`absolute -inset-5 rounded-full ${presentation.glow} blur-2xl transition-transform duration-700 group-hover:scale-110`} />
+                <div className="absolute inset-3 rounded-full border border-white/15 dark:border-white/[0.08]" aria-hidden="true" />
+                <div className="absolute inset-2 rounded-full border border-white/70 dark:border-white/10">
+                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_0_6px_rgba(59,130,246,0.14)] dark:bg-blue-300" />
+                </div>
+                <div className="absolute inset-[15%] rounded-full border border-dashed border-white/60 dark:border-blue-200/20">
+                  <span className="absolute bottom-[8%] right-0 h-1.5 w-1.5 translate-x-1/2 rounded-full bg-teal-300 shadow-[0_0_0_5px_rgba(45,212,191,0.12)]" />
+                </div>
+                <Image
+                  src={publicAssetPath(category.image)}
+                  alt=""
+                  width={72}
+                  height={72}
+                  priority
+                  className="relative z-10 h-16 w-16 object-contain opacity-80 brightness-0 drop-shadow-[0_16px_20px_rgba(15,23,42,0.3)] transition-transform duration-500 group-hover:scale-110 dark:invert sm:h-[4.5rem] sm:w-[4.5rem]"
                 />
               </div>
               <h1 className="display-xl lg:display-2xl font-bold text-neutral-900 dark:text-white leading-tight mb-6">
@@ -256,31 +260,43 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                         <Link href={`/products?category=${category.slug}&subcategory=${sub.slug}`} className="block group h-full">
                           <Card
                             variant="elevated"
-                            className={`h-full flex flex-col overflow-hidden border-neutral-100 dark:border-neutral-700/50 ${colors.hoverBorder} transition-all duration-300 hover:shadow-[0_20px_50px_-32px_rgba(0,0,0,0.15)] dark:hover:shadow-[0_20px_50px_-32px_rgba(0,0,0,0.4)]`}
+                            className={`group relative h-full flex flex-col overflow-hidden rounded-[1.5rem] border-neutral-100 bg-white/90 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.42)] ${colors.hoverBorder} transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(30,64,175,0.3)] dark:border-white/10 dark:bg-neutral-900/80 dark:hover:shadow-[0_26px_60px_-34px_rgba(0,0,0,0.45)]`}
                           >
-                            <div className={`relative h-36 bg-gradient-to-br ${colors.gradient} dark:from-neutral-800/80 dark:via-neutral-800/50 dark:to-neutral-900/80 overflow-hidden`}>
-                              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.8),transparent_55%)] opacity-80 dark:opacity-[0.03]" aria-hidden="true" />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                              <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="relative">
-                                  <div className={`w-14 h-14 ${colors.iconBg} ${colors.iconColor} drop-shadow-lg rounded-2xl flex items-center justify-center`}>
-                                    <Package className="w-7 h-7" />
-                                  </div>
-                                  <div className={`absolute inset-0 w-14 h-14 ${colors.iconBg} opacity-20 blur-xl`} aria-hidden="true" />
-                                </div>
+                            <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${presentation.surface}`}>
+                              <span className={`absolute -right-10 top-2 h-36 w-36 rounded-full ${presentation.glow} blur-3xl transition-transform duration-700 group-hover:scale-110`} />
+                              <span className="absolute -right-8 top-4 h-32 w-32 rounded-full border border-white/75 dark:border-white/10" />
+                              <span className="absolute right-3 top-14 h-24 w-24 rounded-full border border-white/65 dark:border-white/[0.08]" />
+
+                              <div className="relative flex items-center justify-between p-4">
+                                <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${presentation.text}`}>
+                                  Subcategory {String(index + 1).padStart(2, "0")}
+                                </span>
+                                <Badge variant="outline" className={`${presentation.text} border-current/20 bg-white/55 dark:bg-neutral-950/25`}>
+                                  {sub.productCount} products
+                                </Badge>
                               </div>
-                              <Badge variant="primary" className="absolute top-3 right-3 shadow-sm">
-                                {sub.productCount} Products
-                              </Badge>
+
+                              <div className={`absolute right-6 top-16 flex h-20 w-20 items-center justify-center rounded-[1.35rem] bg-gradient-to-br ${presentation.accent} shadow-[0_18px_35px_-18px_rgba(15,23,42,0.55)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06]`}>
+                                <Image
+                                  src={publicAssetPath(category.image)}
+                                  alt=""
+                                  width={48}
+                                  height={48}
+                                  className="h-11 w-11 object-contain brightness-0 invert"
+                                />
+                              </div>
                             </div>
                             <CardContent className="p-5 flex flex-col flex-1">
-                              <CardTitle className="text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                                {sub.name}
-                              </CardTitle>
+                              <div className="flex items-start justify-between gap-3">
+                                <CardTitle className="text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                  {sub.name}
+                                </CardTitle>
+                                <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-neutral-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-600 dark:text-neutral-600 dark:group-hover:text-blue-400" />
+                              </div>
                               <CardDescription className="mt-2 line-clamp-2">{sub.description}</CardDescription>
                               <div className="mt-auto pt-4 flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400">
                                 <span className="group-hover:underline">View Products</span>
-                                <ChevronRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                                <span className="h-px w-5 bg-current transition-all duration-300 group-hover:w-8" />
                               </div>
                             </CardContent>
                           </Card>
