@@ -5,7 +5,6 @@ import Image from "next/image";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { categories, companyInfo } from "@/data";
-import { categoryPresentation } from "@/components/products/category-presentation";
 import { publicAssetPath } from "@/lib/paths";
 
 export function CategoriesSection() {
@@ -46,13 +45,13 @@ export function CategoriesSection() {
           viewport={{ once: true, amount: 0.2 }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.07 } } }}
         >
-          {categories.map((cat, index) => {
-            const presentation = categoryPresentation[cat.slug] ?? categoryPresentation.tablets;
+          {categories.slice(0, 5).map((cat, index) => {
+            const { colors } = cat;
 
             return (
               <motion.div
                 key={cat.slug}
-                className={index === categories.length - 1 ? "col-span-2 xl:col-span-1" : ""}
+                className=""
                 variants={{
                   hidden: { opacity: 0, y: 24, scale: 0.97 },
                   visible: {
@@ -66,23 +65,23 @@ export function CategoriesSection() {
                 <Link
                   href={`/categories/${cat.slug}`}
                   aria-label={`Explore ${cat.name}, ${cat.productCount} products`}
-                  className={`group relative block h-[13.5rem] overflow-hidden rounded-[1.5rem] border border-white/90 bg-gradient-to-br ${presentation.surface} p-4 shadow-[0_18px_45px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1.5 hover:border-blue-200 hover:shadow-[0_28px_60px_-36px_rgba(30,64,175,0.45)] dark:border-white/10 dark:hover:border-blue-700/50 sm:h-[15rem] sm:p-5 xl:h-[17rem] xl:p-6`}
+                  className={`group relative block h-[13.5rem] overflow-hidden rounded-[1.5rem] border border-white/90 bg-gradient-to-br ${colors.surface} p-4 shadow-[0_18px_45px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1.5 hover:border-blue-200 hover:shadow-[0_28px_60px_-36px_rgba(30,64,175,0.45)] dark:border-white/10 dark:hover:border-blue-700/50 sm:h-[15rem] sm:p-5 xl:h-[17rem] xl:p-6`}
                 >
                   <span
-                    className={`absolute -right-10 top-8 h-36 w-36 rounded-full ${presentation.glow} blur-2xl transition-transform duration-700 group-hover:scale-125 sm:h-44 sm:w-44`}
+                    className={`absolute -right-10 top-8 h-36 w-36 rounded-full ${colors.glow} blur-2xl transition-transform duration-700 group-hover:scale-125 sm:h-44 sm:w-44`}
                   />
                   <span className="absolute -right-8 top-7 h-32 w-32 rounded-full border border-white/70 dark:border-white/10 sm:h-40 sm:w-40" />
                   <span className="absolute -right-1 top-16 h-24 w-24 rounded-full border border-white/60 dark:border-white/[0.08] sm:h-28 sm:w-28" />
 
                   <div className="relative flex items-center justify-between">
-                    <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${presentation.text}`}>
+                    <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${colors.text}`}>
                       Category {String(index + 1).padStart(2, "0")}
                     </span>
                     <ArrowUpRight className="h-4 w-4 text-neutral-400 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue-600 dark:group-hover:text-blue-300" />
                   </div>
 
                   <div
-                    className={`absolute right-4 top-14 flex h-20 w-20 items-center justify-center rounded-[1.4rem] bg-gradient-to-br ${presentation.accent} shadow-[0_18px_35px_-18px_rgba(15,23,42,0.55)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06] sm:right-6 sm:h-24 sm:w-24 xl:right-5 xl:top-16`}
+                    className={`absolute right-4 top-14 flex h-20 w-20 items-center justify-center rounded-[1.4rem] bg-gradient-to-br ${colors.accent} shadow-[0_18px_35px_-18px_rgba(15,23,42,0.55)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06] sm:right-6 sm:h-24 sm:w-24 xl:right-5 xl:top-16`}
                   >
                     <Image
                       src={publicAssetPath(cat.image)}
@@ -94,7 +93,7 @@ export function CategoriesSection() {
                   </div>
 
                   <div className="absolute inset-x-4 bottom-4 sm:inset-x-5 sm:bottom-5 xl:inset-x-6 xl:bottom-6">
-                    <p className={`text-[10px] font-bold uppercase tracking-[0.16em] ${presentation.text}`}>
+                    <p className={`text-[10px] font-bold uppercase tracking-[0.16em] ${colors.text}`}>
                       {cat.productCount} products
                     </p>
                     <h3 className="mt-1 font-display text-xl font-bold tracking-[-0.035em] text-neutral-950 dark:text-white sm:text-2xl">

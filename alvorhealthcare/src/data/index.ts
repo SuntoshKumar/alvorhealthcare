@@ -34,7 +34,7 @@ export const categories: Category[] = categoriesData.map((category) => ({
       (product) => product.category === category.name && product.subCategory === subCategory.name
     ).length,
   })),
-}));
+})) as Category[];
 export const companyInfo: CompanyInfo = {
   ...(companyData as Omit<CompanyInfo, "productsCount">),
   productsCount: products.length,

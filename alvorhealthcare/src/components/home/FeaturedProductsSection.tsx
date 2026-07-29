@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Tablet, Pill, Droplets, Syringe, Shield, ChevronRight, Download } from "lucide-react";
+import { Tablet, Pill, Droplets, Syringe, ChevronRight, Download } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
@@ -76,22 +76,21 @@ const featuredProducts = [
   },
 ];
 
-const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+const categoryIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Tablets: Tablet,
   Capsules: Pill,
   Syrups: Droplets,
   Injections: Syringe,
   Supplements: Pill,
-  "Medical Supplies": Shield,
 };
 
 const getCategoryIcon = (category: string) => {
-  const Icon = categoryIcons[category] || Tablet;
+  const Icon = categoryIconMap[category] || Tablet;
   return <Icon className="w-16 h-16 text-primary-600/50 group-hover:scale-110 transition-transform duration-300" aria-hidden="true" />;
 };
 
 const getCategoryIconSmall = (category: string) => {
-  const Icon = categoryIcons[category] || Tablet;
+  const Icon = categoryIconMap[category] || Tablet;
   return <Icon className="w-4 h-4 text-primary-600" aria-hidden="true" />;
 };
 

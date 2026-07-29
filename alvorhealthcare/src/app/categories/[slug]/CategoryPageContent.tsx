@@ -25,10 +25,8 @@ import { Button, LinkButton } from "@/components/ui/Button";
 import { Pagination } from "@/components/ui/Navigation";
 import { ProductCard } from "@/components/products/ProductCard";
 import { sortProducts, paginateProducts } from "@/data";
-import { categoryPresentation } from "@/components/products/category-presentation";
 import { publicAssetPath } from "@/lib/paths";
 import {
-  getCategoryColors,
   AnimatedCounter,
   TiltCard,
 } from "@/components/products/category-utils";
@@ -78,8 +76,7 @@ function HeroDecor({ reducedMotion }: { reducedMotion: boolean }) {
 
 export function CategoryPageContent({ category, products: categoryProducts }: Props) {
   const prefersReducedMotion = useReducedMotion();
-  const colors = getCategoryColors(category.name);
-  const presentation = categoryPresentation[category.slug] ?? categoryPresentation.tablets;
+  const { colors } = category;
   const transitionDuration = prefersReducedMotion ? 0.01 : 0.35;
 
   const [filters, setFilters] = useState({
@@ -172,7 +169,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
               transition={{ duration: prefersReducedMotion ? 0.01 : 0.6 }}
             >
               <div className="group relative mx-auto mb-8 flex h-44 w-44 items-center justify-center rounded-full border border-white/25 bg-white/[0.07] p-2 shadow-[0_28px_70px_-38px_rgba(15,23,42,0.75)] backdrop-blur-[2px] sm:h-48 sm:w-48 sm:p-3">
-                <div className={`absolute -inset-5 rounded-full ${presentation.glow} blur-2xl transition-transform duration-700 group-hover:scale-110`} />
+                <div className={`absolute -inset-5 rounded-full ${colors.glow} blur-2xl transition-transform duration-700 group-hover:scale-110`} />
                 <div className="absolute inset-3 rounded-full border border-white/15 dark:border-white/[0.08]" aria-hidden="true" />
                 <div className="absolute inset-2 rounded-full border border-white/70 dark:border-white/10">
                   <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_0_6px_rgba(59,130,246,0.14)] dark:bg-blue-300" />
@@ -262,21 +259,28 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                             variant="elevated"
                             className={`group relative h-full flex flex-col overflow-hidden rounded-[1.5rem] border-neutral-100 bg-white/90 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.42)] ${colors.hoverBorder} transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(30,64,175,0.3)] dark:border-white/10 dark:bg-neutral-900/80 dark:hover:shadow-[0_26px_60px_-34px_rgba(0,0,0,0.45)]`}
                           >
-                            <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${presentation.surface}`}>
-                              <span className={`absolute -right-10 top-2 h-36 w-36 rounded-full ${presentation.glow} blur-3xl transition-transform duration-700 group-hover:scale-110`} />
+                            <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${colors.surface}`}>
+                              <span className={`absolute -right-10 top-2 h-36 w-36 rounded-full ${colors.glow} blur-3xl transition-transform duration-700 group-hover:scale-110`} />
                               <span className="absolute -right-8 top-4 h-32 w-32 rounded-full border border-white/75 dark:border-white/10" />
                               <span className="absolute right-3 top-14 h-24 w-24 rounded-full border border-white/65 dark:border-white/[0.08]" />
 
                               <div className="relative flex items-center justify-between p-4">
-                                <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${presentation.text}`}>
+                                <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${colors.text}`}>
                                   Subcategory {String(index + 1).padStart(2, "0")}
                                 </span>
-                                <Badge variant="outline" className={`${presentation.text} border-current/20 bg-white/55 dark:bg-neutral-950/25`}>
+                                <Badge
+                                  variant="outline"
+                                  className={
+                                    sub.productCount === 0
+                                      ? "text-red-600 border-red-200 bg-red-50/55 dark:text-red-400 dark:border-red-800/40 dark:bg-red-950/25"
+                                      : `${colors.text} border-current/20 bg-white/55 dark:bg-neutral-950/25`
+                                  }
+                                >
                                   {sub.productCount} products
                                 </Badge>
                               </div>
 
-                              <div className={`absolute right-6 top-16 flex h-20 w-20 items-center justify-center rounded-[1.35rem] bg-gradient-to-br ${presentation.accent} shadow-[0_18px_35px_-18px_rgba(15,23,42,0.55)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06]`}>
+                              <div className={`absolute right-6 top-16 flex h-20 w-20 items-center justify-center rounded-[1.35rem] bg-gradient-to-br ${colors.accent} shadow-[0_18px_35px_-18px_rgba(15,23,42,0.55)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06]`}>
                                 <Image
                                   src={publicAssetPath(category.image)}
                                   alt=""

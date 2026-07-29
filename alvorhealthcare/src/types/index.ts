@@ -27,6 +27,20 @@ export interface Product {
   updatedAt: string;
 }
 
+export interface CategoryColors {
+  accent: string;
+  glow: string;
+  surface: string;
+  text: string;
+  gradient: string;
+  iconBg: string;
+  iconColor: string;
+  hoverBorder: string;
+  subHoverBg: string;
+  subHoverBorder: string;
+  subHoverText: string;
+}
+
 export interface Category {
   id: string;
   slug: string;
@@ -34,6 +48,7 @@ export interface Category {
   description: string;
   icon: string;
   image: string;
+  colors: CategoryColors;
   productCount: number;
   featured: boolean;
   order: number;

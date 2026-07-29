@@ -20,10 +20,8 @@ import {Card, CardContent, CardTitle, CardDescription} from "@/components/ui/Car
 import {Badge} from "@/components/ui/Badge";
 import {LinkButton} from "@/components/ui/Button";
 import {categories} from "@/data";
-import {categoryPresentation} from "@/components/products/category-presentation";
 import {publicAssetPath} from "@/lib/paths";
 import {
-    getCategoryColors,
     AnimatedCounter,
     TiltCard,
 } from "@/components/products/category-utils";
@@ -194,8 +192,7 @@ export function CategoriesPageContent() {
 
                     <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {categories.map((category, index) => {
-                            const colors = getCategoryColors(category.name);
-                            const presentation = categoryPresentation[category.slug] ?? categoryPresentation.tablets;
+                            const { colors } = category;
                             const rowIndex = Math.floor(index / 3);
                             const rowDelay = rowIndex * 0.08;
                             return (
@@ -206,21 +203,21 @@ export function CategoriesPageContent() {
                                                 <Link href={`/categories/${category.slug}`} className="block group">
                                                     <Card variant="elevated"
                                                           className={`h-full overflow-hidden rounded-[1.5rem] border-neutral-100 bg-white/90 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.45)] transition-all duration-500 ${colors.hoverBorder} hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(30,64,175,0.3)] dark:border-white/10 dark:bg-neutral-900/80 dark:hover:shadow-[0_26px_60px_-34px_rgba(0,0,0,0.45)]`}>
-                                                        <div className={`relative h-56 overflow-hidden bg-gradient-to-br ${presentation.surface}`}>
-                                                            <span className={`absolute -right-12 top-6 h-48 w-48 rounded-full ${presentation.glow} blur-3xl transition-transform duration-700 group-hover:scale-110`} />
+                                                        <div className={`relative h-56 overflow-hidden bg-gradient-to-br ${colors.surface}`}>
+                                                            <span className={`absolute -right-12 top-6 h-48 w-48 rounded-full ${colors.glow} blur-3xl transition-transform duration-700 group-hover:scale-110`} />
                                                             <span className="absolute -right-8 top-7 h-40 w-40 rounded-full border border-white/75 dark:border-white/10" />
                                                             <span className="absolute right-4 top-16 h-28 w-28 rounded-full border border-white/65 dark:border-white/[0.08]" />
 
                                                             <div className="relative flex items-center justify-between p-5">
-                                                                <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${presentation.text}`}>
+                                                                <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${colors.text}`}>
                                                                     Category {String(index + 1).padStart(2, "0")}
                                                                 </span>
-                                                                <Badge variant="outline" className={`${presentation.text} border-current/20 bg-white/55 dark:bg-neutral-950/25`}>
+                                                                <Badge variant="outline" className={`${colors.text} border-current/20 bg-white/55 dark:bg-neutral-950/25`}>
                                                                     {category.productCount} products
                                                                 </Badge>
                                                             </div>
 
-                                                            <div className={`absolute right-8 top-20 flex h-28 w-28 items-center justify-center rounded-[1.8rem] bg-gradient-to-br ${presentation.accent} shadow-[0_22px_40px_-20px_rgba(15,23,42,0.6)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06]`}>
+                                                            <div className={`absolute right-8 top-20 flex h-28 w-28 items-center justify-center rounded-[1.8rem] bg-gradient-to-br ${colors.accent} shadow-[0_22px_40px_-20px_rgba(15,23,42,0.6)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06]`}>
                                                                 <Image
                                                                     src={publicAssetPath(category.image)}
                                                                     alt=""
@@ -250,16 +247,16 @@ export function CategoriesPageContent() {
                                                             </div>
 
                                                             {category.subCategories && category.subCategories.length > 0 && (
-                                                                <div className="mt-4 flex flex-wrap gap-1.5">
+                                                                <div className="mt-4 flex gap-1.5 overflow-x-auto scrollbar-none">
                                                                     {category.subCategories.slice(0, 4).map((sub) => (
                                                                         <Badge key={sub.id} variant="outline" size="sm"
-                                                                               className={`${colors.subHoverBg} ${colors.subHoverText} ${colors.subHoverBorder} transition-colors duration-300`}>
+                                                                               className={`shrink-0 ${colors.subHoverBg} ${colors.subHoverText} ${colors.subHoverBorder} transition-colors duration-300`}>
                                                                             {sub.name} ({sub.productCount})
                                                                         </Badge>
                                                                     ))}
                                                                     {category.subCategories.length > 4 && (
                                                                         <Badge variant="outline"
-                                                                               size="sm">+{category.subCategories.length - 4} more</Badge>
+                                                                               size="sm" className="shrink-0">+{category.subCategories.length - 4} more</Badge>
                                                                     )}
                                                                 </div>
                                                             )}
