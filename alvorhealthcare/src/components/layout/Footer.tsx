@@ -54,7 +54,10 @@ export function Footer() {
               Categories
             </h3>
             <ul className="space-y-3">
-              {categories.map((category) => (
+              {categories
+                .sort((a, b) => a.order - b.order)
+                .slice(0, 6)
+                .map((category) => (
                 <li key={category.id}>
                   <Link
                     href={`/categories/${category.slug}`}
@@ -69,7 +72,7 @@ export function Footer() {
                   href="/categories"
                   className="text-sm text-neutral-400 hover:text-blue-400 transition-colors"
                 >
-                  View All Categories
+                  +{categories.length - 6} more
                 </Link>
               </li>
             </ul>
