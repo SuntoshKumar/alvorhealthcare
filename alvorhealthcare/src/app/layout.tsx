@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { TopBarLoader } from "@/components/ui/TopBarLoader";
 import { OrganizationStructuredData } from "@/components/ui/StructuredData";
+import { publicAssetPath } from "@/lib/paths";
 import { absoluteSiteUrl, siteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -48,13 +49,17 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon.png", type: "image/png", sizes: "48x48" },
-      { url: "/icon-16.png", type: "image/png", sizes: "16x16" },
-      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
-      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
-      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+      { url: publicAssetPath("/icon-32.png?v=20260731"), type: "image/png", sizes: "32x32" },
+      { url: publicAssetPath("/icon.png?v=20260731"), type: "image/png", sizes: "48x48" },
+      { url: publicAssetPath("/icon-192.png?v=20260731"), type: "image/png", sizes: "192x192" },
+      { url: publicAssetPath("/icon-512.png?v=20260731"), type: "image/png", sizes: "512x512" },
     ],
-    apple: "/apple-icon.png",
+    shortcut: [
+      { url: publicAssetPath("/icon-32.png?v=20260731"), type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: publicAssetPath("/apple-icon.png?v=20260731"), type: "image/png", sizes: "180x180" },
+    ],
   },
 };
 
