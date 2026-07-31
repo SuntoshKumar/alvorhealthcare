@@ -732,13 +732,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .top-bar-loader {
   position: fixed;
-  top: 0;
+  top: 4rem;
   left: 0;
   right: 0;
   z-index: 60;
-  height: 0.05rem;
+  height: 0.125rem;
   overflow: hidden;
   pointer-events: none;
+}
+
+@media (min-width: 1280px) {
+  .top-bar-loader {
+    top: 4.5rem;
+  }
 }
 
 .top-bar-loader__bar {
