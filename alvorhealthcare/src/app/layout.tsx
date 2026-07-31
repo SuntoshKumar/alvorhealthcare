@@ -49,13 +49,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: publicAssetPath("/favicon-20260731.ico"), type: "image/x-icon", sizes: "32x32" },
       { url: publicAssetPath("/icon-32.png?v=20260731"), type: "image/png", sizes: "32x32" },
       { url: publicAssetPath("/icon.png?v=20260731"), type: "image/png", sizes: "48x48" },
       { url: publicAssetPath("/icon-192.png?v=20260731"), type: "image/png", sizes: "192x192" },
       { url: publicAssetPath("/icon-512.png?v=20260731"), type: "image/png", sizes: "512x512" },
     ],
     shortcut: [
-      { url: publicAssetPath("/icon-32.png?v=20260731"), type: "image/png", sizes: "32x32" },
+      { url: publicAssetPath("/favicon-20260731.ico"), type: "image/x-icon", sizes: "32x32" },
     ],
     apple: [
       { url: publicAssetPath("/apple-icon.png?v=20260731"), type: "image/png", sizes: "180x180" },
