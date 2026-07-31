@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import { Providers } from "./providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { TopBarLoader } from "@/components/ui/TopBarLoader";
 import { OrganizationStructuredData } from "@/components/ui/StructuredData";
 import { absoluteSiteUrl, siteUrl } from "@/lib/seo";
 import "./globals.css";
@@ -75,6 +77,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen flex flex-col bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 antialiased">
         <Providers>
+          <Suspense fallback={null}>
+            <TopBarLoader />
+          </Suspense>
           <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 btn-primary focus-ring">
             Skip to main content
           </a>
