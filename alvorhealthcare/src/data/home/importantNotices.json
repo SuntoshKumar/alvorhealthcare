@@ -1,0 +1,37 @@
+{
+  "_note": "Add one object to notices for each homepage message. Only one message is displayed at a time; visitors can swipe or use the arrow controls to see the others. carousel.autoPlay enables automatic swapping and carousel.intervalSeconds sets the delay from 3 to 30 seconds. enabled controls whether a message can appear. Priority controls order and color: low is green, medium is blue, important is amber, and critical is red. startDate and endDate are optional YYYY-MM-DD dates evaluated in Myanmar time. Keep every id unique and change it when publishing a replacement notice so previous dismissals do not hide the new message.",
+  "carousel": {
+    "autoPlay": true,
+    "intervalSeconds": 7
+  },
+  "notices": [
+    {
+      "enabled": true,
+      "id": "distribution-enquiries-critical-2026-08",
+      "priority": "critical",
+      "title": "Product availability",
+      "message": "For current product availability and distribution enquiries, please contact our team directly.",
+      "cta": {
+        "label": "Contact our team",
+        "href": "/contact"
+      },
+      "startDate": "2026-08-01",
+      "endDate": "",
+      "dismissible": true
+    },
+    {
+      "enabled": true,
+      "id": "distribution-enquiries-medium-2026-08",
+      "priority": "medium",
+      "title": "Product availability",
+      "message": "For current product availability and distribution enquiries, please contact our team directly.",
+      "cta": {
+        "label": "Contact our team",
+        "href": "/contact"
+      },
+      "startDate": "2026-08-01",
+      "endDate": "",
+      "dismissible": true
+    }
+  ]
+}

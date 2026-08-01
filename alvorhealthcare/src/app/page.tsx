@@ -9,10 +9,12 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { CTASection } from "@/components/home/CTASection";
 import { DistributionSection } from "@/components/home/DistributionSection";
 import { DistributionQualitySection } from "@/components/home/DistributionQualitySection";
+import { ImportantNotices } from "@/components/home/ImportantNotice";
 
 export default function HomePage() {
   return (
     <>
+      <ImportantNotices />
       <HeroSection />
       <StatisticsSection />
       <CategoriesSection />

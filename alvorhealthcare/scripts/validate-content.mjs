@@ -21,6 +21,7 @@ const news = readJson("news", "articles.json");
 const site = readJson("site.json");
 const home = {
   hero: readJson("home", "hero.json"),
+  importantNotices: readJson("home", "importantNotices.json"),
   whyChoose: readJson("home", "whyChoose.json"),
   partners: readJson("home", "partners.json"),
   news: readJson("home", "news.json"),
@@ -124,6 +125,42 @@ requireLinks(site.footer?.legalLinks, "site.footer.legalLinks");
 requireText(home.hero?.titlePrefix, "home.hero.titlePrefix");
 requireText(home.hero?.titleHighlight, "home.hero.titleHighlight");
 requireText(home.hero?.description, "home.hero.description");
+requireText(home.importantNotices?._note, "home.importantNotices._note");
+if (typeof home.importantNotices?.carousel?.autoPlay !== "boolean") {
+  errors.push("home.importantNotices.carousel.autoPlay must be a boolean");
+}
+if (
+  !Number.isInteger(home.importantNotices?.carousel?.intervalSeconds) ||
+  home.importantNotices.carousel.intervalSeconds < 3 ||
+  home.importantNotices.carousel.intervalSeconds > 30
+) {
+  errors.push("home.importantNotices.carousel.intervalSeconds must be an integer from 3 to 30");
+}
+if (!Array.isArray(home.importantNotices?.notices)) {
+  errors.push("home.importantNotices.notices must be an array");
+} else {
+  requireUnique(home.importantNotices.notices, "id", "home.importantNotices.notices");
+  home.importantNotices.notices.forEach((notice, index) => {
+    const path = `home.importantNotices.notices[${index}]`;
+    if (typeof notice.enabled !== "boolean") errors.push(`${path}.enabled must be a boolean`);
+    if (typeof notice.dismissible !== "boolean") errors.push(`${path}.dismissible must be a boolean`);
+    requireSlug(notice.id, `${path}.id`);
+    requireText(notice.title, `${path}.title`);
+    requireText(notice.message, `${path}.message`);
+    if (!new Set(["low", "medium", "important", "critical"]).has(notice.priority)) {
+      errors.push(`${path}.priority is invalid: ${notice.priority}`);
+    }
+    if (notice.cta) {
+      requireText(notice.cta.label, `${path}.cta.label`);
+      requireInternalHref(notice.cta.href, `${path}.cta.href`);
+    }
+    if (notice.startDate) requireDate(notice.startDate, `${path}.startDate`);
+    if (notice.endDate) requireDate(notice.endDate, `${path}.endDate`);
+    if (notice.startDate && notice.endDate && notice.startDate > notice.endDate) {
+      errors.push(`${path}.endDate must be on or after startDate`);
+    }
+  });
+}
 requireText(home.whyChoose?.title, "home.whyChoose.title");
 requireText(home.cta?.title, "home.cta.title");
 if (!Array.isArray(home.whyChoose?.items) || home.whyChoose.items.length === 0) {

@@ -101,6 +101,33 @@ collections:
   - name: home
     label: Homepage
     files:
+      - name: home_important_notices
+        label: Important Notices
+        file: alvorhealthcare/src/data/home/importantNotices.json
+        format: json
+        fields:
+          - { label: How It Works, name: _note, widget: hidden }
+          - label: Carousel
+            name: carousel
+            widget: object
+            fields:
+              - { label: Automatic Swapping, name: autoPlay, widget: boolean, default: true }
+              - { label: Delay in Seconds, name: intervalSeconds, widget: number, value_type: int, min: 3, max: 30, default: 7 }
+          - label: Notices
+            name: notices
+            widget: list
+            summary: "{{fields.priority}} - {{fields.title}}"
+            fields:
+              - { label: Enabled, name: enabled, widget: boolean, default: false }
+              - { label: Notice ID, name: id, widget: string, hint: "Use a unique kebab-case ID. Change it when replacing a notice so previous dismissals do not hide the new message." }
+              - { label: Priority, name: priority, widget: select, options: ["low", "medium", "important", "critical"], default: "medium" }
+              - { label: Title, name: title, widget: string }
+              - { label: Message, name: message, widget: text }
+              - { label: Action, name: cta, widget: object, required: false, fields: *link_fields }
+              - { label: Start Date, name: startDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false }
+              - { label: End Date, name: endDate, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", required: false }
+              - { label: Dismissible, name: dismissible, widget: boolean, default: true }
+
       - name: home_hero
         label: Hero
         file: alvorhealthcare/src/data/home/hero.json

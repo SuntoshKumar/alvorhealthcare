@@ -436,6 +436,25 @@ h1, h2, h3, h4, h5, h6 {
     linear-gradient(145deg, #f8fbff 0%, #ffffff 48%, #f1f8ff 100%);
 }
 
+.important-notices + .pharma-hero {
+  min-height: calc(92svh - 5rem) !important;
+  padding-top: 1rem !important;
+}
+
+.important-notices + .pharma-hero > .container {
+  padding-top: 2rem !important;
+}
+
+@media (min-width: 1024px) {
+  .important-notices + .pharma-hero {
+    min-height: calc(92svh - 4rem) !important;
+  }
+
+  .important-notices + .pharma-hero > .container {
+    padding-top: 3rem !important;
+  }
+}
+
 [data-theme="dark"] .pharma-hero {
   background:
     radial-gradient(circle at 72% 38%, rgba(30, 64, 175, 0.26), transparent 31%),
