@@ -43,7 +43,7 @@ export function FeaturedProducts() {
           viewport={{ once: true, amount: 0.1 }}
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
         >
-          {featured.map((product) => (
+          {featured.map((product, index) => (
             <motion.div
               key={product.id}
               variants={{
@@ -51,7 +51,7 @@ export function FeaturedProducts() {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.58, ease: [0.22, 1, 0.36, 1] } },
               }}
             >
-              <ProductCard product={product} />
+              <ProductCard product={product} imageLoading={index === 0 ? "eager" : "lazy"} />
             </motion.div>
           ))}
         </motion.div>

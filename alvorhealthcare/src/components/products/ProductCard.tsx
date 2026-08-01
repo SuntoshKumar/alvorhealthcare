@@ -12,6 +12,7 @@ import type { Product } from "@/types";
 interface ProductCardProps {
   product: Product;
   variant?: "grid" | "list" | "related";
+  imageLoading?: "eager" | "lazy";
 }
 
 function downloadBrochure(product: Product) {
@@ -43,7 +44,7 @@ function ProductBadges({ product }: { product: Product }) {
   );
 }
 
-export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
+export function ProductCard({ product, variant = "grid", imageLoading = "lazy" }: ProductCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   const specifications = [
@@ -63,6 +64,7 @@ export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
             src={publicAssetPath(product.thumbnail)}
             alt={`${product.name} product artwork`}
             fill
+            loading={imageLoading}
             className={`object-contain p-3 transition-all duration-500 ease-out group-hover:-translate-y-1 group-hover:scale-[1.04] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
             sizes="(max-width: 640px) 100vw, 144px"
             onLoad={() => setImageLoaded(true)}
@@ -133,6 +135,7 @@ export function ProductCard({ product, variant = "grid" }: ProductCardProps) {
           src={publicAssetPath(product.thumbnail)}
           alt={`${product.name} product artwork`}
           fill
+          loading={imageLoading}
           className={`object-contain p-4 transition-all duration-500 ease-out group-hover:-translate-y-1.5 group-hover:scale-[1.045] ${imageLoaded ? "opacity-100" : "opacity-0"}`}
           sizes={isRelated ? "(max-width: 640px) 100vw, 25vw" : "(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"}
           onLoad={() => setImageLoaded(true)}
