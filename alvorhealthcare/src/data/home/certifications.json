@@ -1,0 +1,36 @@
+{
+  "title": "Trusted & Certified",
+  "description": "Our commitment to quality is backed by international certifications and regulatory compliance.",
+  "badges": [
+    {
+      "name": "WHO-GMP",
+      "description": "World Health Organization Good Manufacturing Practices",
+      "icon": "ShieldCheck"
+    },
+    {
+      "name": "ISO 9001:2015",
+      "description": "Quality Management System Certification",
+      "icon": "Award"
+    },
+    {
+      "name": "Myanmar FDA",
+      "description": "Registered with Myanmar Food and Drug Administration",
+      "icon": "BadgeCheck"
+    },
+    {
+      "name": "Cold Chain Certified",
+      "description": "Temperature-controlled logistics for sensitive pharmaceuticals",
+      "icon": "Thermometer"
+    },
+    {
+      "name": "GDP Compliant",
+      "description": "Good Distribution Practices for pharmaceutical products",
+      "icon": "Truck"
+    },
+    {
+      "name": "ISO 14001",
+      "description": "Environmental Management System Certification",
+      "icon": "Leaf"
+    }
+  ]
+}
