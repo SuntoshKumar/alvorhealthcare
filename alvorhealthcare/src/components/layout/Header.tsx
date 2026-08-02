@@ -195,41 +195,10 @@ export function Header() {
   const companyActive = companyNavigation.some((item) => isActive(item.href));
 
   return (
-    <>
-      <div className="fixed inset-x-0 top-0 z-50 hidden h-8 bg-primary-600/95 text-white backdrop-blur-sm lg:block">
-        <div className="container flex h-full items-center justify-between text-xs">
-          <div className="flex items-center gap-6">
-            <a
-              href="tel:+959250666200"
-              className="flex items-center gap-1.5 transition-colors hover:text-primary-100"
-              aria-label="Call us at 09-250666200"
-            >
-              <Phone className="h-3 w-3" aria-hidden="true" />
-              <span className="font-medium">09-250666200</span>
-            </a>
-            <span className="h-3 w-px bg-white/30" aria-hidden="true" />
-            <div className="flex items-center gap-1.5">
-              <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
-              <span className="font-semibold">WHO-GMP Certified</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <Mail className="h-3 w-3" aria-hidden="true" />
-            <a
-              href="mailto:alvorhealthcare@gmail.com"
-              className="transition-colors hover:text-primary-100"
-              aria-label="Email us at alvorhealthcare@gmail.com"
-            >
-              alvorhealthcare@gmail.com
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <header
-        className={clsx(
-          "fixed inset-x-0 top-0 z-50 h-16 transition-transform duration-300 xl:h-[4.5rem] lg:top-8",
-          isHidden && "-translate-y-full"
+    <header
+      className={clsx(
+        "fixed inset-x-0 top-0 z-50 h-16 transition-transform duration-300 xl:h-[4.5rem]",
+        isHidden && "-translate-y-full"
       )}
     >
       <div
@@ -614,6 +583,5 @@ export function Header() {
         )}
       </AnimatePresence>
     </header>
-    </>
   );
 }
