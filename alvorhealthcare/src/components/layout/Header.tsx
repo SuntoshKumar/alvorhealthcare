@@ -18,6 +18,8 @@ import {
   Moon,
   Newspaper,
   PackageSearch,
+  Phone,
+  ShieldCheck,
   Sun,
   X,
   type LucideIcon,
@@ -193,10 +195,41 @@ export function Header() {
   const companyActive = companyNavigation.some((item) => isActive(item.href));
 
   return (
-    <header
-      className={clsx(
-        "fixed inset-x-0 top-0 z-50 h-16 transition-transform duration-300 xl:h-[4.5rem]",
-        isHidden && "-translate-y-full"
+    <>
+      <div className="fixed inset-x-0 top-0 z-50 hidden h-8 bg-primary-600/95 text-white backdrop-blur-sm lg:block">
+        <div className="container flex h-full items-center justify-between text-xs">
+          <div className="flex items-center gap-6">
+            <a
+              href="tel:+959250666200"
+              className="flex items-center gap-1.5 transition-colors hover:text-primary-100"
+              aria-label="Call us at 09-250666200"
+            >
+              <Phone className="h-3 w-3" aria-hidden="true" />
+              <span className="font-medium">09-250666200</span>
+            </a>
+            <span className="h-3 w-px bg-white/30" aria-hidden="true" />
+            <div className="flex items-center gap-1.5">
+              <ShieldCheck className="h-3.5 w-3.5" aria-hidden="true" />
+              <span className="font-semibold">WHO-GMP Certified</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <Mail className="h-3 w-3" aria-hidden="true" />
+            <a
+              href="mailto:alvorhealthcare@gmail.com"
+              className="transition-colors hover:text-primary-100"
+              aria-label="Email us at alvorhealthcare@gmail.com"
+            >
+              alvorhealthcare@gmail.com
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <header
+        className={clsx(
+          "fixed inset-x-0 top-0 z-50 h-16 transition-transform duration-300 xl:h-[4.5rem] lg:top-8",
+          isHidden && "-translate-y-full"
       )}
     >
       <div
@@ -229,8 +262,8 @@ export function Header() {
               <span className="block whitespace-nowrap font-heading text-[15px] font-bold leading-none text-neutral-950 dark:text-white xl:text-base">
                 Alvor Healthcare
               </span>
-              <span className="mt-1.5 block whitespace-nowrap text-[9px] font-bold uppercase leading-none tracking-[0.14em] text-primary-600 dark:text-primary-400">
-                Distribution in Myanmar
+              <span className="mt-1.5 block whitespace-nowrap text-[10px] font-semibold uppercase leading-none tracking-[0.14em] text-primary-600 dark:text-primary-400">
+                Licensed Pharmaceutical Distributor
               </span>
             </span>
           </Link>
@@ -297,6 +330,13 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-1.5">
+            <a
+              href="tel:+959250666200"
+              className="flex h-9 w-9 items-center justify-center rounded-lg text-neutral-500 transition-colors duration-200 hover:bg-neutral-100 hover:text-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:text-neutral-400 dark:hover:bg-white/[0.07] dark:hover:text-primary-300"
+              aria-label="Call us at 09-250666200"
+            >
+              <Phone className="h-[17px] w-[17px]" aria-hidden="true" />
+            </a>
             <button
               type="button"
               onClick={toggle}
@@ -373,6 +413,13 @@ export function Header() {
                   <p className="mt-2 max-w-xs text-sm leading-6 text-neutral-500 dark:text-neutral-400">
                     Explore company updates, resources, opportunities, and contact channels.
                   </p>
+                  <div className="mt-4 flex items-center gap-2 rounded-xl border border-primary-200 bg-primary-50 p-3 dark:border-primary-800 dark:bg-primary-900/20">
+                    <ShieldCheck className="h-5 w-5 flex-shrink-0 text-primary-600 dark:text-primary-400" aria-hidden="true" />
+                    <div>
+                      <p className="text-xs font-bold text-primary-700 dark:text-primary-300">WHO-GMP Certified</p>
+                      <p className="text-[10px] text-primary-600 dark:text-primary-400">ISO 9001:2015 | Myanmar FDA Registered</p>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2">
@@ -470,8 +517,8 @@ export function Header() {
                     <span className="block font-heading text-base font-bold leading-none text-neutral-950 dark:text-white">
                       Alvor Healthcare
                     </span>
-                    <span className="mt-1.5 block text-[9px] font-bold uppercase tracking-[0.14em] text-primary-600 dark:text-primary-400">
-                      Distribution in Myanmar
+                    <span className="mt-1.5 block text-[10px] font-semibold uppercase tracking-[0.14em] text-primary-600 dark:text-primary-400">
+                      Licensed Pharmaceutical Distributor
                     </span>
                   </span>
                 </Link>
@@ -567,5 +614,6 @@ export function Header() {
         )}
       </AnimatePresence>
     </header>
+    </>
   );
 }
