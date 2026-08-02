@@ -4,6 +4,7 @@ import whyChoose from "./whyChoose.json";
 import partners from "./partners.json";
 import news from "./news.json";
 import cta from "./cta.json";
+import certifications from "./certifications.json";
 
 const content = {
   hero,
@@ -11,7 +12,8 @@ const content = {
   whyChoose,
   partners,
   news,
-  cta
+  cta,
+  certifications
 };
 
 export default content;

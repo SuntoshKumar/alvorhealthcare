@@ -27,7 +27,7 @@ export function ContactInfo() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">
             Contact Information
           </span>
           <h2 id="contact-info-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">
@@ -67,7 +67,7 @@ export function ContactInfo() {
                     <Icon className="w-5 h-5 text-white" aria-hidden="true" />
                   </div>
 
-                  <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400 mb-1">
                     {info.subtitle}
                   </p>
 
@@ -86,10 +86,10 @@ export function ContactInfo() {
                       href={info.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400 transition-colors hover:text-blue-700 dark:hover:text-blue-300"
+                      className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 dark:text-primary-400 transition-colors hover:text-primary-700 dark:hover:text-primary-300"
                     >
                       {info.action}
-                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-blue-600 group-hover:text-white dark:bg-blue-900/30 dark:group-hover:bg-blue-600">
+                      <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-primary-600 group-hover:text-white dark:bg-primary-900/30 dark:group-hover:bg-primary-600">
                         <ArrowRight className="h-3.5 w-3.5" />
                       </span>
                     </a>

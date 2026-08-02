@@ -16,7 +16,7 @@ export function AboutServices() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="services" className="relative scroll-mt-32 overflow-hidden bg-[#071b2f] py-20 text-white sm:py-24 lg:py-32" aria-labelledby="services-heading">
+    <section id="services" className="relative scroll-mt-32 overflow-hidden bg-neutral-900 py-20 text-white sm:py-24 lg:py-32" aria-labelledby="services-heading">
       <div className="pharma-grid absolute inset-0 opacity-15" aria-hidden="true" />
       <div className="container relative">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end lg:gap-16">
@@ -36,7 +36,7 @@ export function AboutServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, delay: prefersReducedMotion ? 0 : 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-2xl text-base leading-relaxed text-blue-100/75 sm:text-lg"
+            className="max-w-2xl text-base leading-relaxed text-primary-100/75 sm:text-lg"
           >
             {content.description}
           </motion.p>
@@ -54,11 +54,11 @@ export function AboutServices() {
                 transition={{ duration: 0.65, delay: prefersReducedMotion ? 0 : index * 0.07, ease: [0.22, 1, 0.36, 1] }}
                 className="transform-gpu border border-white/10 bg-white/[0.065] p-7 backdrop-blur-xl sm:p-8"
               >
-                <span className="flex h-12 w-12 items-center justify-center bg-gradient-to-br from-blue-500 to-teal-500 text-white">
+                <span className="flex h-12 w-12 items-center justify-center bg-gradient-to-br from-primary-500 to-teal-500 text-white">
                   <Icon className="h-6 w-6" aria-hidden="true" />
                 </span>
                 <h3 className="mt-6 font-display text-2xl font-bold">{service.title}</h3>
-                <p className="mt-3 leading-relaxed text-blue-100/70">{service.description}</p>
+                <p className="mt-3 leading-relaxed text-primary-100/70">{service.description}</p>
               </motion.article>
             );
           })}
@@ -77,7 +77,7 @@ export function AboutServices() {
               <h3 className="font-display text-xl font-bold">{group.title}</h3>
               <ul className="mt-4 space-y-3">
                 {group.items.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-blue-100/70">
+                  <li key={item} className="flex items-start gap-3 text-sm text-primary-100/70">
                     <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-teal-300" aria-hidden="true" />
                     {item}
                   </li>

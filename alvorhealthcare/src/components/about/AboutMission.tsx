@@ -25,7 +25,7 @@ export function AboutMission() {
 
   return (
     <section id="mission" className="relative scroll-mt-32 overflow-hidden bg-white py-20 dark:bg-neutral-950 sm:py-24 lg:py-32" aria-labelledby="mission-heading">
-      <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-blue-200 to-transparent dark:via-blue-900" aria-hidden="true" />
+      <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-primary-200 to-transparent dark:via-primary-900" aria-hidden="true" />
       <div className="container">
         <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
           <motion.div
@@ -35,14 +35,14 @@ export function AboutMission() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="lg:sticky lg:top-28 lg:self-start"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">Our foundation</span>
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Our foundation</span>
             <h2 id="mission-heading" className="mt-4 max-w-lg font-display text-[clamp(2.5rem,5vw,4.6rem)] font-bold leading-[0.96] tracking-[-0.055em] text-neutral-950 dark:text-white">
               Principles that stay constant as we grow.
             </h2>
             <p className="mt-6 max-w-md text-base leading-relaxed text-neutral-600 dark:text-neutral-300 lg:text-lg">
               {content.description} They connect dependable supply with the responsibility of serving healthcare needs.
             </p>
-            <div className="mt-8 h-px w-24 bg-gradient-to-r from-blue-600 to-teal-400" />
+            <div className="mt-8 h-px w-24 bg-gradient-to-r from-primary-600 to-teal-400" />
           </motion.div>
 
           <div>
@@ -55,11 +55,11 @@ export function AboutMission() {
                   viewport={{ once: true, margin: "-80px" }}
                   transition={{ duration: 0.65, delay: prefersReducedMotion ? 0 : index * 0.07, ease: [0.22, 1, 0.36, 1] }}
                   whileHover={prefersReducedMotion ? undefined : { y: -2 }}
-                  className="group relative transform-gpu overflow-hidden rounded-[1.6rem] border border-neutral-200/80 bg-neutral-50/80 p-6 transition-colors hover:border-blue-200 hover:bg-blue-50/55 dark:border-neutral-800 dark:bg-neutral-900/60 dark:hover:border-blue-800/70 dark:hover:bg-blue-950/20 sm:p-8"
+                  className="group relative transform-gpu overflow-hidden rounded-[1.6rem] border border-neutral-200/80 bg-neutral-50/80 p-6 transition-colors hover:border-primary-200 hover:bg-primary-50/55 dark:border-neutral-800 dark:bg-neutral-900/60 dark:hover:border-primary-800/70 dark:hover:bg-primary-950/20 sm:p-8"
                 >
-                  <div className={`absolute inset-y-0 left-0 w-1 ${item.accent === "teal" ? "bg-teal-500" : "bg-blue-600"}`} />
+                  <div className={`absolute inset-y-0 left-0 w-1 ${item.accent === "teal" ? "bg-teal-500" : "bg-primary-600"}`} />
                   <div className="grid gap-5 sm:grid-cols-[auto_1fr] sm:items-start">
-                    <span className={`flex h-13 w-13 items-center justify-center rounded-2xl ${item.accent === "teal" ? "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300" : "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300"}`}>
+                    <span className={`flex h-13 w-13 items-center justify-center rounded-2xl ${item.accent === "teal" ? "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300" : "bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300"}`}>
                       <item.icon className="h-6 w-6" />
                     </span>
                     <div>

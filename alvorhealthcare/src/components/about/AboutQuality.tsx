@@ -78,8 +78,8 @@ export function AboutQuality() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="quality" className="relative scroll-mt-32 overflow-hidden bg-[#f4f8ff] py-20 dark:bg-[#081321] sm:py-24 lg:py-32" aria-labelledby="quality-heading">
-      <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-blue-300/20 blur-3xl dark:bg-blue-800/10" aria-hidden="true" />
+    <section id="quality" className="relative scroll-mt-32 overflow-hidden bg-[var(--bg-secondary)] py-20 dark:bg-[var(--bg-primary)] sm:py-24 lg:py-32" aria-labelledby="quality-heading">
+      <div className="absolute right-0 top-0 h-96 w-96 rounded-full bg-primary-300/20 blur-3xl dark:bg-primary-800/10" aria-hidden="true" />
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 24 }}
@@ -89,7 +89,7 @@ export function AboutQuality() {
         >
           <div className="relative mb-14 grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-16">
             <div>
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400">Distribution quality</span>
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-primary-600 dark:text-primary-400">Distribution quality</span>
               <h2 id="quality-heading" className="mt-4 font-display text-[clamp(2.6rem,5vw,4.7rem)] font-bold leading-[0.96] tracking-[-0.055em] text-neutral-950 dark:text-white">
                 Product stewardship at every handoff.
               </h2>
@@ -113,13 +113,13 @@ export function AboutQuality() {
               <HoverScale>
                 <Card variant="outlined" className="h-full p-6">
                   <div className="flex gap-4">
-                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                       <control.icon className="h-6 w-6" aria-hidden="true" />
                     </div>
                     <div>
                       <div className="mb-2 flex items-center gap-2">
                         <CardTitle className="text-neutral-900 dark:text-white">{control.title}</CardTitle>
-                        <span className="rounded-full bg-blue-50 px-2 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/20 dark:text-blue-300">{control.badge}</span>
+                        <span className="rounded-full bg-primary-50 px-2 py-0.5 text-xs font-medium text-primary-700 dark:bg-primary-900/20 dark:text-primary-300">{control.badge}</span>
                       </div>
                       <CardDescription>{control.description}</CardDescription>
                     </div>
@@ -166,12 +166,12 @@ export function AboutQuality() {
           viewport={{ once: true, margin: "-70px" }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-700 via-blue-600 to-teal-700 p-8 text-white shadow-[0_32px_90px_-45px_rgba(30,64,175,0.9)] lg:p-12">
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary-700 via-primary-600 to-teal-700 p-8 text-white shadow-[0_32px_90px_-45px_rgba(14,116,144,0.9)] lg:p-12">
             <h3 className="relative font-display text-3xl font-bold tracking-[-0.04em] sm:text-4xl">Need product documentation?</h3>
-            <p className="relative mt-4 max-w-2xl text-base leading-relaxed text-blue-100 lg:text-lg">
+            <p className="relative mt-4 max-w-2xl text-base leading-relaxed text-primary-100 lg:text-lg">
               Tell us the product, destination market, organization, and document required. Our team will confirm what is available for that request.
             </p>
-            <Link href="/contact?inquiryType=partnership&subject=Product%20documentation" className="relative mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-blue-700 transition-transform hover:-translate-y-0.5">
+            <Link href="/contact?inquiryType=partnership&subject=Product%20documentation" className="relative mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-primary-700 transition-transform hover:-translate-y-0.5">
               Request documentation
               <ArrowRight className="h-4 w-4" />
             </Link>

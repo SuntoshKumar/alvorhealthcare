@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { ChevronRight, Star } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card, CardContent, CardTitle, CardDescription } from "@/components/ui/Card";
@@ -38,7 +37,7 @@ export function CategoriesSection() {
                         <div className="absolute inset-0 flex items-center justify-center">
                           <Image
                             src={publicAssetPath(category.image)}
-                            alt=""
+                            alt={`${category.name} category icon`}
                             width={64}
                             height={64}
                             className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"

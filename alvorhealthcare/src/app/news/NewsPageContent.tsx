@@ -28,7 +28,7 @@ const categoryLabels: Record<string, string> = {
 
 const categoryStyles: Record<string, string> = {
   "product-launch": "bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300",
-  announcement: "bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300",
+  announcement: "bg-primary-50 text-primary-700 dark:bg-primary-950/40 dark:text-primary-300",
   research: "bg-teal-50 text-teal-700 dark:bg-teal-950/40 dark:text-teal-300",
   "healthcare-news": "bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300",
   event: "bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-300",
@@ -78,7 +78,7 @@ export function NewsPageContent() {
 
   return (
     <div className="min-h-screen overflow-hidden bg-white dark:bg-neutral-950">
-      <section className="relative overflow-hidden border-b border-neutral-200 bg-gradient-to-br from-[#f0f4f8] via-white to-[#eef4f0] pt-28 dark:border-white/10 dark:from-[#061524] dark:via-[#0a1e30] dark:to-[#061524] lg:pt-40">
+      <section className="relative overflow-hidden border-b border-neutral-200 bg-gradient-to-br from-neutral-50 via-white to-secondary-50 pt-28 dark:border-white/10 dark:from-[var(--bg-primary)] dark:via-[var(--bg-secondary)] dark:to-[var(--bg-primary)] lg:pt-40">
         <div
           className="absolute inset-0 opacity-[0.04] dark:opacity-25 [background-image:linear-gradient(rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.06)_1px,transparent_1px)] [background-size:56px_56px] dark:[background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)]"
           aria-hidden="true"
@@ -86,7 +86,7 @@ export function NewsPageContent() {
         <motion.div
           animate={prefersReducedMotion ? {} : { y: [-10, 10, -10] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -right-32 top-16 h-96 w-96 rounded-full bg-blue-400/10 blur-3xl dark:bg-blue-500/20"
+          className="absolute -right-32 top-16 h-96 w-96 rounded-full bg-primary-400/10 blur-3xl dark:bg-primary-500/20"
           aria-hidden="true"
         />
         <motion.div
@@ -103,8 +103,8 @@ export function NewsPageContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={revealTransition}
             >
-              <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-neutral-700 shadow-sm backdrop-blur-xl dark:border-white/15 dark:bg-white/[0.07] dark:text-blue-100">
-                <Sparkles className="h-4 w-4 text-blue-600 dark:text-teal-300" aria-hidden="true" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.18em] text-neutral-700 shadow-sm backdrop-blur-xl dark:border-white/15 dark:bg-white/[0.07] dark:text-primary-100">
+                <Sparkles className="h-4 w-4 text-primary-600 dark:text-teal-300" aria-hidden="true" />
                 Alvor newsroom
               </span>
             </motion.div>
@@ -116,14 +116,14 @@ export function NewsPageContent() {
               className="mt-7 text-5xl font-bold tracking-[-0.055em] text-neutral-950 dark:text-white sm:text-6xl lg:text-7xl"
             >
               Healthcare
-              <span className="block text-blue-600 dark:text-blue-300">news & updates</span>
+              <span className="block text-primary-600 dark:text-primary-300">news & updates</span>
             </motion.h1>
 
             <motion.p
               initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...revealTransition, delay: prefersReducedMotion ? 0 : 0.16 }}
-              className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-blue-100/70"
+              className="mt-6 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-primary-100/70"
             >
               Company announcements, portfolio updates, distribution quality
               milestones, and the partnerships shaping our work in healthcare.
@@ -145,13 +145,13 @@ export function NewsPageContent() {
                   value={search}
                   onChange={(event) => setSearch(event.target.value)}
                   placeholder="Search by headline, topic, or keyword..."
-                  className="h-14 w-full rounded-2xl border border-neutral-200 bg-white pl-12 pr-12 text-sm font-medium text-neutral-950 shadow-sm outline-none transition-[border-color,box-shadow,background-color] placeholder:text-neutral-400 focus:border-blue-400 focus:ring-4 focus:ring-blue-100 dark:border-neutral-800 dark:bg-neutral-900 dark:text-white dark:focus:border-blue-700 dark:focus:ring-blue-950"
+                  className="h-14 w-full rounded-2xl border border-neutral-200 bg-white pl-12 pr-12 text-sm font-medium text-neutral-950 shadow-sm outline-none transition-[border-color,box-shadow,background-color] placeholder:text-neutral-400 focus:border-primary-400 focus:ring-4 focus:ring-primary-100 dark:border-neutral-800 dark:bg-neutral-900 dark:text-white dark:focus:border-primary-700 dark:focus:ring-primary-950"
                 />
                 {search && (
                   <button
                     type="button"
                     onClick={() => setSearch("")}
-                    className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-neutral-400 outline-none hover:bg-neutral-100 hover:text-neutral-700 focus-visible:ring-2 focus-visible:ring-blue-500 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
+                    className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-lg text-neutral-400 outline-none hover:bg-neutral-100 hover:text-neutral-700 focus-visible:ring-2 focus-visible:ring-primary-500 dark:hover:bg-neutral-800 dark:hover:text-neutral-200"
                     aria-label="Clear search"
                   >
                     <X className="h-4 w-4" aria-hidden="true" />
@@ -164,10 +164,10 @@ export function NewsPageContent() {
                   type="button"
                   onClick={() => updateCategory("all")}
                   aria-pressed={category === "all"}
-                  className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold outline-none transition-all focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                  className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold outline-none transition-all focus-visible:ring-2 focus-visible:ring-primary-500 ${
                     category === "all"
                       ? "bg-neutral-950 text-white shadow-md dark:bg-white dark:text-neutral-950"
-                      : "border border-neutral-200 text-neutral-600 hover:border-blue-300 hover:text-blue-700 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-blue-800 dark:hover:text-blue-300"
+                      : "border border-neutral-200 text-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-primary-800 dark:hover:text-primary-300"
                   }`}
                 >
                   All news
@@ -179,10 +179,10 @@ export function NewsPageContent() {
                     type="button"
                     onClick={() => updateCategory(categoryName)}
                     aria-pressed={category === categoryName}
-                    className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold outline-none transition-all focus-visible:ring-2 focus-visible:ring-blue-500 ${
+                    className={`shrink-0 rounded-full px-4 py-2 text-sm font-bold outline-none transition-all focus-visible:ring-2 focus-visible:ring-primary-500 ${
                       category === categoryName
                         ? "bg-neutral-950 text-white shadow-md dark:bg-white dark:text-neutral-950"
-                        : "border border-neutral-200 text-neutral-600 hover:border-blue-300 hover:text-blue-700 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-blue-800 dark:hover:text-blue-300"
+                        : "border border-neutral-200 text-neutral-600 hover:border-primary-300 hover:text-primary-700 dark:border-neutral-800 dark:text-neutral-300 dark:hover:border-primary-800 dark:hover:text-primary-300"
                     }`}
                   >
                     {categoryLabels[categoryName]}
@@ -195,27 +195,27 @@ export function NewsPageContent() {
             </div>
 
             <div className="flex flex-col gap-2.5">
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-blue-100/50">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400 dark:text-primary-100/50">
                 Latest headlines
               </p>
               {sortedArticles.slice(0, 2).map((article, i) => (
                 <Link
                   key={article.id}
                   href={`/news/${article.slug}`}
-                  className="group flex items-center gap-3 rounded-xl border border-neutral-100 bg-white/70 p-3 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-md dark:border-neutral-800 dark:bg-white/[0.03] dark:hover:border-blue-800"
+                  className="group flex items-center gap-3 rounded-xl border border-neutral-100 bg-white/70 p-3 backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-md dark:border-neutral-800 dark:bg-white/[0.03] dark:hover:border-primary-800"
                 >
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-[11px] font-bold text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-[11px] font-bold text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div className="min-w-0 flex-1">
-                    <p className="line-clamp-1 text-sm font-semibold text-neutral-900 transition-colors group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-300">
+                    <p className="line-clamp-1 text-sm font-semibold text-neutral-900 transition-colors group-hover:text-primary-700 dark:text-white dark:group-hover:text-primary-300">
                       {article.title}
                     </p>
                     <span className="text-[11px] text-neutral-400 dark:text-neutral-500">
                       {format(new Date(article.publishDate), "MMM d")} · {article.readTime} min read
                     </span>
                   </div>
-                  <ArrowRight className="h-4 w-4 shrink-0 text-neutral-300 transition-all group-hover:translate-x-0.5 group-hover:text-blue-600 dark:text-neutral-600 dark:group-hover:text-blue-400" aria-hidden="true" />
+                  <ArrowRight className="h-4 w-4 shrink-0 text-neutral-300 transition-all group-hover:translate-x-0.5 group-hover:text-primary-600 dark:text-neutral-600 dark:group-hover:text-primary-400" aria-hidden="true" />
                 </Link>
               ))}
             </div>
@@ -224,7 +224,7 @@ export function NewsPageContent() {
       </section>
 
       {featuredArticle && (
-        <section className="relative z-10 bg-[#f4f7f9] py-10 dark:bg-[#08111d] lg:py-14" aria-labelledby="featured-story">
+        <section className="relative z-10 bg-[var(--bg-secondary)] py-10 dark:bg-[var(--bg-primary)] lg:py-14" aria-labelledby="featured-story">
           <div className="container">
             <motion.article
               initial={prefersReducedMotion ? false : { y: 36 }}
@@ -235,12 +235,12 @@ export function NewsPageContent() {
             >
               <Link
                 href={`/news/${featuredArticle.slug}`}
-                className="relative min-h-72 overflow-hidden outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-blue-400 lg:min-h-[31rem]"
+                className="relative min-h-72 overflow-hidden outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-primary-400 lg:min-h-[31rem]"
                 aria-label={`Read featured story: ${featuredArticle.title}`}
               >
                 <Image
                   src={publicAssetPath(featuredArticle.featuredImage)}
-                  alt=""
+                  alt={featuredArticle.title}
                   fill
                   priority
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.035]"
@@ -275,7 +275,7 @@ export function NewsPageContent() {
                   </span>
                   <Link
                     href={`/news/${featuredArticle.slug}`}
-                    className="inline-flex items-center gap-2 rounded-xl bg-neutral-950 px-5 py-3 text-sm font-bold text-white outline-none transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-blue-700 focus-visible:ring-4 focus-visible:ring-blue-200 dark:bg-white dark:text-neutral-950 dark:hover:bg-blue-300 dark:focus-visible:ring-blue-900"
+                    className="inline-flex items-center gap-2 rounded-xl bg-neutral-950 px-5 py-3 text-sm font-bold text-white outline-none transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-primary-700 focus-visible:ring-4 focus-visible:ring-primary-200 dark:bg-white dark:text-neutral-950 dark:hover:bg-primary-300 dark:focus-visible:ring-primary-900"
                   >
                     Read story
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -291,7 +291,7 @@ export function NewsPageContent() {
         <div className="container">
           <div className="grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">News archive</p>
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">News archive</p>
               <h2 id="news-archive" className="mt-3 text-4xl font-bold tracking-[-0.04em] text-neutral-950 dark:text-white sm:text-5xl">
                 {isDefaultView ? "More from Alvor" : "Search results"}
               </h2>
@@ -332,7 +332,7 @@ export function NewsPageContent() {
                 <button
                   type="button"
                   onClick={clearFilters}
-                  className="text-sm font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+                  className="text-sm font-semibold text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300"
                 >
                   Clear all
                 </button>
@@ -354,13 +354,13 @@ export function NewsPageContent() {
                 >
                   <Link
                     href={`/news/${article.slug}`}
-                    className="grid h-full outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-blue-400 sm:grid-cols-[13rem_1fr]"
+                    className="grid h-full outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-primary-400 sm:grid-cols-[13rem_1fr]"
                     aria-label={`Read article: ${article.title}`}
                   >
                     <div className="relative min-h-56 overflow-hidden sm:min-h-full">
                       <Image
                         src={publicAssetPath(article.featuredImage)}
-                        alt=""
+                        alt={article.title}
                         fill
                         className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.045]"
                         sizes="(min-width: 768px) 208px, 100vw"
@@ -374,7 +374,7 @@ export function NewsPageContent() {
                         </span>
                         <time dateTime={article.publishDate}>{format(new Date(article.publishDate), "MMM d, yyyy")}</time>
                       </div>
-                      <h3 className="mt-5 text-xl font-bold tracking-tight text-neutral-950 transition-colors group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-300">
+                      <h3 className="mt-5 text-xl font-bold tracking-tight text-neutral-950 transition-colors group-hover:text-primary-700 dark:text-white dark:group-hover:text-primary-300">
                         {article.title}
                       </h3>
                       <p className="mt-3 line-clamp-3 text-sm leading-6 text-neutral-600 dark:text-neutral-300">{article.excerpt}</p>
@@ -383,7 +383,7 @@ export function NewsPageContent() {
                           <Clock3 className="h-3.5 w-3.5" aria-hidden="true" />
                           {article.readTime} min
                         </span>
-                        <span className="inline-flex items-center gap-2 text-sm font-bold text-blue-700 dark:text-blue-300">
+                        <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-700 dark:text-primary-300">
                           Read article
                           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                         </span>
@@ -401,7 +401,7 @@ export function NewsPageContent() {
               animate={{ opacity: 1, y: 0 }}
               className="mt-12 rounded-[2rem] border border-dashed border-neutral-300 bg-neutral-50 px-6 py-16 text-center dark:border-neutral-700 dark:bg-neutral-900/60"
             >
-              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-blue-600 shadow-sm dark:bg-neutral-800 dark:text-blue-300">
+              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-primary-600 shadow-sm dark:bg-neutral-800 dark:text-primary-300">
                 <FileText className="h-7 w-7" aria-hidden="true" />
               </span>
               <h3 className="mt-5 text-2xl font-bold text-neutral-950 dark:text-white">No matching stories</h3>
@@ -409,7 +409,7 @@ export function NewsPageContent() {
               <button
                 type="button"
                 onClick={clearFilters}
-                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-neutral-950 px-5 py-3 text-sm font-bold text-white outline-none hover:bg-blue-700 focus-visible:ring-4 focus-visible:ring-blue-200 dark:bg-white dark:text-neutral-950 dark:hover:bg-blue-300"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-neutral-950 px-5 py-3 text-sm font-bold text-white outline-none hover:bg-primary-700 focus-visible:ring-4 focus-visible:ring-primary-200 dark:bg-white dark:text-neutral-950 dark:hover:bg-primary-300"
               >
                 <Tag className="h-4 w-4" aria-hidden="true" />
                 View all news
@@ -419,7 +419,7 @@ export function NewsPageContent() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#dff4ee] py-16 dark:bg-teal-950/25 lg:py-20">
+      <section className="relative overflow-hidden bg-secondary-50 py-16 dark:bg-teal-950/25 lg:py-20">
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full border border-teal-700/10" aria-hidden="true" />
         <div className="container relative">
           <div className="grid items-center gap-8 lg:grid-cols-[1fr_auto]">

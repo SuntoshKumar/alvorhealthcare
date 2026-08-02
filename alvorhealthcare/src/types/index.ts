@@ -69,8 +69,10 @@ export interface CompanyInfo {
   mission: string;
   vision: string;
   foundedYear: number;
+  yearsInOperation: number;
   countriesServed: number;
   productsCount: number;
+  healthcarePartners: number;
   distributionCapabilities: string[];
   qualityStandards: string[];
   contact: ContactInfo;

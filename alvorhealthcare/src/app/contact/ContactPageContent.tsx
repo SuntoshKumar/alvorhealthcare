@@ -1,11 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, ChevronDown, Building2, ArrowRight, Navigation } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, ChevronDown, Building2, ArrowRight, Navigation, Copy, ExternalLink } from "lucide-react";
 import { ScrollReveal, StaggerContainer, StaggerItem, HoverScale } from "@/components/animations/Animations";
 import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
@@ -82,6 +82,15 @@ export default function ContactPageContent({
     }
   };
 
+  const copyEmailToClipboard = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(companyInfo.contact.email);
+      toast.success("Email address copied to clipboard");
+    } catch {
+      toast.error("Unable to copy. Please copy manually: " + companyInfo.contact.email);
+    }
+  }, []);
+
   const contactInfo = [
     {
       icon: MapPin,
@@ -93,7 +102,7 @@ export default function ContactPageContent({
       ],
       action: "View Location",
       link: null,
-      gradient: "from-blue-500 to-blue-600",
+      gradient: "from-primary-500 to-primary-600",
     },
     {
       icon: Phone,
@@ -144,7 +153,7 @@ export default function ContactPageContent({
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950">
-      <section className="bg-gradient-to-b from-blue-50 via-white to-teal-50 dark:from-blue-950/30 dark:via-neutral-950 dark:to-teal-950/30 py-16 lg:py-24" aria-labelledby="contact-heading">
+      <section className="bg-gradient-to-b from-primary-50 via-white to-teal-50 dark:from-primary-950/30 dark:via-neutral-950 dark:to-teal-950/30 py-16 lg:py-24" aria-labelledby="contact-heading">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center">
             <ScrollReveal>
@@ -173,7 +182,7 @@ export default function ContactPageContent({
                         <info.icon className="w-5 h-5 text-white" aria-hidden="true" />
                       </div>
 
-                      <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-1">
+                      <p className="text-xs font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400 mb-1">
                         {info.subtitle}
                       </p>
 
@@ -190,10 +199,10 @@ export default function ContactPageContent({
                       {info.link && (
                         <a
                           href={info.link}
-                          className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400 transition-colors hover:text-blue-700 dark:hover:text-blue-300"
+                          className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 dark:text-primary-400 transition-colors hover:text-primary-700 dark:hover:text-primary-300"
                         >
                           {info.action}
-                          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-blue-600 group-hover:text-white dark:bg-blue-900/30 dark:group-hover:bg-blue-600">
+                          <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-primary-600 group-hover:text-white dark:bg-primary-900/30 dark:group-hover:bg-primary-600">
                             <ArrowRight className="h-3.5 w-3.5" />
                           </span>
                         </a>
@@ -287,10 +296,32 @@ export default function ContactPageContent({
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="p-4 bg-success-50 border border-success-200 rounded-xl flex items-center gap-3 text-success-800"
+                      className="space-y-3"
                     >
-                      <CheckCircle className="w-5 h-5 flex-shrink-0" />
-                      <p>Your email app has been opened with a draft. Review it and press Send to complete your inquiry.</p>
+                      <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-center gap-3 text-emerald-700 dark:bg-emerald-900/20 dark:border-emerald-800 dark:text-emerald-400">
+                        <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                        <div className="text-sm">
+                          <p className="font-medium">Your email app should open with a pre-filled message.</p>
+                          <p className="mt-1 text-emerald-600 dark:text-emerald-300">Review it and press Send to complete your inquiry.</p>
+                        </div>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={copyEmailToClipboard}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-200 bg-white px-3 py-2 text-xs font-medium text-neutral-600 transition-colors hover:bg-neutral-50 hover:text-primary-600 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
+                        >
+                          <Copy className="w-3.5 h-3.5" />
+                          Copy email address
+                        </button>
+                        <a
+                          href={`mailto:${companyInfo.contact.email}`}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-200 bg-white px-3 py-2 text-xs font-medium text-neutral-600 transition-colors hover:bg-neutral-50 hover:text-primary-600 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          Email us directly
+                        </a>
+                      </div>
                     </motion.div>
                   )}
 
@@ -298,10 +329,32 @@ export default function ContactPageContent({
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="p-4 bg-danger-50 border border-danger-200 rounded-xl flex items-center gap-3 text-danger-800"
+                      className="space-y-3"
                     >
-                      <AlertCircle className="w-5 h-5 flex-shrink-0" />
-                      <p>Failed to send message. Please try again or contact us directly at {companyInfo.contact.email}.</p>
+                      <div className="p-4 bg-red-50 border border-red-200 rounded-xl flex items-center gap-3 text-red-700 dark:bg-red-900/20 dark:border-red-800 dark:text-red-400">
+                        <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                        <div className="text-sm">
+                          <p className="font-medium">Unable to open your email app.</p>
+                          <p className="mt-1 text-red-600 dark:text-red-300">Please contact us directly at {companyInfo.contact.email}</p>
+                        </div>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={copyEmailToClipboard}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-200 bg-white px-3 py-2 text-xs font-medium text-neutral-600 transition-colors hover:bg-neutral-50 hover:text-primary-600 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
+                        >
+                          <Copy className="w-3.5 h-3.5" />
+                          Copy email address
+                        </button>
+                        <a
+                          href={`mailto:${companyInfo.contact.email}`}
+                          className="inline-flex items-center gap-1.5 rounded-lg border border-neutral-200 bg-white px-3 py-2 text-xs font-medium text-neutral-600 transition-colors hover:bg-neutral-50 hover:text-primary-600 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          Email us directly
+                        </a>
+                      </div>
                     </motion.div>
                   )}
                 </form>
@@ -353,12 +406,12 @@ export default function ContactPageContent({
                   <HoverScale className="h-full">
                     <Card variant="elevated" className="p-6 h-full flex flex-col">
                       <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                        <div className="w-12 h-12 bg-primary-50 dark:bg-primary-900/30 rounded-xl flex items-center justify-center text-primary-600 dark:text-primary-400 flex-shrink-0">
                           <Building2 className="w-6 h-6" aria-hidden="true" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-neutral-900 dark:text-white">{office.name}</h4>
-                          <p className="text-blue-600 dark:text-blue-400 text-sm font-medium mt-1">{office.city}</p>
+                          <p className="text-primary-600 dark:text-primary-400 text-sm font-medium mt-1">{office.city}</p>
                           <p className="mt-3 text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
                             {office.address}, {office.region}, {office.country}
                           </p>
@@ -399,7 +452,7 @@ export default function ContactPageContent({
                 className="w-full"
               />
               <div className="absolute bottom-4 left-4 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-soft flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+                <div className="w-10 h-10 bg-primary-50 dark:bg-primary-900/30 rounded-xl flex items-center justify-center text-primary-600 dark:text-primary-400 flex-shrink-0">
                   <Navigation className="w-5 h-5" />
                 </div>
                 <div>
@@ -412,7 +465,7 @@ export default function ContactPageContent({
         </div>
       </section>
 
-      <section className="section bg-blue-600 dark:bg-blue-700 text-white relative overflow-hidden" aria-labelledby="cta-heading">
+      <section className="section bg-primary-600 dark:bg-primary-700 text-white relative overflow-hidden" aria-labelledby="cta-heading">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:24px_24px] opacity-10" aria-hidden="true" />
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -422,7 +475,7 @@ export default function ContactPageContent({
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="body-lg text-blue-100 dark:text-blue-300 mb-8">
+              <p className="body-lg text-primary-100 dark:text-primary-300 mb-8">
                 Let&apos;s discuss how Alvor Healthcare can support your product, distribution, or healthcare supply needs in Myanmar.
               </p>
             </ScrollReveal>

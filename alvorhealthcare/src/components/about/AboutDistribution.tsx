@@ -92,9 +92,9 @@ export function AboutDistribution() {
               className="transform-gpu"
             >
               <HoverScale>
-                <Card variant="outlined" className="group h-full rounded-[1.5rem] border-neutral-200/80 p-6 transition-all hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_28px_70px_-48px_rgba(30,64,175,0.75)] dark:border-neutral-800 lg:p-8">
+                <Card variant="outlined" className="group h-full rounded-[1.5rem] border-neutral-200/80 p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-[0_28px_70px_-48px_rgba(14,116,144,0.75)] dark:border-neutral-800 lg:p-8">
                   <div className="flex gap-4">
-                    <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                    <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                       <capability.icon className="h-7 w-7" aria-hidden="true" />
                     </div>
                     <div>
@@ -136,7 +136,7 @@ export function AboutDistribution() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/contact?inquiryType=partnership&subject=Distribution%20partnership" className="inline-flex items-center justify-center gap-2 rounded-xl border border-neutral-300 bg-white px-5 py-3 text-sm font-bold text-neutral-800 transition-all hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white">
+                <Link href="/contact?inquiryType=partnership&subject=Distribution%20partnership" className="inline-flex items-center justify-center gap-2 rounded-xl border border-neutral-300 bg-white px-5 py-3 text-sm font-bold text-neutral-800 transition-all hover:-translate-y-0.5 hover:border-primary-300 hover:text-primary-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white">
                   Discuss distribution requirements
                   <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -150,7 +150,7 @@ export function AboutDistribution() {
                   { icon: Truck, title: "Delivery", description: "Order and shipment coordination" },
                 ].map((item) => (
                   <div key={item.title} className="rounded-2xl border border-neutral-100 bg-white p-5 dark:border-neutral-700/50 dark:bg-neutral-800/30">
-                    <item.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                    <item.icon className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                     <p className="mt-4 font-bold text-neutral-900 dark:text-white">{item.title}</p>
                     <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">{item.description}</p>
                   </div>

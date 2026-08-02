@@ -204,15 +204,15 @@ export function Header() {
         className={clsx(
           "relative h-full border-b backdrop-blur-2xl transition-[background-color,border-color,box-shadow] duration-500",
           scrolled
-            ? "border-neutral-200/80 bg-white/95 shadow-[0_12px_36px_-26px_rgba(15,23,42,0.5)] dark:border-white/10 dark:bg-[#07101f]/95 dark:shadow-[0_14px_40px_-28px_rgba(0,0,0,0.9)]"
-            : "border-white/10 bg-white/88 dark:bg-[#07101f]/88"
+            ? "border-neutral-200/80 bg-white/95 shadow-[0_12px_36px_-26px_rgba(15,23,42,0.5)] dark:border-white/10 dark:bg-[var(--bg-primary)]/95 dark:shadow-[0_14px_40px_-28px_rgba(0,0,0,0.9)]"
+            : "border-white/10 bg-white/88 dark:bg-[var(--bg-primary)]/88"
         )}
       >
         <div className="container flex h-full items-center justify-between">
           <Link
             href="/"
             onClick={() => setCompanyOpen(false)}
-            className="group flex min-w-0 flex-shrink-0 items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-4 dark:focus-visible:ring-offset-[#07101f]"
+            className="group flex min-w-0 flex-shrink-0 items-center gap-3 rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-4 dark:focus-visible:ring-offset-[var(--bg-primary)]"
             aria-label="Alvor Healthcare Home"
           >
             <span className="relative h-10 w-10 flex-shrink-0 transition-transform duration-300 group-hover:-rotate-2 group-hover:scale-[1.04] xl:h-11 xl:w-11">
@@ -221,7 +221,7 @@ export function Header() {
                 alt=""
                 fill
                 priority
-                className="object-contain drop-shadow-[0_8px_12px_rgba(37,99,235,0.18)]"
+                className="object-contain drop-shadow-[0_8px_12px_rgba(14,116,144,0.18)]"
                 sizes="44px"
               />
             </span>
@@ -320,7 +320,7 @@ export function Header() {
             <Link
               href={siteContent.headerCta.href}
               onClick={() => setCompanyOpen(false)}
-              className="group hidden h-9 items-center gap-2 rounded-lg bg-primary-600 px-4 text-[13px] font-semibold text-white shadow-[0_8px_18px_-10px_rgba(37,99,235,0.9)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:bg-primary-500 dark:hover:bg-primary-400 dark:hover:text-neutral-950 dark:focus-visible:ring-offset-[#07101f] sm:inline-flex"
+              className="group hidden h-9 items-center gap-2 rounded-lg bg-primary-600 px-4 text-[13px] font-semibold text-white shadow-[0_8px_18px_-10px_rgba(14,116,144,0.9)] transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:bg-primary-500 dark:hover:bg-primary-400 dark:hover:text-neutral-950 dark:focus-visible:ring-offset-[var(--bg-primary)] sm:inline-flex"
             >
               {siteContent.headerCta.label}
               <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
@@ -360,7 +360,7 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={prefersReducedMotion ? undefined : { opacity: 0, y: -8 }}
               transition={{ duration: prefersReducedMotion ? 0 : 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute inset-x-0 top-full border-b border-neutral-200/80 bg-white/97 shadow-[0_26px_60px_-34px_rgba(15,23,42,0.5)] backdrop-blur-2xl dark:border-white/10 dark:bg-[#07101f]/97 dark:shadow-[0_30px_70px_-36px_rgba(0,0,0,0.9)]"
+              className="absolute inset-x-0 top-full border-b border-neutral-200/80 bg-white/97 shadow-[0_26px_60px_-34px_rgba(15,23,42,0.5)] backdrop-blur-2xl dark:border-white/10 dark:bg-[var(--bg-primary)]/97 dark:shadow-[0_30px_70px_-36px_rgba(0,0,0,0.9)]"
             >
               <div className="container grid grid-cols-[0.7fr_1.8fr] gap-10 py-6">
                 <div className="border-r border-neutral-200 pr-10 dark:border-white/10">
@@ -444,7 +444,7 @@ export function Header() {
               aria-modal="true"
               aria-label="Mobile navigation panel"
               tabIndex={-1}
-              className="absolute inset-y-0 right-0 flex w-full max-w-[25rem] flex-col overflow-hidden border-l border-neutral-200 bg-white shadow-[-24px_0_70px_-32px_rgba(2,6,23,0.65)] dark:border-white/10 dark:bg-[#07101f]"
+              className="absolute inset-y-0 right-0 flex w-full max-w-[25rem] flex-col overflow-hidden border-l border-neutral-200 bg-white shadow-[-24px_0_70px_-32px_rgba(2,6,23,0.65)] dark:border-white/10 dark:bg-[var(--bg-primary)]"
               variants={{
                 open: { opacity: 1, x: 0 },
                 closed: { opacity: 0, x: prefersReducedMotion ? 0 : 36 },
@@ -462,7 +462,7 @@ export function Header() {
                       src={publicAssetPath("/images/alvor.svg")}
                       alt=""
                       fill
-                      className="object-contain drop-shadow-[0_8px_12px_rgba(37,99,235,0.18)]"
+                      className="object-contain drop-shadow-[0_8px_12px_rgba(14,116,144,0.18)]"
                       sizes="44px"
                     />
                   </span>
@@ -556,7 +556,7 @@ export function Header() {
                 <Link
                   href={siteContent.headerCta.href}
                   onClick={closeMobile}
-                  className="group flex w-full items-center justify-between rounded-lg bg-primary-600 px-4 py-3.5 text-sm font-semibold text-white shadow-[0_12px_24px_-14px_rgba(37,99,235,0.85)] transition-colors hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:bg-primary-500 dark:hover:bg-primary-400 dark:hover:text-neutral-950 dark:focus-visible:ring-offset-[#07101f]"
+                  className="group flex w-full items-center justify-between rounded-lg bg-primary-600 px-4 py-3.5 text-sm font-semibold text-white shadow-[0_12px_24px_-14px_rgba(14,116,144,0.85)] transition-colors hover:bg-primary-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 dark:bg-primary-500 dark:hover:bg-primary-400 dark:hover:text-neutral-950 dark:focus-visible:ring-offset-[var(--bg-primary)]"
                 >
                   <span>{siteContent.headerCta.label}</span>
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />

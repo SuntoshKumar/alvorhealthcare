@@ -20,7 +20,7 @@ export const Badge = ({
 }: BadgeProps) => {
   const variants = {
     default: "bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300",
-    primary: "bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300",
+    primary: "bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300",
     secondary: "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300",
     success: "bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-300",
     warning: "bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300",

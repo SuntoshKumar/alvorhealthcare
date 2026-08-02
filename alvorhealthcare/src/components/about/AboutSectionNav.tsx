@@ -58,7 +58,7 @@ export function AboutSectionNav() {
                 {isActive && (
                   <motion.span
                     layoutId="about-section-nav"
-                    className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-600 to-teal-600"
+                    className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-600 to-teal-600"
                     transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 380, damping: 34 }}
                   />
                 )}

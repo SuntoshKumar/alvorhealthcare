@@ -1,12 +1,12 @@
-import { PageStub } from "@/components/ui/PageStub";
+import { redirect } from "next/navigation";
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({
   title: "Distributors",
-  description: "Partner with Alvor Healthcare as a distributor.",
+  description: "Partner with Alvor Healthcare as a distributor in Myanmar.",
   path: "/distributors",
 });
 
 export default function DistributorsPage() {
-  return <PageStub title="Distributors" description="Information for current and prospective distribution partners coming soon." />;
+  redirect("/contact?inquiryType=partnership");
 }

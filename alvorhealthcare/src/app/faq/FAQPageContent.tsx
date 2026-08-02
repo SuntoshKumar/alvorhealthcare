@@ -35,15 +35,15 @@ export function FAQPageContent() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950">
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-primary-50 via-white to-secondary-50 pt-28 pb-16 dark:from-blue-950/35 dark:via-neutral-950 dark:to-teal-950/25 lg:pt-40 lg:pb-24">
+      <section className="relative overflow-hidden bg-gradient-to-b from-primary-50 via-white to-secondary-50 pt-28 pb-16 dark:from-primary-950/35 dark:via-neutral-950 dark:to-teal-950/25 lg:pt-40 lg:pb-24">
         <div
-          className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] bg-[size:24px_24px] text-blue-950 opacity-[0.035] dark:text-blue-100 dark:opacity-[0.06]"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] bg-[size:24px_24px] text-primary-950 opacity-[0.035] dark:text-primary-100 dark:opacity-[0.06]"
           aria-hidden="true"
         />
         <motion.div
           animate={prefersReduced ? {} : { y: [-6, 6, -6] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -left-24 top-28 h-64 w-64 rounded-full bg-blue-300/20 blur-3xl dark:bg-blue-500/10"
+          className="absolute -left-24 top-28 h-64 w-64 rounded-full bg-primary-300/20 blur-3xl dark:bg-primary-500/10"
           aria-hidden="true"
         />
         <motion.div
@@ -60,7 +60,7 @@ export function FAQPageContent() {
             transition={{ duration: 0.7, ease }}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-neutral-700 shadow-sm backdrop-blur-sm dark:border-neutral-700 dark:bg-neutral-900/80 dark:text-neutral-200">
-              <Sparkles className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
+              <Sparkles className="h-3.5 w-3.5 text-primary-600 dark:text-primary-400" />
               Help centre
             </span>
             <h1 className="mt-7 display-lg lg:display-xl font-bold text-neutral-900 dark:text-white">
@@ -116,7 +116,7 @@ export function FAQPageContent() {
                 }}
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 shadow-md">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 shadow-md">
                     <HelpCircle className="h-5 w-5 text-white" />
                   </div>
                   <h2 className="heading-xl font-bold text-neutral-900 dark:text-white">
@@ -137,10 +137,10 @@ export function FAQPageContent() {
                         <button
                           type="button"
                           onClick={() => toggleItem(key)}
-                          className="w-full flex items-center justify-between px-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-blue-500"
+                          className="w-full flex items-center justify-between px-6 py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary-500 dark:focus-visible:ring-primary-500"
                           aria-expanded={isOpen}
                         >
-                          <span className="font-semibold text-neutral-900 dark:text-white pr-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
+                          <span className="font-semibold text-neutral-900 dark:text-white pr-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-200">
                             {item.question}
                           </span>
                           <motion.span
@@ -162,7 +162,7 @@ export function FAQPageContent() {
                               className="overflow-hidden"
                             >
                               <div className="border-t border-neutral-100 dark:border-neutral-800">
-                                <div className="mx-6 my-5 h-0.5 w-12 rounded-full bg-gradient-to-r from-blue-500 to-teal-500" />
+                                <div className="mx-6 my-5 h-0.5 w-12 rounded-full bg-gradient-to-r from-primary-500 to-teal-500" />
                                 <p className="-mt-3 px-6 pb-5 text-neutral-600 leading-relaxed dark:text-neutral-300">
                                   {item.answer}
                                 </p>

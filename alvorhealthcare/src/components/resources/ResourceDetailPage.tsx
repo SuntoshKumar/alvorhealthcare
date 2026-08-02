@@ -26,13 +26,13 @@ const toneStyles: Record<
   }
 > = {
   blue: {
-    badge: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
-    icon: "bg-blue-600 text-white",
-    iconSoft: "bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300",
-    panel: "from-blue-600 to-blue-800",
-    glow: "bg-blue-400/25",
-    line: "bg-blue-500",
-    accent: "bg-blue-500",
+    badge: "bg-primary-100 text-primary-700 dark:bg-primary-900/40 dark:text-primary-300",
+    icon: "bg-primary-600 text-white",
+    iconSoft: "bg-primary-50 text-primary-600 dark:bg-primary-950/60 dark:text-primary-300",
+    panel: "from-primary-600 to-primary-800",
+    glow: "bg-primary-400/25",
+    line: "bg-primary-500",
+    accent: "bg-primary-500",
   },
   teal: {
     badge: "bg-teal-100 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
@@ -104,7 +104,7 @@ export function ResourceDetailPage({ collection }: ResourceDetailPageProps) {
           >
             <Link
               href="/resources"
-              className="inline-flex items-center gap-2 font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+              className="inline-flex items-center gap-2 font-medium transition-colors hover:text-primary-600 dark:hover:text-primary-400"
             >
               <ArrowLeft className="h-4 w-4" />
               Resources
@@ -245,7 +245,7 @@ export function ResourceDetailPage({ collection }: ResourceDetailPageProps) {
               className="mb-10 grid gap-5 lg:grid-cols-[0.8fr_1.2fr] lg:items-end lg:gap-20"
             >
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">
+                <span className="text-xs font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">
                   {section.eyebrow}
                 </span>
                 <h2
@@ -286,7 +286,7 @@ export function ResourceDetailPage({ collection }: ResourceDetailPageProps) {
                 >
                   <Link
                     href={item.href}
-                    className="group flex h-full min-h-72 flex-col rounded-3xl border border-neutral-200 bg-white p-6 shadow-[0_18px_48px_-42px_rgba(15,23,42,0.55)] outline-none transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-[0_24px_56px_-36px_rgba(15,23,42,0.6)] focus-visible:ring-4 focus-visible:ring-blue-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-neutral-700 dark:hover:shadow-[0_24px_56px_-36px_rgba(15,23,42,0.4)] dark:focus-visible:ring-blue-900/60 sm:p-7"
+                    className="group flex h-full min-h-72 flex-col rounded-3xl border border-neutral-200 bg-white p-6 shadow-[0_18px_48px_-42px_rgba(15,23,42,0.55)] outline-none transition-all duration-300 hover:-translate-y-1 hover:border-neutral-300 hover:shadow-[0_24px_56px_-36px_rgba(15,23,42,0.6)] focus-visible:ring-4 focus-visible:ring-primary-200 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:border-neutral-700 dark:hover:shadow-[0_24px_56px_-36px_rgba(15,23,42,0.4)] dark:focus-visible:ring-primary-900/60 sm:p-7"
                   >
                     <div className="flex items-start justify-between">
                       <div
@@ -297,7 +297,7 @@ export function ResourceDetailPage({ collection }: ResourceDetailPageProps) {
                           className="h-6 w-6"
                         />
                       </div>
-                      <ExternalLink className="h-4 w-4 text-neutral-400 transition-all duration-300 group-hover:text-blue-500 group-hover:-translate-y-0.5 dark:text-neutral-600" />
+                      <ExternalLink className="h-4 w-4 text-neutral-400 transition-all duration-300 group-hover:text-primary-500 group-hover:-translate-y-0.5 dark:text-neutral-600" />
                     </div>
                     <div className="mt-auto pt-10">
                       {item.meta && (

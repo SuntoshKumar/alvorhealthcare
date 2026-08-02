@@ -205,8 +205,8 @@ export function ProductsPageContent() {
       animate={{ opacity: 1 }}
       transition={{ duration: prefersReducedMotion ? 0.01 : 0.28, ease: "easeOut" }}
     >
-      <section className="relative overflow-hidden border-b border-neutral-100 bg-gradient-to-b from-blue-50 via-white to-white pb-12 pt-28 dark:border-neutral-800 dark:from-blue-950/30 dark:via-neutral-950 dark:to-neutral-950 lg:pb-14">
-        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-200/30 blur-3xl dark:bg-blue-800/10" aria-hidden="true" />
+      <section className="relative overflow-hidden border-b border-neutral-100 bg-gradient-to-b from-primary-50 via-white to-white pb-12 pt-28 dark:border-neutral-800 dark:from-primary-950/30 dark:via-neutral-950 dark:to-neutral-950 lg:pb-14">
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary-200/30 blur-3xl dark:bg-primary-800/10" aria-hidden="true" />
         <div className="pharma-grid absolute inset-0 opacity-40 dark:opacity-15" aria-hidden="true" />
         <div className="container relative">
           <motion.div
@@ -223,13 +223,13 @@ export function ProductsPageContent() {
               },
             }}
           >
-            <motion.div variants={heroItemVariants} className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-blue-700 shadow-sm backdrop-blur-xl dark:border-blue-800/50 dark:bg-neutral-900/70 dark:text-blue-300">
+            <motion.div variants={heroItemVariants} className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary-100 bg-white/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-primary-700 shadow-sm backdrop-blur-xl dark:border-primary-800/50 dark:bg-neutral-900/70 dark:text-primary-300">
               <Package className="h-3.5 w-3.5" />
               Product directory
             </motion.div>
             <motion.h1 variants={heroItemVariants} className="display-lg lg:display-xl font-bold text-neutral-900 dark:text-white">
               Find the right product,
-              <span className="block bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent">
                 without the noise.
               </span>
             </motion.h1>
@@ -239,7 +239,7 @@ export function ProductsPageContent() {
             </motion.p>
             <motion.div variants={heroItemVariants} className="mt-7 flex flex-wrap gap-2.5 text-sm text-neutral-600 dark:text-neutral-400">
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-neutral-100 dark:bg-neutral-900 dark:ring-neutral-800">
-                <Package className="h-4 w-4 text-blue-600" />
+                <Package className="h-4 w-4 text-primary-600" />
                 {products.length} products
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ring-1 ring-neutral-100 dark:bg-neutral-900 dark:ring-neutral-800">
@@ -269,7 +269,7 @@ export function ProductsPageContent() {
               {filters.category === "all" && (
                 <motion.span
                   layoutId="active-product-category"
-                  className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700"
+                  className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700"
                   transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 380, damping: 34 }}
                 />
               )}
@@ -287,7 +287,7 @@ export function ProductsPageContent() {
                 {filters.category === category.slug && (
                   <motion.span
                     layoutId="active-product-category"
-                    className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700"
+                    className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary-700"
                     transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 380, damping: 34 }}
                   />
                 )}
@@ -310,14 +310,14 @@ export function ProductsPageContent() {
                     onClick={() => selectSubCategory("")}
                     className={`relative shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
                       !filters.subCategory
-                        ? "text-blue-700 dark:text-blue-300"
+                        ? "text-primary-700 dark:text-primary-300"
                         : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
                     }`}
                   >
                     {!filters.subCategory && (
                       <motion.span
                         layoutId="active-product-subcategory"
-                        className="absolute inset-0 rounded-full bg-blue-50 dark:bg-blue-900/30"
+                        className="absolute inset-0 rounded-full bg-primary-50 dark:bg-primary-900/30"
                         transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 380, damping: 34 }}
                       />
                     )}
@@ -330,14 +330,14 @@ export function ProductsPageContent() {
                       onClick={() => selectSubCategory(subCategory.name)}
                       className={`relative shrink-0 rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
                         filters.subCategory === subCategory.name
-                          ? "text-blue-700 dark:text-blue-300"
+                          ? "text-primary-700 dark:text-primary-300"
                           : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
                       }`}
                     >
                       {filters.subCategory === subCategory.name && (
                         <motion.span
                           layoutId="active-product-subcategory"
-                          className="absolute inset-0 rounded-full bg-blue-50 dark:bg-blue-900/30"
+                          className="absolute inset-0 rounded-full bg-primary-50 dark:bg-primary-900/30"
                           transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 380, damping: 34 }}
                         />
                       )}
@@ -364,20 +364,20 @@ export function ProductsPageContent() {
             <div className="grid gap-2.5 p-2.5 lg:grid-cols-[minmax(0,1fr)_220px_auto]">
               <div className="relative">
                 <label htmlFor="product-search" className="sr-only">Search products</label>
-                <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-600 dark:text-blue-400" />
+                <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-primary-600 dark:text-primary-400" />
                 <input
                   id="product-search"
                   type="text"
                   placeholder="Search by product, indication, or therapeutic area"
                   value={filters.search}
                   onChange={(event) => updateFilter("search", event.target.value)}
-                  className="h-14 w-full rounded-[0.9rem] border border-transparent bg-neutral-50 pl-14 pr-28 text-[15px] font-medium text-neutral-900 outline-none transition-all placeholder:font-normal placeholder:text-neutral-400 hover:bg-neutral-100/80 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 dark:bg-neutral-800/70 dark:text-white dark:placeholder:text-neutral-500 dark:hover:bg-neutral-800 dark:focus:border-blue-500 dark:focus:bg-neutral-900 dark:focus:ring-blue-900/40 sm:pr-40"
+                  className="h-14 w-full rounded-[0.9rem] border border-transparent bg-neutral-50 pl-14 pr-28 text-[15px] font-medium text-neutral-900 outline-none transition-all placeholder:font-normal placeholder:text-neutral-400 hover:bg-neutral-100/80 focus:border-primary-500 focus:bg-white focus:ring-4 focus:ring-primary-100 dark:bg-neutral-800/70 dark:text-white dark:placeholder:text-neutral-500 dark:hover:bg-neutral-800 dark:focus:border-primary-500 dark:focus:bg-neutral-900 dark:focus:ring-primary-900/40 sm:pr-40"
                 />
                 <div className="absolute right-3 top-1/2 flex -translate-y-1/2 items-center gap-1">
                   <AnimatePresence>
                     {isSearching && (
                       <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
-                        <LoaderCircle className="h-4 w-4 animate-spin text-blue-600" />
+                        <LoaderCircle className="h-4 w-4 animate-spin text-primary-600" />
                       </motion.span>
                     )}
                   </AnimatePresence>
@@ -399,7 +399,7 @@ export function ProductsPageContent() {
 
               <div className="relative">
                 <label htmlFor="product-sort" className="sr-only">Sort results</label>
-                <ArrowUpDown className="pointer-events-none absolute left-4 top-1/2 z-10 h-4 w-4 -translate-y-1/2 text-blue-600 dark:text-blue-400" />
+                <ArrowUpDown className="pointer-events-none absolute left-4 top-1/2 z-10 h-4 w-4 -translate-y-1/2 text-primary-600 dark:text-primary-400" />
                 <span className="pointer-events-none absolute left-11 top-2.5 z-10 text-[10px] font-bold uppercase tracking-[0.16em] text-neutral-400">
                   Sort by
                 </span>
@@ -407,7 +407,7 @@ export function ProductsPageContent() {
                   id="product-sort"
                   value={filters.sortBy}
                   onChange={(event) => updateFilter("sortBy", event.target.value as SortOption)}
-                  className="h-14 w-full appearance-none rounded-[0.9rem] border border-transparent bg-neutral-50 pb-1.5 pl-11 pr-10 pt-5 text-sm font-semibold text-neutral-800 outline-none transition-all hover:bg-neutral-100/80 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 dark:bg-neutral-800/70 dark:text-white dark:hover:bg-neutral-800 dark:focus:border-blue-500 dark:focus:bg-neutral-900 dark:focus:ring-blue-900/40"
+                  className="h-14 w-full appearance-none rounded-[0.9rem] border border-transparent bg-neutral-50 pb-1.5 pl-11 pr-10 pt-5 text-sm font-semibold text-neutral-800 outline-none transition-all hover:bg-neutral-100/80 focus:border-primary-500 focus:bg-white focus:ring-4 focus:ring-primary-100 dark:bg-neutral-800/70 dark:text-white dark:hover:bg-neutral-800 dark:focus:border-primary-500 dark:focus:bg-neutral-900 dark:focus:ring-primary-900/40"
                 >
                   <option value="featured">Featured first</option>
                   <option value="name">Name A-Z</option>
@@ -425,7 +425,7 @@ export function ProductsPageContent() {
                     onClick={() => updateFilter("viewMode", "grid")}
                     className={`rounded-lg p-2.5 transition-all ${
                       filters.viewMode === "grid"
-                        ? "bg-white text-blue-600 shadow-sm dark:bg-neutral-700 dark:text-blue-400"
+                        ? "bg-white text-primary-600 shadow-sm dark:bg-neutral-700 dark:text-primary-400"
                         : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
                     }`}
                     aria-label="Grid view"
@@ -438,7 +438,7 @@ export function ProductsPageContent() {
                     onClick={() => updateFilter("viewMode", "list")}
                     className={`rounded-lg p-2.5 transition-all ${
                       filters.viewMode === "list"
-                        ? "bg-white text-blue-600 shadow-sm dark:bg-neutral-700 dark:text-blue-400"
+                        ? "bg-white text-primary-600 shadow-sm dark:bg-neutral-700 dark:text-primary-400"
                         : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
                     }`}
                     aria-label="List view"
@@ -454,7 +454,7 @@ export function ProductsPageContent() {
               <div className="border-t border-neutral-100 px-4 pb-4 pt-3.5 dark:border-neutral-800 sm:px-5">
                 <div className="mb-3 flex items-center justify-between gap-4">
                   <p className="flex items-center gap-2 text-sm font-semibold text-neutral-700 dark:text-neutral-200">
-                    <SlidersHorizontal className="h-4 w-4 text-blue-600" />
+                    <SlidersHorizontal className="h-4 w-4 text-primary-600" />
                     Therapeutic areas
                   </p>
                   {hasActiveFilters && (
@@ -474,7 +474,7 @@ export function ProductsPageContent() {
                       aria-pressed={filters.tags.includes(tag)}
                       className={`rounded-full px-3 py-1.5 text-xs font-medium capitalize transition-all ${
                         filters.tags.includes(tag)
-                          ? "bg-blue-600 text-white shadow-sm shadow-blue-500/20"
+                          ? "bg-primary-600 text-white shadow-sm shadow-primary-500/20"
                           : "bg-neutral-100 text-neutral-600 hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-700"
                       }`}
                     >
@@ -509,7 +509,7 @@ export function ProductsPageContent() {
                   className="flex flex-wrap items-center justify-end gap-2"
                 >
                   {activeCategory && (
-                    <span className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 dark:border-blue-800/50 dark:bg-blue-900/30 dark:text-blue-300">
+                    <span className="rounded-full border border-primary-100 bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-700 dark:border-primary-800/50 dark:bg-primary-900/30 dark:text-primary-300">
                       {activeCategory.name}
                     </span>
                   )}
@@ -517,21 +517,21 @@ export function ProductsPageContent() {
                     <button
                       type="button"
                       onClick={() => selectSubCategory("")}
-                      className="inline-flex items-center gap-1 rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 transition-colors hover:border-blue-200 hover:bg-blue-100 dark:border-blue-800/50 dark:bg-blue-900/30 dark:text-blue-300 dark:hover:bg-blue-900/50"
+                      className="inline-flex items-center gap-1 rounded-full border border-primary-100 bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-700 transition-colors hover:border-primary-200 hover:bg-primary-100 dark:border-primary-800/50 dark:bg-primary-900/30 dark:text-primary-300 dark:hover:bg-primary-900/50"
                     >
                       {activeSubCategory.name}
                       <X className="h-3 w-3" />
                     </button>
                   )}
                   {filters.search && (
-                    <button type="button" onClick={() => updateFilter("search", "")} className="inline-flex max-w-56 items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium text-neutral-600 transition-colors hover:border-blue-200 hover:text-blue-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+                    <button type="button" onClick={() => updateFilter("search", "")} className="inline-flex max-w-56 items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium text-neutral-600 transition-colors hover:border-primary-200 hover:text-primary-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
                       <Search className="h-3 w-3 shrink-0" />
                       <span className="truncate">{filters.search}</span>
                       <X className="h-3 w-3 shrink-0" />
                     </button>
                   )}
                   {filters.tags.map((tag) => (
-                    <button key={tag} type="button" onClick={() => toggleTag(tag)} className="inline-flex items-center gap-1 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium capitalize text-neutral-600 transition-colors hover:border-blue-200 hover:text-blue-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
+                    <button key={tag} type="button" onClick={() => toggleTag(tag)} className="inline-flex items-center gap-1 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium capitalize text-neutral-600 transition-colors hover:border-primary-200 hover:text-primary-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300">
                       {tag.split("-").join(" ")}
                       <X className="h-3 w-3" />
                     </button>
@@ -552,7 +552,7 @@ export function ProductsPageContent() {
                   transition={{ duration: transitionDuration, ease: [0.22, 1, 0.36, 1] }}
                   className="rounded-3xl border border-dashed border-neutral-200 bg-white px-6 py-20 text-center dark:border-neutral-700 dark:bg-neutral-900/60"
                 >
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                     <Search className="h-6 w-6" />
                   </div>
                   <h2 className="mt-5 text-xl font-bold text-neutral-900 dark:text-white">No matching products</h2>

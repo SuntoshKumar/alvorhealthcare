@@ -12,7 +12,7 @@ const icons: Record<string, typeof Award> = {
 };
 
 const gradients = {
-  award: "from-blue-500 to-blue-600",
+  award: "from-primary-500 to-primary-600",
   shield: "from-emerald-500 to-emerald-600",
   heart: "from-rose-500 to-rose-600",
   lightbulb: "from-amber-500 to-amber-600",
@@ -32,7 +32,7 @@ export function CareersCulture() {
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
             className="lg:sticky lg:top-28"
           >
-            <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+            <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">
               {culture.eyebrow}
             </span>
             <h2 id="culture-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">
@@ -59,7 +59,7 @@ export function CareersCulture() {
               return (
                 <motion.div
                   key={value.title}
-                  className="group flex gap-4 rounded-2xl border border-neutral-200/70 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_18px_50px_-38px_rgba(30,64,175,0.7)] dark:border-neutral-700/50 dark:bg-neutral-800/30 dark:hover:border-blue-700/60"
+                  className="group flex gap-4 rounded-2xl border border-neutral-200/70 bg-white p-5 transition-all hover:-translate-y-0.5 hover:border-primary-200 hover:shadow-[0_18px_50px_-38px_rgba(14,116,144,0.7)] dark:border-neutral-700/50 dark:bg-neutral-800/30 dark:hover:border-primary-700/60"
                   variants={{
                     hidden: { opacity: 0, y: 20 },
                     visible: {

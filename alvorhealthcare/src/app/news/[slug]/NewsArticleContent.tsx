@@ -18,7 +18,7 @@ const categoryLabels: Record<string, string> = {
 
 const categoryStyles: Record<string, string> = {
   "product-launch": "bg-rose-100 text-rose-800 dark:bg-rose-950/50 dark:text-rose-200",
-  announcement: "bg-blue-100 text-blue-800 dark:bg-blue-950/50 dark:text-blue-200",
+  announcement: "bg-primary-100 text-primary-800 dark:bg-primary-950/50 dark:text-primary-200",
   research: "bg-teal-100 text-teal-800 dark:bg-teal-950/50 dark:text-teal-200",
   "healthcare-news": "bg-amber-100 text-amber-800 dark:bg-amber-950/50 dark:text-amber-200",
   event: "bg-violet-100 text-violet-800 dark:bg-violet-950/50 dark:text-violet-200",
@@ -39,14 +39,14 @@ export function NewsArticleContent({ article, relatedArticles }: NewsArticleCont
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950">
       <article>
-        <header className="relative overflow-hidden bg-[#061524] pt-28 text-white lg:pt-40">
+        <header className="relative overflow-hidden bg-neutral-900 pt-28 text-white lg:pt-40">
           <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:56px_56px]" aria-hidden="true" />
-          <div className="absolute -right-32 top-16 h-96 w-96 rounded-full bg-blue-500/20 blur-3xl" aria-hidden="true" />
+          <div className="absolute -right-32 top-16 h-96 w-96 rounded-full bg-primary-500/20 blur-3xl" aria-hidden="true" />
 
           <div className="container relative pb-14 lg:pb-20">
             <Link
               href="/news"
-              className="inline-flex items-center gap-2 rounded-lg text-sm font-bold text-blue-100/70 outline-none transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-blue-300"
+              className="inline-flex items-center gap-2 rounded-lg text-sm font-bold text-primary-100/70 outline-none transition-colors hover:text-white focus-visible:ring-2 focus-visible:ring-primary-300"
             >
               <ArrowLeft className="h-4 w-4" aria-hidden="true" />
               Back to newsroom
@@ -58,7 +58,7 @@ export function NewsArticleContent({ article, relatedArticles }: NewsArticleCont
                 animate={{ opacity: 1, y: 0 }}
                 transition={transition}
               >
-                <div className="flex flex-wrap items-center gap-3 text-sm text-blue-100/60">
+                <div className="flex flex-wrap items-center gap-3 text-sm text-primary-100/60">
                   <span className={`rounded-full px-3 py-1.5 text-xs font-bold ${categoryStyles[article.category]}`}>
                     {categoryLabels[article.category]}
                   </span>
@@ -72,14 +72,14 @@ export function NewsArticleContent({ article, relatedArticles }: NewsArticleCont
                   </span>
                 </div>
                 <h1 className="mt-7 text-4xl font-bold tracking-[-0.05em] sm:text-5xl lg:text-7xl">{article.title}</h1>
-                <p className="mt-6 max-w-3xl text-lg leading-8 text-blue-100/70 sm:text-xl">{article.excerpt}</p>
+                <p className="mt-6 max-w-3xl text-lg leading-8 text-primary-100/70 sm:text-xl">{article.excerpt}</p>
                 <div className="mt-8 flex items-center gap-3 border-t border-white/10 pt-6">
                   <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-teal-300">
                     <UserRound className="h-5 w-5" aria-hidden="true" />
                   </span>
                   <div>
                     <p className="font-bold text-white">{article.author}</p>
-                    <p className="text-sm text-blue-100/50">Alvor Healthcare</p>
+                    <p className="text-sm text-primary-100/50">Alvor Healthcare</p>
                   </div>
                 </div>
               </motion.div>
@@ -92,7 +92,7 @@ export function NewsArticleContent({ article, relatedArticles }: NewsArticleCont
               >
                 <Image
                   src={publicAssetPath(article.featuredImage)}
-                  alt=""
+                  alt={article.title}
                   fill
                   priority
                   className="object-cover"
@@ -155,9 +155,9 @@ export function NewsArticleContent({ article, relatedArticles }: NewsArticleCont
                   ))}
                 </div>
 
-                <div className="mt-12 rounded-2xl border border-blue-200 bg-blue-50/70 p-6 dark:border-blue-900/60 dark:bg-blue-950/20">
+                <div className="mt-12 rounded-2xl border border-primary-200 bg-primary-50/70 p-6 dark:border-primary-900/60 dark:bg-primary-950/20">
                   <div className="flex items-start gap-3">
-                    <FileText className="mt-0.5 h-5 w-5 shrink-0 text-blue-700 dark:text-blue-300" aria-hidden="true" />
+                    <FileText className="mt-0.5 h-5 w-5 shrink-0 text-primary-700 dark:text-primary-300" aria-hidden="true" />
                     <p className="text-sm leading-6 text-neutral-700 dark:text-neutral-300">
                       This release reflects information available on its publication date. Product availability,
                       registration status, and approved information may differ by market.
@@ -182,16 +182,16 @@ export function NewsArticleContent({ article, relatedArticles }: NewsArticleCont
       </article>
 
       {relatedArticles.length > 0 && (
-        <section className="border-y border-neutral-200 bg-[#f4f7f9] py-16 dark:border-neutral-800 dark:bg-[#08111d] lg:py-20" aria-labelledby="related-news">
+        <section className="border-y border-neutral-200 bg-[var(--bg-secondary)] py-16 dark:border-neutral-800 dark:bg-[var(--bg-primary)] lg:py-20" aria-labelledby="related-news">
           <div className="container">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">Continue reading</p>
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">Continue reading</p>
                 <h2 id="related-news" className="mt-3 text-4xl font-bold tracking-[-0.04em] text-neutral-950 dark:text-white">
                   Related stories
                 </h2>
               </div>
-              <Link href="/news" className="inline-flex items-center gap-2 text-sm font-bold text-blue-700 dark:text-blue-300">
+              <Link href="/news" className="inline-flex items-center gap-2 text-sm font-bold text-primary-700 dark:text-primary-300">
                 View newsroom
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
@@ -209,26 +209,26 @@ export function NewsArticleContent({ article, relatedArticles }: NewsArticleCont
                 >
                   <Link
                     href={`/news/${related.slug}`}
-                    className="grid h-full outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-blue-400 sm:grid-cols-[13rem_1fr]"
+                    className="grid h-full outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-primary-400 sm:grid-cols-[13rem_1fr]"
                   >
                     <div className="relative min-h-52 overflow-hidden">
                       <Image
                         src={publicAssetPath(related.featuredImage)}
-                        alt=""
+                        alt={related.title}
                         fill
                         className="object-cover transition-transform duration-700 group-hover:scale-[1.045]"
                         sizes="(min-width: 768px) 208px, 100vw"
                       />
                     </div>
                     <div className="flex flex-col p-6">
-                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-blue-600 dark:text-blue-400">
+                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-primary-600 dark:text-primary-400">
                         {categoryLabels[related.category]}
                       </p>
-                      <h3 className="mt-3 text-xl font-bold text-neutral-950 transition-colors group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-300">
+                      <h3 className="mt-3 text-xl font-bold text-neutral-950 transition-colors group-hover:text-primary-700 dark:text-white dark:group-hover:text-primary-300">
                         {related.title}
                       </h3>
                       <p className="mt-3 line-clamp-2 text-sm leading-6 text-neutral-600 dark:text-neutral-300">{related.excerpt}</p>
-                      <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-blue-700 dark:text-blue-300">
+                      <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-bold text-primary-700 dark:text-primary-300">
                         Read article
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
                       </span>

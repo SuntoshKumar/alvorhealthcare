@@ -10,7 +10,7 @@ const departmentColors: Record<string, string> = {
   Commercial: "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400",
   "Quality & Compliance": "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400",
   "Regulatory Support": "bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400",
-  "Supply Operations": "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
+  "Supply Operations": "bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-400",
   "Customer Operations": "bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-400",
   "Corporate Functions": "bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-400",
 };
@@ -33,7 +33,7 @@ export function CareersJobs() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">
             {jobs.eyebrow}
           </span>
           <h2 id="openings-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">
@@ -87,7 +87,7 @@ export function CareersJobs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.1 }}
                 transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                className="group rounded-2xl border border-neutral-100 bg-white transition-all duration-300 hover:border-blue-200 hover:shadow-[0_12px_40px_-28px_rgba(30,64,175,0.15)] dark:border-neutral-700/50 dark:bg-neutral-800/30 dark:hover:border-blue-700/60"
+                className="group rounded-2xl border border-neutral-100 bg-white transition-all duration-300 hover:border-primary-200 hover:shadow-[0_12px_40px_-28px_rgba(14,116,144,0.15)] dark:border-neutral-700/50 dark:bg-neutral-800/30 dark:hover:border-primary-700/60"
               >
                   <button
                     onClick={() => setExpandedJob(isExpanded ? null : job.id)}
@@ -97,11 +97,11 @@ export function CareersJobs() {
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4">
                       <div className="flex-1 min-w-0">
                         <div className="flex flex-wrap items-center gap-2 mb-2">
-                          <h3 className="font-heading text-base font-bold text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                          <h3 className="font-heading text-base font-bold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                             {job.title}
                           </h3>
                           {job.postCount > 1 && (
-                            <span className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-semibold text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                            <span className="inline-flex items-center gap-1 rounded-full bg-primary-50 px-2 py-0.5 text-[11px] font-semibold text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                               <Users className="h-3 w-3" />
                               {job.postCount} Posts
                             </span>
@@ -148,7 +148,7 @@ export function CareersJobs() {
                               <ul className="space-y-2">
                                 {job.responsibilities.map((item, i) => (
                                   <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-600 dark:text-neutral-300">
-                                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-blue-500 flex-shrink-0" />
+                                    <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary-500 flex-shrink-0" />
                                     {item}
                                   </li>
                                 ))}
@@ -172,7 +172,7 @@ export function CareersJobs() {
                           <div className="mt-6 pt-5 border-t border-neutral-100 dark:border-neutral-700/50 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                             <a
                               href={`mailto:bd@alvorcare.com?subject=Application%20-%20${encodeURIComponent(job.title)}`}
-                              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-blue-500/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30 dark:from-blue-500 dark:to-blue-600"
+                              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-primary-500/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/30 dark:from-primary-500 dark:to-primary-600"
                             >
                               <Mail className="h-4 w-4" />
                               Apply for this role

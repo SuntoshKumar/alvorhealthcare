@@ -9,9 +9,9 @@ export function CareersHero() {
   const { hero } = careersContent;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-white to-teal-50 dark:from-blue-950/35 dark:via-neutral-950 dark:to-teal-950/25 py-16 lg:py-24" aria-labelledby="careers-heading">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] bg-[size:24px_24px] text-blue-950 opacity-[0.035] dark:text-blue-100 dark:opacity-[0.06]" aria-hidden="true" />
-      <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-blue-300/20 blur-3xl dark:bg-blue-500/10" aria-hidden="true" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-primary-50 via-white to-teal-50 dark:from-primary-950/35 dark:via-neutral-950 dark:to-teal-950/25 py-16 lg:py-24" aria-labelledby="careers-heading">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] bg-[size:24px_24px] text-primary-950 opacity-[0.035] dark:text-primary-100 dark:opacity-[0.06]" aria-hidden="true" />
+      <div className="absolute -left-24 top-10 h-64 w-64 rounded-full bg-primary-300/20 blur-3xl dark:bg-primary-500/10" aria-hidden="true" />
       <div className="absolute -right-24 bottom-0 h-72 w-72 rounded-full bg-teal-300/20 blur-3xl dark:bg-teal-500/10" aria-hidden="true" />
 
       <div className="container relative">
@@ -22,9 +22,9 @@ export function CareersHero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-blue-600 dark:border-blue-800 dark:bg-blue-900/40 dark:text-blue-300"
+                className="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-600 dark:border-primary-800 dark:bg-primary-900/40 dark:text-primary-300"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
+                <span className="h-1.5 w-1.5 rounded-full bg-primary-500 animate-pulse" />
                 {hero.eyebrow}
               </motion.span>
 
@@ -88,10 +88,10 @@ export function CareersHero() {
             className="relative"
           >
             <div className="relative rounded-3xl border border-neutral-200 bg-white p-8 shadow-[0_28px_70px_-55px_rgba(15,23,42,0.15)] dark:border-neutral-700/50 dark:bg-neutral-800/40 dark:shadow-[0_28px_70px_-55px_rgba(0,0,0,0.5)]">
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 to-teal-500/5 dark:from-blue-500/10 dark:to-teal-500/10" aria-hidden="true" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-500/5 to-teal-500/5 dark:from-primary-500/10 dark:to-teal-500/10" aria-hidden="true" />
 
               <div className="relative">
-                <p className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-4">
+                <p className="text-xs font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400 mb-4">
                   Life at Alvor
                 </p>
                 <h3 className="font-heading text-xl font-bold text-neutral-900 dark:text-white mb-6">
@@ -114,7 +114,7 @@ export function CareersHero() {
                 <div className="mt-6 pt-6 border-t border-neutral-100 dark:border-neutral-700/50">
                   <div className="flex items-center gap-3">
                     <div className="flex -space-x-2">
-                      {["bg-blue-500", "bg-teal-500", "bg-emerald-500", "bg-amber-500"].map((color, i) => (
+                      {["bg-primary-500", "bg-teal-500", "bg-emerald-500", "bg-amber-500"].map((color, i) => (
                         <div
                           key={i}
                           className={`w-8 h-8 rounded-full ${color} border-2 border-white dark:border-neutral-800 flex items-center justify-center text-[10px] font-bold text-white`}

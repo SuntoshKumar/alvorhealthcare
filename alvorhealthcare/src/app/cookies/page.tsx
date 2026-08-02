@@ -37,7 +37,7 @@ export default function CookiesPage() {
         <p>
           This policy describes browser storage used by the website published at the Alvor Healthcare web address. It
           should be read with our{" "}
-          <Link href="/privacy" className="font-bold text-blue-700 underline underline-offset-4 dark:text-blue-300">
+          <Link href="/privacy" className="font-bold text-primary-700 underline underline-offset-4 dark:text-primary-300">
             Privacy Policy
           </Link>
           .

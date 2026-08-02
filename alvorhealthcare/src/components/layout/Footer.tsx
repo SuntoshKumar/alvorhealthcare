@@ -1,13 +1,38 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, CheckCircle, Copy } from "lucide-react";
 import { FaLinkedinIn, FaTwitter, FaFacebookF, FaInstagram, FaYoutube, FaViber, FaWhatsapp } from "react-icons/fa";
+import { toast } from "react-hot-toast";
 import { categories, companyInfo, siteContent } from "@/data";
 import { publicAssetPath } from "@/lib/paths";
 
 export function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+
+  const handleNewsletterSubmit = useCallback((e: React.FormEvent) => {
+    e.preventDefault();
+    if (!newsletterEmail || !newsletterEmail.includes("@")) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+    const mailto = `mailto:${companyInfo.contact.email}?subject=${encodeURIComponent("Newsletter Subscription")}&body=${encodeURIComponent(`Please add me to your newsletter mailing list.\n\nEmail: ${newsletterEmail}`)}`;
+    window.location.assign(mailto);
+    setNewsletterSubmitted(true);
+    toast.success("Opening your email app to subscribe...");
+  }, [newsletterEmail]);
+
+  const copyNewsletterEmail = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(companyInfo.contact.email);
+      toast.success("Email address copied to clipboard");
+    } catch {
+      toast.error("Unable to copy. Please copy manually: " + companyInfo.contact.email);
+    }
+  }, []);
   return (
     <footer className="bg-neutral-900 text-white" role="contentinfo">
       <div className="container py-16 lg:py-20">
@@ -19,7 +44,7 @@ export function Footer() {
                   src={publicAssetPath("/images/alvor.svg")}
                   alt=""
                   fill
-                  className="object-contain drop-shadow-[0_10px_16px_rgba(0,124,255,0.22)]"
+                  className="object-contain drop-shadow-[0_10px_16px_rgba(14,116,144,0.22)]"
                   sizes="44px"
                 />
               </div>
@@ -33,17 +58,17 @@ export function Footer() {
             </p>
             <div className="flex flex-col gap-2.5 text-sm text-neutral-400">
               {companyInfo.contact.phones.map((phone) => (
-                <a key={phone} href={`tel:${phone.replace(/\D/g, "")}`} className="flex items-center gap-3 hover:text-blue-400 transition-colors">
-                  <Phone className="w-4 h-4 text-blue-500 flex-shrink-0" />
+                <a key={phone} href={`tel:${phone.replace(/\D/g, "")}`} className="flex items-center gap-3 hover:text-primary-400 transition-colors">
+                  <Phone className="w-4 h-4 text-primary-500 flex-shrink-0" />
                   {phone}
                 </a>
               ))}
-              <a href={`mailto:${companyInfo.contact.email}`} className="flex items-center gap-3 hover:text-blue-400 transition-colors">
-                <Mail className="w-4 h-4 text-blue-500 flex-shrink-0" />
+              <a href={`mailto:${companyInfo.contact.email}`} className="flex items-center gap-3 hover:text-primary-400 transition-colors">
+                <Mail className="w-4 h-4 text-primary-500 flex-shrink-0" />
                 {companyInfo.contact.email}
               </a>
               <span className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-blue-500 flex-shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" />
                 <span>{companyInfo.contact.address}, {companyInfo.contact.city}, {companyInfo.contact.country}</span>
               </span>
             </div>
@@ -61,7 +86,7 @@ export function Footer() {
                 <li key={category.id}>
                   <Link
                     href={`/categories/${category.slug}`}
-                    className="text-sm text-neutral-400 hover:text-blue-400 transition-colors"
+                    className="text-sm text-neutral-400 hover:text-primary-400 transition-colors"
                   >
                     {category.name}
                   </Link>
@@ -70,7 +95,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/categories"
-                  className="text-sm text-neutral-400 hover:text-blue-400 transition-colors"
+                  className="text-sm text-neutral-400 hover:text-primary-400 transition-colors"
                 >
                   +{categories.length - 6} more
                 </Link>
@@ -87,7 +112,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-400 hover:text-blue-400 transition-colors"
+                    className="text-sm text-neutral-400 hover:text-primary-400 transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -115,7 +140,7 @@ export function Footer() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-neutral-800 hover:bg-blue-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all"
+                    className="w-9 h-9 rounded-lg bg-neutral-800 hover:bg-primary-600 flex items-center justify-center text-neutral-400 hover:text-white transition-all"
                     aria-label={link.platform}
                   >
                     {icons[link.platform] || <span className="text-xs font-semibold">{link.platform.charAt(0)}</span>}
@@ -144,21 +169,41 @@ export function Footer() {
             <h4 className="font-heading font-semibold text-xs uppercase tracking-wider text-neutral-400 mb-3">
               {siteContent.footer.newsletterTitle}
             </h4>
-            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder={siteContent.footer.newsletterPlaceholder}
-                className="flex-1 px-3.5 py-2.5 bg-neutral-800 border border-neutral-700 rounded-xl text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                aria-label="Email for newsletter"
-              />
+            {newsletterSubmitted ? (
+              <div className="flex items-center gap-2 rounded-xl bg-neutral-800 px-3.5 py-2.5 text-sm text-emerald-400">
+                <CheckCircle className="w-4 h-4 flex-shrink-0" />
+                <span>Thank you! Check your email app.</span>
+              </div>
+            ) : (
+              <form className="flex gap-2" onSubmit={handleNewsletterSubmit}>
+                <input
+                  type="email"
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder={siteContent.footer.newsletterPlaceholder}
+                  className="flex-1 px-3.5 py-2.5 bg-neutral-800 border border-neutral-700 rounded-xl text-sm text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  aria-label="Email for newsletter"
+                  required
+                />
+                <button
+                  type="submit"
+                  className="px-3.5 py-2.5 bg-primary-600 hover:bg-primary-700 rounded-xl transition-colors"
+                  aria-label="Subscribe"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </form>
+            )}
+            <div className="mt-2 flex items-center gap-2">
               <button
-                type="submit"
-                className="px-3.5 py-2.5 bg-blue-600 hover:bg-blue-700 rounded-xl transition-colors"
-                aria-label="Subscribe"
+                type="button"
+                onClick={copyNewsletterEmail}
+                className="inline-flex items-center gap-1 text-[10px] text-neutral-500 hover:text-primary-400 transition-colors"
               >
-                <ArrowRight className="w-4 h-4" />
+                <Copy className="w-3 h-3" />
+                Or email us directly
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>

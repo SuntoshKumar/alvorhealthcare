@@ -20,7 +20,7 @@ export function FeaturedProducts() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <div>
-            <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Products</span>
+            <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">Products</span>
             <h2 id="featured-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2">
               Featured Products
             </h2>
@@ -30,7 +30,7 @@ export function FeaturedProducts() {
           </div>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 transition-colors flex-shrink-0"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:text-primary-700 transition-colors flex-shrink-0"
           >
             Browse All Products <ArrowRight className="w-4 h-4" />
           </Link>

@@ -25,14 +25,14 @@ export function LegalPage({
 }: LegalPageProps) {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950">
-      <header className="relative overflow-hidden border-b border-neutral-200/70 bg-[#f4f8ff] pt-28 pb-16 dark:border-neutral-800 dark:bg-[#07111f] lg:pt-40 lg:pb-24">
+      <header className="relative overflow-hidden border-b border-neutral-200/70 bg-[var(--bg-secondary)] pt-28 pb-16 dark:border-neutral-800 dark:bg-[var(--bg-primary)] lg:pt-40 lg:pb-24">
         <div className="pharma-grid absolute inset-0 opacity-70 dark:opacity-20" aria-hidden="true" />
-        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-300/25 blur-3xl dark:bg-blue-800/15" aria-hidden="true" />
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary-300/25 blur-3xl dark:bg-primary-800/15" aria-hidden="true" />
         <div className="absolute -bottom-40 left-[10%] h-80 w-80 rounded-full bg-teal-300/20 blur-3xl dark:bg-teal-800/10" aria-hidden="true" />
 
         <div className="container relative">
           <div className="max-w-4xl">
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white/80 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.17em] text-blue-700 shadow-sm backdrop-blur-sm dark:border-blue-900/70 dark:bg-neutral-900/70 dark:text-blue-300">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary-200 bg-white/80 px-3.5 py-2 text-xs font-bold uppercase tracking-[0.17em] text-primary-700 shadow-sm backdrop-blur-sm dark:border-primary-900/70 dark:bg-neutral-900/70 dark:text-primary-300">
               <Icon className="h-4 w-4" aria-hidden="true" />
               {eyebrow}
             </div>
@@ -54,10 +54,10 @@ export function LegalPage({
         <div className="grid items-start gap-12 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-20">
           <aside className="lg:sticky lg:top-28">
             <details className="group rounded-2xl border border-neutral-200 bg-neutral-50/70 p-4 dark:border-neutral-800 dark:bg-neutral-900/60 lg:hidden">
-              <summary className="cursor-pointer list-none font-bold text-neutral-950 outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-white">
+              <summary className="cursor-pointer list-none font-bold text-neutral-950 outline-none focus-visible:ring-2 focus-visible:ring-primary-500 dark:text-white">
                 <span className="flex items-center justify-between gap-4">
                   Jump to a section
-                  <span className="text-blue-600 transition-transform group-open:rotate-45 dark:text-blue-400" aria-hidden="true">+</span>
+                  <span className="text-primary-600 transition-transform group-open:rotate-45 dark:text-primary-400" aria-hidden="true">+</span>
                 </span>
               </summary>
               <nav className="mt-4 grid gap-1 border-t border-neutral-200 pt-3 dark:border-neutral-800" aria-label={`${title} sections`}>
@@ -65,7 +65,7 @@ export function LegalPage({
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className="rounded-lg px-2 py-2 text-sm font-semibold text-neutral-600 outline-none hover:bg-white hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-blue-300"
+                    className="rounded-lg px-2 py-2 text-sm font-semibold text-neutral-600 outline-none hover:bg-white hover:text-primary-700 focus-visible:ring-2 focus-visible:ring-primary-500 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:hover:text-primary-300"
                   >
                     {section.title}
                   </a>
@@ -82,7 +82,7 @@ export function LegalPage({
                   <a
                     key={section.id}
                     href={`#${section.id}`}
-                    className="block border-l-2 border-transparent py-2.5 pl-4 text-sm font-semibold text-neutral-600 transition-colors hover:border-blue-600 hover:text-blue-700 focus-visible:border-blue-600 focus-visible:text-blue-700 focus-visible:outline-none dark:text-neutral-400 dark:hover:text-blue-300 dark:focus-visible:text-blue-300"
+                    className="block border-l-2 border-transparent py-2.5 pl-4 text-sm font-semibold text-neutral-600 transition-colors hover:border-primary-600 hover:text-primary-700 focus-visible:border-primary-600 focus-visible:text-primary-700 focus-visible:outline-none dark:text-neutral-400 dark:hover:text-primary-300 dark:focus-visible:text-primary-300"
                   >
                     {section.title}
                   </a>
@@ -139,7 +139,7 @@ export function LegalCallout({
   tone?: "blue" | "teal" | "amber";
 }) {
   const styles = {
-    blue: "border-blue-200 bg-blue-50/70 dark:border-blue-900/60 dark:bg-blue-950/20",
+    blue: "border-primary-200 bg-primary-50/70 dark:border-primary-900/60 dark:bg-primary-950/20",
     teal: "border-teal-200 bg-teal-50/70 dark:border-teal-900/60 dark:bg-teal-950/20",
     amber: "border-amber-200 bg-amber-50/80 dark:border-amber-900/60 dark:bg-amber-950/20",
   };
@@ -162,20 +162,20 @@ export function LegalContact({ subject }: { subject: string }) {
     <div className="grid gap-3 sm:grid-cols-2">
       <a
         href={`mailto:${companyInfo.contact.email}?subject=${encodeURIComponent(subject)}`}
-        className="flex items-start gap-3 rounded-2xl border border-neutral-200 p-4 font-semibold text-neutral-800 outline-none transition-colors hover:border-blue-300 hover:bg-blue-50/50 focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-neutral-800 dark:text-neutral-100 dark:hover:border-blue-800 dark:hover:bg-blue-950/20"
+        className="flex items-start gap-3 rounded-2xl border border-neutral-200 p-4 font-semibold text-neutral-800 outline-none transition-colors hover:border-primary-300 hover:bg-primary-50/50 focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-neutral-800 dark:text-neutral-100 dark:hover:border-primary-800 dark:hover:bg-primary-950/20"
       >
-        <Mail className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+        <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary-600 dark:text-primary-400" aria-hidden="true" />
         <span className="break-all">{companyInfo.contact.email}</span>
       </a>
       <a
         href={`tel:${companyInfo.contact.phone.replace(/\D/g, "")}`}
-        className="flex items-start gap-3 rounded-2xl border border-neutral-200 p-4 font-semibold text-neutral-800 outline-none transition-colors hover:border-blue-300 hover:bg-blue-50/50 focus-visible:ring-2 focus-visible:ring-blue-500 dark:border-neutral-800 dark:text-neutral-100 dark:hover:border-blue-800 dark:hover:bg-blue-950/20"
+        className="flex items-start gap-3 rounded-2xl border border-neutral-200 p-4 font-semibold text-neutral-800 outline-none transition-colors hover:border-primary-300 hover:bg-primary-50/50 focus-visible:ring-2 focus-visible:ring-primary-500 dark:border-neutral-800 dark:text-neutral-100 dark:hover:border-primary-800 dark:hover:bg-primary-950/20"
       >
-        <Phone className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+        <Phone className="mt-0.5 h-5 w-5 shrink-0 text-primary-600 dark:text-primary-400" aria-hidden="true" />
         {companyInfo.contact.phone}
       </a>
       <div className="flex items-start gap-3 rounded-2xl border border-neutral-200 p-4 text-neutral-700 dark:border-neutral-800 dark:text-neutral-300 sm:col-span-2">
-        <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-blue-600 dark:text-blue-400" aria-hidden="true" />
+        <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-primary-600 dark:text-primary-400" aria-hidden="true" />
         <span>{address}</span>
       </div>
     </div>

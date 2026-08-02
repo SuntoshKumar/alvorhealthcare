@@ -9,7 +9,7 @@ export function CareChannelsSection() {
     <section className="section bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="partners-heading" id="partners">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">{content.eyebrow}</span>
+          <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">{content.eyebrow}</span>
           <h2 id="partners-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-3">
             {content.title}
           </h2>

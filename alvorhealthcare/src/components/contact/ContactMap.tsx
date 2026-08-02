@@ -17,7 +17,7 @@ export function ContactMap() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">
             Visit Us
           </span>
           <h2 id="map-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">
@@ -47,7 +47,7 @@ export function ContactMap() {
               className="w-full"
             />
             <div className="absolute bottom-4 left-4 bg-white/95 dark:bg-neutral-950/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-soft flex items-center gap-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
                 <Navigation className="w-5 h-5 text-white" />
               </div>
               <div>

@@ -14,7 +14,7 @@ const icons: Record<string, typeof Shield> = {
 };
 
 const gradients: Record<string, string> = {
-  shield: "from-blue-500 to-blue-600",
+  shield: "from-primary-500 to-primary-600",
   package: "from-teal-500 to-teal-600",
   award: "from-amber-500 to-amber-600",
   truck: "from-cyan-500 to-cyan-600",
@@ -35,7 +35,7 @@ export function WhyChooseUsSection() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">{content.eyebrow}</span>
+          <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">{content.eyebrow}</span>
           <h2 id="why-choose-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">
             {content.title}
           </h2>

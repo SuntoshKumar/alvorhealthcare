@@ -7,7 +7,7 @@ export default function CategoryNotFound() {
       <div className="max-w-lg w-full text-center">
         <div className="relative mx-auto mb-8 flex h-28 w-28 items-center justify-center rounded-full border border-dashed border-neutral-200 bg-neutral-50 dark:border-neutral-700 dark:bg-neutral-900/60">
           <Package className="h-12 w-12 text-neutral-300 dark:text-neutral-600" />
-          <div className="absolute -right-1 -top-1 flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-blue-600 ring-4 ring-white dark:bg-blue-900/30 dark:text-blue-400 dark:ring-neutral-950">
+          <div className="absolute -right-1 -top-1 flex h-10 w-10 items-center justify-center rounded-full bg-primary-50 text-primary-600 ring-4 ring-white dark:bg-primary-900/30 dark:text-primary-400 dark:ring-neutral-950">
             <Search className="h-5 w-5" />
           </div>
         </div>
@@ -23,7 +23,7 @@ export default function CategoryNotFound() {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/categories"
-            className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 transition-all hover:bg-blue-700 hover:shadow-blue-600/40 focus:outline-none focus:ring-4 focus:ring-blue-100 dark:focus:ring-blue-900/40"
+            className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary-600/25 transition-all hover:bg-primary-700 hover:shadow-primary-600/40 focus:outline-none focus:ring-4 focus:ring-primary-100 dark:focus:ring-primary-900/40"
           >
             <ArrowLeft className="h-4 w-4" />
             Browse All Categories

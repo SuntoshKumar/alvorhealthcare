@@ -27,13 +27,13 @@ const toneStyles: Record<
   }
 > = {
   blue: {
-    badge: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
-    icon: "bg-blue-600 text-white",
-    iconSoft: "bg-blue-50 text-blue-600 dark:bg-blue-950/60 dark:text-blue-300",
-    panel: "from-blue-600 to-blue-800",
-    glow: "bg-blue-400/25",
-    line: "bg-blue-500",
-    accent: "bg-blue-500",
+    badge: "bg-primary-100 text-primary-700 dark:bg-primary-900/40 dark:text-primary-300",
+    icon: "bg-primary-600 text-white",
+    iconSoft: "bg-primary-50 text-primary-600 dark:bg-primary-950/60 dark:text-primary-300",
+    panel: "from-primary-600 to-primary-800",
+    glow: "bg-primary-400/25",
+    line: "bg-primary-500",
+    accent: "bg-primary-500",
   },
   teal: {
     badge: "bg-teal-100 text-teal-700 dark:bg-teal-900/40 dark:text-teal-300",
@@ -105,7 +105,7 @@ export function ResourceInformationPage({ page }: ResourceInformationPageProps) 
           >
             <Link
               href="/resources"
-              className="inline-flex items-center gap-2 font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+              className="inline-flex items-center gap-2 font-medium transition-colors hover:text-primary-600 dark:hover:text-primary-400"
             >
               <ArrowLeft className="h-4 w-4" />
               Resources
@@ -201,7 +201,7 @@ export function ResourceInformationPage({ page }: ResourceInformationPageProps) 
             transition={{ duration: 0.65, ease }}
             className="mb-12 max-w-3xl"
           >
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">
               How we can help
             </p>
             <h2

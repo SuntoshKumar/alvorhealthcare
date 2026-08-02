@@ -31,7 +31,7 @@ export function AnimatedFaq({ items }: AnimatedFaqProps) {
             <div
               className={`rounded-xl border transition-colors duration-200 ${
                 isOpen
-                  ? "border-blue-200 bg-blue-50/50 dark:border-blue-800/50 dark:bg-blue-950/20"
+                  ? "border-primary-200 bg-primary-50/50 dark:border-primary-800/50 dark:bg-primary-950/20"
                   : "border-neutral-100 bg-white dark:border-neutral-700/50 dark:bg-neutral-800/30"
               }`}
             >
@@ -42,7 +42,7 @@ export function AnimatedFaq({ items }: AnimatedFaqProps) {
               >
                 <span className={`font-medium text-sm leading-relaxed transition-colors duration-200 ${
                   isOpen
-                    ? "text-blue-700 dark:text-blue-300"
+                    ? "text-primary-700 dark:text-primary-300"
                     : "text-neutral-900 dark:text-white"
                 }`}>
                   {item.q}
@@ -54,7 +54,7 @@ export function AnimatedFaq({ items }: AnimatedFaqProps) {
                 >
                   <ChevronDown className={`w-5 h-5 transition-colors duration-200 ${
                     isOpen
-                      ? "text-blue-500 dark:text-blue-400"
+                      ? "text-primary-500 dark:text-primary-400"
                       : "text-neutral-400 dark:text-neutral-500"
                   }`} />
                 </motion.span>
@@ -70,7 +70,7 @@ export function AnimatedFaq({ items }: AnimatedFaqProps) {
                     className="overflow-hidden"
                   >
                     <div className="px-5 pb-5">
-                      <div className="h-px bg-gradient-to-r from-blue-200 via-blue-100 to-transparent dark:from-blue-800 dark:via-blue-900 mb-4" />
+                      <div className="h-px bg-gradient-to-r from-primary-200 via-primary-100 to-transparent dark:from-primary-800 dark:via-primary-900 mb-4" />
                       <p className="text-sm leading-relaxed text-neutral-600 dark:text-neutral-300">
                         {item.a}
                       </p>

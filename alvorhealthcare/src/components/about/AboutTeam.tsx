@@ -158,10 +158,10 @@ export function AboutTeam() {
               <ScrollReveal>
                 <HoverScale>
                   <Card variant="elevated" className="group h-full overflow-hidden rounded-[1.6rem] border-neutral-200/80">
-                    <div className="relative h-72 overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20" >
-                      <Image src={publicAssetPath(member.image || "/images/team/default-avatar.png")} alt="" fill className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" />
+                    <div className="relative h-72 overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 to-teal-50 dark:from-primary-900/20 dark:to-teal-900/20" >
+                      <Image src={publicAssetPath(member.image || "/images/team/default-avatar.png")} alt={member.name} fill className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]" sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw" />
                       <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/10 to-transparent" />
-                      <a href={member.linkedin} className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-neutral-950/30 text-white backdrop-blur-xl transition-colors hover:bg-blue-600" aria-label={`${member.name} on LinkedIn`}>
+                      <a href={member.linkedin} className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-neutral-950/30 text-white backdrop-blur-xl transition-colors hover:bg-primary-600" aria-label={`${member.name} on LinkedIn`}>
                         <LinkedinIcon className="h-4 w-4" />
                       </a>
                       <div className="absolute bottom-4 left-4 right-4 flex flex-wrap gap-1.5">
@@ -172,7 +172,7 @@ export function AboutTeam() {
                     </div>
                     <CardContent className="p-6">
                       <CardTitle className="text-neutral-900 dark:text-white">{member.name}</CardTitle>
-                      <div className="text-blue-600 dark:text-blue-400 font-medium text-sm mb-3">{member.role}</div>
+                      <div className="text-primary-600 dark:text-primary-400 font-medium text-sm mb-3">{member.role}</div>
                       <CardDescription className="line-clamp-3">{member.bio}</CardDescription>
                       <div className="mt-4 flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
                         <span className="flex items-center gap-1">
@@ -204,14 +204,14 @@ export function AboutTeam() {
                   <Card variant="outlined" className="group p-6 text-left">
                     <div className="mb-5 flex items-center gap-4">
                       <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl bg-neutral-100 dark:bg-neutral-800">
-                        <Image src={publicAssetPath(member.image || "/images/team/default-avatar.png")} alt="" fill className="object-cover" sizes="64px" />
+                        <Image src={publicAssetPath(member.image || "/images/team/default-avatar.png")} alt={member.name} fill className="object-cover" sizes="64px" />
                       </div>
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                         {React.createElement(getDepartmentIcon(member.department), { className: "w-5 h-5" })}
                       </div>
                     </div>
                     <CardTitle className="text-neutral-900 dark:text-white">{member.name}</CardTitle>
-                    <div className="text-blue-600 dark:text-blue-400 font-medium text-sm mb-2">{member.role}</div>
+                    <div className="text-primary-600 dark:text-primary-400 font-medium text-sm mb-2">{member.role}</div>
                     <Badge variant="outline" size="sm" className="mb-4">{member.department}</Badge>
                     <p className="text-sm text-neutral-600 dark:text-neutral-400">Leading our {member.department.toLowerCase()} division with excellence and innovation.</p>
                   </Card>
@@ -222,14 +222,14 @@ export function AboutTeam() {
         </StaggerContainer>
 
         <ScrollReveal>
-          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-blue-700 to-teal-700 p-8 text-white lg:p-12">
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-r from-primary-700 to-teal-700 p-8 text-white lg:p-12">
             <div className="absolute -right-12 -top-20 h-64 w-64 rounded-full border border-white/15" aria-hidden="true" />
             <h3 className="relative font-display text-3xl font-bold tracking-[-0.04em] sm:text-4xl">Build what healthcare needs next.</h3>
-            <p className="relative mt-4 max-w-2xl text-base leading-relaxed text-blue-100 lg:text-lg">
+            <p className="relative mt-4 max-w-2xl text-base leading-relaxed text-primary-100 lg:text-lg">
               We&apos;re always looking for passionate professionals who share our commitment to healthcare excellence.
               Explore career opportunities across supply chain, quality, regulatory, medical information, and commercial functions.
             </p>
-            <Link href="/careers" className="relative mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-blue-700 transition-transform hover:-translate-y-0.5">
+            <Link href="/careers" className="relative mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-primary-700 transition-transform hover:-translate-y-0.5">
               View Career Opportunities
               <ArrowRight className="h-4 w-4" />
             </Link>

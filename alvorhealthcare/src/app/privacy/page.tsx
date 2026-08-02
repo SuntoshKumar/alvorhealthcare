@@ -33,7 +33,7 @@ export default function PrivacyPage() {
     >
       <LegalCallout title="The current website does not use advertising pixels or first-party analytics cookies.">
         The site stores a theme preference in your browser only when you use the light/dark theme control. See our{" "}
-        <Link href="/cookies" className="font-bold text-blue-700 underline underline-offset-4 dark:text-blue-300">
+        <Link href="/cookies" className="font-bold text-primary-700 underline underline-offset-4 dark:text-primary-300">
           Cookie Policy
         </Link>{" "}
         for the exact storage details.

@@ -18,7 +18,7 @@ const categoryLabels: Record<string, string> = {
 
 const categoryStyles: Record<string, string> = {
   "product-launch": "bg-rose-50 text-rose-700 dark:bg-rose-950/40 dark:text-rose-300",
-  announcement: "bg-blue-50 text-blue-700 dark:bg-blue-950/40 dark:text-blue-300",
+  announcement: "bg-primary-50 text-primary-700 dark:bg-primary-950/40 dark:text-primary-300",
   research: "bg-teal-50 text-teal-700 dark:bg-teal-950/40 dark:text-teal-300",
   "healthcare-news": "bg-amber-50 text-amber-700 dark:bg-amber-950/40 dark:text-amber-300",
   event: "bg-violet-50 text-violet-700 dark:bg-violet-950/40 dark:text-violet-300",
@@ -39,11 +39,11 @@ export function NewsSection() {
   if (!leadArticle) return null;
 
   return (
-    <section className="relative overflow-hidden border-y border-neutral-200 bg-[#f4f7f9] py-20 dark:border-neutral-800 dark:bg-[#08111d] lg:py-28" aria-labelledby="home-news-heading">
+    <section className="relative overflow-hidden border-y border-neutral-200 bg-[var(--bg-secondary)] py-20 dark:border-neutral-800 dark:bg-[var(--bg-primary)] lg:py-28" aria-labelledby="home-news-heading">
       <div className="absolute inset-0 opacity-[0.045] dark:opacity-[0.08]" aria-hidden="true">
         <div className="h-full w-full bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] bg-[size:52px_52px]" />
       </div>
-      <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-blue-300/20 blur-3xl dark:bg-blue-800/10" aria-hidden="true" />
+      <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full bg-primary-300/20 blur-3xl dark:bg-primary-800/10" aria-hidden="true" />
       <div className="absolute -bottom-32 left-[8%] h-72 w-72 rounded-full bg-teal-300/20 blur-3xl dark:bg-teal-800/10" aria-hidden="true" />
 
       <div className="container relative">
@@ -54,7 +54,7 @@ export function NewsSection() {
             viewport={{ once: true, margin: "-60px" }}
             transition={transition}
           >
-            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">
               <Newspaper className="h-4 w-4" aria-hidden="true" />
               {content.eyebrow}
             </span>
@@ -74,7 +74,7 @@ export function NewsSection() {
           >
             <Link
               href="/news"
-              className="inline-flex items-center gap-2 rounded-xl border border-neutral-300 bg-white px-5 py-3 text-sm font-bold text-neutral-950 shadow-sm outline-none transition-[transform,border-color,color] hover:-translate-y-0.5 hover:border-blue-300 hover:text-blue-700 focus-visible:ring-4 focus-visible:ring-blue-200 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:hover:border-blue-700 dark:hover:text-blue-300 dark:focus-visible:ring-blue-950"
+              className="inline-flex items-center gap-2 rounded-xl border border-neutral-300 bg-white px-5 py-3 text-sm font-bold text-neutral-950 shadow-sm outline-none transition-[transform,border-color,color] hover:-translate-y-0.5 hover:border-primary-300 hover:text-primary-700 focus-visible:ring-4 focus-visible:ring-primary-200 dark:border-neutral-700 dark:bg-neutral-900 dark:text-white dark:hover:border-primary-700 dark:hover:text-primary-300 dark:focus-visible:ring-primary-950"
             >
               {content.linkLabel}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -92,13 +92,13 @@ export function NewsSection() {
           >
             <Link
               href={`/news/${leadArticle.slug}`}
-              className="grid h-full outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-blue-400 sm:grid-cols-[1.08fr_0.92fr] lg:grid-cols-1 xl:grid-cols-[1.08fr_0.92fr]"
+              className="grid h-full outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-primary-400 sm:grid-cols-[1.08fr_0.92fr] lg:grid-cols-1 xl:grid-cols-[1.08fr_0.92fr]"
               aria-label={`Read featured news: ${leadArticle.title}`}
             >
               <div className="relative min-h-72 overflow-hidden lg:min-h-[23rem]">
                 <Image
                   src={publicAssetPath(leadArticle.featuredImage)}
-                  alt=""
+                  alt={leadArticle.title}
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   sizes="(min-width: 1280px) 40vw, (min-width: 1024px) 62vw, (min-width: 640px) 50vw, 100vw"
@@ -119,7 +119,7 @@ export function NewsSection() {
                     {format(new Date(leadArticle.publishDate), "MMM d, yyyy")}
                   </time>
                 </div>
-                <h3 className="mt-5 text-2xl font-bold tracking-[-0.03em] text-neutral-950 transition-colors group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-300 sm:text-3xl">
+                <h3 className="mt-5 text-2xl font-bold tracking-[-0.03em] text-neutral-950 transition-colors group-hover:text-primary-700 dark:text-white dark:group-hover:text-primary-300 sm:text-3xl">
                   {leadArticle.title}
                 </h3>
                 <p className="mt-4 line-clamp-3 text-base leading-7 text-neutral-600 dark:text-neutral-300">
@@ -130,7 +130,7 @@ export function NewsSection() {
                     <Clock3 className="h-3.5 w-3.5 text-teal-600 dark:text-teal-400" aria-hidden="true" />
                     {leadArticle.readTime} min read
                   </span>
-                  <span className="inline-flex items-center gap-2 text-sm font-bold text-blue-700 dark:text-blue-300">
+                  <span className="inline-flex items-center gap-2 text-sm font-bold text-primary-700 dark:text-primary-300">
                     Read story
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                   </span>
@@ -151,13 +151,13 @@ export function NewsSection() {
               >
                 <Link
                   href={`/news/${article.slug}`}
-                  className="grid h-full grid-cols-[7.5rem_minmax(0,1fr)] outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-blue-400 sm:grid-cols-[11rem_minmax(0,1fr)] lg:grid-cols-[9rem_minmax(0,1fr)]"
+                  className="grid h-full grid-cols-[7.5rem_minmax(0,1fr)] outline-none focus-visible:ring-4 focus-visible:ring-inset focus-visible:ring-primary-400 sm:grid-cols-[11rem_minmax(0,1fr)] lg:grid-cols-[9rem_minmax(0,1fr)]"
                   aria-label={`Read news article: ${article.title}`}
                 >
                   <div className="relative min-h-48 overflow-hidden">
                     <Image
                       src={publicAssetPath(article.featuredImage)}
-                      alt=""
+                      alt={article.title}
                       fill
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                       sizes="(min-width: 1024px) 144px, (min-width: 640px) 176px, 120px"
@@ -170,10 +170,10 @@ export function NewsSection() {
                       </span>
                       <time dateTime={article.publishDate}>{format(new Date(article.publishDate), "MMM d, yyyy")}</time>
                     </div>
-                    <h3 className="mt-4 text-lg font-bold leading-snug text-neutral-950 transition-colors group-hover:text-blue-700 dark:text-white dark:group-hover:text-blue-300 sm:text-xl">
+                    <h3 className="mt-4 text-lg font-bold leading-snug text-neutral-950 transition-colors group-hover:text-primary-700 dark:text-white dark:group-hover:text-primary-300 sm:text-xl">
                       {article.title}
                     </h3>
-                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-blue-700 dark:text-blue-300">
+                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary-700 dark:text-primary-300">
                       Read article
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                     </span>

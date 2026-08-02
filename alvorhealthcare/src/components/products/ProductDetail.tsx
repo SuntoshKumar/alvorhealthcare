@@ -120,7 +120,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
       </nav>
 
       <section className="relative overflow-hidden bg-white py-10 dark:bg-neutral-950 lg:py-16" aria-labelledby="product-title">
-        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue-100/60 blur-3xl dark:bg-blue-900/10" aria-hidden="true" />
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-primary-100/60 blur-3xl dark:bg-primary-900/10" aria-hidden="true" />
         <div className="pharma-grid absolute inset-0 opacity-25 dark:opacity-10" aria-hidden="true" />
         <div className="container relative">
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] lg:items-start lg:gap-14">
@@ -131,9 +131,9 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
               transition={{ duration: prefersReducedMotion ? 0.01 : 0.65, ease: [0.22, 1, 0.36, 1] }}
             >
               <div>
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-neutral-100 bg-gradient-to-br from-neutral-50 via-white to-blue-50 shadow-[0_30px_70px_-48px_rgba(30,64,175,0.55)] dark:border-neutral-800 dark:from-neutral-900 dark:via-neutral-900 dark:to-blue-950/30 sm:aspect-[3/2] lg:aspect-[4/3]">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-neutral-100 bg-gradient-to-br from-neutral-50 via-white to-primary-50 shadow-[0_30px_70px_-48px_rgba(14,116,144,0.55)] dark:border-neutral-800 dark:from-neutral-900 dark:via-neutral-900 dark:to-primary-950/30 sm:aspect-[3/2] lg:aspect-[4/3]">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.95),transparent_50%)] opacity-80 dark:opacity-10" aria-hidden="true" />
-                  <div className="absolute inset-x-[25%] bottom-8 h-5 rounded-[50%] bg-blue-950/10 blur-lg dark:bg-black/35" aria-hidden="true" />
+                  <div className="absolute inset-x-[25%] bottom-8 h-5 rounded-[50%] bg-primary-950/10 blur-lg dark:bg-black/35" aria-hidden="true" />
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={selectedImage}
@@ -169,25 +169,25 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                         whileTap={{ scale: 0.96 }}
                         whileHover={prefersReducedMotion ? undefined : { y: -2 }}
                         transition={{ duration: prefersReducedMotion ? 0.01 : 0.2 }}
-                        className={`relative h-18 w-18 shrink-0 overflow-hidden rounded-xl border-2 bg-neutral-50 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:bg-neutral-900 sm:h-20 sm:w-20 ${
+                        className={`relative h-18 w-18 shrink-0 overflow-hidden rounded-xl border-2 bg-neutral-50 transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-500 dark:bg-neutral-900 sm:h-20 sm:w-20 ${
                           index === selectedImage
-                            ? "border-blue-600 shadow-[0_8px_20px_-12px_rgba(37,99,235,0.7)]"
-                            : "border-neutral-200 opacity-70 hover:border-blue-300 hover:opacity-100 dark:border-neutral-700"
+                            ? "border-primary-600 shadow-[0_8px_20px_-12px_rgba(14,116,144,0.7)]"
+                            : "border-neutral-200 opacity-70 hover:border-primary-300 hover:opacity-100 dark:border-neutral-700"
                         }`}
                         aria-label={`View product image ${index + 1}`}
                         aria-pressed={index === selectedImage}
                       >
-                        <Image src={publicAssetPath(image)} alt="" fill className="object-contain p-1" sizes="80px" />
+                        <Image src={publicAssetPath(image)} alt={`Product image ${index + 1}`} fill className="object-contain p-1" sizes="80px" />
                         {index === selectedImage && (
                           <motion.span
                             layoutId="selected-product-image"
-                            className="pointer-events-none absolute inset-0 rounded-[0.65rem] ring-2 ring-inset ring-blue-500/70"
+                            className="pointer-events-none absolute inset-0 rounded-[0.65rem] ring-2 ring-inset ring-primary-500/70"
                             transition={prefersReducedMotion ? { duration: 0.01 } : { type: "spring", stiffness: 420, damping: 34 }}
                           />
                         )}
                         <AnimatePresence>
                           {index === selectedImage && (
-                            <motion.span layoutId="active-product-thumbnail" className="absolute inset-x-2 bottom-1 h-0.5 rounded-full bg-blue-600" />
+                            <motion.span layoutId="active-product-thumbnail" className="absolute inset-x-2 bottom-1 h-0.5 rounded-full bg-primary-600" />
                           )}
                         </AnimatePresence>
                       </motion.button>
@@ -203,7 +203,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
               transition={{ duration: prefersReducedMotion ? 0.01 : 0.65, delay: prefersReducedMotion ? 0 : 0.08, ease: [0.22, 1, 0.36, 1] }}
             >
               <div>
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                <p className="text-sm font-semibold uppercase tracking-widest text-primary-600 dark:text-primary-400">
                   {product.category}{product.subCategory ? ` / ${product.subCategory}` : ""}
                 </p>
                 <h1 id="product-title" className="mt-3 text-4xl font-bold tracking-tight text-neutral-900 dark:text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
@@ -237,7 +237,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                         key={item.label}
                         className="flex items-center gap-2.5 rounded-xl border border-neutral-100 bg-neutral-50 px-3.5 py-2.5 dark:border-neutral-800 dark:bg-neutral-900/60"
                       >
-                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                           <item.icon className="h-3.5 w-3.5" />
                         </div>
                         <div>
@@ -254,14 +254,14 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                 <div className="mt-7 space-y-4">
                   <Link
                     href={inquiryHref}
-                    className="group flex items-center gap-4 rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-5 text-white shadow-lg shadow-blue-500/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-blue-500/30 dark:from-blue-500 dark:to-blue-600"
+                    className="group flex items-center gap-4 rounded-2xl bg-gradient-to-r from-primary-600 to-primary-700 p-5 text-white shadow-lg shadow-primary-500/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary-500/30 dark:from-primary-500 dark:to-primary-600"
                   >
                     <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/15 backdrop-blur-sm">
                       <Mail className="h-6 w-6" />
                     </span>
                     <div className="flex-1">
                       <p className="font-bold">Request product information</p>
-                      <p className="mt-0.5 text-sm text-blue-100 dark:text-blue-200">
+                      <p className="mt-0.5 text-sm text-primary-100 dark:text-primary-200">
                         Availability, prescribing details, and documentation
                       </p>
                     </div>
@@ -273,7 +273,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                       <button
                         type="button"
                         onClick={handleDownloadBrochure}
-                        className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-700 transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:border-blue-700 dark:hover:bg-blue-950/50 dark:hover:text-blue-300"
+                        className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-700 transition-all hover:border-primary-300 hover:bg-primary-50 hover:text-primary-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:border-primary-700 dark:hover:bg-primary-950/50 dark:hover:text-primary-300"
                       >
                         <Download className="h-4 w-4" />
                         Download brochure
@@ -283,7 +283,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                       <button
                         type="button"
                         onClick={handleShare}
-                        className="flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-700 transition-all hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:border-blue-700 dark:hover:bg-blue-950/50 dark:hover:text-blue-300"
+                        className="flex w-full items-center justify-center gap-2 rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-700 transition-all hover:border-primary-300 hover:bg-primary-50 hover:text-primary-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300 dark:hover:border-primary-700 dark:hover:bg-primary-950/50 dark:hover:text-primary-300"
                       >
                         <Share2 className="h-4 w-4" />
                         Share
@@ -302,7 +302,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
           <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-14">
             <div>
               <ScrollReveal>
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                <p className="text-sm font-semibold uppercase tracking-widest text-primary-600 dark:text-primary-400">
                   Product information
                 </p>
                 <h2 id="details-heading" className="mt-3 display-sm font-bold text-neutral-900 dark:text-white">
@@ -349,7 +349,7 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
                     <dl className="mt-5 space-y-4">
                       {specifications.map((item) => (
                         <div key={item.label} className="flex gap-3">
-                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                             <item.icon className="h-4 w-4" />
                           </div>
                           <div>
@@ -366,8 +366,8 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
               )}
 
               <ScrollReveal delay={0.1}>
-                <Card variant="outlined" className="rounded-3xl border-blue-100 bg-blue-50 p-6 dark:border-blue-800/40 dark:bg-blue-900/20">
-                  <Mail className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                <Card variant="outlined" className="rounded-3xl border-primary-100 bg-primary-50 p-6 dark:border-primary-800/40 dark:bg-primary-900/20">
+                  <Mail className="h-6 w-6 text-primary-600 dark:text-primary-400" />
                   <h3 className="mt-4 heading-sm font-bold text-neutral-900 dark:text-white">
                     Need availability or prescribing information?
                   </h3>
@@ -390,14 +390,14 @@ export function ProductDetail({ product, relatedProducts }: ProductDetailProps) 
           <div className="container">
             <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
               <ScrollReveal>
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                <p className="text-sm font-semibold uppercase tracking-widest text-primary-600 dark:text-primary-400">
                   Continue browsing
                 </p>
                 <h2 id="related-heading" className="mt-3 display-sm font-bold text-neutral-900 dark:text-white">
                   Related products
                 </h2>
               </ScrollReveal>
-              <Link href="/products" className="inline-flex items-center gap-1 font-semibold text-blue-600 hover:text-blue-700 dark:text-blue-400">
+              <Link href="/products" className="inline-flex items-center gap-1 font-semibold text-primary-600 hover:text-primary-700 dark:text-primary-400">
                 View all products
                 <ChevronRight className="h-4 w-4" />
               </Link>

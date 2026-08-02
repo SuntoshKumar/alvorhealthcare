@@ -10,6 +10,7 @@ import { CTASection } from "@/components/home/CTASection";
 import { DistributionSection } from "@/components/home/DistributionSection";
 import { DistributionQualitySection } from "@/components/home/DistributionQualitySection";
 import { ImportantNotices } from "@/components/home/ImportantNotice";
+import { CertificationsSection } from "@/components/home/CertificationsSection";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <ImportantNotices />
       <HeroSection />
       <StatisticsSection />
+      <CertificationsSection />
       <CategoriesSection />
       <FeaturedProducts />
       <WhyChooseUsSection />

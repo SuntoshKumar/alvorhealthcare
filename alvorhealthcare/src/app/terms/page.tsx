@@ -39,7 +39,7 @@ export default function TermsPage() {
       <LegalSection id="agreement" title="1. Agreement and scope">
         <p>
           By accessing or using this website, you agree to these Terms of Use and our{" "}
-          <Link href="/privacy" className="font-bold text-blue-700 underline underline-offset-4 dark:text-blue-300">
+          <Link href="/privacy" className="font-bold text-primary-700 underline underline-offset-4 dark:text-primary-300">
             Privacy Policy
           </Link>
           . If you do not agree, do not use the website.

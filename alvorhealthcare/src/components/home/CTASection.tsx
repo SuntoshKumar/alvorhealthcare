@@ -20,13 +20,13 @@ export function CTASection() {
           <h2 id="cta-heading" className="display-md lg:display-lg font-bold text-white mb-4">
             {content.title}
           </h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-lg mx-auto">
+          <p className="text-lg text-primary-100 mb-8 max-w-lg mx-auto">
             {content.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-3.5 justify-center">
             <Link
               href={content.primaryCta.href}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-primary-600 font-semibold rounded-2xl hover:bg-blue-50 transition-all hover:-translate-y-0.5 text-sm"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-primary-600 font-semibold rounded-2xl hover:bg-primary-50 transition-all hover:-translate-y-0.5 text-sm"
             >
               {content.primaryCta.label}
               <ArrowRight className="w-4.5 h-4.5" />

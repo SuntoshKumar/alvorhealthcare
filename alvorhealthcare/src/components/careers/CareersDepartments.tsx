@@ -68,7 +68,7 @@ export function CareersDepartments() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">
             {departments.eyebrow}
           </span>
           <h2 id="departments-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">
@@ -117,7 +117,7 @@ export function CareersDepartments() {
                     <Icon className="w-5 h-5 text-white" />
                   </div>
 
-                  <h3 className="font-heading text-lg font-semibold text-neutral-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="font-heading text-lg font-semibold text-neutral-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                     {dept.name}
                   </h3>
 
@@ -125,9 +125,9 @@ export function CareersDepartments() {
                     {dept.description}
                   </p>
 
-                  <div className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 dark:text-blue-400 transition-colors">
+                  <div className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-600 dark:text-primary-400 transition-colors">
                     Apply Now
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-blue-50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-blue-600 group-hover:text-white dark:bg-blue-900/30 dark:group-hover:bg-blue-600">
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary-50 transition-all duration-300 group-hover:translate-x-0.5 group-hover:bg-primary-600 group-hover:text-white dark:bg-primary-900/30 dark:group-hover:bg-primary-600">
                       <ArrowRight className="h-3.5 w-3.5" />
                     </span>
                   </div>
@@ -160,7 +160,7 @@ export function CareersDepartments() {
                                 <Icon className="w-5 h-5 text-white" />
                               </div>
                               <div>
-                                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-blue-500 dark:text-blue-400">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-primary-500 dark:text-primary-400">
                                   Department
                                 </p>
                                 <h4 className="font-heading font-bold text-neutral-900 dark:text-white text-sm mt-0.5">
@@ -211,7 +211,7 @@ export function CareersDepartments() {
                           {/* CTA */}
                           <Link
                             href="/contact?inquiryType=career"
-                            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-blue-500/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30 dark:from-blue-500 dark:to-blue-600"
+                            className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-primary-600 to-primary-700 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-primary-500/20 transition-all hover:-translate-y-0.5 hover:shadow-lg hover:shadow-primary-500/30 dark:from-primary-500 dark:to-primary-600"
                           >
                             Apply for this role
                             <ArrowRight className="w-3.5 h-3.5" />

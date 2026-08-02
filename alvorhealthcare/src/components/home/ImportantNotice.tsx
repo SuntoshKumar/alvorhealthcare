@@ -54,12 +54,12 @@ const toneStyles = {
   },
   medium: {
     container:
-      "border-blue-200/80 bg-gradient-to-r from-blue-50 via-white to-cyan-50 text-blue-950 dark:border-blue-800/60 dark:from-blue-950/70 dark:via-neutral-950 dark:to-cyan-950/50 dark:text-blue-100",
-    accent: "bg-blue-500",
-    icon: "bg-blue-600 text-white dark:bg-blue-500",
-    priority: "border-blue-200 bg-blue-100/80 text-blue-800 dark:border-blue-700/50 dark:bg-blue-900/45 dark:text-blue-200",
-    link: "text-blue-700 hover:text-blue-900 dark:text-blue-300 dark:hover:text-white",
-    close: "text-blue-700/70 hover:bg-blue-100 hover:text-blue-950 dark:text-blue-300/70 dark:hover:bg-blue-900/60 dark:hover:text-white",
+      "border-primary-200/80 bg-gradient-to-r from-primary-50 via-white to-cyan-50 text-primary-950 dark:border-primary-800/60 dark:from-primary-950/70 dark:via-neutral-950 dark:to-cyan-950/50 dark:text-primary-100",
+    accent: "bg-primary-500",
+    icon: "bg-primary-600 text-white dark:bg-primary-500",
+    priority: "border-primary-200 bg-primary-100/80 text-primary-800 dark:border-primary-700/50 dark:bg-primary-900/45 dark:text-primary-200",
+    link: "text-primary-700 hover:text-primary-900 dark:text-primary-300 dark:hover:text-white",
+    close: "text-primary-700/70 hover:bg-primary-100 hover:text-primary-950 dark:text-primary-300/70 dark:hover:bg-primary-900/60 dark:hover:text-white",
     Icon: Info,
   },
   important: {

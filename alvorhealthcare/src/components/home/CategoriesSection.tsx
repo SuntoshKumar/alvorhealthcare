@@ -21,7 +21,7 @@ export function CategoriesSection() {
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
           <div>
-            <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">Categories</span>
+            <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">Categories</span>
             <h2 id="categories-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2">
               Explore Our Product Range
             </h2>
@@ -32,7 +32,7 @@ export function CategoriesSection() {
           </div>
           <Link
             href="/categories"
-            className="inline-flex w-fit flex-shrink-0 items-center gap-2 rounded-full border border-blue-200/80 bg-blue-50/70 px-4 py-2.5 text-sm font-semibold text-blue-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-100/70 dark:border-blue-800/60 dark:bg-blue-950/35 dark:text-blue-300 dark:hover:border-blue-700 dark:hover:bg-blue-900/45"
+            className="inline-flex w-fit flex-shrink-0 items-center gap-2 rounded-full border border-primary-200/80 bg-primary-50/70 px-4 py-2.5 text-sm font-semibold text-primary-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-primary-300 hover:bg-primary-100/70 dark:border-primary-800/60 dark:bg-primary-950/35 dark:text-primary-300 dark:hover:border-primary-700 dark:hover:bg-primary-900/45"
           >
             View All Categories <ArrowRight className="w-4 h-4" />
           </Link>
@@ -65,7 +65,7 @@ export function CategoriesSection() {
                 <Link
                   href={`/categories/${cat.slug}`}
                   aria-label={`Explore ${cat.name}, ${cat.productCount} products`}
-                  className={`group relative block h-[13.5rem] overflow-hidden rounded-[1.5rem] border border-white/90 bg-gradient-to-br ${colors.surface} p-4 shadow-[0_18px_45px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1.5 hover:border-blue-200 hover:shadow-[0_28px_60px_-36px_rgba(30,64,175,0.45)] dark:border-white/10 dark:hover:border-blue-700/50 sm:h-[15rem] sm:p-5 xl:h-[17rem] xl:p-6`}
+                  className={`group relative block h-[13.5rem] overflow-hidden rounded-[1.5rem] border border-white/90 bg-gradient-to-br ${colors.surface} p-4 shadow-[0_18px_45px_-35px_rgba(15,23,42,0.45)] transition-all duration-500 hover:-translate-y-1.5 hover:border-primary-200 hover:shadow-[0_28px_60px_-36px_rgba(14,116,144,0.45)] dark:border-white/10 dark:hover:border-primary-700/50 sm:h-[15rem] sm:p-5 xl:h-[17rem] xl:p-6`}
                 >
                   <span
                     className={`absolute -right-10 top-8 h-36 w-36 rounded-full ${colors.glow} blur-2xl transition-transform duration-700 group-hover:scale-125 sm:h-44 sm:w-44`}
@@ -77,7 +77,7 @@ export function CategoriesSection() {
                     <span className={`text-[10px] font-bold uppercase tracking-[0.18em] ${colors.text}`}>
                       Category {String(index + 1).padStart(2, "0")}
                     </span>
-                    <ArrowUpRight className="h-4 w-4 text-neutral-400 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-blue-600 dark:group-hover:text-blue-300" />
+                    <ArrowUpRight className="h-4 w-4 text-neutral-400 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary-600 dark:group-hover:text-primary-300" />
                   </div>
 
                   <div
@@ -85,7 +85,7 @@ export function CategoriesSection() {
                   >
                     <Image
                       src={publicAssetPath(cat.image)}
-                      alt=""
+                      alt={`${cat.name} category icon`}
                       width={54}
                       height={54}
                       className="h-10 w-10 object-contain brightness-0 invert sm:h-12 sm:w-12"
@@ -99,7 +99,7 @@ export function CategoriesSection() {
                     <h3 className="mt-1 font-display text-xl font-bold tracking-[-0.035em] text-neutral-950 dark:text-white sm:text-2xl">
                       {cat.name}
                     </h3>
-                    <span className="mt-2 hidden items-center gap-1.5 text-xs font-semibold text-neutral-500 transition-colors group-hover:text-blue-700 dark:text-neutral-400 dark:group-hover:text-blue-300 sm:flex">
+                    <span className="mt-2 hidden items-center gap-1.5 text-xs font-semibold text-neutral-500 transition-colors group-hover:text-primary-700 dark:text-neutral-400 dark:group-hover:text-primary-300 sm:flex">
                       Explore category
                       <span className="h-px w-5 bg-current transition-all duration-300 group-hover:w-8" />
                     </span>

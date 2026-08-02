@@ -1,10 +1,10 @@
 export function ProductsPageSkeleton() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950" aria-busy="true" aria-label="Loading products">
-      <section className="border-b border-neutral-100 bg-gradient-to-b from-blue-50 via-white to-white pb-12 pt-28 dark:border-neutral-800 dark:from-blue-950/30 dark:via-neutral-950 dark:to-neutral-950 lg:pb-14">
+      <section className="border-b border-neutral-100 bg-gradient-to-b from-primary-50 via-white to-white pb-12 pt-28 dark:border-neutral-800 dark:from-primary-950/30 dark:via-neutral-950 dark:to-neutral-950 lg:pb-14">
         <div className="container">
           <div className="max-w-3xl animate-pulse">
-            <div className="h-7 w-36 rounded-full bg-blue-100 dark:bg-blue-900/40" />
+            <div className="h-7 w-36 rounded-full bg-primary-100 dark:bg-primary-900/40" />
             <div className="mt-5 h-12 w-full max-w-2xl rounded-xl bg-neutral-200/80 dark:bg-neutral-800" />
             <div className="mt-3 h-12 w-3/4 rounded-xl bg-neutral-200/70 dark:bg-neutral-800/80" />
             <div className="mt-6 h-5 w-full max-w-xl rounded-lg bg-neutral-200/60 dark:bg-neutral-800/70" />

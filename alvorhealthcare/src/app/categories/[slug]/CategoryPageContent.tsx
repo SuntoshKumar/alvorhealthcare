@@ -46,30 +46,14 @@ function HeroDecor({ reducedMotion }: { reducedMotion: boolean }) {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
       <motion.div
-        className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-200/50 dark:border-blue-700/20"
+        className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary-200/50 dark:border-primary-700/20"
         animate={reducedMotion ? undefined : { rotate: 360 }}
         transition={{ duration: 48, repeat: Infinity, ease: "linear" }}
       >
-        <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500 shadow-[0_0_0_6px_rgba(59,130,246,0.12)]" />
-        <span className="absolute bottom-[15%] left-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-teal-400 shadow-[0_0_0_5px_rgba(45,212,191,0.1)]" />
+        <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-500 shadow-[0_0_0_6px_rgba(14,116,144,0.12)]" />
+        <span className="absolute bottom-[15%] left-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-accent-400 shadow-[0_0_0_5px_rgba(45,212,191,0.1)]" />
       </motion.div>
-      <motion.div
-        className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-blue-300/40 dark:border-blue-600/15"
-        animate={reducedMotion ? undefined : { rotate: -360 }}
-        transition={{ duration: 36, repeat: Infinity, ease: "linear" }}
-      >
-        <span className="absolute right-0 top-1/2 h-1.5 w-1.5 translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-400" />
-      </motion.div>
-      <motion.div
-        className="absolute left-1/2 top-[18%] h-px w-[420px] -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-300/60 to-transparent dark:via-blue-600/30"
-        animate={reducedMotion ? undefined : { opacity: [0.3, 0.8, 0.3], scaleX: [0.85, 1, 0.85] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        className="absolute left-1/2 bottom-[22%] h-px w-[320px] -translate-x-1/2 bg-gradient-to-r from-transparent via-teal-300/40 to-transparent dark:via-teal-600/20"
-        animate={reducedMotion ? undefined : { opacity: [0.2, 0.6, 0.2], scaleX: [0.9, 1.05, 0.9] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-      />
+      <div className="absolute left-1/2 top-[18%] h-px w-[420px] -translate-x-1/2 bg-gradient-to-r from-transparent via-primary-300/60 to-transparent dark:via-primary-600/30" />
     </div>
   );
 }
@@ -156,7 +140,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950">
       <section
-        className={`relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b ${colors.gradient} dark:from-blue-950/30 dark:via-neutral-950 dark:to-teal-950/30`}
+        className={`relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b ${colors.gradient} dark:from-primary-950/30 dark:via-neutral-950 dark:to-teal-950/30`}
       >
         <div
           className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] bg-[size:24px_24px] opacity-[0.04]"
@@ -174,7 +158,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
             >
               <Link
                 href="/categories"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-neutral-900/70 text-blue-700 dark:text-blue-300 text-sm font-medium shadow-sm ring-1 ring-blue-100 dark:ring-blue-800/50 hover:bg-white dark:hover:bg-neutral-900 transition-colors backdrop-blur-xl"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 dark:bg-neutral-900/70 text-primary-700 dark:text-primary-300 text-sm font-medium shadow-sm ring-1 ring-primary-100 dark:ring-primary-800/50 hover:bg-white dark:hover:bg-neutral-900 transition-colors backdrop-blur-xl"
               >
                 <Package className="w-4 h-4" aria-hidden="true" />
                 All Categories
@@ -187,15 +171,15 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
               animate="visible"
               transition={{ duration: prefersReducedMotion ? 0.01 : 0.6 }}
             >
-              <div className="group relative mx-auto mb-8 flex h-44 w-44 items-center justify-center rounded-full border border-white/25 bg-white/[0.07] p-2 shadow-[0_28px_70px_-38px_rgba(15,23,42,0.75)] backdrop-blur-[2px] transition-all duration-500 hover:border-white/40 hover:shadow-[0_28px_70px_-38px_rgba(59,130,246,0.45)] sm:h-48 sm:w-48 sm:p-3">
+              <div className="group relative mx-auto mb-8 flex h-44 w-44 items-center justify-center rounded-full border border-white/25 bg-white/[0.07] p-2 shadow-[0_28px_70px_-38px_rgba(15,23,42,0.75)] backdrop-blur-[2px] transition-all duration-500 hover:border-white/40 hover:shadow-[0_28px_70px_-38px_rgba(14,116,144,0.45)] sm:h-48 sm:w-48 sm:p-3">
                 <div className={`absolute -inset-5 rounded-full ${colors.glow} blur-2xl transition-all duration-700 group-hover:scale-110`} />
                 <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${colors.accent} opacity-0 transition-opacity duration-500 group-hover:opacity-20`} />
                 <div className="absolute inset-3 rounded-full border border-white/15 transition-colors duration-500 group-hover:border-white/25 dark:border-white/[0.08]" aria-hidden="true" />
                 <div className="absolute inset-2 rounded-full border border-white/70 transition-all duration-500 group-hover:border-white group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] dark:border-white/10">
-                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_0_6px_rgba(59,130,246,0.14)] dark:bg-blue-300" />
+                  <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_0_6px_rgba(14,116,144,0.14)] dark:bg-primary-300" />
                 </div>
-                <div className="absolute inset-[15%] rounded-full border border-dashed border-white/60 transition-all duration-500 group-hover:border-white/80 group-hover:rotate-45 dark:border-blue-200/20">
-                  <span className="absolute bottom-[8%] right-0 h-1.5 w-1.5 translate-x-1/2 rounded-full bg-teal-300 shadow-[0_0_0_5px_rgba(45,212,191,0.12)]" />
+                <div className="absolute inset-[15%] rounded-full border border-dashed border-white/60 transition-all duration-500 group-hover:border-white/80 group-hover:rotate-45 dark:border-primary-200/20">
+                  <span className="absolute bottom-[8%] right-0 h-1.5 w-1.5 translate-x-1/2 rounded-full bg-accent-300 shadow-[0_0_0_5px_rgba(45,212,191,0.12)]" />
                 </div>
                 <div className="relative z-10 h-16 w-16 sm:h-[4.5rem] sm:w-[4.5rem]">
                   <div 
@@ -235,24 +219,24 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
               className="flex flex-wrap items-center justify-center gap-8 text-sm text-neutral-600 dark:text-neutral-300"
             >
               <div className="flex items-center gap-2 rounded-full bg-white/80 dark:bg-neutral-900/70 px-4 py-2 shadow-sm ring-1 ring-neutral-100 dark:ring-neutral-800 backdrop-blur-xl">
-                <Package className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <Package className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                 <AnimatedCounter end={category.productCount} duration={1800} />
                 <span>Products</span>
               </div>
               {category.subCategories && category.subCategories.length > 0 && (
                 <div className="flex items-center gap-2 rounded-full bg-white/80 dark:bg-neutral-900/70 px-4 py-2 shadow-sm ring-1 ring-neutral-100 dark:ring-neutral-800 backdrop-blur-xl">
-                  <Star className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                  <Star className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                   <AnimatedCounter end={category.subCategories.length} duration={1600} />
                   <span>Subcategories</span>
                 </div>
               )}
               <div className="flex items-center gap-2 rounded-full bg-white/80 dark:bg-neutral-900/70 px-4 py-2 shadow-sm ring-1 ring-neutral-100 dark:ring-neutral-800 backdrop-blur-xl">
-                <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <Globe className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                 <span className="font-medium text-neutral-900 dark:text-white">Myanmar</span>
                 <span>Market</span>
               </div>
               <div className="flex items-center gap-2 rounded-full bg-white/80 dark:bg-neutral-900/70 px-4 py-2 shadow-sm ring-1 ring-neutral-100 dark:ring-neutral-800 backdrop-blur-xl">
-                <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                <Shield className="w-5 h-5 text-primary-600 dark:text-primary-400" />
                 <span className="font-medium text-neutral-900 dark:text-white">Documented</span>
                 <span>Records</span>
               </div>
@@ -284,7 +268,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                         <Link href={`/products?category=${category.slug}&subcategory=${sub.slug}`} className="block group h-full">
                           <Card
                             variant="elevated"
-                            className={`group relative h-full flex flex-col overflow-hidden rounded-[1.5rem] border-neutral-100 bg-white/90 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.42)] ${colors.hoverBorder} transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(30,64,175,0.3)] dark:border-white/10 dark:bg-neutral-900/80 dark:hover:shadow-[0_26px_60px_-34px_rgba(0,0,0,0.45)]`}
+                            className={`group relative h-full flex flex-col overflow-hidden rounded-[1.5rem] border-neutral-100 bg-white/90 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.42)] ${colors.hoverBorder} transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(14,116,144,0.3)] dark:border-white/10 dark:bg-neutral-900/80 dark:hover:shadow-[0_26px_60px_-34px_rgba(0,0,0,0.45)]`}
                           >
                             <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${colors.surface}`}>
                               <span className={`absolute -right-10 top-2 h-36 w-36 rounded-full ${colors.glow} blur-3xl transition-transform duration-700 group-hover:scale-110`} />
@@ -310,7 +294,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                               <div className={`absolute right-6 top-16 flex h-20 w-20 items-center justify-center rounded-[1.35rem] bg-gradient-to-br ${colors.accent} shadow-[0_18px_35px_-18px_rgba(15,23,42,0.55)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06]`}>
                                 <Image
                                   src={publicAssetPath(category.image)}
-                                  alt=""
+                                  alt={`${category.name} category icon`}
                                   width={48}
                                   height={48}
                                   className="h-11 w-11 object-contain brightness-0 invert"
@@ -319,13 +303,13 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                             </div>
                             <CardContent className="p-5 flex flex-col flex-1">
                               <div className="flex items-start justify-between gap-3">
-                                <CardTitle className="text-neutral-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                <CardTitle className="text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
                                   {sub.name}
                                 </CardTitle>
-                                <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-neutral-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-blue-600 dark:text-neutral-600 dark:group-hover:text-blue-400" />
+                                <ChevronRight className="mt-0.5 h-5 w-5 shrink-0 text-neutral-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-primary-600 dark:text-neutral-600 dark:group-hover:text-primary-400" />
                               </div>
                               <CardDescription className="mt-2 line-clamp-2">{sub.description}</CardDescription>
-                              <div className="mt-auto pt-4 flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400">
+                              <div className="mt-auto pt-4 flex items-center gap-1.5 text-sm font-medium text-primary-600 dark:text-primary-400">
                                 <span className="group-hover:underline">View Products</span>
                                 <span className="h-px w-5 bg-current transition-all duration-300 group-hover:w-8" />
                               </div>
@@ -371,20 +355,20 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                   <label htmlFor="category-product-search" className="sr-only">
                     Search products
                   </label>
-                  <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-blue-600 dark:text-blue-400" />
+                  <Search className="pointer-events-none absolute left-5 top-1/2 h-5 w-5 -translate-y-1/2 text-primary-600 dark:text-primary-400" />
                   <input
                     id="category-product-search"
                     type="text"
                     placeholder="Search products in this category..."
                     value={filters.search}
                     onChange={(e) => handleFilterChange("search", e.target.value)}
-                    className="h-14 w-full rounded-[0.9rem] border border-transparent bg-neutral-50 pl-14 pr-28 text-[15px] font-medium text-neutral-900 outline-none transition-all placeholder:font-normal placeholder:text-neutral-400 hover:bg-neutral-100/80 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 dark:bg-neutral-800/70 dark:text-white dark:placeholder:text-neutral-500 dark:hover:bg-neutral-800 dark:focus:border-blue-500 dark:focus:bg-neutral-900 dark:focus:ring-blue-900/40 sm:pr-40"
+                    className="h-14 w-full rounded-[0.9rem] border border-transparent bg-neutral-50 pl-14 pr-28 text-[15px] font-medium text-neutral-900 outline-none transition-all placeholder:font-normal placeholder:text-neutral-400 hover:bg-neutral-100/80 focus:border-primary-500 focus:bg-white focus:ring-4 focus:ring-primary-100 dark:bg-neutral-800/70 dark:text-white dark:placeholder:text-neutral-500 dark:hover:bg-neutral-800 dark:focus:border-primary-500 dark:focus:bg-neutral-900 dark:focus:ring-primary-900/40 sm:pr-40"
                   />
                   <div className="absolute right-3 top-1/2 flex -translate-y-1/2 items-center gap-1">
                     <AnimatePresence>
                       {isSearching && (
                         <motion.span initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}>
-                          <div className="h-4 w-4 animate-spin rounded-full border-2 border-blue-600 border-t-transparent" />
+                          <div className="h-4 w-4 animate-spin rounded-full border-2 border-primary-600 border-t-transparent" />
                         </motion.span>
                       )}
                     </AnimatePresence>
@@ -408,7 +392,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                   <label htmlFor="category-product-sort" className="sr-only">
                     Sort results
                   </label>
-                  <ArrowUpDown className="pointer-events-none absolute left-4 top-1/2 z-10 h-4 w-4 -translate-y-1/2 text-blue-600 dark:text-blue-400" />
+                  <ArrowUpDown className="pointer-events-none absolute left-4 top-1/2 z-10 h-4 w-4 -translate-y-1/2 text-primary-600 dark:text-primary-400" />
                   <span className="pointer-events-none absolute left-11 top-2.5 z-10 text-[10px] font-bold uppercase tracking-[0.16em] text-neutral-400">
                     Sort by
                   </span>
@@ -416,7 +400,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                     id="category-product-sort"
                     value={filters.sortBy}
                     onChange={(e) => handleFilterChange("sortBy", e.target.value)}
-                    className="h-14 w-full appearance-none rounded-[0.9rem] border border-transparent bg-neutral-50 pb-1.5 pl-11 pr-10 pt-5 text-sm font-semibold text-neutral-800 outline-none transition-all hover:bg-neutral-100/80 focus:border-blue-500 focus:bg-white focus:ring-4 focus:ring-blue-100 dark:bg-neutral-800/70 dark:text-white dark:hover:bg-neutral-800 dark:focus:border-blue-500 dark:focus:bg-neutral-900 dark:focus:ring-blue-900/40"
+                    className="h-14 w-full appearance-none rounded-[0.9rem] border border-transparent bg-neutral-50 pb-1.5 pl-11 pr-10 pt-5 text-sm font-semibold text-neutral-800 outline-none transition-all hover:bg-neutral-100/80 focus:border-primary-500 focus:bg-white focus:ring-4 focus:ring-primary-100 dark:bg-neutral-800/70 dark:text-white dark:hover:bg-neutral-800 dark:focus:border-primary-500 dark:focus:bg-neutral-900 dark:focus:ring-primary-900/40"
                   >
                     <option value="name">Name A-Z</option>
                     <option value="newest">Newest first</option>
@@ -436,7 +420,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                       onClick={() => handleFilterChange("viewMode", "grid")}
                       className={`rounded-lg p-2.5 transition-all ${
                         filters.viewMode === "grid"
-                          ? "bg-white text-blue-600 shadow-sm dark:bg-neutral-700 dark:text-blue-400"
+                          ? "bg-white text-primary-600 shadow-sm dark:bg-neutral-700 dark:text-primary-400"
                           : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
                       }`}
                       aria-label="Grid view"
@@ -449,7 +433,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                       onClick={() => handleFilterChange("viewMode", "list")}
                       className={`rounded-lg p-2.5 transition-all ${
                         filters.viewMode === "list"
-                          ? "bg-white text-blue-600 shadow-sm dark:bg-neutral-700 dark:text-blue-400"
+                          ? "bg-white text-primary-600 shadow-sm dark:bg-neutral-700 dark:text-primary-400"
                           : "text-neutral-500 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-white"
                       }`}
                       aria-label="List view"
@@ -489,7 +473,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                     <button
                       type="button"
                       onClick={() => handleFilterChange("search", "")}
-                      className="inline-flex max-w-56 items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium text-neutral-600 transition-colors hover:border-blue-200 hover:text-blue-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
+                      className="inline-flex max-w-56 items-center gap-1.5 rounded-full border border-neutral-200 bg-white px-3 py-1 text-xs font-medium text-neutral-600 transition-colors hover:border-primary-200 hover:text-primary-600 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-300"
                     >
                       <Search className="h-3 w-3 shrink-0" />
                       <span className="truncate">{filters.search}</span>
@@ -512,7 +496,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
                   transition={{ duration: transitionDuration, ease: easeOut }}
                   className="rounded-3xl border border-dashed border-neutral-200 bg-white px-6 py-20 text-center dark:border-neutral-700 dark:bg-neutral-900/60"
                 >
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-50 text-primary-600 dark:bg-primary-900/30 dark:text-primary-400">
                     <Search className="h-6 w-6" />
                   </div>
                   <h3 className="mt-5 text-xl font-bold text-neutral-900 dark:text-white">No matching products</h3>
@@ -600,7 +584,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
         </div>
       </section>
 
-      <section className="section bg-blue-600 dark:bg-blue-800 text-white relative overflow-hidden" aria-labelledby="cta-heading">
+      <section className="section bg-primary-600 dark:bg-primary-800 text-white relative overflow-hidden" aria-labelledby="cta-heading">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] bg-[size:24px_24px] opacity-10" aria-hidden="true" />
         <div className="container relative">
           <div className="max-w-3xl mx-auto text-center">
@@ -610,7 +594,7 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={0.1}>
-              <p className="body-lg text-blue-100 mb-8">
+              <p className="body-lg text-primary-100 mb-8">
                 Our pharmaceutical experts can help you select the best products for your market needs.
               </p>
             </ScrollReveal>

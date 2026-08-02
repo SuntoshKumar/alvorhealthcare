@@ -30,22 +30,22 @@ function HeroDecor({reducedMotion}: { reducedMotion: boolean }) {
     return (
         <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
             <motion.div
-                className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-200/50 dark:border-blue-700/20"
+                className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-primary-200/50 dark:border-primary-700/20"
                 animate={reducedMotion ? undefined : {rotate: 360}}
                 transition={{duration: 48, repeat: Infinity, ease: "linear"}}
             >
-                <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-blue-500 shadow-[0_0_0_6px_rgba(59,130,246,0.12)]" />
+                <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary-500 shadow-[0_0_0_6px_rgba(14,116,144,0.12)]" />
                 <span className="absolute bottom-[15%] left-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-teal-400 shadow-[0_0_0_5px_rgba(45,212,191,0.1)]" />
             </motion.div>
             <motion.div
-                className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-blue-300/40 dark:border-blue-600/15"
+                className="absolute left-1/2 top-1/2 h-[360px] w-[360px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-primary-300/40 dark:border-primary-600/15"
                 animate={reducedMotion ? undefined : {rotate: -360}}
                 transition={{duration: 36, repeat: Infinity, ease: "linear"}}
             >
                 <span className="absolute right-0 top-1/2 h-1.5 w-1.5 translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-400" />
             </motion.div>
             <motion.div
-                className="absolute left-1/2 top-[18%] h-px w-[420px] -translate-x-1/2 bg-gradient-to-r from-transparent via-blue-300/60 to-transparent dark:via-blue-600/30"
+                className="absolute left-1/2 top-[18%] h-px w-[420px] -translate-x-1/2 bg-gradient-to-r from-transparent via-primary-300/60 to-transparent dark:via-primary-600/30"
                 animate={reducedMotion ? undefined : {opacity: [0.3, 0.8, 0.3], scaleX: [0.85, 1, 0.85]}}
                 transition={{duration: 5, repeat: Infinity, ease: "easeInOut"}}
             />
@@ -99,7 +99,7 @@ export function CategoriesPageContent() {
     return (
         <div className="min-h-screen bg-white dark:bg-neutral-950">
             <section
-                className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50 via-white to-teal-50 dark:from-blue-950/30 dark:via-neutral-950 dark:to-teal-950/30">
+                className="relative min-h-[50vh] lg:min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary-50 via-white to-teal-50 dark:from-primary-950/30 dark:via-neutral-950 dark:to-teal-950/30">
                 <div
                     className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] bg-[size:24px_24px] opacity-[0.04]"
                     aria-hidden="true"/>
@@ -111,7 +111,7 @@ export function CategoriesPageContent() {
                             <motion.span
                                 initial={{opacity: 0, y: 20}}
                                 animate={{opacity: 1, y: 0}}
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6"
+                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm font-medium mb-6"
                             >
                                 <Package className="w-4 h-4" aria-hidden="true"/>
                                 {categories.length} Product Categories
@@ -150,22 +150,22 @@ export function CategoriesPageContent() {
                                 className="flex flex-wrap items-center justify-center gap-8 text-sm text-neutral-600 dark:text-neutral-300"
                             >
                                 <div className="flex items-center gap-2">
-                                    <Package className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
+                                    <Package className="w-5 h-5 text-primary-600 dark:text-primary-400"/>
                                     <AnimatedCounter end={totalProducts} suffix="+" duration={1800}/>
                                     <span>Products</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Star className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
+                                    <Star className="w-5 h-5 text-primary-600 dark:text-primary-400"/>
                                     <AnimatedCounter end={totalSubs} duration={1600}/>
                                     <span>Subcategories</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
+                                    <Globe className="w-5 h-5 text-primary-600 dark:text-primary-400"/>
                                     <span className="font-medium text-neutral-900 dark:text-white">Myanmar</span>
                                     <span>Market</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <Shield className="w-5 h-5 text-blue-600 dark:text-blue-400"/>
+                                    <Shield className="w-5 h-5 text-primary-600 dark:text-primary-400"/>
                                     <span className="font-medium text-neutral-900 dark:text-white">Documented</span>
                                     <span>Records</span>
                                 </div>
@@ -202,7 +202,7 @@ export function CategoriesPageContent() {
                                             <TiltCard>
                                                 <Link href={`/categories/${category.slug}`} className="block group">
                                                     <Card variant="elevated"
-                                                          className={`h-full overflow-hidden rounded-[1.5rem] border-neutral-100 bg-white/90 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.45)] transition-all duration-500 ${colors.hoverBorder} hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(30,64,175,0.3)] dark:border-white/10 dark:bg-neutral-900/80 dark:hover:shadow-[0_26px_60px_-34px_rgba(0,0,0,0.45)]`}>
+                                                          className={`h-full overflow-hidden rounded-[1.5rem] border-neutral-100 bg-white/90 shadow-[0_18px_50px_-38px_rgba(15,23,42,0.45)] transition-all duration-500 ${colors.hoverBorder} hover:-translate-y-1 hover:shadow-[0_26px_60px_-34px_rgba(14,116,144,0.3)] dark:border-white/10 dark:bg-neutral-900/80 dark:hover:shadow-[0_26px_60px_-34px_rgba(0,0,0,0.45)]`}>
                                                         <div className={`relative h-56 overflow-hidden bg-gradient-to-br ${colors.surface}`}>
                                                             <span className={`absolute -right-12 top-6 h-48 w-48 rounded-full ${colors.glow} blur-3xl transition-transform duration-700 group-hover:scale-110`} />
                                                             <span className="absolute -right-8 top-7 h-40 w-40 rounded-full border border-white/75 dark:border-white/10" />
@@ -220,7 +220,7 @@ export function CategoriesPageContent() {
                                                             <div className={`absolute right-8 top-20 flex h-28 w-28 items-center justify-center rounded-[1.8rem] bg-gradient-to-br ${colors.accent} shadow-[0_22px_40px_-20px_rgba(15,23,42,0.6)] transition-transform duration-500 group-hover:-rotate-3 group-hover:scale-[1.06]`}>
                                                                 <Image
                                                                     src={publicAssetPath(category.image)}
-                                                                    alt=""
+                                                                    alt={`${category.name} category icon`}
                                                                     width={72}
                                                                     height={72}
                                                                     className="h-16 w-16 object-contain brightness-0 invert"
@@ -238,12 +238,12 @@ export function CategoriesPageContent() {
                                                             <div className="flex items-start justify-between gap-4">
                                                                 <div>
                                                                     <CardTitle
-                                                                        className="text-neutral-900 transition-colors duration-300 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
+                                                                        className="text-neutral-900 transition-colors duration-300 group-hover:text-primary-600 dark:text-white dark:group-hover:text-primary-400">
                                                                         {category.name}
                                                                     </CardTitle>
                                                                     <CardDescription className="mt-2 line-clamp-2">{category.description}</CardDescription>
                                                                 </div>
-                                                                <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-neutral-300 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-blue-600 dark:text-neutral-600 dark:group-hover:text-blue-400"/>
+                                                                <ChevronRight className="mt-1 h-5 w-5 shrink-0 text-neutral-300 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-primary-600 dark:text-neutral-600 dark:group-hover:text-primary-400"/>
                                                             </div>
 
                                                             {category.subCategories && category.subCategories.length > 0 && (
@@ -261,7 +261,7 @@ export function CategoriesPageContent() {
                                                                 </div>
                                                             )}
 
-                                                            <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-blue-600 dark:text-blue-400">
+                                                            <div className="mt-5 flex items-center gap-1.5 text-sm font-medium text-primary-600 dark:text-primary-400">
                                                                 <span className="group-hover:underline">View Products</span>
                                                                 <span className="h-px w-5 bg-current transition-all duration-300 group-hover:w-8"/>
                                                             </div>
@@ -298,9 +298,9 @@ export function CategoriesPageContent() {
                                 icon: Award,
                                 title: "Supplier Review",
                                 desc: "Products are onboarded through documented supplier and portfolio review",
-                                gradient: "from-blue-500 to-blue-600",
-                                glow: "shadow-blue-500/25",
-                                bg: "from-blue-50/80 to-transparent dark:from-blue-950/20 dark:to-transparent"
+                                gradient: "from-primary-500 to-primary-600",
+                                glow: "shadow-primary-500/25",
+                                bg: "from-primary-50/80 to-transparent dark:from-primary-950/20 dark:to-transparent"
                             },
                             {
                                 icon: Shield,
@@ -401,7 +401,7 @@ export function CategoriesPageContent() {
                             </h2>
                         </ScrollReveal>
                         <ScrollReveal delay={0.1}>
-                            <p className="body-lg text-blue-100 mb-8">
+                            <p className="body-lg text-primary-100 mb-8">
                                 Our pharmaceutical experts can help you find the right products for your market needs.
                                 Contact us for personalized recommendations.
                             </p>

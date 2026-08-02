@@ -19,11 +19,11 @@ const toneStyles: Record<
   { icon: string; border: string; wash: string; label: string; accent: string }
 > = {
   blue: {
-    icon: "bg-blue-600 text-white",
-    border: "border-blue-200/80 dark:border-blue-900/70",
-    wash: "from-blue-50 to-white dark:from-blue-950/35 dark:to-neutral-900",
-    label: "text-blue-600 dark:text-blue-400",
-    accent: "bg-blue-500",
+    icon: "bg-primary-600 text-white",
+    border: "border-primary-200/80 dark:border-primary-900/70",
+    wash: "from-primary-50 to-white dark:from-primary-950/35 dark:to-neutral-900",
+    label: "text-primary-600 dark:text-primary-400",
+    accent: "bg-primary-500",
   },
   teal: {
     icon: "bg-teal-600 text-white",
@@ -83,7 +83,7 @@ export function ResourcesPageContent() {
   return (
     <div className="min-h-screen overflow-hidden bg-white dark:bg-neutral-950">
       {/* ── Hero ── */}
-      <section className="relative border-b border-neutral-100 bg-[#f7f8f4] pt-28 pb-16 dark:border-neutral-800 dark:bg-neutral-950 lg:pt-40 lg:pb-24">
+      <section className="relative border-b border-neutral-100 bg-[var(--bg-secondary)] pt-28 pb-16 dark:border-neutral-800 dark:bg-neutral-950 lg:pt-40 lg:pb-24">
         <div
           className="absolute inset-0 opacity-[0.05] dark:opacity-[0.08]"
           aria-hidden="true"
@@ -99,7 +99,7 @@ export function ResourcesPageContent() {
         <motion.div
           animate={prefersReduced ? {} : { y: [5, -5, 5] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute right-[6%] top-12 h-72 w-72 rounded-full bg-blue-300/20 blur-3xl"
+          className="absolute right-[6%] top-12 h-72 w-72 rounded-full bg-primary-300/20 blur-3xl"
           aria-hidden="true"
         />
 
@@ -112,7 +112,7 @@ export function ResourcesPageContent() {
                 transition={{ duration: 0.7, ease }}
               >
                 <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-neutral-700 shadow-sm backdrop-blur-sm dark:border-neutral-700 dark:bg-neutral-900/80 dark:text-neutral-200">
-                  <Sparkles className="h-3.5 w-3.5 text-blue-600 dark:text-blue-400" />
+                  <Sparkles className="h-3.5 w-3.5 text-primary-600 dark:text-primary-400" />
                   Knowledge, made useful
                 </span>
                 <h1 className="mt-7 max-w-4xl text-5xl font-bold tracking-[-0.055em] text-neutral-950 dark:text-white sm:text-6xl lg:text-7xl">
@@ -126,7 +126,7 @@ export function ResourcesPageContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease, delay: 0.15 }}
             >
-              <div className="border-l-2 border-blue-600 pl-6 dark:border-blue-400">
+              <div className="border-l-2 border-primary-600 pl-6 dark:border-primary-400">
                 <p className="text-lg leading-8 text-neutral-600 dark:text-neutral-300">
                   Find product references, patient guidance, clinical
                   information pathways, and professional learning through one
@@ -172,7 +172,7 @@ export function ResourcesPageContent() {
             className="mb-12 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"
           >
             <div>
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary-600 dark:text-primary-400">
                 Choose your pathway
               </p>
               <h2
@@ -217,7 +217,7 @@ export function ResourcesPageContent() {
                 >
                   <Link
                     href={collection.href}
-                    className={`group relative flex h-full min-h-[23rem] flex-col overflow-hidden rounded-[2rem] border bg-gradient-to-br p-7 shadow-[0_22px_60px_-48px_rgba(15,23,42,0.65)] outline-none transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-40px_rgba(15,23,42,0.7)] focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/60 sm:p-9 ${tone.border} ${tone.wash}`}
+                    className={`group relative flex h-full min-h-[23rem] flex-col overflow-hidden rounded-[2rem] border bg-gradient-to-br p-7 shadow-[0_22px_60px_-48px_rgba(15,23,42,0.65)] outline-none transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_70px_-40px_rgba(15,23,42,0.7)] focus-visible:ring-4 focus-visible:ring-primary-200 dark:focus-visible:ring-primary-900/60 sm:p-9 ${tone.border} ${tone.wash}`}
                   >
                     <div
                       className={`absolute inset-y-0 left-0 w-1 transition-all duration-300 group-hover:w-1.5 ${tone.accent}`}
@@ -355,7 +355,7 @@ export function ResourcesPageContent() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="section bg-[#eef6f3] dark:bg-teal-950/20">
+      <section className="section bg-secondary-50 dark:bg-teal-950/20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 24 }}

@@ -7,7 +7,7 @@ const controls = [
     icon: BadgeCheck,
     title: "Supplier Qualification",
     description: "Supply relationships are reviewed before products enter the distribution portfolio.",
-    gradient: "from-blue-500 to-blue-600",
+    gradient: "from-primary-500 to-primary-600",
   },
   {
     icon: FileSearch,
@@ -46,7 +46,7 @@ export function DistributionQualitySection() {
     <section className="section bg-neutral-50 dark:bg-neutral-900/50" aria-labelledby="quality-heading">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">
             Distribution Quality
           </span>
           <h2 id="quality-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">

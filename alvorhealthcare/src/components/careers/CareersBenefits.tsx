@@ -26,7 +26,7 @@ export function CareersBenefits() {
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+          <span className="text-xs font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-widest">
             {benefits.eyebrow}
           </span>
           <h2 id="benefits-heading" className="display-md font-bold text-neutral-900 dark:text-white mt-2 mb-4">
