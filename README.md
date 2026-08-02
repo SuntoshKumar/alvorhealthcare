@@ -20,16 +20,16 @@ A corporate website for Alvor Healthcare Company Limited — a pharmaceutical di
 
 <div align="center">
 
-![Homepage](public/sreenshots/src_1.png)
+![Homepage](alvorhealthcare/public/sreenshots/src_1.png)
 *Homepage — Hero section with trust signals and certification badges*
 
-![Products](public/sreenshots/src_2.png)
+![Products](alvorhealthcare/public/sreenshots/src_2.png)
 *Product catalog with cold-chain indicators and category filtering*
 
-![About](public/sreenshots/src_3.png)
+![About](alvorhealthcare/public/sreenshots/src_3.png)
 *About page — Company history, team, and quality standards*
 
-![Contact](public/sreenshots/src_4.png)
+![Contact](alvorhealthcare/public/sreenshots/src_4.png)
 *Contact page — Form with clipboard copy and direct email fallback*
 
 </div>
