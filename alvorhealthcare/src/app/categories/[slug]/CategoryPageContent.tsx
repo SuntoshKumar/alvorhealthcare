@@ -187,23 +187,31 @@ export function CategoryPageContent({ category, products: categoryProducts }: Pr
               animate="visible"
               transition={{ duration: prefersReducedMotion ? 0.01 : 0.6 }}
             >
-              <div className="group relative mx-auto mb-8 flex h-44 w-44 items-center justify-center rounded-full border border-white/25 bg-white/[0.07] p-2 shadow-[0_28px_70px_-38px_rgba(15,23,42,0.75)] backdrop-blur-[2px] sm:h-48 sm:w-48 sm:p-3">
-                <div className={`absolute -inset-5 rounded-full ${colors.glow} blur-2xl transition-transform duration-700 group-hover:scale-110`} />
-                <div className="absolute inset-3 rounded-full border border-white/15 dark:border-white/[0.08]" aria-hidden="true" />
-                <div className="absolute inset-2 rounded-full border border-white/70 dark:border-white/10">
+              <div className="group relative mx-auto mb-8 flex h-44 w-44 items-center justify-center rounded-full border border-white/25 bg-white/[0.07] p-2 shadow-[0_28px_70px_-38px_rgba(15,23,42,0.75)] backdrop-blur-[2px] transition-all duration-500 hover:border-white/40 hover:shadow-[0_28px_70px_-38px_rgba(59,130,246,0.45)] sm:h-48 sm:w-48 sm:p-3">
+                <div className={`absolute -inset-5 rounded-full ${colors.glow} blur-2xl transition-all duration-700 group-hover:scale-110`} />
+                <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${colors.accent} opacity-0 transition-opacity duration-500 group-hover:opacity-20`} />
+                <div className="absolute inset-3 rounded-full border border-white/15 transition-colors duration-500 group-hover:border-white/25 dark:border-white/[0.08]" aria-hidden="true" />
+                <div className="absolute inset-2 rounded-full border border-white/70 transition-all duration-500 group-hover:border-white group-hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] dark:border-white/10">
                   <span className="absolute left-1/2 top-0 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white shadow-[0_0_0_6px_rgba(59,130,246,0.14)] dark:bg-blue-300" />
                 </div>
-                <div className="absolute inset-[15%] rounded-full border border-dashed border-white/60 dark:border-blue-200/20">
+                <div className="absolute inset-[15%] rounded-full border border-dashed border-white/60 transition-all duration-500 group-hover:border-white/80 group-hover:rotate-45 dark:border-blue-200/20">
                   <span className="absolute bottom-[8%] right-0 h-1.5 w-1.5 translate-x-1/2 rounded-full bg-teal-300 shadow-[0_0_0_5px_rgba(45,212,191,0.12)]" />
                 </div>
-                <Image
-                  src={publicAssetPath(category.image)}
-                  alt=""
-                  width={72}
-                  height={72}
-                  priority
-                  className="relative z-10 h-16 w-16 object-contain opacity-80 brightness-0 drop-shadow-[0_16px_20px_rgba(15,23,42,0.3)] transition-transform duration-500 group-hover:scale-110 dark:invert sm:h-[4.5rem] sm:w-[4.5rem]"
-                />
+                <div className="relative z-10 h-16 w-16 sm:h-[4.5rem] sm:w-[4.5rem]">
+                  <div 
+                    className={`absolute inset-0 bg-gradient-to-br ${colors.accent} transition-all duration-500 group-hover:scale-110`}
+                    style={{
+                      maskImage: `url("${publicAssetPath(category.image)}")`,
+                      WebkitMaskImage: `url("${publicAssetPath(category.image)}")`,
+                      maskSize: 'contain',
+                      WebkitMaskSize: 'contain',
+                      maskRepeat: 'no-repeat',
+                      WebkitMaskRepeat: 'no-repeat',
+                      maskPosition: 'center',
+                      WebkitMaskPosition: 'center',
+                    }}
+                  />
+                </div>
               </div>
               <h1 className="display-xl lg:display-2xl font-bold text-neutral-900 dark:text-white leading-tight mb-6">
                 {category.name}
